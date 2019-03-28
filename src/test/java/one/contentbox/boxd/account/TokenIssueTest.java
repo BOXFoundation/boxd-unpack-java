@@ -58,6 +58,13 @@ public class TokenIssueTest {
         System.out.println(tokenIssueTxResp.getTokenAddress());
         System.out.println(tokenIssueTxResp.getHash());
 
+        Thread.sleep(2000);
+
+        Map<String, Long> targets =  new HashMap<>();
+        targets.put("b1Tvej4G8Lma86pgYpWqv4fUFJcEyDdeGst", 100L);
+        targets.put("b1USvtdkLrXXtzTfz8R5tpicJYobDbwuqeT", 200L);
+        String hash = client.sendTokenToAdddresses(100, targets, tokenIssueTxResp.getHash(), tokenIssueTxResp.getIssueOutIndex(), privKeyHex);
+        System.out.println(hash);
     }
 }
 

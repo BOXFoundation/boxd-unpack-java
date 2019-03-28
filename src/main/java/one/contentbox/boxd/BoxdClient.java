@@ -142,6 +142,21 @@ public interface BoxdClient {
     boolean newAccount(String passphrase, String keyStoreFilePath)
             throws BoxdException, FileAlreadyExistsException, Exception;
 
+
+    /**
+     * send token to others
+     *
+     * @param fee
+     * @param to
+     * @param tokenHash
+     * @param tokenIndex
+     * @param privKeyHex
+     * @return
+     * @throws BoxdException
+     */
+    String sendTokenToAdddresses(long fee, Map<String, Long> to, String tokenHash, int tokenIndex, String privKeyHex) throws BoxdException;
+
+
     /**
      * Send box to others, This method will execute 3 main steps:\n
      *
@@ -372,7 +387,7 @@ public interface BoxdClient {
      * @return
      * @throws BoxdException
      */
-    Transaction makeUnsignedTokenTransferTx(TokenTransferTxReq tokenTransferTxReq) throws BoxdException;
+    TransactionResp makeUnsignedTokenTransferTx(TokenTransferTxReq tokenTransferTxReq) throws BoxdException;
 
     /**
      * Send transaction to the chain, it will come into the memory pool

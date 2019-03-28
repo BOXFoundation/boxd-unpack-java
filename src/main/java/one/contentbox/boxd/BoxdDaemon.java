@@ -33,10 +33,31 @@ public class BoxdDaemon extends  Thread{
      *
      * @param boxdClient
      */
-    public BoxdDaemon(BoxdClient boxdClient) {
+    public BoxdDaemon(BoxdClient boxdClient) throws BoxdException{
         this.managedChannel = boxdClient.getManagedChannel();
-
+        if (this.managedChannel.isShutdown()){
+            log.error("Rpc connect is already shutdown");
+            throw new BoxdException(-1, "Rpc connect is already shutdown");
+        }
         this.webApiBlockingStub = WebApiGrpc.newBlockingStub(this.managedChannel).withWaitForReady();
+    }
+
+    /**
+     * Get all listeners
+     *
+     * @return
+     */
+    public List<Listener> getListeners() {
+        return this.listeners;
+    }
+
+    /**
+     * Get all listener's count
+     *
+     * @return
+     */
+    public int getListenerCount() {
+        return this.listeners.size();
     }
 
     /**
@@ -48,6 +69,18 @@ public class BoxdDaemon extends  Thread{
         this.listeners.add(listener);
     }
 
+
+    /**
+     * Remove Listener class from the listener group
+     *
+     * @param listener
+     */
+    public void deleteListener(Listener listener) {
+        if(listeners.contains(listener)){
+            listeners.remove(listener);
+        }
+    }
+
     @Override
     public void run() {
         listenAndReadNewBlock();
@@ -57,7 +90,8 @@ public class BoxdDaemon extends  Thread{
      * Listen new blocks
      */
     private void listenAndReadNewBlock(){
-        Iterator<BlockDetail> blockDetails = this.webApiBlockingStub.listenAndReadNewBlock(ListenBlocksReq.newBuilder().build());
+        Iterator<BlockDetail> blockDetails = this.webApiBlockingStub
+                .listenAndReadNewBlock(ListenBlocksReq.newBuilder().build());
         while (blockDetails.hasNext()){
            for(Listener listener: this.listeners){
                if(listener instanceof BlockListener) {
@@ -112,7 +146,6 @@ public class BoxdDaemon extends  Thread{
         return this.managedChannel.awaitTermination(timeout, unit);
     }
 
-
     /**
      * Get rpc connection state
      *
@@ -132,5 +165,4 @@ public class BoxdDaemon extends  Thread{
     public void notifyWhenStateChanged(ConnectivityState connectivityState, Runnable runnable) {
         this.managedChannel.notifyWhenStateChanged(connectivityState, runnable);
     }
-
 }

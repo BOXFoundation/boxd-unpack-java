@@ -1,6 +1,5 @@
 package one.contentbox.boxd.util;
 
-import com.googlecode.protobuf.format.util.HexUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

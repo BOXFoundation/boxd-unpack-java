@@ -5,7 +5,6 @@ import lombok.Data;
 /**
  * Boxd Exception class
  */
-@Data
 public class BoxdException extends Exception{
 
     private int code;

@@ -3,6 +3,7 @@ package one.contentbox.boxd;
 import com.google.protobuf.ByteString;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import lombok.extern.slf4j.Slf4j;
 import one.contentbox.boxd.account.Account;
 import one.contentbox.boxd.account.DefaultAccount;
 import one.contentbox.boxd.constant.DebugLevel;
@@ -32,6 +33,7 @@ import java.util.Map;
 /**
  *  Boxd client implemention
  */
+@Slf4j
 public class BoxdClientImpl implements BoxdClient {
 
     private String host = "localhost";
@@ -278,9 +280,7 @@ public class BoxdClientImpl implements BoxdClient {
     @Override
     public BalanceResp getTokenbalance(List<String> addrs, String tokenHash, int tokenIndex) throws BoxdException {
         GetTokenBalanceReq.Builder builder = GetTokenBalanceReq.newBuilder();
-        for (int i = 0; i < addrs.size(); i++) {
-            builder.setAddrs(i, addrs.get(i));
-        }
+        builder.addAllAddrs(addrs);
         builder.setTokenHash(tokenHash);
         builder.setTokenIndex(tokenIndex);
 
@@ -294,7 +294,6 @@ public class BoxdClientImpl implements BoxdClient {
     @Override
     public Transaction getRawTransaction(String txHash) throws BoxdException {
         ByteString txHashBs = ByteString.copyFromUtf8(txHash);
-        ByteString txHashBs2 = ByteString.copyFrom(txHash.getBytes());
         GetRawTransactionResponse rawTransactionResponse = transactionCommandBlockingStub
                 .getRawTransaction(GetRawTransactionRequest.newBuilder().setHash(txHashBs).build());
         if (!rawTransactionResponse.hasTx()) {
@@ -326,6 +325,63 @@ public class BoxdClientImpl implements BoxdClient {
             throw new BoxdException(makeTxResp.getCode(), makeTxResp.getMessage());
         }
         return new TransactionResp(makeTxResp);
+    }
+
+    @Override
+    public String sendTokenToAdddresses(long fee, Map<String, Long> to, String tokenHash, int tokenIndex, String privKeyHex)
+            throws BoxdException {
+        long transferValue = to.values().stream().mapToLong(Long::longValue).sum();
+        if (transferValue <= 0) {
+            throw new BoxdException(-1, "Transfer amount must > 0");
+        }
+
+        if (transferValue < fee) {
+            throw new BoxdException(-1, "Transfer amount must > fee");
+        }
+
+        TokenTransferTxReq tokenTransferTxReq = new TokenTransferTxReq();
+        tokenTransferTxReq.setFee(fee);
+        tokenTransferTxReq.setTo(to);
+        tokenTransferTxReq.setTokenHash(tokenHash);
+        tokenTransferTxReq.setTokenIndex(tokenIndex);
+
+        String address = dumpAddrFromPrivKey(privKeyHex);
+        tokenTransferTxReq.setFrom(address);
+
+        TransactionResp transactionResp = makeUnsignedTokenTransferTx(tokenTransferTxReq);
+        Transaction unsignedTx = transactionResp.getTx();
+
+        List<ByteString> rawMsgs = transactionResp.getRawMsgs();
+
+        // calcTxHashForSig
+        Transaction.Builder builder = Transaction.newBuilder();
+        builder.addAllVout(unsignedTx.getVoutList());
+
+        List<TxIn> inList = new ArrayList<>();
+        for (int i = 0; i < unsignedTx.getVinCount(); i++) {
+            TxIn txIn = unsignedTx.getVin(i);
+
+            byte[] rawMsg = rawMsgs.get(i).toByteArray();
+            // sig hash
+            byte[] sigHashBytes = Sha256Hash.hash(Sha256Hash.hash(rawMsg));
+            // sig
+            byte[] sigBytes = account.sign(sigHashBytes, privKeyHex);
+            // script sig
+            Opcode opcode = new Opcode();
+            opcode.addOperand(sigBytes).addOperand(account.dumpPubKey(privKeyHex));
+            byte[] scriptSig = opcode.getResult();
+            opcode.reset();
+
+            TxIn.Builder txInBuilder = TxIn.newBuilder().setScriptSig(ByteString.copyFrom(scriptSig))
+                    .setPrevOutPoint(OutPoint.newBuilder().setHash(txIn.getPrevOutPoint().getHash()).setIndex(txIn.getPrevOutPoint().getIndex()).build());
+            inList.add(txInBuilder.build());
+        }
+        builder.addAllVin(inList);
+
+        Transaction tx = builder.build();
+        String hash = sendTransaction(tx);
+
+        return hash;
     }
 
     @Override
@@ -367,7 +423,7 @@ public class BoxdClientImpl implements BoxdClient {
     }
 
     @Override
-    public Transaction makeUnsignedTokenTransferTx(TokenTransferTxReq tokenTransferTxReq) throws BoxdException {
+    public TransactionResp makeUnsignedTokenTransferTx(TokenTransferTxReq tokenTransferTxReq) throws BoxdException {
         MakeTokenTransferTxReq.Builder builder = MakeTokenTransferTxReq.newBuilder();
         builder.setFee(tokenTransferTxReq.getFee());
         builder.setFrom(tokenTransferTxReq.getFrom());
@@ -375,18 +431,14 @@ public class BoxdClientImpl implements BoxdClient {
         builder.setTokenIndex(tokenTransferTxReq.getTokenIndex());
 
         Map<String, Long> to = tokenTransferTxReq.getTo();
-        int index = 0;
-        for (String addr : to.keySet()) {
-            builder.setTo(index, addr);
-            builder.setAmounts(index, to.get(addr));
-            index++;
-        }
+        builder.addAllTo(to.keySet());
+        builder.addAllAmounts(to.values());
 
         MakeTxResp makeTxResp = transactionCommandBlockingStub.makeUnsignedTokenTransferTx(builder.build());
         if (makeTxResp.getCode() != 0) {
             throw new BoxdException(makeTxResp.getCode(), makeTxResp.getMessage());
         }
-        return makeTxResp.getTx();
+        return new TransactionResp(makeTxResp);
     }
 
     @Override

@@ -8,7 +8,7 @@ import one.contentbox.boxd.proto.BlockDetail;
 
 public class BoxdDaemonTest {
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws Exception{
         String host = "localhost";
         int port = 19111;
 
