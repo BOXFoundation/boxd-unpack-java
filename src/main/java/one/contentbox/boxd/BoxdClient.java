@@ -310,6 +310,12 @@ public interface BoxdClient {
      */
     one.contentbox.boxd.response.FetchUtxosResp fetchUtxos(String address, long amount, String tokenHash, int tokenIndex) throws BoxdException;
 
+    /**
+     * Get fee price on-chain
+     *
+     * @return
+     * @throws BoxdException
+     */
     long getFeePrice() throws BoxdException;
 
     /**

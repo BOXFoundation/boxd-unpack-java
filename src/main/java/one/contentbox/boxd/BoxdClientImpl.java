@@ -5,6 +5,7 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import one.contentbox.boxd.account.Account;
 import one.contentbox.boxd.account.DefaultAccount;
+import one.contentbox.boxd.constant.DebugLevel;
 import one.contentbox.boxd.proto.*;
 import one.contentbox.boxd.proto.FetchUtxosResp;
 import one.contentbox.boxd.proto.ViewTxDetailResp;
@@ -49,6 +50,7 @@ public class BoxdClientImpl implements BoxdClient {
         if (host != null && !"".equalsIgnoreCase(host)) {
             this.host = host;
         }
+        this.port = port;
 
         this.managedChannel = ManagedChannelBuilder
                 .forAddress(this.host, this.port)
@@ -194,6 +196,10 @@ public class BoxdClientImpl implements BoxdClient {
 
     @Override
     public String setDebugLevel(String level) throws BoxdException {
+        if(!DebugLevel.levels.contains(level)){
+            throw new BoxdException(-1, "Debug level not supported");
+        }
+
         BaseResponse baseResponse = contorlCommandBlockingStub
                 .setDebugLevel(DebugLevelRequest.newBuilder().setLevel(level).build());
         if (baseResponse.getCode() != 0) {
