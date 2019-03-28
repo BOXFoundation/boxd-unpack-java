@@ -26,6 +26,9 @@ public interface BoxdClient {
      */
     ManagedChannel getManagedChannel();
 
+
+    boolean isValidAddr(String addr);
+
     /**
      * Get private key in hex by passphrase and keystore
      *

@@ -70,6 +70,11 @@ public class BoxdClientImpl implements BoxdClient {
     }
 
     @Override
+    public boolean isValidAddr(String addr) {
+        return AddressUtils.isVaildAddr(addr);
+    }
+
+    @Override
     public ManagedChannel getManagedChannel() {
         return managedChannel;
     }
