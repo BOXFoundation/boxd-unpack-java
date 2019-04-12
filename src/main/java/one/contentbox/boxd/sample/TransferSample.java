@@ -1,16 +1,18 @@
-package one.contentbox.boxd.account;
+package one.contentbox.boxd.sample;
 
 import one.contentbox.boxd.BoxdClient;
 import one.contentbox.boxd.BoxdClientImpl;
+import one.contentbox.boxd.account.Account;
+import one.contentbox.boxd.account.DefaultAccount;
 import one.contentbox.boxd.response.ViewTxDetailResp;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TransferTest {
+public class TransferSample {
     public static void main(String args[]) throws Exception{
-        String host = "localhost";
+        String host = "39.97.169.1";
         int port = 19111;
 
         BoxdClient client = new BoxdClientImpl(host, port);

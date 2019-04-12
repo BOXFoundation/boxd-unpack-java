@@ -1,4 +1,4 @@
-package one.contentbox.boxd.account;
+package one.contentbox.boxd.sample;
 
 import one.contentbox.boxd.BoxdClient;
 import one.contentbox.boxd.BoxdClientImpl;
@@ -6,10 +6,10 @@ import one.contentbox.boxd.BoxdDaemon;
 import one.contentbox.boxd.event.BlockListener;
 import one.contentbox.boxd.proto.BlockDetail;
 
-public class BoxdDaemonTest {
+public class BoxdDaemonSample {
 
     public static void main(String args[]) throws Exception{
-        String host = "localhost";
+        String host = "39.97.169.1";
         int port = 19111;
 
         BoxdClient client = new BoxdClientImpl(host, port);

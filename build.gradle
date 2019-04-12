@@ -27,6 +27,8 @@ dependencies {
     testCompile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.26'
     compile group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.49'
     compile group: 'org.web3j', name: 'core', version: '3.6.0'
+    // https://mvnrepository.com/artifact/com.lambdaworks/scrypt
+    compile group: 'com.lambdaworks', name: 'scrypt', version: '1.4.0'
     compile('io.grpc:grpc-netty:1.18.0')
     compile('io.grpc:grpc-protobuf:1.18.0')
     compile('io.grpc:grpc-stub:1.18.0')
@@ -50,10 +52,6 @@ protobuf {
         }
     }
 }
-
-
-
-
 
 sourceSets {
     main {

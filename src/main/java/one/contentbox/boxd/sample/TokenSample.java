@@ -1,44 +1,32 @@
-package one.contentbox.boxd.account;
+package one.contentbox.boxd.sample;
 
-import com.google.protobuf.ByteString;
+import lombok.extern.slf4j.Slf4j;
 import one.contentbox.boxd.BoxdClient;
 import one.contentbox.boxd.BoxdClientImpl;
-import one.contentbox.boxd.proto.OutPoint;
-import one.contentbox.boxd.proto.Transaction;
-import one.contentbox.boxd.proto.TxIn;
+import one.contentbox.boxd.account.Account;
+import one.contentbox.boxd.account.DefaultAccount;
 import one.contentbox.boxd.request.Token;
 import one.contentbox.boxd.request.TokenIssueTxReq;
 import one.contentbox.boxd.response.TokenIssueTxResp;
 import one.contentbox.boxd.response.ViewTxDetailResp;
-import one.contentbox.boxd.script.Opcode;
-import one.contentbox.boxd.util.TxUtils;
 import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.Sha256Hash;
-import org.bouncycastle.util.encoders.Hex;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class TokenIssueTest {
+@Slf4j
+public class TokenSample {
 
 
     public static void main(String[] args) throws Exception {
-        String host = "localhost";
+        String host = "39.97.169.1";
         int port = 19111;
+        BoxdClient client = new BoxdClientImpl(host, port);
 
         Account account = new DefaultAccount();
-        //        account.newAccount("1", "6.keystore");
         ECKey ecKey = new ECKey();
         String privKeyHex = ecKey.getPrivateKeyAsHex();
         String address = account.dumpAddrFromPrivKey(privKeyHex);
-        //String privKeyHex = account.dumpPrivKeyFromKeyStore(new File("5.keystore"), "1");
-        //String address = account.dumpAddrFromPrivKey(privKeyHex);
-
-        BoxdClient client = new BoxdClientImpl(host, port);
-
 
         client.faucet(address, 10000);
         Thread.sleep(2000);
@@ -55,8 +43,8 @@ public class TokenIssueTest {
         tokenIssueTxReq.setToken(token);
 
         TokenIssueTxResp tokenIssueTxResp = client.tokenIssue(100, address, token, privKeyHex);
-        System.out.println(tokenIssueTxResp.getTokenAddress());
-        System.out.println(tokenIssueTxResp.getHash());
+        log.info(tokenIssueTxResp.getTokenAddress());
+        log.info(tokenIssueTxResp.getHash());
 
         Thread.sleep(2000);
 
@@ -64,7 +52,10 @@ public class TokenIssueTest {
         targets.put("b1Tvej4G8Lma86pgYpWqv4fUFJcEyDdeGst", 100L);
         targets.put("b1USvtdkLrXXtzTfz8R5tpicJYobDbwuqeT", 200L);
         String hash = client.sendTokenToAdddresses(100, targets, tokenIssueTxResp.getHash(), tokenIssueTxResp.getIssueOutIndex(), privKeyHex);
-        System.out.println(hash);
+
+        ViewTxDetailResp viewTxDetailResp = client.viewTxDetail(hash);
+        log.info(viewTxDetailResp.getTxDetail().toString());
+
     }
 }
 

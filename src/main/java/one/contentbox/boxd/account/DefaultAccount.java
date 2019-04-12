@@ -1,6 +1,7 @@
 package one.contentbox.boxd.account;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lambdaworks.crypto.SCrypt;
 import lombok.extern.slf4j.Slf4j;
 import one.contentbox.boxd.BoxdException;
 import one.contentbox.boxd.crypto.Ripemd160;
@@ -10,7 +11,6 @@ import org.bitcoinj.core.Base58;
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.Sha256Hash;
 import org.bitcoinj.core.Utils;
-import org.bouncycastle.crypto.generators.SCrypt;
 import org.bouncycastle.util.encoders.Hex;
 import org.web3j.crypto.CipherException;
 import org.web3j.crypto.ECKeyPair;
@@ -27,6 +27,7 @@ import javax.crypto.spec.SecretKeySpec;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.FileAlreadyExistsException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -37,7 +38,7 @@ import java.util.Arrays;
 public class DefaultAccount extends Account {
 
     @Override
-    public byte[] dumpPubKeyHash(String privKey) throws BoxdException{
+    public byte[] dumpPubKeyHash(String privKey) throws BoxdException {
         validPrivKey(privKey);
         byte[] pk = dumpPubKey(privKey);
         return Ripemd160.getHash(pk);
@@ -71,8 +72,6 @@ public class DefaultAccount extends Account {
     private static final int DKLEN = 32;
 
     private static final String CIPHER = "aes-128-ctr";
-    private static final String AES_128_CTR = "pbkdf2";
-    private static final String SCRYPT = "scrypt";
 
     @Override
     public boolean newAccount(String passphrase, String keyStoreFilePath)
@@ -99,26 +98,33 @@ public class DefaultAccount extends Account {
         return false;
     }
 
-    KeyStoreFile create(String password, ECKeyPair ecKeyPair, int n, int p) throws CipherException{
+    KeyStoreFile create(String password, ECKeyPair ecKeyPair, int n, int p) throws Exception {
         byte[] salt = generateRandomBytes(32);
 
-        byte[] deribedKey = generateDerivedScryptKey(password.getBytes(), salt, n, R, p, DKLEN);
+        byte[] deribedKey = generateDerivedScryptKey(password.getBytes(Charset.forName("UTF-8")), salt, n, R, p, DKLEN);
 
         byte[] encryptKey = Arrays.copyOfRange(deribedKey, 0, 16);
 
         byte[] iv = generateRandomBytes(16);
 
-        byte[] privateKeyBytes = Numeric.toBytesPadded(ecKeyPair.getPrivateKey(), 32);
+        byte[] privateKeyBytes = ecKeyPair.getPrivateKey().toByteArray();
 
         byte[] cipherText = performCipherOperation(Cipher.ENCRYPT_MODE, iv, encryptKey, privateKeyBytes);
 
         byte[] mac = generateMac(deribedKey, cipherText);
+
+        return createFile(privateKeyBytes, salt, cipherText, iv, mac);
+    }
+
+    private KeyStoreFile createFile(byte[] privateKeyBytes,
+                                    byte[] salt, byte[] cipherText,  byte[] iv, byte[] mac ) {
 
         String addr = dumpAddrFromPrivKey(privateKeyBytes);
 
         KeyStoreFile keyStoreFile = new KeyStoreFile();
         keyStoreFile.setId("");
         keyStoreFile.setAddress(addr);
+        keyStoreFile.setVersion("0.1.0");
 
         KeyStoreFile.Cryto cryto = new KeyStoreFile.Cryto();
 
@@ -133,12 +139,11 @@ public class DefaultAccount extends Account {
 
         cryto.setMac(Numeric.toHexStringNoPrefix(mac));
 
-
         KeyStoreFile.Kdfparams kdfparams = new KeyStoreFile.Kdfparams();
         kdfparams.setSalt(Numeric.toHexStringNoPrefix(salt));
         kdfparams.setDklen(DKLEN);
-        kdfparams.setN(n);
-        kdfparams.setP(p);
+        kdfparams.setN(N_STANDARD);
+        kdfparams.setP(P_STANDARD);
         kdfparams.setR(R);
 
         cryto.setKdfparams(kdfparams);
@@ -154,7 +159,7 @@ public class DefaultAccount extends Account {
         System.arraycopy(derivedKey, 16, result, 0, 16);
         System.arraycopy(cipherText, 0, result, 16, cipherText.length);
 
-        return Hash.sha3(result);
+        return Hash.sha256(result);
     }
 
     private static byte[] performCipherOperation(
@@ -174,8 +179,8 @@ public class DefaultAccount extends Account {
     }
 
     private static byte[] generateDerivedScryptKey(
-            byte[] password, byte[] salt, int n, int r, int p, int dkLen) {
-        return SCrypt.generate(password, salt, n, r, p, dkLen);
+            byte[] password, byte[] salt, int n, int r, int p, int dkLen) throws Exception{
+        return SCrypt.scrypt(password, salt, n, r, p, dkLen);
     }
 
     private static byte[] generateRandomBytes(int size) {
@@ -218,28 +223,27 @@ public class DefaultAccount extends Account {
             int p = kdfparams.getP();
             int r = kdfparams.getR();
             byte[] salt = Hex.decode(kdfparams.getSalt());
-            byte[] derivedKey = SCrypt.generate(bytes, salt, n, r, p, dklen);
+            byte[] derivedKey = null;
+            try {
+                derivedKey = SCrypt.scrypt(bytes, salt, n, r, p, dklen);
+            }catch (Exception e){
+                log.error("Create keystore err");
+                throw new BoxdException(-1, "Create keystore err : " + e.getMessage());
+            }
 
-            byte[] result = new byte[16 + cipherText.length];
-            System.arraycopy(derivedKey, 16, result, 0, 16);
-            System.arraycopy(cipherText, 0, result, 16, cipherText.length);
+            byte[] exspectMac  = generateMac(derivedKey, cipherText);
+            if(!Arrays.equals(exspectMac, Hex.decode(cryto.getMac()))){
+                throw new BoxdException(-1, "Passphrase doesn't match key store");
+            }
 
             byte[] encryptKey = Arrays.copyOfRange(derivedKey, 0, 16);
+
             IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
             Cipher cipher = Cipher.getInstance("AES/CTR/NoPadding");
 
             SecretKeySpec secretKeySpec = new SecretKeySpec(encryptKey, "AES");
             cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, ivParameterSpec);
             byte[] privateKey = cipher.doFinal(cipherText);
-
-            String addr = dumpAddrFromPrivKey(privateKey);
-            if(addr == null || "".equalsIgnoreCase(addr)){
-                throw new BoxdException(-1, "Passphrase doesn't match key store");
-            }
-
-            if(!addr.equalsIgnoreCase(keyStoreFile.getAddress())){
-                throw new BoxdException(-1, "Passphrase doesn't match key store");
-            }
 
             return Hex.toHexString(privateKey);
         } catch (IOException| NoSuchAlgorithmException | NoSuchPaddingException

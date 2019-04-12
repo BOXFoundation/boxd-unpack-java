@@ -1,30 +1,21 @@
-package one.contentbox.boxd.account;
+package one.contentbox.boxd.sample;
 
-import com.google.protobuf.ByteString;
 import one.contentbox.boxd.BoxdClient;
 import one.contentbox.boxd.BoxdClientImpl;
-import one.contentbox.boxd.proto.MakeSplitAddrTxReq;
-import one.contentbox.boxd.proto.OutPoint;
-import one.contentbox.boxd.proto.Transaction;
-import one.contentbox.boxd.proto.TxIn;
+import one.contentbox.boxd.account.Account;
+import one.contentbox.boxd.account.DefaultAccount;
 import one.contentbox.boxd.request.SplitAddrTxReq;
 import one.contentbox.boxd.response.SplitAddrTxResp;
-import one.contentbox.boxd.response.ViewTxDetailResp;
-import one.contentbox.boxd.script.Opcode;
-import one.contentbox.boxd.util.TxUtils;
-import org.bitcoinj.core.Sha256Hash;
-import org.bouncycastle.util.encoders.Hex;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class SplitAddrTest {
+public class SplitAddrSample {
     public static void main(String[] args) throws Exception{
-        String host = "localhost";
+        String host = "39.97.169.1";
         int port = 19111;
+        BoxdClient client = new BoxdClientImpl(host, port);
 
         Account account = new DefaultAccount();
         String keystoreName= "split_addr.keystore";
@@ -32,9 +23,6 @@ public class SplitAddrTest {
 
         String privKeyHex = account.dumpPrivKeyFromKeyStore(new File(keystoreName), "1");
         String address = account.dumpAddrFromPrivKey(privKeyHex);
-
-        BoxdClient client = new BoxdClientImpl(host, port);
-
 
         client.faucet(address, 10000);
         Thread.sleep(2000);
@@ -48,8 +36,8 @@ public class SplitAddrTest {
         splitAddrTxReq.setFrom(address);
         splitAddrTxReq.setDetail(targets);
 
-
         SplitAddrTxResp splitAddrTxResp = client.createSplitAddr(100, targets, privKeyHex);
         System.out.println(splitAddrTxResp.getSplitAddr());
+
     }
 }

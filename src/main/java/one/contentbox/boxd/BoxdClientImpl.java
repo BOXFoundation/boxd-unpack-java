@@ -479,6 +479,113 @@ public class BoxdClientImpl implements BoxdClient {
     }
 
     @Override
+    public Transaction createTransaction(String address, Map<String, Long> to, long fee, List<Utxo> utxoList)
+            throws BoxdException {
+        long total =  to.values().stream().mapToLong(Long::longValue).sum() + fee;
+
+        long balanceOnChain = 0L;
+        for (Utxo utxo : utxoList) {
+            balanceOnChain += utxo.getTxOut().getValue();
+        }
+
+        // Check real balance again
+        if (utxoList.size() < 1) {
+            throw new BoxdException(-1, "Parse utxo err");
+        }
+
+        if(balanceOnChain < total){
+            throw new BoxdException(-1, "The Balance of " + address + "is too low");
+        }
+
+        // create transaction
+        Transaction.Builder txBuilder = Transaction.newBuilder();
+
+        // add vin
+        List<TxIn> vinsList = new ArrayList<>();
+        for (Utxo utxo : utxoList) {
+            TxIn tx = TxIn.newBuilder()
+                    .setPrevOutPoint(utxo.getOutPoint())
+                    .setScriptSig(utxo.getTxOut().getScriptPubKey()).build();
+            vinsList.add(tx);
+        }
+
+        // add vout
+        List<TxOut> vouts = new ArrayList<>();
+        for (String addr : to.keySet()) {
+
+            byte[] tmp = AddressUtils.getPkh(addr);
+
+            Opcode opcode = new Opcode();
+            opcode.adddOpCode((byte) Opcode.OPDUP).adddOpCode((byte) Opcode.OPHASH160).addOperand(tmp)
+                    .adddOpCode((byte) Opcode.OPEQUALVERIFY).adddOpCode((byte) Opcode.OPCHECKSIG);
+            byte[] addrScript = opcode.getResult();
+            opcode.reset();
+
+            TxOut txOut = TxOut.newBuilder()
+                    .setScriptPubKey(ByteString.copyFrom(addrScript))
+                    .setValue(to.get(addr)).build();
+
+            vouts.add(txOut);
+        }
+
+        // process charge
+        if(balanceOnChain > total){
+            long charge = balanceOnChain - total;
+
+            byte[] tmp = AddressUtils.getPkh(address);
+
+            Opcode opcode = new Opcode();
+            opcode.adddOpCode((byte) Opcode.OPDUP).adddOpCode((byte) Opcode.OPHASH160).addOperand(tmp)
+                    .adddOpCode((byte) Opcode.OPEQUALVERIFY).adddOpCode((byte) Opcode.OPCHECKSIG);
+            byte[] addrScript = opcode.getResult();
+            opcode.reset();
+
+            TxOut txOut = TxOut.newBuilder()
+                    .setScriptPubKey(ByteString.copyFrom(addrScript))
+                    .setValue(charge).build();
+
+            vouts.add(txOut);
+        }
+
+        txBuilder.addAllVin(vinsList);
+        txBuilder.addAllVout(vouts);
+        Transaction unsignedTx = txBuilder.build();
+        return unsignedTx;
+    }
+
+    @Override
+    public Transaction signTransaction(Transaction unsignedTx, String privateKey)
+            throws BoxdException {
+        Transaction.Builder builder = Transaction.newBuilder();
+        builder.addAllVout(unsignedTx.getVoutList());
+
+        List<TxIn> inList = new ArrayList<>();
+        for (int i = 0; i < unsignedTx.getVinCount(); i++) {
+            TxIn txIn = unsignedTx.getVin(i);
+
+            byte[] scriptPubBytes = txIn.getScriptSig().toByteArray();
+            byte[] rawMsg = TxUtils.calcTxHashForSig(scriptPubBytes, unsignedTx, i);
+            // sig hash
+            byte[] sigHashBytes = Sha256Hash.hash(Sha256Hash.hash(rawMsg));
+            // sig
+            byte[] sigBytes = account.sign(sigHashBytes, privateKey);
+            // script sig
+            Opcode opcode = new Opcode();
+            opcode.addOperand(sigBytes).addOperand(account.dumpPubKey(privateKey));
+            byte[] scriptSig = opcode.getResult();
+            opcode.reset();
+
+            TxIn.Builder txInBuilder = TxIn.newBuilder().setScriptSig(ByteString.copyFrom(scriptSig))
+                    .setPrevOutPoint(OutPoint.newBuilder().setHash(txIn.getPrevOutPoint().getHash()).setIndex(txIn.getPrevOutPoint().getIndex()).build());
+            inList.add(txInBuilder.build());
+        }
+        builder.addAllVin(inList);
+
+        Transaction tx = builder.build();
+        return tx;
+    }
+
+    @Override
     public String sendToAdddresses(long fee, Map<String, Long> to, String privKeyHex) throws BoxdException {
 
         long transferValue = to.values().stream().mapToLong(Long::longValue).sum();
@@ -639,11 +746,9 @@ public class BoxdClientImpl implements BoxdClient {
             byte[] rawMsg = rawMsgs.get(i).toByteArray();
             // sig hash
             byte[] sigHashBytes = Sha256Hash.hash(Sha256Hash.hash(rawMsg));
-            System.out.println("sig hash:" + Hex.toHexString(sigHashBytes));
 
             // sig
             byte[] sigBytes = account.sign(sigHashBytes, privKeyHex);
-            System.out.println("sig: " + Hex.toHexString(sigBytes));
 
             // script sig
             Opcode opcode = new Opcode();

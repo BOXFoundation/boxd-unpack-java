@@ -1,12 +1,11 @@
 package one.contentbox.boxd;
 
 import io.grpc.ManagedChannel;
-import one.contentbox.boxd.proto.Block;
-import one.contentbox.boxd.proto.BlockDetail;
-import one.contentbox.boxd.proto.BlockHeader;
-import one.contentbox.boxd.proto.Transaction;
+import one.contentbox.boxd.proto.*;
 import one.contentbox.boxd.request.*;
 import one.contentbox.boxd.response.*;
+import one.contentbox.boxd.response.FetchUtxosResp;
+import one.contentbox.boxd.response.ViewTxDetailResp;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -391,6 +390,27 @@ public interface BoxdClient {
      * @throws BoxdException
      */
     TransactionResp makeUnsignedTokenTransferTx(TokenTransferTxReq tokenTransferTxReq) throws BoxdException;
+
+    /**
+     * Create unsigned transaction by UTXOs
+     *
+     * @param from
+     * @param fee
+     * @param utxos
+     * @return
+     * @throws BoxdException
+     */
+    Transaction createTransaction(String from, Map<String, Long> to, long fee, List<Utxo> utxos) throws BoxdException;
+
+    /**
+     * Sign a unsigned transaction
+     *
+     * @param unsignedTx
+     * @param privateKey
+     * @return
+     * @throws BoxdException
+     */
+    Transaction signTransaction(Transaction unsignedTx, String privateKey) throws BoxdException;
 
     /**
      * Send transaction to the chain, it will come into the memory pool

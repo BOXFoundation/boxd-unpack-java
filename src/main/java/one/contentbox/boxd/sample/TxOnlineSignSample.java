@@ -1,9 +1,11 @@
-package one.contentbox.boxd.account;
+package one.contentbox.boxd.sample;
 
 import com.google.protobuf.ByteString;
 import one.contentbox.boxd.BoxdClient;
 import one.contentbox.boxd.BoxdClientImpl;
 import one.contentbox.boxd.BoxdException;
+import one.contentbox.boxd.account.Account;
+import one.contentbox.boxd.account.DefaultAccount;
 import one.contentbox.boxd.proto.OutPoint;
 import one.contentbox.boxd.proto.Transaction;
 import one.contentbox.boxd.proto.TxIn;
@@ -15,17 +17,16 @@ import one.contentbox.boxd.script.Opcode;
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.Sha256Hash;
 import org.bouncycastle.util.encoders.Hex;
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BoxdClientOnlineSignTest {
+public class TxOnlineSignSample {
 
     public static void main(String[] args) throws BoxdException, Exception{
-        String host = "localhost";
+        String host = "39.97.169.1";
         int port = 19111;
 
         // create new account

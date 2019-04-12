@@ -10,6 +10,7 @@ public class KeyStoreFile {
     String id;
     String address;
     Cryto crypto;
+    String version;
 
     @Data
     static class Cryto {
