@@ -449,7 +449,7 @@ public class RpcBoxdClientImpl implements BoxdClient {
         List<TxOut> vouts = new ArrayList<>();
         for (String addr : to.keySet()) {
 
-            byte[] tmp = AddressUtils.getPubkeyHash(addr);
+            byte[] tmp = AddressUtils.getPubKeyHashFromAddr(addr);
 
             Opcode opcode = new Opcode();
             opcode.adddOpCode((byte) Opcode.OPDUP).adddOpCode((byte) Opcode.OPHASH160).addOperand(tmp)
@@ -468,7 +468,7 @@ public class RpcBoxdClientImpl implements BoxdClient {
         if (balanceOnChain > total) {
             long charge = balanceOnChain - total;
 
-            byte[] tmp = AddressUtils.getPubkeyHash(address);
+            byte[] tmp = AddressUtils.getPubKeyHashFromAddr(address);
 
             Opcode opcode = new Opcode();
             opcode.adddOpCode((byte) Opcode.OPDUP).adddOpCode((byte) Opcode.OPHASH160).addOperand(tmp)

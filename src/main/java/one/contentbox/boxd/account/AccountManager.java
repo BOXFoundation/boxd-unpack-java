@@ -21,6 +21,8 @@ public interface AccountManager {
     byte[] dumpPubKeyHashFromPrivKey(byte[] privKey) throws BoxdException;
     byte[] dumpPubKeyHashFromPrivKey(String privKey) throws BoxdException;
 
+    byte[] dumpPubKeyHashFromAddr(String addr) throws BoxdException;
+
     byte[] dumpPubKeyFromPrivKey(String privKey) throws BoxdException;
     byte[] dumpPubKeyFromPrivKey(byte[] privKey) throws BoxdException;
 

@@ -1,6 +1,8 @@
 package one.contentbox.boxd.util;
 
 import one.contentbox.boxd.crypto.hash.Base58;
+import one.contentbox.boxd.crypto.hash.Hash;
+import one.contentbox.boxd.crypto.hash.Sha256Hash;
 import one.contentbox.boxd.exception.BoxdException;
 
 public class AddressUtils {
@@ -30,7 +32,7 @@ public class AddressUtils {
         return true;
     }
 
-    public static  byte[] getPubkeyHash(String addr) throws BoxdException {
+    public static  byte[] getPubKeyHashFromAddr(String addr) throws BoxdException {
         if( !isVaildAddr(addr)){
             throw new BoxdException(-1, "Addr format error");
         }
@@ -51,4 +53,25 @@ public class AddressUtils {
         }
         return result;
     }
+
+    public static String getAddrFromPubKey(byte[] pubKey) {
+        byte[] pub = Hash.sha256hash160(pubKey);
+        // prefix
+        byte[] prefix = {0x13, 0x26};
+
+        // checksum
+        byte[] all = ArrayUtils.join(prefix, pub);
+
+        byte[] checksumAll = Sha256Hash.hashTwice(all);
+        byte[] checksum = new byte[4];
+        System.arraycopy(checksumAll, 0, checksum, 0, 4);
+
+
+        byte[] tmp = ArrayUtils.join(prefix, pub);
+        byte[] content = ArrayUtils.join(tmp, checksum);
+
+        String addr = Base58.encode(content);
+        return addr;
+    }
+
 }
