@@ -480,11 +480,6 @@ public class RpcBoxdClientImpl implements BoxdClient {
     }
 
     @Override
-    public String signRawTransaction(String unsignedRawTx, String privateKey) throws BoxdException {
-        return null;
-    }
-
-    @Override
     public Transaction signTransaction(UnsignedTx unsignedTx, String privateKey) throws BoxdException {
         Transaction.Builder builder = Transaction.newBuilder();
         builder.addAllVout(unsignedTx.getTx().getVoutList());

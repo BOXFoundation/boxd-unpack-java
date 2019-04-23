@@ -24,11 +24,6 @@ import java.security.spec.ECGenParameterSpec;
  */
 public class Keys {
 
-    static final int PRIVATE_KEY_SIZE = 32;
-    static final int PUBLIC_KEY_SIZE = 64;
-
-    public static final int ADDRESS_SIZE = 160;
-
     static {
         if (Security.getProvider(BouncyCastleProvider.PROVIDER_NAME) == null) {
             Security.addProvider(new BouncyCastleProvider());

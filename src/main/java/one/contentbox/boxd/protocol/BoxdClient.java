@@ -235,8 +235,6 @@ public interface BoxdClient {
      */
     Transaction signTransaction(UnsignedTx unsignedTx, String privateKey) throws BoxdException;
 
-    String signRawTransaction(String unsignedRawTx, String privateKey) throws BoxdException;
-
     /**
      * Send transaction to the chain, it will come into the memory pool
      *
