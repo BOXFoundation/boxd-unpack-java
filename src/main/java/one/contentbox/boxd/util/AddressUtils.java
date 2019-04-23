@@ -66,7 +66,6 @@ public class AddressUtils {
         byte[] checksum = new byte[4];
         System.arraycopy(checksumAll, 0, checksum, 0, 4);
 
-
         byte[] tmp = ArrayUtils.join(prefix, pub);
         byte[] content = ArrayUtils.join(tmp, checksum);
 

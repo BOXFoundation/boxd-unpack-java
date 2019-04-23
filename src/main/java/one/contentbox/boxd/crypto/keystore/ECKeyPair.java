@@ -9,6 +9,10 @@ package one.contentbox.boxd.crypto.keystore;
 
 import one.contentbox.boxd.crypto.secp256k1.Secp256k1;
 import one.contentbox.boxd.util.ByteUtils;
+import org.bouncycastle.crypto.digests.SHA256Digest;
+import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
+import org.bouncycastle.crypto.signers.ECDSASigner;
+import org.bouncycastle.crypto.signers.HMacDSAKCalculator;
 import org.bouncycastle.jcajce.provider.asymmetric.ec.BCECPrivateKey;
 import org.bouncycastle.jcajce.provider.asymmetric.ec.BCECPublicKey;
 
@@ -35,6 +39,20 @@ public class ECKeyPair {
         return publicKey;
     }
 
+
+    /**
+     * Sign a hash with the private key of this key pair.
+     * @param transactionHash   the hash to sign
+     * @return  An {@link ECDSASignature} of the hash
+     */
+    public ECDSASignature sign(byte[] transactionHash) {
+        ECDSASigner signer = new ECDSASigner(new HMacDSAKCalculator(new SHA256Digest()));
+        ECPrivateKeyParameters privKey = new ECPrivateKeyParameters(privateKey, Secp256k1.CURVE);
+        signer.init(true, privKey);
+        BigInteger[] components = signer.generateSignature(transactionHash);
+
+        return new ECDSASignature(components[0], components[1]).toCanonicalised();
+    }
 
     public static ECKeyPair create(byte[] privateKey) {
         byte[] publicKey = Secp256k1.PublicFromPrivateKey(privateKey);
