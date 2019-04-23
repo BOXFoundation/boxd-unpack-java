@@ -55,7 +55,7 @@ public class AddressUtils {
     }
 
     public static String getAddrFromPubKey(byte[] pubKey) {
-        byte[] pub = Hash.sha256hash160(pubKey);
+        byte[] pub = Hash.Ripemd160(Sha256Hash.hash(pubKey));
         // prefix
         byte[] prefix = {0x13, 0x26};
 

@@ -11,7 +11,6 @@ import org.bouncycastle.asn1.DLSequence;
 import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.asn1.x9.X9IntegerConverter;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
-import org.bouncycastle.crypto.digests.SHA256Digest;
 import org.bouncycastle.crypto.ec.CustomNamedCurves;
 import org.bouncycastle.crypto.generators.ECKeyPairGenerator;
 import org.bouncycastle.crypto.params.ECDomainParameters;
@@ -19,7 +18,6 @@ import org.bouncycastle.crypto.params.ECKeyGenerationParameters;
 import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
 import org.bouncycastle.crypto.params.ECPublicKeyParameters;
 import org.bouncycastle.crypto.signers.ECDSASigner;
-import org.bouncycastle.crypto.signers.HMacDSAKCalculator;
 import org.bouncycastle.math.ec.ECAlgorithms;
 import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
@@ -78,6 +76,11 @@ public class Secp256k1 {
 
         ECPoint point = new FixedPointCombMultiplier().multiply(CURVE.getG(), privKey);
         return point.getEncoded(true);
+    }
+
+
+    public static byte[] PublicFromPrivateKey(BigInteger privateKey) {
+        return PublicFromPrivateKey(privateKey.toByteArray());
     }
 
     public static byte[] RecoverPubBytesFromSignature(byte[] data, byte[] sign) {
@@ -184,36 +187,6 @@ public class Secp256k1 {
         seq.close();
         return bos.toByteArray();
     }
-
-//    public static byte[] Sign(byte[] data, byte[] privateKey) {
-//        if (data.length != 32) {
-//            throw new IllegalArgumentException("Expected 32 byte input to ECDSA signature, not " + data.length);
-//        }
-//        ECDSASigner signer = new ECDSASigner(new HMacDSAKCalculator(new SHA256Digest()));
-//        ECPrivateKeyParameters privKey = new ECPrivateKeyParameters(new BigInteger(1, privateKey), CURVE);
-//        signer.init(true, privKey);
-//        BigInteger[] components = signer.generateSignature(data);
-//
-//        ECDSASignature signature = new ECDSASignature(components[0], components[1]).toCanonicalised();
-//
-//        // Now we have to work backwards to figure out the recId needed to recover the signature.
-//        int recId = -1;
-//        byte[] pubkey = PublicFromPrivateKey(privateKey);
-//        for (int i = 0; i < 4; i++) {
-//            byte[] k = recoverPubBytesFromSignature(i, signature, data);
-//            if (k != null && Arrays.equals(k, pubkey)) {
-//                recId = i;
-//                break;
-//            }
-//        }
-//        if (recId == -1) {
-//            throw new RuntimeException("Could not construct a recoverable key. This should never happen.");
-//        }
-//        signature.v = (byte) (recId + 27);
-//
-//        return signature.toByteArray();
-//
-//    }
 
     public static boolean Verify(byte[] data, byte[] sign, byte[] pub) {
         if (data.length != 32) {

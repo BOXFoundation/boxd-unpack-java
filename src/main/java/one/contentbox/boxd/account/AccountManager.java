@@ -9,7 +9,7 @@ import java.nio.file.FileAlreadyExistsException;
 public interface AccountManager {
 
     boolean dumpKeyStoreFromPrivKey(String privKey, String password, String path)
-            throws FileNotFoundException, FileAlreadyExistsException,  BoxdException;
+            throws FileAlreadyExistsException,  BoxdException;
 
     String dumpPrivKeyFromKeyStore(String  file, String passphrase) throws FileNotFoundException, BoxdException;
     String dumpPrivKeyFromKeyStore(File file, String passphrase) throws FileNotFoundException, BoxdException;

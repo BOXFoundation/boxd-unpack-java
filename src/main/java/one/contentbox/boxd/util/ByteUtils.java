@@ -22,6 +22,10 @@ public class ByteUtils {
         return true;
     }
 
+    public static BigInteger toBigInt(byte[] value) {
+        return new BigInteger(1, value);
+    }
+
     public static byte[] SubBytes(byte[] src, int begin, int count) {
         byte[] bs = new byte[count];
         System.arraycopy(src, begin, bs, 0, count);
