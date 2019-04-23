@@ -29,9 +29,7 @@ import one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag;
 import one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction;
 import one.contentbox.boxd.util.AddressUtils;
 import one.contentbox.boxd.util.ProtobufSerdeUtils;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-import java.security.Security;
 import java.util.*;
 
 /**
@@ -39,10 +37,6 @@ import java.util.*;
  */
 @Slf4j
 public class RpcBoxdClientImpl implements BoxdClient {
-
-    static {
-        Security.addProvider(new BouncyCastleProvider());
-    }
 
     private String host = "localhost";
     private int port = 19111;
@@ -52,7 +46,6 @@ public class RpcBoxdClientImpl implements BoxdClient {
     ContorlCommandGrpc.ContorlCommandBlockingStub contorlCommandBlockingStub;
     TransactionCommandGrpc.TransactionCommandBlockingStub transactionCommandBlockingStub;
     WebApiGrpc.WebApiBlockingStub webApiBlockingStub;
-    FaucetGrpc.FaucetBlockingStub faucetBlockingStub;
 
     AccountManager account = new AccountManagerImpl();
 
@@ -74,11 +67,6 @@ public class RpcBoxdClientImpl implements BoxdClient {
         this.transactionCommandBlockingStub = TransactionCommandGrpc
                 .newBlockingStub(this.managedChannel).withWaitForReady();
         this.webApiBlockingStub = WebApiGrpc.newBlockingStub(this.managedChannel).withWaitForReady();
-    }
-
-    @Override
-    public ManagedChannel getManagedChannel() {
-        return managedChannel;
     }
 
     @Override
@@ -487,7 +475,6 @@ public class RpcBoxdClientImpl implements BoxdClient {
         txBuilder.addAllVout(vouts);
 
         Transaction unsignedTx = txBuilder.build();
-
 
         return new UnsignedTx(unsignedTx, null);
     }

@@ -17,8 +17,7 @@ public class BoxdDaemonSample {
         String host = "39.97.169.1";
         int port = 19111;
 
-        BoxdClient client = new RpcBoxdClientImpl(host, port);
-        BoxdDaemon boxdDaemon = new BoxdDaemon(client);
+        BoxdDaemon boxdDaemon = new BoxdDaemon(host, port);
         boxdDaemon.setBlockListener(new BlockListener() {
             @Override
             public void blockDetected(BlockDetail blockDetail) {

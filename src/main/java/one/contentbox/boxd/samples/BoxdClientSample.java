@@ -87,11 +87,6 @@ public class BoxdClientSample {
         return boxdClient.viewBlockDetail(hash);
     }
 
-//    public boolean isValidAddr(String addr) throws BoxdException {
-//        return boxdClient.isValidAddr(addr);
-//    }
-
-
     public static void main(String[] args) throws Exception {
         String host = "39.97.169.1";
         int port = 19111;
@@ -128,12 +123,10 @@ public class BoxdClientSample {
         List<Node> nodes = sample.getNodeInfo();
         System.out.println(SampleHelper.formatJavaObject(nodes));
 
-
         Block block = sample.getBlock(height);
         Block block1 = sample.getBlock(blockHash1);
         System.out.println(SampleHelper.formatJavaObject(block));
         System.out.println(SampleHelper.formatJavaObject(block1));
-
 
         long balance = sample.getBalance(addr);
         System.out.println(balance);
@@ -158,12 +151,5 @@ public class BoxdClientSample {
 
         BlockDetail blockDetail = sample.viewBlockDetail(blockHash);
         System.out.println(SampleHelper.formatJavaObject(blockDetail));
-
-//        boolean isValid1 = sample.isValidAddr(addr);
-//        boolean isValid2 = sample.isValidAddr(addr1);
-//        boolean isValid3 = sample.isValidAddr(addr.substring(1));
-//        boolean isValid4 = sample.isValidAddr(addr.replaceFirst("k", "m"));
-//
-//        System.out.println(isValid1 + "\t" + isValid2 + "\t" + isValid3 + "\t" + isValid4) ;
     }
 }

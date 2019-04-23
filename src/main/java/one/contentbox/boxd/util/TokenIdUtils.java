@@ -8,9 +8,7 @@ import org.bouncycastle.util.encoders.Hex;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-
 public class TokenIdUtils {
-
 
     public static Outpoint parse(String base58Outpint) throws Exception{
         byte[] indexByte = new byte[4];

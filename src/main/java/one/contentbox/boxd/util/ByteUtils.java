@@ -51,7 +51,7 @@ public class ByteUtils {
     /**
      * Omitting sign indication byte.
      * <br><br>
-     * Instead of {@link org.spongycastle.util.BigIntegers#asUnsignedByteArray(BigInteger)}
+     * Instead of {@link org.bouncycastle.util.BigIntegers#asUnsignedByteArray(BigInteger)}
      * <br>we use this custom method to avoid an empty array in case of BigInteger.ZERO
      *
      * @param value - any big integer number. A <code>null</code>-value will return <code>null</code>
@@ -143,7 +143,6 @@ public class ByteUtils {
             result = a | b | c | d;
         }
         return result;
-
     }
 
     public static byte[] LongToBytes(long num) {
@@ -158,7 +157,6 @@ public class ByteUtils {
         result[6] = (byte)((num >>> 8) & 0xff );
         result[7] = (byte)((num >>> 0) & 0xff );
         return result;
-
     }
 
     public static long BytesToLong(byte[] bytes) {

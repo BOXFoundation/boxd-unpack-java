@@ -28,9 +28,6 @@ public class Keys {
     static final int PUBLIC_KEY_SIZE = 64;
 
     public static final int ADDRESS_SIZE = 160;
-    public static final int ADDRESS_LENGTH_IN_HEX = ADDRESS_SIZE >> 2;
-    static final int PUBLIC_KEY_LENGTH_IN_HEX = PUBLIC_KEY_SIZE << 1;
-    public static final int PRIVATE_KEY_LENGTH_IN_HEX = PRIVATE_KEY_SIZE << 1;
 
     static {
         if (Security.getProvider(BouncyCastleProvider.PROVIDER_NAME) == null) {

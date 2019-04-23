@@ -206,13 +206,13 @@ public class AccountManagerImpl implements AccountManager {
 
             byte[] mac = generateMac(deribedKey, cipherText);
 
-            return createFile(privateKeyBytes, ecKeyPair.getPublicKey().toByteArray(), salt, cipherText, iv, mac);
+            return createFile(ecKeyPair.getPublicKey().toByteArray(), salt, cipherText, iv, mac);
         }catch (Exception e){
             throw new BoxdException(-1, "Create KeyStore error, " + e.getMessage());
         }
     }
 
-    private KeyStore createFile(byte[] privateKeyBytes, byte[] pubKeyBytes,
+    private KeyStore createFile(byte[] pubKeyBytes,
                                 byte[] salt, byte[] cipherText, byte[] iv, byte[] mac ) throws BoxdException {
 
         String addr = getAddrFromPubKey(pubKeyBytes);
@@ -227,12 +227,9 @@ public class AccountManagerImpl implements AccountManager {
         cryto.setCiphertext(Hex.toHexString(cipherText));
         cryto.setCipher(CIPHER);
 
-
         KeyStore.Cipherparams cipherparams = new KeyStore.Cipherparams();
         cipherparams.setIv(Hex.toHexString(iv));
-
         cryto.setCipherparams(cipherparams);
-
         cryto.setMac(Hex.toHexString(mac));
 
         KeyStore.Kdfparams kdfparams = new KeyStore.Kdfparams();
@@ -241,11 +238,9 @@ public class AccountManagerImpl implements AccountManager {
         kdfparams.setN(N_STANDARD);
         kdfparams.setP(P_STANDARD);
         kdfparams.setR(R);
-
         cryto.setKdfparams(kdfparams);
 
         keyStoreFile.setCrypto(cryto);
-
         return keyStoreFile;
     }
 

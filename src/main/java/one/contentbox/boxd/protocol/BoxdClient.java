@@ -23,13 +23,6 @@ import java.util.Map;
 public interface BoxdClient {
 
     /**
-     * Get rpc channel
-     *
-     * @return
-     */
-    ManagedChannel getManagedChannel();
-
-    /**
      * Add the given nodeId to local node, the local node will connect to the given node
      *
      * @param nodeId

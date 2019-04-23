@@ -11,7 +11,7 @@ public class TxIn {
 
     private OutPoint prevOutPoint;
     private String scriptSig;
-    private long sequence;
+    //private long sequence;
 
     public TxIn() {
     }
@@ -24,9 +24,9 @@ public class TxIn {
         return this.scriptSig;
     }
 
-    public long getSequence() {
-        return this.sequence;
-    }
+//    public long getSequence() {
+//        return this.sequence;
+//    }
 
     public void setPrevOutPoint(OutPoint prevOutPoint) {
         this.prevOutPoint = prevOutPoint;
@@ -36,9 +36,9 @@ public class TxIn {
         this.scriptSig = scriptSig;
     }
 
-    public void setSequence(long sequence) {
-        this.sequence = sequence;
-    }
+//    public void setSequence(long sequence) {
+//        this.sequence = sequence;
+//    }
 
     public boolean equals(Object o) {
         if (o == this) return true;
@@ -52,10 +52,11 @@ public class TxIn {
         final Object this$scriptSig = this.getScriptSig();
         final Object other$scriptSig = other.getScriptSig();
         if (this$scriptSig == null ? other$scriptSig != null : !this$scriptSig.equals(other$scriptSig)) return false;
-        if (this.getSequence() != other.getSequence()) return false;
+        //if (this.getSequence() != other.getSequence()) return false;
         return true;
     }
 
+    @Override
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -63,8 +64,8 @@ public class TxIn {
         result = result * PRIME + ($prevOutPoint == null ? 43 : $prevOutPoint.hashCode());
         final Object $scriptSig = this.getScriptSig();
         result = result * PRIME + ($scriptSig == null ? 43 : $scriptSig.hashCode());
-        final long $sequence = this.getSequence();
-        result = result * PRIME + (int) ($sequence >>> 32 ^ $sequence);
+        //final long $sequence = this.getSequence();
+        //result = result * PRIME + (int) ($sequence >>> 32 ^ $sequence);
         return result;
     }
 
@@ -72,7 +73,8 @@ public class TxIn {
         return other instanceof TxIn;
     }
 
+    @Override
     public String toString() {
-        return "TxIn(prevOutPoint=" + this.getPrevOutPoint() + ", scriptSig=" + this.getScriptSig() + ", sequence=" + this.getSequence() + ")";
+        return "TxIn(prevOutPoint=" + this.getPrevOutPoint() + ", scriptSig=" + this.getScriptSig();
     }
 }

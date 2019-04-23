@@ -17,7 +17,6 @@ public interface AccountManager {
     String dumpAddrFromPrivKey(String privKey) throws BoxdException;
     String dumpAddrFromPrivKey(byte[] privKeyBytes) throws BoxdException;
 
-
     byte[] dumpPubKeyHashFromPrivKey(byte[] privKey) throws BoxdException;
     byte[] dumpPubKeyHashFromPrivKey(String privKey) throws BoxdException;
 
@@ -25,7 +24,6 @@ public interface AccountManager {
 
     byte[] dumpPubKeyFromPrivKey(String privKey) throws BoxdException;
     byte[] dumpPubKeyFromPrivKey(byte[] privKey) throws BoxdException;
-
 
     boolean newAccount(String passphrase, String keyStoreFilePath)
             throws FileAlreadyExistsException, BoxdException;

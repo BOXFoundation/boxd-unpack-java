@@ -71,7 +71,6 @@ public class Secp256k1 {
         return point.getEncoded(true);
     }
 
-
     public static byte[] PublicFromPrivateKey(BigInteger privateKey) {
         return PublicFromPrivateKey(privateKey.toByteArray());
     }

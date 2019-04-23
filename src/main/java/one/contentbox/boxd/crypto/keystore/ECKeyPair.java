@@ -39,7 +39,6 @@ public class ECKeyPair {
         return publicKey;
     }
 
-
     /**
      * Sign a hash with the private key of this key pair.
      * @param transactionHash   the hash to sign

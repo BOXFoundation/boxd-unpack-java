@@ -1,7 +1,5 @@
 package one.contentbox.boxd.exception;
 
-import lombok.Data;
-
 /**
  * Boxd Exception class
  */

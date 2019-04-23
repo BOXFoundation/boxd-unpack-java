@@ -11,11 +11,11 @@ public class TxInDetail {
 
     private TxOutDetail prevOutDetail;
     private String scriptSig;
-    private int sequence;
     private String prevOutPoint;
 
     public TxInDetail() {
     }
+
 
     public TxOutDetail getPrevOutDetail() {
         return this.prevOutDetail;
@@ -23,10 +23,6 @@ public class TxInDetail {
 
     public String getScriptSig() {
         return this.scriptSig;
-    }
-
-    public int getSequence() {
-        return this.sequence;
     }
 
     public String getPrevOutPoint() {
@@ -39,10 +35,6 @@ public class TxInDetail {
 
     public void setScriptSig(String scriptSig) {
         this.scriptSig = scriptSig;
-    }
-
-    public void setSequence(int sequence) {
-        this.sequence = sequence;
     }
 
     public void setPrevOutPoint(String prevOutPoint) {
@@ -61,7 +53,6 @@ public class TxInDetail {
         final Object this$scriptSig = this.getScriptSig();
         final Object other$scriptSig = other.getScriptSig();
         if (this$scriptSig == null ? other$scriptSig != null : !this$scriptSig.equals(other$scriptSig)) return false;
-        if (this.getSequence() != other.getSequence()) return false;
         final Object this$prevOutPoint = this.getPrevOutPoint();
         final Object other$prevOutPoint = other.getPrevOutPoint();
         if (this$prevOutPoint == null ? other$prevOutPoint != null : !this$prevOutPoint.equals(other$prevOutPoint))
@@ -76,7 +67,6 @@ public class TxInDetail {
         result = result * PRIME + ($prevOutDetail == null ? 43 : $prevOutDetail.hashCode());
         final Object $scriptSig = this.getScriptSig();
         result = result * PRIME + ($scriptSig == null ? 43 : $scriptSig.hashCode());
-        result = result * PRIME + this.getSequence();
         final Object $prevOutPoint = this.getPrevOutPoint();
         result = result * PRIME + ($prevOutPoint == null ? 43 : $prevOutPoint.hashCode());
         return result;
@@ -87,6 +77,6 @@ public class TxInDetail {
     }
 
     public String toString() {
-        return "TxInDetail(prevOutDetail=" + this.getPrevOutDetail() + ", scriptSig=" + this.getScriptSig() + ", sequence=" + this.getSequence() + ", prevOutPoint=" + this.getPrevOutPoint() + ")";
+        return "TxInDetail(prevOutDetail=" + this.getPrevOutDetail() + ", scriptSig=" + this.getScriptSig() + ", prevOutPoint=" + this.getPrevOutPoint() + ")";
     }
 }

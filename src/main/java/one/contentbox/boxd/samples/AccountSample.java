@@ -19,7 +19,6 @@ public class AccountSample {
     static File f = new File("demo.keystore");
     static String path = "demo1.keystore";
 
-
     public String dumpAddrFromPrivateKey(String privKey) throws BoxdException{
         return manager.dumpAddrFromPrivKey(privKey);
     }
@@ -44,11 +43,12 @@ public class AccountSample {
         if(f.exists()){
             f.delete();
         }
-
         return manager.newAccount(password, path);
     }
 
-
+    public boolean isValidAddr(String addr) {
+        return AddressUtils.isVaildAddr(addr);
+    }
 
     public static void main(String args[]) throws Exception{
         AccountSample sample = new AccountSample();
@@ -60,8 +60,12 @@ public class AccountSample {
 
         sample.dumpKeyStoreFromPrivateKey(privateKey, path, password);
 
-
         sample.newAccount("new.keystore", "1");
 
+        boolean isValid = sample.isValidAddr(addr);
+        System.out.println(isValid);
+
+        System.out.println(sample.isValidAddr(addr.substring(1)));
+        System.out.println(sample.isValidAddr(addr.replace("T", "B")));
     }
 }

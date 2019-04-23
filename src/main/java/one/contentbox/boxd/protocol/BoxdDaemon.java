@@ -2,11 +2,10 @@ package one.contentbox.boxd.protocol;
 
 import io.grpc.ConnectivityState;
 import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
 import lombok.extern.slf4j.Slf4j;
 import one.contentbox.boxd.exception.BoxdException;
-import one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail;
-import one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq;
-import one.contentbox.boxd.protocol.rpc.protobuf.generated.WebApiGrpc;
+import one.contentbox.boxd.protocol.rpc.protobuf.generated.*;
 import one.contentbox.boxd.protocol.subscribe.BlockListener;
 
 import java.util.Iterator;
@@ -25,16 +24,24 @@ public class BoxdDaemon extends  Thread{
 
     private BlockListener blockListener;
 
+    private String host;
+    private int port;
+
     /**
      * Init boxdDaemon
-     *
-     * @param boxdClient
      */
-    public BoxdDaemon(BoxdClient boxdClient) throws BoxdException {
-        this.managedChannel = boxdClient.getManagedChannel();
-        if (this.managedChannel.isShutdown()){
-            throw new BoxdException(-1, "Rpc connect is already shutdown");
+    public BoxdDaemon(String host, int port) throws BoxdException {
+        if (host != null && !"".equalsIgnoreCase(host)) {
+            this.host = host;
         }
+        this.port = port;
+
+        this.managedChannel = ManagedChannelBuilder
+            .forAddress(this.host, this.port)
+            .usePlaintext()
+                .enableRetry()
+                .maxRetryAttempts(1)
+                .build();
         this.webApiBlockingStub = WebApiGrpc.newBlockingStub(this.managedChannel).withWaitForReady();
     }
 
