@@ -1,7 +1,6 @@
 package one.contentbox.boxd.account;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lambdaworks.crypto.SCrypt;
 import lombok.extern.slf4j.Slf4j;
 import one.contentbox.boxd.crypto.hash.Hash;
 import one.contentbox.boxd.crypto.keystore.ECKeyPair;
@@ -10,6 +9,7 @@ import one.contentbox.boxd.crypto.secp256k1.Secp256k1;
 import one.contentbox.boxd.crypto.util.Utils;
 import one.contentbox.boxd.exception.BoxdException;
 import one.contentbox.boxd.util.AddressUtils;
+import org.bouncycastle.crypto.generators.SCrypt;
 import org.bouncycastle.util.encoders.Hex;
 
 import javax.crypto.BadPaddingException;
@@ -132,7 +132,7 @@ public class AccountManagerImpl implements AccountManager {
             byte[] salt = Hex.decode(kdfparams.getSalt());
             byte[] derivedKey = null;
             try {
-                derivedKey = SCrypt.scrypt(bytes, salt, n, r, p, dklen);
+                derivedKey = SCrypt.generate(bytes, salt, n, r, p, dklen);
             }catch (Exception e){
                 throw new BoxdException(-1, "Create keystore err : " + e.getMessage());
             }
@@ -275,7 +275,7 @@ public class AccountManagerImpl implements AccountManager {
 
     private static byte[] generateDerivedScryptKey(
             byte[] password, byte[] salt, int n, int r, int p, int dkLen) throws Exception{
-        return SCrypt.scrypt(password, salt, n, r, p, dkLen);
+        return SCrypt.generate(password, salt, n, r, p, dkLen);
     }
 
     private static byte[] generateRandomBytes(int size) {

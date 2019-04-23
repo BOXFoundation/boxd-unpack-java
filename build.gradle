@@ -27,8 +27,6 @@ dependencies {
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.26'
     compile group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.61'
 
-    compile group: 'com.lambdaworks', name: 'scrypt', version: '1.4.0'
-
     compile('io.grpc:grpc-netty:1.18.0')
     compile('io.grpc:grpc-protobuf:1.18.0')
     compile('io.grpc:grpc-stub:1.18.0')
