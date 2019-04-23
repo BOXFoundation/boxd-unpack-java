@@ -4,14 +4,12 @@ import io.grpc.ConnectivityState;
 import io.grpc.ManagedChannel;
 import lombok.extern.slf4j.Slf4j;
 import one.contentbox.boxd.exception.BoxdException;
-import one.contentbox.boxd.protocol.subscribe.BlockListener;
 import one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail;
 import one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq;
 import one.contentbox.boxd.protocol.rpc.protobuf.generated.WebApiGrpc;
+import one.contentbox.boxd.protocol.subscribe.BlockListener;
 
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
