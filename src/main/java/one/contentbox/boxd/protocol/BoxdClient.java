@@ -1,6 +1,5 @@
 package one.contentbox.boxd.protocol;
 
-import io.grpc.ManagedChannel;
 import one.contentbox.boxd.exception.BoxdException;
 import one.contentbox.boxd.protocol.core.request.*;
 import one.contentbox.boxd.protocol.core.response.*;

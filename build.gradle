@@ -1,22 +1,37 @@
 buildscript {
     repositories {
+        jcenter()
         mavenCentral()
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
+        }
     }
     dependencies {
         classpath("com.google.protobuf:protobuf-gradle-plugin:0.8.0")
+        classpath("com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3")
     }
 }
 
 apply plugin: 'java'
+apply plugin: 'maven'
 apply plugin: 'eclipse'
 apply plugin: 'com.google.protobuf'
-group 'one.one.boxd.client'
-version '0.1.0'
+apply plugin: 'com.jfrog.bintray'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
+    }
 }
 
 dependencies {
@@ -50,9 +65,21 @@ protobuf {
             artifact = 'io.grpc:protoc-gen-grpc-java:1.4.0'
         }
     }
+
     generateProtoTasks {
         all()*.plugins {
             grpc {}
+        }
+    }
+}
+
+allprojects {
+    tasks.withType(Javadoc) {
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/8/docs/api"
+            failOnError false
         }
     }
 }
@@ -67,3 +94,29 @@ sourceSets {
         }
     }
 }
+
+ext {
+    // have to change
+    publishedGroupId = 'one.contentbox.boxd'
+    // `artifact` also use as and `bintray.pkg.name` for simplifying
+    artifact = 'boxd-client'
+    libraryVersion = '0.0.1'
+    // `libraryName` also uses as `bintray.pkg.libraryName` and `bintray.pkg.version.libraryName`
+    libraryName = 'Boxd Java SDK'
+
+    siteUrl = 'https://github.com/BOXFoundation/boxd-unpack-java'
+
+    // normally no need to change
+    repoName = 'maven'
+
+    gitUrl = "${siteUrl}.git"
+
+    developerId = 'JarvisWang'
+    developerName = 'JarvisWang'
+    developerEmail = 'wangjunbao2018@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+apply from: 'bintray.gradle'
