@@ -9,7 +9,7 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-//apply plugin: 'com.google.protobuf'
+apply plugin: 'com.google.protobuf'
 group 'one.one.boxd.client'
 version '0.1.0'
 
@@ -34,36 +34,36 @@ dependencies {
     compile group: 'com.alibaba', name: 'fastjson', version: '1.2.56'
 }
 
-//protobuf {
-//    protoc {
-//        artifact = "com.google.protobuf:protoc:3.2.0"
-//    }
-//
-//    generatedFilesBaseDir = "build/generated"
-//
-//    clean {
-//        delete generatedFilesBaseDir
-//    }
-//
-//    plugins {
-//        grpc {
-//            artifact = 'io.grpc:protoc-gen-grpc-java:1.4.0'
-//        }
-//    }
-//    generateProtoTasks {
-//        all()*.plugins {
-//            grpc {}
-//        }
-//    }
-//}
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.2.0"
+    }
 
-//sourceSets {
-//    main {
-//        proto {
-//            srcDir 'src/main/proto'
-//        }
-//        java {
-//            srcDir 'src/main/java'
-//        }
-//    }
-//}
+    generatedFilesBaseDir = "build/generated"
+
+    clean {
+        delete generatedFilesBaseDir
+    }
+
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.4.0'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
+
+sourceSets {
+    main {
+        proto {
+            srcDir 'src/main/proto'
+        }
+        java {
+            srcDir 'src/main/java'
+        }
+    }
+}
