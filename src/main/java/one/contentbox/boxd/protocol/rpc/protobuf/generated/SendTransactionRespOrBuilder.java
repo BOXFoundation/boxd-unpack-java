@@ -15,7 +15,7 @@ public interface SendTransactionRespOrBuilder extends
   /**
    * <code>string message = 2;</code>
    */
-  java.lang.String getMessage();
+  String getMessage();
   /**
    * <code>string message = 2;</code>
    */
@@ -25,7 +25,7 @@ public interface SendTransactionRespOrBuilder extends
   /**
    * <code>string hash = 3;</code>
    */
-  java.lang.String getHash();
+  String getHash();
   /**
    * <code>string hash = 3;</code>
    */

@@ -19,7 +19,7 @@ public  final class SplitContractInfo extends
     weights_ = java.util.Collections.emptyList();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -45,7 +45,7 @@ public  final class SplitContractInfo extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               addrs_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000001;
@@ -55,7 +55,7 @@ public  final class SplitContractInfo extends
           }
           case 16: {
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-              weights_ = new java.util.ArrayList<java.lang.Long>();
+              weights_ = new java.util.ArrayList<Long>();
               mutable_bitField0_ |= 0x00000002;
             }
             weights_.add(input.readUInt64());
@@ -65,7 +65,7 @@ public  final class SplitContractInfo extends
             int length = input.readRawVarint32();
             int limit = input.pushLimit(length);
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-              weights_ = new java.util.ArrayList<java.lang.Long>();
+              weights_ = new java.util.ArrayList<Long>();
               mutable_bitField0_ |= 0x00000002;
             }
             while (input.getBytesUntilLimit() > 0) {
@@ -93,14 +93,14 @@ public  final class SplitContractInfo extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return WebProto.internal_static_rpcpb_SplitContractInfo_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_SplitContractInfo_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return WebProto.internal_static_rpcpb_SplitContractInfo_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_SplitContractInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            SplitContractInfo.class, SplitContractInfo.Builder.class);
+            SplitContractInfo.class, Builder.class);
   }
 
   public static final int ADDRS_FIELD_NUMBER = 1;
@@ -121,7 +121,7 @@ public  final class SplitContractInfo extends
   /**
    * <code>repeated string addrs = 1;</code>
    */
-  public java.lang.String getAddrs(int index) {
+  public String getAddrs(int index) {
     return addrs_.get(index);
   }
   /**
@@ -133,11 +133,11 @@ public  final class SplitContractInfo extends
   }
 
   public static final int WEIGHTS_FIELD_NUMBER = 2;
-  private java.util.List<java.lang.Long> weights_;
+  private java.util.List<Long> weights_;
   /**
    * <code>repeated uint64 weights = 2;</code>
    */
-  public java.util.List<java.lang.Long>
+  public java.util.List<Long>
       getWeightsList() {
     return weights_;
   }
@@ -212,8 +212,8 @@ public  final class SplitContractInfo extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -230,7 +230,7 @@ public  final class SplitContractInfo extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -321,9 +321,9 @@ public  final class SplitContractInfo extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -333,17 +333,17 @@ public  final class SplitContractInfo extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.SplitContractInfo)
-          SplitContractInfoOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.SplitContractInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return WebProto.internal_static_rpcpb_SplitContractInfo_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_SplitContractInfo_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return WebProto.internal_static_rpcpb_SplitContractInfo_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_SplitContractInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SplitContractInfo.class, SplitContractInfo.Builder.class);
+              SplitContractInfo.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.SplitContractInfo.newBuilder()
@@ -352,7 +352,7 @@ public  final class SplitContractInfo extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -372,7 +372,7 @@ public  final class SplitContractInfo extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return WebProto.internal_static_rpcpb_SplitContractInfo_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_SplitContractInfo_descriptor;
     }
 
     public SplitContractInfo getDefaultInstanceForType() {
@@ -511,7 +511,7 @@ public  final class SplitContractInfo extends
     /**
      * <code>repeated string addrs = 1;</code>
      */
-    public java.lang.String getAddrs(int index) {
+    public String getAddrs(int index) {
       return addrs_.get(index);
     }
     /**
@@ -525,7 +525,7 @@ public  final class SplitContractInfo extends
      * <code>repeated string addrs = 1;</code>
      */
     public Builder setAddrs(
-        int index, java.lang.String value) {
+        int index, String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -538,7 +538,7 @@ public  final class SplitContractInfo extends
      * <code>repeated string addrs = 1;</code>
      */
     public Builder addAddrs(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -551,7 +551,7 @@ public  final class SplitContractInfo extends
      * <code>repeated string addrs = 1;</code>
      */
     public Builder addAllAddrs(
-        java.lang.Iterable<java.lang.String> values) {
+        Iterable<String> values) {
       ensureAddrsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, addrs_);
@@ -582,17 +582,17 @@ public  final class SplitContractInfo extends
       return this;
     }
 
-    private java.util.List<java.lang.Long> weights_ = java.util.Collections.emptyList();
+    private java.util.List<Long> weights_ = java.util.Collections.emptyList();
     private void ensureWeightsIsMutable() {
       if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-        weights_ = new java.util.ArrayList<java.lang.Long>(weights_);
+        weights_ = new java.util.ArrayList<Long>(weights_);
         bitField0_ |= 0x00000002;
        }
     }
     /**
      * <code>repeated uint64 weights = 2;</code>
      */
-    public java.util.List<java.lang.Long>
+    public java.util.List<Long>
         getWeightsList() {
       return java.util.Collections.unmodifiableList(weights_);
     }
@@ -631,7 +631,7 @@ public  final class SplitContractInfo extends
      * <code>repeated uint64 weights = 2;</code>
      */
     public Builder addAllWeights(
-        java.lang.Iterable<? extends java.lang.Long> values) {
+        Iterable<? extends Long> values) {
       ensureWeightsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, weights_);
@@ -685,7 +685,7 @@ public  final class SplitContractInfo extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<SplitContractInfo> getParserForType() {
     return PARSER;
   }

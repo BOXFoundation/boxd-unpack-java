@@ -24,7 +24,7 @@ public  final class BlockHeader extends
     candidatesHash_ = com.google.protobuf.ByteString.EMPTY;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -97,14 +97,14 @@ public  final class BlockHeader extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return BlockProto.internal_static_corepb_BlockHeader_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return BlockProto.internal_static_corepb_BlockHeader_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            BlockHeader.class, BlockHeader.Builder.class);
+            BlockHeader.class, Builder.class);
   }
 
   public static final int VERSION_FIELD_NUMBER = 1;
@@ -243,8 +243,8 @@ public  final class BlockHeader extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -271,7 +271,7 @@ public  final class BlockHeader extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -369,9 +369,9 @@ public  final class BlockHeader extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -381,17 +381,17 @@ public  final class BlockHeader extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.BlockHeader)
-          BlockHeaderOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeaderOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return BlockProto.internal_static_corepb_BlockHeader_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return BlockProto.internal_static_corepb_BlockHeader_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              BlockHeader.class, BlockHeader.Builder.class);
+              BlockHeader.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.newBuilder()
@@ -400,7 +400,7 @@ public  final class BlockHeader extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -430,7 +430,7 @@ public  final class BlockHeader extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return BlockProto.internal_static_corepb_BlockHeader_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_descriptor;
     }
 
     public BlockHeader getDefaultInstanceForType() {
@@ -773,7 +773,7 @@ public  final class BlockHeader extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<BlockHeader> getParserForType() {
     return PARSER;
   }

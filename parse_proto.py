@@ -11,7 +11,7 @@ import shutil
 #option java_outer_classname ="Proto";
 #option java_multiple_files = true;
 
-_j_package = '''option java_package = "one.contentbox.boxd.proto";'''
+_j_package = '''option java_package = "one.contentbox.boxd.protocol.rpc.protobuf.generated";'''
 _j_class_prefix = '''option java_outer_classname ="'''
 _j_class_subfix = '''Proto";'''
 _j_multi_file = '''option java_multiple_files = true;'''

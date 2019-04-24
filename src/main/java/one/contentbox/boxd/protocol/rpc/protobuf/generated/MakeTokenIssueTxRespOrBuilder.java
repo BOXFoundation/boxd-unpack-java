@@ -15,7 +15,7 @@ public interface MakeTokenIssueTxRespOrBuilder extends
   /**
    * <code>string message = 2;</code>
    */
-  java.lang.String getMessage();
+  String getMessage();
   /**
    * <code>string message = 2;</code>
    */
@@ -34,11 +34,11 @@ public interface MakeTokenIssueTxRespOrBuilder extends
   /**
    * <code>.corepb.Transaction tx = 4;</code>
    */
-  Transaction getTx();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTx();
   /**
    * <code>.corepb.Transaction tx = 4;</code>
    */
-  TransactionOrBuilder getTxOrBuilder();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxOrBuilder();
 
   /**
    * <code>repeated bytes rawMsgs = 5;</code>

@@ -117,7 +117,7 @@ public final class TransactionProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\021transaction.proto\022\005rpcpb\032\013block.proto\032" +
       "\014common.proto\"\036\n\rGetBalanceReq\022\r\n\005addrs\030" +
       "\001 \003(\t\"A\n\016GetBalanceResp\022\014\n\004code\030\001 \001(\005\022\017\n" +
@@ -144,38 +144,38 @@ public final class TransactionProto {
       "\004\022\013\n\003fee\030\004 \001(\004\"y\n\023MakeSplitAddrTxResp\022\014\n" +
       "\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\021\n\tsplitAdd" +
       "r\030\003 \001(\t\022\037\n\002tx\030\004 \001(\0132\023.corepb.Transaction" +
-      "\022\017\n\007rawMsgs\030\005 \003(\014\"`\n\023MakeTokenIssueTxReq" +
-      "\022\016\n\006issuer\030\001 \001(\t\022\016\n\006issuee\030\002 \001(\t\022\034\n\003tag\030" +
-      "\003 \001(\0132\017.rpcpb.TokenTag\022\013\n\003fee\030\004 \001(\004\"\200\001\n\024" +
-      "MakeTokenIssueTxResp\022\014\n\004code\030\001 \001(\005\022\017\n\007me",
-      "ssage\030\002 \001(\t\022\027\n\017issue_out_index\030\003 \001(\r\022\037\n\002" +
-      "tx\030\004 \001(\0132\023.corepb.Transaction\022\017\n\007rawMsgs" +
-      "\030\005 \003(\014\"y\n\026MakeTokenTransferTxReq\022\014\n\004from" +
-      "\030\001 \001(\t\022\n\n\002to\030\002 \003(\t\022\017\n\007amounts\030\003 \003(\004\022\022\n\nt" +
-      "oken_hash\030\004 \001(\t\022\023\n\013token_index\030\005 \001(\r\022\013\n\003" +
-      "fee\030\006 \001(\004\"I\n\010TokenTag\022\014\n\004name\030\001 \001(\t\022\016\n\006s" +
-      "ymbol\030\002 \001(\t\022\016\n\006supply\030\003 \001(\004\022\017\n\007decimal\030\004" +
-      " \001(\r2\346\005\n\022TransactionCommand\0229\n\nGetBalanc" +
-      "e\022\024.rpcpb.GetBalanceReq\032\025.rpcpb.GetBalan" +
-      "ceResp\022C\n\017GetTokenBalance\022\031.rpcpb.GetTok",
-      "enBalanceReq\032\025.rpcpb.GetBalanceResp\0229\n\nF" +
-      "etchUtxos\022\024.rpcpb.FetchUtxosReq\032\025.rpcpb." +
-      "FetchUtxosResp\022H\n\017SendTransaction\022\031.rpcp" +
-      "b.SendTransactionReq\032\032.rpcpb.SendTransac" +
-      "tionResp\022V\n\021GetRawTransaction\022\037.rpcpb.Ge" +
-      "tRawTransactionRequest\032 .rpcpb.GetRawTra" +
-      "nsactionResponse\022D\n\013GetFeePrice\022\031.rpcpb." +
-      "GetFeePriceRequest\032\032.rpcpb.GetFeePriceRe" +
-      "sponse\0225\n\016MakeUnsignedTx\022\020.rpcpb.MakeTxR" +
-      "eq\032\021.rpcpb.MakeTxResp\022P\n\027MakeUnsignedSpl",
-      "itAddrTx\022\031.rpcpb.MakeSplitAddrTxReq\032\032.rp" +
-      "cpb.MakeSplitAddrTxResp\022S\n\030MakeUnsignedT" +
-      "okenIssueTx\022\032.rpcpb.MakeTokenIssueTxReq\032" +
-      "\033.rpcpb.MakeTokenIssueTxResp\022O\n\033MakeUnsi" +
-      "gnedTokenTransferTx\022\035.rpcpb.MakeTokenTra" +
-      "nsferTxReq\032\021.rpcpb.MakeTxRespB/\n\031one.con" +
-      "tentbox.boxd.protoB\020TransactionProtoP\001b\006" +
-      "proto3"
+      "\022\017\n\007rawMsgs\030\005 \003(\014\"_\n\023MakeTokenIssueTxReq" +
+      "\022\016\n\006issuer\030\001 \001(\t\022\r\n\005owner\030\002 \001(\t\022\034\n\003tag\030\003" +
+      " \001(\0132\017.rpcpb.TokenTag\022\013\n\003fee\030\004 \001(\004\"\200\001\n\024M" +
+      "akeTokenIssueTxResp\022\014\n\004code\030\001 \001(\005\022\017\n\007mes",
+      "sage\030\002 \001(\t\022\027\n\017issue_out_index\030\003 \001(\r\022\037\n\002t" +
+      "x\030\004 \001(\0132\023.corepb.Transaction\022\017\n\007rawMsgs\030" +
+      "\005 \003(\014\"y\n\026MakeTokenTransferTxReq\022\014\n\004from\030" +
+      "\001 \001(\t\022\n\n\002to\030\002 \003(\t\022\017\n\007amounts\030\003 \003(\004\022\022\n\nto" +
+      "ken_hash\030\004 \001(\t\022\023\n\013token_index\030\005 \001(\r\022\013\n\003f" +
+      "ee\030\006 \001(\004\"I\n\010TokenTag\022\014\n\004name\030\001 \001(\t\022\016\n\006sy" +
+      "mbol\030\002 \001(\t\022\016\n\006supply\030\003 \001(\004\022\017\n\007decimal\030\004 " +
+      "\001(\r2\346\005\n\022TransactionCommand\0229\n\nGetBalance" +
+      "\022\024.rpcpb.GetBalanceReq\032\025.rpcpb.GetBalanc" +
+      "eResp\022C\n\017GetTokenBalance\022\031.rpcpb.GetToke",
+      "nBalanceReq\032\025.rpcpb.GetBalanceResp\0229\n\nFe" +
+      "tchUtxos\022\024.rpcpb.FetchUtxosReq\032\025.rpcpb.F" +
+      "etchUtxosResp\022H\n\017SendTransaction\022\031.rpcpb" +
+      ".SendTransactionReq\032\032.rpcpb.SendTransact" +
+      "ionResp\022V\n\021GetRawTransaction\022\037.rpcpb.Get" +
+      "RawTransactionRequest\032 .rpcpb.GetRawTran" +
+      "sactionResponse\022D\n\013GetFeePrice\022\031.rpcpb.G" +
+      "etFeePriceRequest\032\032.rpcpb.GetFeePriceRes" +
+      "ponse\0225\n\016MakeUnsignedTx\022\020.rpcpb.MakeTxRe" +
+      "q\032\021.rpcpb.MakeTxResp\022P\n\027MakeUnsignedSpli",
+      "tAddrTx\022\031.rpcpb.MakeSplitAddrTxReq\032\032.rpc" +
+      "pb.MakeSplitAddrTxResp\022S\n\030MakeUnsignedTo" +
+      "kenIssueTx\022\032.rpcpb.MakeTokenIssueTxReq\032\033" +
+      ".rpcpb.MakeTokenIssueTxResp\022O\n\033MakeUnsig" +
+      "nedTokenTransferTx\022\035.rpcpb.MakeTokenTran" +
+      "sferTxReq\032\021.rpcpb.MakeTxRespBI\n3one.cont" +
+      "entbox.boxd.protocol.rpc.protobuf.genera" +
+      "tedB\020TransactionProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -196,115 +196,115 @@ public final class TransactionProto {
     internal_static_rpcpb_GetBalanceReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetBalanceReq_descriptor,
-        new java.lang.String[] { "Addrs", });
+        new String[] { "Addrs", });
     internal_static_rpcpb_GetBalanceResp_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_rpcpb_GetBalanceResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetBalanceResp_descriptor,
-        new java.lang.String[] { "Code", "Message", "Balances", });
+        new String[] { "Code", "Message", "Balances", });
     internal_static_rpcpb_GetTokenBalanceReq_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_rpcpb_GetTokenBalanceReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetTokenBalanceReq_descriptor,
-        new java.lang.String[] { "Addrs", "TokenHash", "TokenIndex", });
+        new String[] { "Addrs", "TokenHash", "TokenIndex", });
     internal_static_rpcpb_FetchUtxosReq_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_rpcpb_FetchUtxosReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_FetchUtxosReq_descriptor,
-        new java.lang.String[] { "Addr", "Amount", "TokenHash", "TokenIndex", });
+        new String[] { "Addr", "Amount", "TokenHash", "TokenIndex", });
     internal_static_rpcpb_FetchUtxosResp_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_rpcpb_FetchUtxosResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_FetchUtxosResp_descriptor,
-        new java.lang.String[] { "Code", "Message", "Utxos", });
+        new String[] { "Code", "Message", "Utxos", });
     internal_static_rpcpb_GetRawTransactionRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_rpcpb_GetRawTransactionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetRawTransactionRequest_descriptor,
-        new java.lang.String[] { "Hash", });
+        new String[] { "Hash", });
     internal_static_rpcpb_GetRawTransactionResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_rpcpb_GetRawTransactionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetRawTransactionResponse_descriptor,
-        new java.lang.String[] { "Tx", });
+        new String[] { "Tx", });
     internal_static_rpcpb_SendTransactionReq_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_rpcpb_SendTransactionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_SendTransactionReq_descriptor,
-        new java.lang.String[] { "Tx", });
+        new String[] { "Tx", });
     internal_static_rpcpb_SendTransactionResp_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_rpcpb_SendTransactionResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_SendTransactionResp_descriptor,
-        new java.lang.String[] { "Code", "Message", "Hash", });
+        new String[] { "Code", "Message", "Hash", });
     internal_static_rpcpb_GetFeePriceRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_rpcpb_GetFeePriceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetFeePriceRequest_descriptor,
-        new java.lang.String[] { });
+        new String[] { });
     internal_static_rpcpb_GetFeePriceResponse_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_rpcpb_GetFeePriceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetFeePriceResponse_descriptor,
-        new java.lang.String[] { "BoxPerByte", });
+        new String[] { "BoxPerByte", });
     internal_static_rpcpb_MakeTxReq_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_rpcpb_MakeTxReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_MakeTxReq_descriptor,
-        new java.lang.String[] { "From", "To", "Amounts", "Fee", });
+        new String[] { "From", "To", "Amounts", "Fee", });
     internal_static_rpcpb_MakeTxResp_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_rpcpb_MakeTxResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_MakeTxResp_descriptor,
-        new java.lang.String[] { "Code", "Message", "Tx", "RawMsgs", });
+        new String[] { "Code", "Message", "Tx", "RawMsgs", });
     internal_static_rpcpb_MakeSplitAddrTxReq_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_rpcpb_MakeSplitAddrTxReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_MakeSplitAddrTxReq_descriptor,
-        new java.lang.String[] { "From", "Addrs", "Weights", "Fee", });
+        new String[] { "From", "Addrs", "Weights", "Fee", });
     internal_static_rpcpb_MakeSplitAddrTxResp_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_rpcpb_MakeSplitAddrTxResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_MakeSplitAddrTxResp_descriptor,
-        new java.lang.String[] { "Code", "Message", "SplitAddr", "Tx", "RawMsgs", });
+        new String[] { "Code", "Message", "SplitAddr", "Tx", "RawMsgs", });
     internal_static_rpcpb_MakeTokenIssueTxReq_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_rpcpb_MakeTokenIssueTxReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_MakeTokenIssueTxReq_descriptor,
-        new java.lang.String[] { "Issuer", "Issuee", "Tag", "Fee", });
+        new String[] { "Issuer", "Owner", "Tag", "Fee", });
     internal_static_rpcpb_MakeTokenIssueTxResp_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_rpcpb_MakeTokenIssueTxResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_MakeTokenIssueTxResp_descriptor,
-        new java.lang.String[] { "Code", "Message", "IssueOutIndex", "Tx", "RawMsgs", });
+        new String[] { "Code", "Message", "IssueOutIndex", "Tx", "RawMsgs", });
     internal_static_rpcpb_MakeTokenTransferTxReq_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_rpcpb_MakeTokenTransferTxReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_MakeTokenTransferTxReq_descriptor,
-        new java.lang.String[] { "From", "To", "Amounts", "TokenHash", "TokenIndex", "Fee", });
+        new String[] { "From", "To", "Amounts", "TokenHash", "TokenIndex", "Fee", });
     internal_static_rpcpb_TokenTag_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_rpcpb_TokenTag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_TokenTag_descriptor,
-        new java.lang.String[] { "Name", "Symbol", "Supply", "Decimal", });
+        new String[] { "Name", "Symbol", "Supply", "Decimal", });
     BlockProto.getDescriptor();
     CommonProto.getDescriptor();
   }

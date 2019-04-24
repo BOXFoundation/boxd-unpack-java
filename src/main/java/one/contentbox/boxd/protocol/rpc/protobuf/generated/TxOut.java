@@ -19,7 +19,7 @@ public  final class TxOut extends
     scriptPubKey_ = com.google.protobuf.ByteString.EMPTY;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -70,11 +70,11 @@ public  final class TxOut extends
     return BlockProto.internal_static_corepb_TxOut_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return BlockProto.internal_static_corepb_TxOut_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            TxOut.class, TxOut.Builder.class);
+            TxOut.class, Builder.class);
   }
 
   public static final int VALUE_FIELD_NUMBER = 1;
@@ -133,8 +133,8 @@ public  final class TxOut extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -151,7 +151,7 @@ public  final class TxOut extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -239,9 +239,9 @@ public  final class TxOut extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -251,17 +251,17 @@ public  final class TxOut extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.TxOut)
-          TxOutOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return BlockProto.internal_static_corepb_TxOut_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return BlockProto.internal_static_corepb_TxOut_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              TxOut.class, TxOut.Builder.class);
+              TxOut.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.newBuilder()
@@ -270,7 +270,7 @@ public  final class TxOut extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -474,7 +474,7 @@ public  final class TxOut extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<TxOut> getParserForType() {
     return PARSER;
   }

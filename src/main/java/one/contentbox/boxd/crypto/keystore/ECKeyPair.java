@@ -1,12 +1,5 @@
 package one.contentbox.boxd.crypto.keystore;
 
-/**
- * describe: ECKeyPair
- *
- * @author wangjunbao2018@gmail.com
- * @date 2019/04/23
- */
-
 import one.contentbox.boxd.crypto.secp256k1.Secp256k1;
 import one.contentbox.boxd.util.ByteUtils;
 import org.bouncycastle.crypto.digests.SHA256Digest;

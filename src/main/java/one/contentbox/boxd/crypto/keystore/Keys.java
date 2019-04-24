@@ -1,12 +1,5 @@
 package one.contentbox.boxd.crypto.keystore;
 
-/**
- * describe: Keys
- *
- * @author wangjunbao2018@gmail.com
- * @date 2019/04/23
- */
-
 import one.contentbox.boxd.crypto.util.Utils;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
@@ -17,7 +10,6 @@ import java.security.Security;
 import java.security.SecureRandom;
 import java.security.KeyPairGenerator;
 import java.security.spec.ECGenParameterSpec;
-
 
 /**
  * Crypto key utilities.

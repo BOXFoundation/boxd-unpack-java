@@ -18,7 +18,7 @@ public  final class GetBalanceReq extends
     addrs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -44,7 +44,7 @@ public  final class GetBalanceReq extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               addrs_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000001;
@@ -68,14 +68,14 @@ public  final class GetBalanceReq extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_GetBalanceReq_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceReq_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_GetBalanceReq_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GetBalanceReq.class, GetBalanceReq.Builder.class);
+            GetBalanceReq.class, Builder.class);
   }
 
   public static final int ADDRS_FIELD_NUMBER = 1;
@@ -96,7 +96,7 @@ public  final class GetBalanceReq extends
   /**
    * <code>repeated string addrs = 1;</code>
    */
-  public java.lang.String getAddrs(int index) {
+  public String getAddrs(int index) {
     return addrs_.get(index);
   }
   /**
@@ -142,8 +142,8 @@ public  final class GetBalanceReq extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -158,7 +158,7 @@ public  final class GetBalanceReq extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -245,9 +245,9 @@ public  final class GetBalanceReq extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -257,17 +257,17 @@ public  final class GetBalanceReq extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetBalanceReq)
-          GetBalanceReqOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_GetBalanceReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceReq_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_GetBalanceReq_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetBalanceReq.class, GetBalanceReq.Builder.class);
+              GetBalanceReq.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq.newBuilder()
@@ -276,7 +276,7 @@ public  final class GetBalanceReq extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -294,7 +294,7 @@ public  final class GetBalanceReq extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_GetBalanceReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceReq_descriptor;
     }
 
     public GetBalanceReq getDefaultInstanceForType() {
@@ -418,7 +418,7 @@ public  final class GetBalanceReq extends
     /**
      * <code>repeated string addrs = 1;</code>
      */
-    public java.lang.String getAddrs(int index) {
+    public String getAddrs(int index) {
       return addrs_.get(index);
     }
     /**
@@ -432,7 +432,7 @@ public  final class GetBalanceReq extends
      * <code>repeated string addrs = 1;</code>
      */
     public Builder setAddrs(
-        int index, java.lang.String value) {
+        int index, String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -445,7 +445,7 @@ public  final class GetBalanceReq extends
      * <code>repeated string addrs = 1;</code>
      */
     public Builder addAddrs(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -458,7 +458,7 @@ public  final class GetBalanceReq extends
      * <code>repeated string addrs = 1;</code>
      */
     public Builder addAllAddrs(
-        java.lang.Iterable<java.lang.String> values) {
+        Iterable<String> values) {
       ensureAddrsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, addrs_);
@@ -526,7 +526,7 @@ public  final class GetBalanceReq extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<GetBalanceReq> getParserForType() {
     return PARSER;
   }

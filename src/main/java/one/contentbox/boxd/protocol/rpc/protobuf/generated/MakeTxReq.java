@@ -21,7 +21,7 @@ public  final class MakeTxReq extends
     fee_ = 0L;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -47,13 +47,13 @@ public  final class MakeTxReq extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             from_ = s;
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               to_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000002;
@@ -63,7 +63,7 @@ public  final class MakeTxReq extends
           }
           case 24: {
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-              amounts_ = new java.util.ArrayList<java.lang.Long>();
+              amounts_ = new java.util.ArrayList<Long>();
               mutable_bitField0_ |= 0x00000004;
             }
             amounts_.add(input.readUInt64());
@@ -73,7 +73,7 @@ public  final class MakeTxReq extends
             int length = input.readRawVarint32();
             int limit = input.pushLimit(length);
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
-              amounts_ = new java.util.ArrayList<java.lang.Long>();
+              amounts_ = new java.util.ArrayList<Long>();
               mutable_bitField0_ |= 0x00000004;
             }
             while (input.getBytesUntilLimit() > 0) {
@@ -106,30 +106,30 @@ public  final class MakeTxReq extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_MakeTxReq_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTxReq_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_MakeTxReq_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTxReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            MakeTxReq.class, MakeTxReq.Builder.class);
+            MakeTxReq.class, Builder.class);
   }
 
   private int bitField0_;
   public static final int FROM_FIELD_NUMBER = 1;
-  private volatile java.lang.Object from_;
+  private volatile Object from_;
   /**
    * <code>string from = 1;</code>
    */
-  public java.lang.String getFrom() {
-    java.lang.Object ref = from_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getFrom() {
+    Object ref = from_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       from_ = s;
       return s;
     }
@@ -139,11 +139,11 @@ public  final class MakeTxReq extends
    */
   public com.google.protobuf.ByteString
       getFromBytes() {
-    java.lang.Object ref = from_;
-    if (ref instanceof java.lang.String) {
+    Object ref = from_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       from_ = b;
       return b;
     } else {
@@ -169,7 +169,7 @@ public  final class MakeTxReq extends
   /**
    * <code>repeated string to = 2;</code>
    */
-  public java.lang.String getTo(int index) {
+  public String getTo(int index) {
     return to_.get(index);
   }
   /**
@@ -181,11 +181,11 @@ public  final class MakeTxReq extends
   }
 
   public static final int AMOUNTS_FIELD_NUMBER = 3;
-  private java.util.List<java.lang.Long> amounts_;
+  private java.util.List<Long> amounts_;
   /**
    * <code>repeated uint64 amounts = 3;</code>
    */
-  public java.util.List<java.lang.Long>
+  public java.util.List<Long>
       getAmountsList() {
     return amounts_;
   }
@@ -282,8 +282,8 @@ public  final class MakeTxReq extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -304,7 +304,7 @@ public  final class MakeTxReq extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -400,9 +400,9 @@ public  final class MakeTxReq extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -412,17 +412,17 @@ public  final class MakeTxReq extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.MakeTxReq)
-          MakeTxReqOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_MakeTxReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTxReq_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_MakeTxReq_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTxReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MakeTxReq.class, MakeTxReq.Builder.class);
+              MakeTxReq.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq.newBuilder()
@@ -431,7 +431,7 @@ public  final class MakeTxReq extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -455,7 +455,7 @@ public  final class MakeTxReq extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_MakeTxReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTxReq_descriptor;
     }
 
     public MakeTxReq getDefaultInstanceForType() {
@@ -582,20 +582,20 @@ public  final class MakeTxReq extends
     }
     private int bitField0_;
 
-    private java.lang.Object from_ = "";
+    private Object from_ = "";
     /**
      * <code>string from = 1;</code>
      */
-    public java.lang.String getFrom() {
-      java.lang.Object ref = from_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getFrom() {
+      Object ref = from_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         from_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -603,11 +603,11 @@ public  final class MakeTxReq extends
      */
     public com.google.protobuf.ByteString
         getFromBytes() {
-      java.lang.Object ref = from_;
+      Object ref = from_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         from_ = b;
         return b;
       } else {
@@ -618,7 +618,7 @@ public  final class MakeTxReq extends
      * <code>string from = 1;</code>
      */
     public Builder setFrom(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -674,7 +674,7 @@ public  final class MakeTxReq extends
     /**
      * <code>repeated string to = 2;</code>
      */
-    public java.lang.String getTo(int index) {
+    public String getTo(int index) {
       return to_.get(index);
     }
     /**
@@ -688,7 +688,7 @@ public  final class MakeTxReq extends
      * <code>repeated string to = 2;</code>
      */
     public Builder setTo(
-        int index, java.lang.String value) {
+        int index, String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -701,7 +701,7 @@ public  final class MakeTxReq extends
      * <code>repeated string to = 2;</code>
      */
     public Builder addTo(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -714,7 +714,7 @@ public  final class MakeTxReq extends
      * <code>repeated string to = 2;</code>
      */
     public Builder addAllTo(
-        java.lang.Iterable<java.lang.String> values) {
+        Iterable<String> values) {
       ensureToIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, to_);
@@ -745,17 +745,17 @@ public  final class MakeTxReq extends
       return this;
     }
 
-    private java.util.List<java.lang.Long> amounts_ = java.util.Collections.emptyList();
+    private java.util.List<Long> amounts_ = java.util.Collections.emptyList();
     private void ensureAmountsIsMutable() {
       if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-        amounts_ = new java.util.ArrayList<java.lang.Long>(amounts_);
+        amounts_ = new java.util.ArrayList<Long>(amounts_);
         bitField0_ |= 0x00000004;
        }
     }
     /**
      * <code>repeated uint64 amounts = 3;</code>
      */
-    public java.util.List<java.lang.Long>
+    public java.util.List<Long>
         getAmountsList() {
       return java.util.Collections.unmodifiableList(amounts_);
     }
@@ -794,7 +794,7 @@ public  final class MakeTxReq extends
      * <code>repeated uint64 amounts = 3;</code>
      */
     public Builder addAllAmounts(
-        java.lang.Iterable<? extends java.lang.Long> values) {
+        Iterable<? extends Long> values) {
       ensureAmountsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, amounts_);
@@ -874,7 +874,7 @@ public  final class MakeTxReq extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<MakeTxReq> getParserForType() {
     return PARSER;
   }

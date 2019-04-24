@@ -17,7 +17,7 @@ public  final class TokenIssueInfo extends
   private TokenIssueInfo() {
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -43,11 +43,11 @@ public  final class TokenIssueInfo extends
             break;
           }
           case 10: {
-            TokenTag.Builder subBuilder = null;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder subBuilder = null;
             if (tokenTag_ != null) {
               subBuilder = tokenTag_.toBuilder();
             }
-            tokenTag_ = input.readMessage(TokenTag.parser(), extensionRegistry);
+            tokenTag_ = input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(tokenTag_);
               tokenTag_ = subBuilder.buildPartial();
@@ -68,18 +68,18 @@ public  final class TokenIssueInfo extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return WebProto.internal_static_rpcpb_TokenIssueInfo_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenIssueInfo_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return WebProto.internal_static_rpcpb_TokenIssueInfo_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenIssueInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            TokenIssueInfo.class, TokenIssueInfo.Builder.class);
+            TokenIssueInfo.class, Builder.class);
   }
 
   public static final int TOKEN_TAG_FIELD_NUMBER = 1;
-  private TokenTag tokenTag_;
+  private one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag tokenTag_;
   /**
    * <code>.rpcpb.TokenTag token_tag = 1;</code>
    */
@@ -89,13 +89,13 @@ public  final class TokenIssueInfo extends
   /**
    * <code>.rpcpb.TokenTag token_tag = 1;</code>
    */
-  public TokenTag getTokenTag() {
-    return tokenTag_ == null ? TokenTag.getDefaultInstance() : tokenTag_;
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag getTokenTag() {
+    return tokenTag_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.getDefaultInstance() : tokenTag_;
   }
   /**
    * <code>.rpcpb.TokenTag token_tag = 1;</code>
    */
-  public TokenTagOrBuilder getTokenTagOrBuilder() {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder getTokenTagOrBuilder() {
     return getTokenTag();
   }
 
@@ -130,8 +130,8 @@ public  final class TokenIssueInfo extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -149,7 +149,7 @@ public  final class TokenIssueInfo extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -236,9 +236,9 @@ public  final class TokenIssueInfo extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -248,17 +248,17 @@ public  final class TokenIssueInfo extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.TokenIssueInfo)
-          TokenIssueInfoOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenIssueInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return WebProto.internal_static_rpcpb_TokenIssueInfo_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenIssueInfo_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return WebProto.internal_static_rpcpb_TokenIssueInfo_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenIssueInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              TokenIssueInfo.class, TokenIssueInfo.Builder.class);
+              TokenIssueInfo.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenIssueInfo.newBuilder()
@@ -267,7 +267,7 @@ public  final class TokenIssueInfo extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -289,7 +289,7 @@ public  final class TokenIssueInfo extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return WebProto.internal_static_rpcpb_TokenIssueInfo_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenIssueInfo_descriptor;
     }
 
     public TokenIssueInfo getDefaultInstanceForType() {
@@ -381,9 +381,9 @@ public  final class TokenIssueInfo extends
       return this;
     }
 
-    private TokenTag tokenTag_ = null;
+    private one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag tokenTag_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            TokenTag, TokenTag.Builder, TokenTagOrBuilder> tokenTagBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder> tokenTagBuilder_;
     /**
      * <code>.rpcpb.TokenTag token_tag = 1;</code>
      */
@@ -393,9 +393,9 @@ public  final class TokenIssueInfo extends
     /**
      * <code>.rpcpb.TokenTag token_tag = 1;</code>
      */
-    public TokenTag getTokenTag() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag getTokenTag() {
       if (tokenTagBuilder_ == null) {
-        return tokenTag_ == null ? TokenTag.getDefaultInstance() : tokenTag_;
+        return tokenTag_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.getDefaultInstance() : tokenTag_;
       } else {
         return tokenTagBuilder_.getMessage();
       }
@@ -403,7 +403,7 @@ public  final class TokenIssueInfo extends
     /**
      * <code>.rpcpb.TokenTag token_tag = 1;</code>
      */
-    public Builder setTokenTag(TokenTag value) {
+    public Builder setTokenTag(one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag value) {
       if (tokenTagBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -420,7 +420,7 @@ public  final class TokenIssueInfo extends
      * <code>.rpcpb.TokenTag token_tag = 1;</code>
      */
     public Builder setTokenTag(
-        TokenTag.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder builderForValue) {
       if (tokenTagBuilder_ == null) {
         tokenTag_ = builderForValue.build();
         onChanged();
@@ -433,11 +433,11 @@ public  final class TokenIssueInfo extends
     /**
      * <code>.rpcpb.TokenTag token_tag = 1;</code>
      */
-    public Builder mergeTokenTag(TokenTag value) {
+    public Builder mergeTokenTag(one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag value) {
       if (tokenTagBuilder_ == null) {
         if (tokenTag_ != null) {
           tokenTag_ =
-            TokenTag.newBuilder(tokenTag_).mergeFrom(value).buildPartial();
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.newBuilder(tokenTag_).mergeFrom(value).buildPartial();
         } else {
           tokenTag_ = value;
         }
@@ -465,7 +465,7 @@ public  final class TokenIssueInfo extends
     /**
      * <code>.rpcpb.TokenTag token_tag = 1;</code>
      */
-    public TokenTag.Builder getTokenTagBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder getTokenTagBuilder() {
       
       onChanged();
       return getTokenTagFieldBuilder().getBuilder();
@@ -473,23 +473,23 @@ public  final class TokenIssueInfo extends
     /**
      * <code>.rpcpb.TokenTag token_tag = 1;</code>
      */
-    public TokenTagOrBuilder getTokenTagOrBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder getTokenTagOrBuilder() {
       if (tokenTagBuilder_ != null) {
         return tokenTagBuilder_.getMessageOrBuilder();
       } else {
         return tokenTag_ == null ?
-            TokenTag.getDefaultInstance() : tokenTag_;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.getDefaultInstance() : tokenTag_;
       }
     }
     /**
      * <code>.rpcpb.TokenTag token_tag = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            TokenTag, TokenTag.Builder, TokenTagOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder> 
         getTokenTagFieldBuilder() {
       if (tokenTagBuilder_ == null) {
         tokenTagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                TokenTag, TokenTag.Builder, TokenTagOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder>(
                 getTokenTag(),
                 getParentForChildren(),
                 isClean());
@@ -535,7 +535,7 @@ public  final class TokenIssueInfo extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<TokenIssueInfo> getParserForType() {
     return PARSER;
   }

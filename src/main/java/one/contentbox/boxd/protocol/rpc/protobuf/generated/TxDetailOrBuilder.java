@@ -10,7 +10,7 @@ public interface TxDetailOrBuilder extends
   /**
    * <code>string hash = 1;</code>
    */
-  java.lang.String getHash();
+  String getHash();
   /**
    * <code>string hash = 1;</code>
    */
@@ -20,12 +20,12 @@ public interface TxDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  java.util.List<TxInDetail>
+  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail> 
       getVinList();
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  TxInDetail getVin(int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail getVin(int index);
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
@@ -33,23 +33,23 @@ public interface TxDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  java.util.List<? extends TxInDetailOrBuilder>
+  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder> 
       getVinOrBuilderList();
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  TxInDetailOrBuilder getVinOrBuilder(
-      int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder getVinOrBuilder(
+          int index);
 
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  java.util.List<TxOutDetail>
+  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail> 
       getVoutList();
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  TxOutDetail getVout(int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail getVout(int index);
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
@@ -57,11 +57,11 @@ public interface TxDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  java.util.List<? extends TxOutDetailOrBuilder>
+  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder> 
       getVoutOrBuilderList();
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  TxOutDetailOrBuilder getVoutOrBuilder(
-      int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder getVoutOrBuilder(
+          int index);
 }

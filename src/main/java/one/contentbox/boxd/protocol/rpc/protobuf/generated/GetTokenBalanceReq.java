@@ -20,7 +20,7 @@ public  final class GetTokenBalanceReq extends
     tokenIndex_ = 0;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -46,7 +46,7 @@ public  final class GetTokenBalanceReq extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               addrs_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000001;
@@ -55,7 +55,7 @@ public  final class GetTokenBalanceReq extends
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             tokenHash_ = s;
             break;
@@ -81,14 +81,14 @@ public  final class GetTokenBalanceReq extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GetTokenBalanceReq.class, GetTokenBalanceReq.Builder.class);
+            GetTokenBalanceReq.class, Builder.class);
   }
 
   private int bitField0_;
@@ -110,7 +110,7 @@ public  final class GetTokenBalanceReq extends
   /**
    * <code>repeated string addrs = 1;</code>
    */
-  public java.lang.String getAddrs(int index) {
+  public String getAddrs(int index) {
     return addrs_.get(index);
   }
   /**
@@ -122,18 +122,18 @@ public  final class GetTokenBalanceReq extends
   }
 
   public static final int TOKEN_HASH_FIELD_NUMBER = 2;
-  private volatile java.lang.Object tokenHash_;
+  private volatile Object tokenHash_;
   /**
    * <code>string token_hash = 2;</code>
    */
-  public java.lang.String getTokenHash() {
-    java.lang.Object ref = tokenHash_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getTokenHash() {
+    Object ref = tokenHash_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       tokenHash_ = s;
       return s;
     }
@@ -143,11 +143,11 @@ public  final class GetTokenBalanceReq extends
    */
   public com.google.protobuf.ByteString
       getTokenHashBytes() {
-    java.lang.Object ref = tokenHash_;
-    if (ref instanceof java.lang.String) {
+    Object ref = tokenHash_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       tokenHash_ = b;
       return b;
     } else {
@@ -212,8 +212,8 @@ public  final class GetTokenBalanceReq extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -232,7 +232,7 @@ public  final class GetTokenBalanceReq extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -323,9 +323,9 @@ public  final class GetTokenBalanceReq extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -335,17 +335,17 @@ public  final class GetTokenBalanceReq extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetTokenBalanceReq)
-          GetTokenBalanceReqOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetTokenBalanceReq.class, GetTokenBalanceReq.Builder.class);
+              GetTokenBalanceReq.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq.newBuilder()
@@ -354,7 +354,7 @@ public  final class GetTokenBalanceReq extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -376,7 +376,7 @@ public  final class GetTokenBalanceReq extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetTokenBalanceReq_descriptor;
     }
 
     public GetTokenBalanceReq getDefaultInstanceForType() {
@@ -511,7 +511,7 @@ public  final class GetTokenBalanceReq extends
     /**
      * <code>repeated string addrs = 1;</code>
      */
-    public java.lang.String getAddrs(int index) {
+    public String getAddrs(int index) {
       return addrs_.get(index);
     }
     /**
@@ -525,7 +525,7 @@ public  final class GetTokenBalanceReq extends
      * <code>repeated string addrs = 1;</code>
      */
     public Builder setAddrs(
-        int index, java.lang.String value) {
+        int index, String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -538,7 +538,7 @@ public  final class GetTokenBalanceReq extends
      * <code>repeated string addrs = 1;</code>
      */
     public Builder addAddrs(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -551,7 +551,7 @@ public  final class GetTokenBalanceReq extends
      * <code>repeated string addrs = 1;</code>
      */
     public Builder addAllAddrs(
-        java.lang.Iterable<java.lang.String> values) {
+        Iterable<String> values) {
       ensureAddrsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, addrs_);
@@ -582,20 +582,20 @@ public  final class GetTokenBalanceReq extends
       return this;
     }
 
-    private java.lang.Object tokenHash_ = "";
+    private Object tokenHash_ = "";
     /**
      * <code>string token_hash = 2;</code>
      */
-    public java.lang.String getTokenHash() {
-      java.lang.Object ref = tokenHash_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getTokenHash() {
+      Object ref = tokenHash_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         tokenHash_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -603,11 +603,11 @@ public  final class GetTokenBalanceReq extends
      */
     public com.google.protobuf.ByteString
         getTokenHashBytes() {
-      java.lang.Object ref = tokenHash_;
+      Object ref = tokenHash_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         tokenHash_ = b;
         return b;
       } else {
@@ -618,7 +618,7 @@ public  final class GetTokenBalanceReq extends
      * <code>string token_hash = 2;</code>
      */
     public Builder setTokenHash(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -714,7 +714,7 @@ public  final class GetTokenBalanceReq extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<GetTokenBalanceReq> getParserForType() {
     return PARSER;
   }

@@ -18,7 +18,7 @@ public  final class GetNodeInfoResponse extends
     nodes_ = java.util.Collections.emptyList();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -45,11 +45,11 @@ public  final class GetNodeInfoResponse extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              nodes_ = new java.util.ArrayList<Node>();
+              nodes_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.Node>();
               mutable_bitField0_ |= 0x00000001;
             }
             nodes_.add(
-                input.readMessage(Node.parser(), extensionRegistry));
+                input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.parser(), extensionRegistry));
             break;
           }
         }
@@ -71,25 +71,25 @@ public  final class GetNodeInfoResponse extends
     return ControlProto.internal_static_rpcpb_GetNodeInfoResponse_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return ControlProto.internal_static_rpcpb_GetNodeInfoResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GetNodeInfoResponse.class, GetNodeInfoResponse.Builder.class);
+            GetNodeInfoResponse.class, Builder.class);
   }
 
   public static final int NODES_FIELD_NUMBER = 1;
-  private java.util.List<Node> nodes_;
+  private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Node> nodes_;
   /**
    * <code>repeated .rpcpb.Node nodes = 1;</code>
    */
-  public java.util.List<Node> getNodesList() {
+  public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Node> getNodesList() {
     return nodes_;
   }
   /**
    * <code>repeated .rpcpb.Node nodes = 1;</code>
    */
-  public java.util.List<? extends NodeOrBuilder>
+  public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder> 
       getNodesOrBuilderList() {
     return nodes_;
   }
@@ -102,13 +102,13 @@ public  final class GetNodeInfoResponse extends
   /**
    * <code>repeated .rpcpb.Node nodes = 1;</code>
    */
-  public Node getNodes(int index) {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.Node getNodes(int index) {
     return nodes_.get(index);
   }
   /**
    * <code>repeated .rpcpb.Node nodes = 1;</code>
    */
-  public NodeOrBuilder getNodesOrBuilder(
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder getNodesOrBuilder(
       int index) {
     return nodes_.get(index);
   }
@@ -144,8 +144,8 @@ public  final class GetNodeInfoResponse extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -160,7 +160,7 @@ public  final class GetNodeInfoResponse extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -247,9 +247,9 @@ public  final class GetNodeInfoResponse extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -259,17 +259,17 @@ public  final class GetNodeInfoResponse extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetNodeInfoResponse)
-          GetNodeInfoResponseOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ControlProto.internal_static_rpcpb_GetNodeInfoResponse_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ControlProto.internal_static_rpcpb_GetNodeInfoResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetNodeInfoResponse.class, GetNodeInfoResponse.Builder.class);
+              GetNodeInfoResponse.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse.newBuilder()
@@ -278,7 +278,7 @@ public  final class GetNodeInfoResponse extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -422,22 +422,22 @@ public  final class GetNodeInfoResponse extends
     }
     private int bitField0_;
 
-    private java.util.List<Node> nodes_ =
+    private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Node> nodes_ =
       java.util.Collections.emptyList();
     private void ensureNodesIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        nodes_ = new java.util.ArrayList<Node>(nodes_);
+        nodes_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.Node>(nodes_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            Node, Node.Builder, NodeOrBuilder> nodesBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.Node, one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder> nodesBuilder_;
 
     /**
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
-    public java.util.List<Node> getNodesList() {
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Node> getNodesList() {
       if (nodesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(nodes_);
       } else {
@@ -457,7 +457,7 @@ public  final class GetNodeInfoResponse extends
     /**
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
-    public Node getNodes(int index) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Node getNodes(int index) {
       if (nodesBuilder_ == null) {
         return nodes_.get(index);
       } else {
@@ -468,7 +468,7 @@ public  final class GetNodeInfoResponse extends
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
     public Builder setNodes(
-        int index, Node value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Node value) {
       if (nodesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -485,7 +485,7 @@ public  final class GetNodeInfoResponse extends
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
     public Builder setNodes(
-        int index, Node.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder builderForValue) {
       if (nodesBuilder_ == null) {
         ensureNodesIsMutable();
         nodes_.set(index, builderForValue.build());
@@ -498,7 +498,7 @@ public  final class GetNodeInfoResponse extends
     /**
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
-    public Builder addNodes(Node value) {
+    public Builder addNodes(one.contentbox.boxd.protocol.rpc.protobuf.generated.Node value) {
       if (nodesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -515,7 +515,7 @@ public  final class GetNodeInfoResponse extends
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
     public Builder addNodes(
-        int index, Node value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Node value) {
       if (nodesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -532,7 +532,7 @@ public  final class GetNodeInfoResponse extends
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
     public Builder addNodes(
-        Node.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder builderForValue) {
       if (nodesBuilder_ == null) {
         ensureNodesIsMutable();
         nodes_.add(builderForValue.build());
@@ -546,7 +546,7 @@ public  final class GetNodeInfoResponse extends
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
     public Builder addNodes(
-        int index, Node.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder builderForValue) {
       if (nodesBuilder_ == null) {
         ensureNodesIsMutable();
         nodes_.add(index, builderForValue.build());
@@ -560,7 +560,7 @@ public  final class GetNodeInfoResponse extends
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
     public Builder addAllNodes(
-        java.lang.Iterable<? extends Node> values) {
+        Iterable<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.Node> values) {
       if (nodesBuilder_ == null) {
         ensureNodesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -600,14 +600,14 @@ public  final class GetNodeInfoResponse extends
     /**
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
-    public Node.Builder getNodesBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder getNodesBuilder(
         int index) {
       return getNodesFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
-    public NodeOrBuilder getNodesOrBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder getNodesOrBuilder(
         int index) {
       if (nodesBuilder_ == null) {
         return nodes_.get(index);  } else {
@@ -617,7 +617,7 @@ public  final class GetNodeInfoResponse extends
     /**
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
-    public java.util.List<? extends NodeOrBuilder>
+    public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder> 
          getNodesOrBuilderList() {
       if (nodesBuilder_ != null) {
         return nodesBuilder_.getMessageOrBuilderList();
@@ -628,31 +628,31 @@ public  final class GetNodeInfoResponse extends
     /**
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
-    public Node.Builder addNodesBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder addNodesBuilder() {
       return getNodesFieldBuilder().addBuilder(
-          Node.getDefaultInstance());
+          one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
-    public Node.Builder addNodesBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder addNodesBuilder(
         int index) {
       return getNodesFieldBuilder().addBuilder(
-          index, Node.getDefaultInstance());
+          index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.Node nodes = 1;</code>
      */
-    public java.util.List<Node.Builder>
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder> 
          getNodesBuilderList() {
       return getNodesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            Node, Node.Builder, NodeOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.Node, one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder> 
         getNodesFieldBuilder() {
       if (nodesBuilder_ == null) {
         nodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                Node, Node.Builder, NodeOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.Node, one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder>(
                 nodes_,
                 ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),
@@ -699,7 +699,7 @@ public  final class GetNodeInfoResponse extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<GetNodeInfoResponse> getParserForType() {
     return PARSER;
   }

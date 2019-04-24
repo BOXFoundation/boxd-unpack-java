@@ -80,13 +80,13 @@ public class AccountManagerImpl implements AccountManager {
 
     @Override
     public byte[] dumpPubKeyHashFromPrivKey(byte[] privKey) throws BoxdException {
-        byte[] pubKey = dumpPubKeyFromPrivKey(privKey);
-        return Hash.Ripemd160(pubKey);
+        String addr = dumpAddrFromPrivKey(privKey);
+        return AddressUtils.getPubKeyHashFromAddr(addr);
     }
 
     @Override
     public byte[] dumpPubKeyHashFromPrivKey(String privKey) throws BoxdException {
-        return dumpPubKeyFromPrivKey(Hex.decode(privKey));
+        return dumpPubKeyHashFromPrivKey(Hex.decode(privKey));
     }
 
     @Override

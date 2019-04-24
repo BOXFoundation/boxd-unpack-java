@@ -32,14 +32,15 @@ public final class CommonProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\014common.proto\022\005rpcpb\032\013block.proto\"\207\001\n\004U" +
       "txo\022#\n\tout_point\030\001 \001(\0132\020.corepb.OutPoint" +
       "\022\035\n\006tx_out\030\002 \001(\0132\r.corepb.TxOut\022\024\n\014block" +
       "_height\030\003 \001(\r\022\023\n\013is_coinbase\030\004 \001(\010\022\020\n\010is" +
       "_spent\030\005 \001(\010\"-\n\014BaseResponse\022\014\n\004code\030\001 \001" +
-      "(\005\022\017\n\007message\030\002 \001(\tB*\n\031one.contentbox.bo" +
-      "xd.protoB\013CommonProtoP\001b\006proto3"
+      "(\005\022\017\n\007message\030\002 \001(\tBD\n3one.contentbox.bo" +
+      "xd.protocol.rpc.protobuf.generatedB\013Comm" +
+      "onProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -59,13 +60,13 @@ public final class CommonProto {
     internal_static_rpcpb_Utxo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_Utxo_descriptor,
-        new java.lang.String[] { "OutPoint", "TxOut", "BlockHeight", "IsCoinbase", "IsSpent", });
+        new String[] { "OutPoint", "TxOut", "BlockHeight", "IsCoinbase", "IsSpent", });
     internal_static_rpcpb_BaseResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_rpcpb_BaseResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_BaseResponse_descriptor,
-        new java.lang.String[] { "Code", "Message", });
+        new String[] { "Code", "Message", });
     BlockProto.getDescriptor();
   }
 

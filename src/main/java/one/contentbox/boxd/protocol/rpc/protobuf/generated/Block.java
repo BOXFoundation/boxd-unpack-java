@@ -20,7 +20,7 @@ public  final class Block extends
     signature_ = com.google.protobuf.ByteString.EMPTY;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -46,11 +46,11 @@ public  final class Block extends
             break;
           }
           case 10: {
-            BlockHeader.Builder subBuilder = null;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.Builder subBuilder = null;
             if (header_ != null) {
               subBuilder = header_.toBuilder();
             }
-            header_ = input.readMessage(BlockHeader.parser(), extensionRegistry);
+            header_ = input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(header_);
               header_ = subBuilder.buildPartial();
@@ -60,11 +60,11 @@ public  final class Block extends
           }
           case 18: {
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-              txs_ = new java.util.ArrayList<Transaction>();
+              txs_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction>();
               mutable_bitField0_ |= 0x00000002;
             }
             txs_.add(
-                input.readMessage(Transaction.parser(), extensionRegistry));
+                input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.parser(), extensionRegistry));
             break;
           }
           case 24: {
@@ -78,11 +78,11 @@ public  final class Block extends
             break;
           }
           case 42: {
-            IrreversibleInfo.Builder subBuilder = null;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.Builder subBuilder = null;
             if (irreversibleInfo_ != null) {
               subBuilder = irreversibleInfo_.toBuilder();
             }
-            irreversibleInfo_ = input.readMessage(IrreversibleInfo.parser(), extensionRegistry);
+            irreversibleInfo_ = input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(irreversibleInfo_);
               irreversibleInfo_ = subBuilder.buildPartial();
@@ -106,19 +106,19 @@ public  final class Block extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return BlockProto.internal_static_corepb_Block_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_Block_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return BlockProto.internal_static_corepb_Block_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_Block_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            Block.class, Block.Builder.class);
+            Block.class, Builder.class);
   }
 
   private int bitField0_;
   public static final int HEADER_FIELD_NUMBER = 1;
-  private BlockHeader header_;
+  private one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader header_;
   /**
    * <code>.corepb.BlockHeader header = 1;</code>
    */
@@ -128,28 +128,28 @@ public  final class Block extends
   /**
    * <code>.corepb.BlockHeader header = 1;</code>
    */
-  public BlockHeader getHeader() {
-    return header_ == null ? BlockHeader.getDefaultInstance() : header_;
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader getHeader() {
+    return header_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.getDefaultInstance() : header_;
   }
   /**
    * <code>.corepb.BlockHeader header = 1;</code>
    */
-  public BlockHeaderOrBuilder getHeaderOrBuilder() {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeaderOrBuilder getHeaderOrBuilder() {
     return getHeader();
   }
 
   public static final int TXS_FIELD_NUMBER = 2;
-  private java.util.List<Transaction> txs_;
+  private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction> txs_;
   /**
    * <code>repeated .corepb.Transaction txs = 2;</code>
    */
-  public java.util.List<Transaction> getTxsList() {
+  public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction> getTxsList() {
     return txs_;
   }
   /**
    * <code>repeated .corepb.Transaction txs = 2;</code>
    */
-  public java.util.List<? extends TransactionOrBuilder>
+  public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder> 
       getTxsOrBuilderList() {
     return txs_;
   }
@@ -162,13 +162,13 @@ public  final class Block extends
   /**
    * <code>repeated .corepb.Transaction txs = 2;</code>
    */
-  public Transaction getTxs(int index) {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTxs(int index) {
     return txs_.get(index);
   }
   /**
    * <code>repeated .corepb.Transaction txs = 2;</code>
    */
-  public TransactionOrBuilder getTxsOrBuilder(
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxsOrBuilder(
       int index) {
     return txs_.get(index);
   }
@@ -192,7 +192,7 @@ public  final class Block extends
   }
 
   public static final int IRREVERSIBLE_INFO_FIELD_NUMBER = 5;
-  private IrreversibleInfo irreversibleInfo_;
+  private one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo irreversibleInfo_;
   /**
    * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
    */
@@ -202,13 +202,13 @@ public  final class Block extends
   /**
    * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
    */
-  public IrreversibleInfo getIrreversibleInfo() {
-    return irreversibleInfo_ == null ? IrreversibleInfo.getDefaultInstance() : irreversibleInfo_;
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo getIrreversibleInfo() {
+    return irreversibleInfo_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.getDefaultInstance() : irreversibleInfo_;
   }
   /**
    * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
    */
-  public IrreversibleInfoOrBuilder getIrreversibleInfoOrBuilder() {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfoOrBuilder getIrreversibleInfoOrBuilder() {
     return getIrreversibleInfo();
   }
 
@@ -271,8 +271,8 @@ public  final class Block extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -301,7 +301,7 @@ public  final class Block extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -400,9 +400,9 @@ public  final class Block extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -412,17 +412,17 @@ public  final class Block extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.Block)
-          BlockOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return BlockProto.internal_static_corepb_Block_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_Block_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return BlockProto.internal_static_corepb_Block_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_Block_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Block.class, Block.Builder.class);
+              Block.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.Block.newBuilder()
@@ -431,7 +431,7 @@ public  final class Block extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -470,7 +470,7 @@ public  final class Block extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return BlockProto.internal_static_corepb_Block_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_Block_descriptor;
     }
 
     public Block getDefaultInstanceForType() {
@@ -617,9 +617,9 @@ public  final class Block extends
     }
     private int bitField0_;
 
-    private BlockHeader header_ = null;
+    private one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader header_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            BlockHeader, BlockHeader.Builder, BlockHeaderOrBuilder> headerBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader, one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeaderOrBuilder> headerBuilder_;
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
@@ -629,9 +629,9 @@ public  final class Block extends
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
-    public BlockHeader getHeader() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader getHeader() {
       if (headerBuilder_ == null) {
-        return header_ == null ? BlockHeader.getDefaultInstance() : header_;
+        return header_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.getDefaultInstance() : header_;
       } else {
         return headerBuilder_.getMessage();
       }
@@ -639,7 +639,7 @@ public  final class Block extends
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
-    public Builder setHeader(BlockHeader value) {
+    public Builder setHeader(one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader value) {
       if (headerBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -656,7 +656,7 @@ public  final class Block extends
      * <code>.corepb.BlockHeader header = 1;</code>
      */
     public Builder setHeader(
-        BlockHeader.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.Builder builderForValue) {
       if (headerBuilder_ == null) {
         header_ = builderForValue.build();
         onChanged();
@@ -669,11 +669,11 @@ public  final class Block extends
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
-    public Builder mergeHeader(BlockHeader value) {
+    public Builder mergeHeader(one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader value) {
       if (headerBuilder_ == null) {
         if (header_ != null) {
           header_ =
-            BlockHeader.newBuilder(header_).mergeFrom(value).buildPartial();
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.newBuilder(header_).mergeFrom(value).buildPartial();
         } else {
           header_ = value;
         }
@@ -701,7 +701,7 @@ public  final class Block extends
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
-    public BlockHeader.Builder getHeaderBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.Builder getHeaderBuilder() {
       
       onChanged();
       return getHeaderFieldBuilder().getBuilder();
@@ -709,23 +709,23 @@ public  final class Block extends
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
-    public BlockHeaderOrBuilder getHeaderOrBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
         return headerBuilder_.getMessageOrBuilder();
       } else {
         return header_ == null ?
-            BlockHeader.getDefaultInstance() : header_;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.getDefaultInstance() : header_;
       }
     }
     /**
      * <code>.corepb.BlockHeader header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            BlockHeader, BlockHeader.Builder, BlockHeaderOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader, one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeaderOrBuilder> 
         getHeaderFieldBuilder() {
       if (headerBuilder_ == null) {
         headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                BlockHeader, BlockHeader.Builder, BlockHeaderOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader, one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeader.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeaderOrBuilder>(
                 getHeader(),
                 getParentForChildren(),
                 isClean());
@@ -734,22 +734,22 @@ public  final class Block extends
       return headerBuilder_;
     }
 
-    private java.util.List<Transaction> txs_ =
+    private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction> txs_ =
       java.util.Collections.emptyList();
     private void ensureTxsIsMutable() {
       if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-        txs_ = new java.util.ArrayList<Transaction>(txs_);
+        txs_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction>(txs_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            Transaction, Transaction.Builder, TransactionOrBuilder> txsBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder> txsBuilder_;
 
     /**
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
-    public java.util.List<Transaction> getTxsList() {
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction> getTxsList() {
       if (txsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(txs_);
       } else {
@@ -769,7 +769,7 @@ public  final class Block extends
     /**
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
-    public Transaction getTxs(int index) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTxs(int index) {
       if (txsBuilder_ == null) {
         return txs_.get(index);
       } else {
@@ -780,7 +780,7 @@ public  final class Block extends
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
     public Builder setTxs(
-        int index, Transaction value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction value) {
       if (txsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -797,7 +797,7 @@ public  final class Block extends
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
     public Builder setTxs(
-        int index, Transaction.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder builderForValue) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         txs_.set(index, builderForValue.build());
@@ -810,7 +810,7 @@ public  final class Block extends
     /**
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
-    public Builder addTxs(Transaction value) {
+    public Builder addTxs(one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction value) {
       if (txsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -827,7 +827,7 @@ public  final class Block extends
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
     public Builder addTxs(
-        int index, Transaction value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction value) {
       if (txsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -844,7 +844,7 @@ public  final class Block extends
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
     public Builder addTxs(
-        Transaction.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder builderForValue) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         txs_.add(builderForValue.build());
@@ -858,7 +858,7 @@ public  final class Block extends
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
     public Builder addTxs(
-        int index, Transaction.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder builderForValue) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         txs_.add(index, builderForValue.build());
@@ -872,7 +872,7 @@ public  final class Block extends
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
     public Builder addAllTxs(
-        java.lang.Iterable<? extends Transaction> values) {
+        Iterable<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction> values) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -912,14 +912,14 @@ public  final class Block extends
     /**
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
-    public Transaction.Builder getTxsBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder getTxsBuilder(
         int index) {
       return getTxsFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
-    public TransactionOrBuilder getTxsOrBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxsOrBuilder(
         int index) {
       if (txsBuilder_ == null) {
         return txs_.get(index);  } else {
@@ -929,7 +929,7 @@ public  final class Block extends
     /**
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
-    public java.util.List<? extends TransactionOrBuilder>
+    public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder> 
          getTxsOrBuilderList() {
       if (txsBuilder_ != null) {
         return txsBuilder_.getMessageOrBuilderList();
@@ -940,31 +940,31 @@ public  final class Block extends
     /**
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
-    public Transaction.Builder addTxsBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder addTxsBuilder() {
       return getTxsFieldBuilder().addBuilder(
-          Transaction.getDefaultInstance());
+          one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.getDefaultInstance());
     }
     /**
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
-    public Transaction.Builder addTxsBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder addTxsBuilder(
         int index) {
       return getTxsFieldBuilder().addBuilder(
-          index, Transaction.getDefaultInstance());
+          index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.getDefaultInstance());
     }
     /**
      * <code>repeated .corepb.Transaction txs = 2;</code>
      */
-    public java.util.List<Transaction.Builder>
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder> 
          getTxsBuilderList() {
       return getTxsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            Transaction, Transaction.Builder, TransactionOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder> 
         getTxsFieldBuilder() {
       if (txsBuilder_ == null) {
         txsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                Transaction, Transaction.Builder, TransactionOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder>(
                 txs_,
                 ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
@@ -1029,9 +1029,9 @@ public  final class Block extends
       return this;
     }
 
-    private IrreversibleInfo irreversibleInfo_ = null;
+    private one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo irreversibleInfo_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            IrreversibleInfo, IrreversibleInfo.Builder, IrreversibleInfoOrBuilder> irreversibleInfoBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo, one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfoOrBuilder> irreversibleInfoBuilder_;
     /**
      * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
      */
@@ -1041,9 +1041,9 @@ public  final class Block extends
     /**
      * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
      */
-    public IrreversibleInfo getIrreversibleInfo() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo getIrreversibleInfo() {
       if (irreversibleInfoBuilder_ == null) {
-        return irreversibleInfo_ == null ? IrreversibleInfo.getDefaultInstance() : irreversibleInfo_;
+        return irreversibleInfo_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.getDefaultInstance() : irreversibleInfo_;
       } else {
         return irreversibleInfoBuilder_.getMessage();
       }
@@ -1051,7 +1051,7 @@ public  final class Block extends
     /**
      * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
      */
-    public Builder setIrreversibleInfo(IrreversibleInfo value) {
+    public Builder setIrreversibleInfo(one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo value) {
       if (irreversibleInfoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1068,7 +1068,7 @@ public  final class Block extends
      * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
      */
     public Builder setIrreversibleInfo(
-        IrreversibleInfo.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.Builder builderForValue) {
       if (irreversibleInfoBuilder_ == null) {
         irreversibleInfo_ = builderForValue.build();
         onChanged();
@@ -1081,11 +1081,11 @@ public  final class Block extends
     /**
      * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
      */
-    public Builder mergeIrreversibleInfo(IrreversibleInfo value) {
+    public Builder mergeIrreversibleInfo(one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo value) {
       if (irreversibleInfoBuilder_ == null) {
         if (irreversibleInfo_ != null) {
           irreversibleInfo_ =
-            IrreversibleInfo.newBuilder(irreversibleInfo_).mergeFrom(value).buildPartial();
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.newBuilder(irreversibleInfo_).mergeFrom(value).buildPartial();
         } else {
           irreversibleInfo_ = value;
         }
@@ -1113,7 +1113,7 @@ public  final class Block extends
     /**
      * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
      */
-    public IrreversibleInfo.Builder getIrreversibleInfoBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.Builder getIrreversibleInfoBuilder() {
       
       onChanged();
       return getIrreversibleInfoFieldBuilder().getBuilder();
@@ -1121,23 +1121,23 @@ public  final class Block extends
     /**
      * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
      */
-    public IrreversibleInfoOrBuilder getIrreversibleInfoOrBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfoOrBuilder getIrreversibleInfoOrBuilder() {
       if (irreversibleInfoBuilder_ != null) {
         return irreversibleInfoBuilder_.getMessageOrBuilder();
       } else {
         return irreversibleInfo_ == null ?
-            IrreversibleInfo.getDefaultInstance() : irreversibleInfo_;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.getDefaultInstance() : irreversibleInfo_;
       }
     }
     /**
      * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            IrreversibleInfo, IrreversibleInfo.Builder, IrreversibleInfoOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo, one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfoOrBuilder> 
         getIrreversibleInfoFieldBuilder() {
       if (irreversibleInfoBuilder_ == null) {
         irreversibleInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                IrreversibleInfo, IrreversibleInfo.Builder, IrreversibleInfoOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo, one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfoOrBuilder>(
                 getIrreversibleInfo(),
                 getParentForChildren(),
                 isClean());
@@ -1183,7 +1183,7 @@ public  final class Block extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<Block> getParserForType() {
     return PARSER;
   }

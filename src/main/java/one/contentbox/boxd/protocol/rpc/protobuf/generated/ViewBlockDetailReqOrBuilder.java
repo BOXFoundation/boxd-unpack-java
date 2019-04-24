@@ -10,7 +10,7 @@ public interface ViewBlockDetailReqOrBuilder extends
   /**
    * <code>string hash = 1;</code>
    */
-  java.lang.String getHash();
+  String getHash();
   /**
    * <code>string hash = 1;</code>
    */

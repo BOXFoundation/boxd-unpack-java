@@ -1,12 +1,5 @@
 package one.contentbox.boxd.crypto.keystore;
 
-/**
- * describe: KeyPair
- *
- * @author wangjunbao2018@gmail.com
- * @date 2019/04/23
- */
-
 import java.security.PrivateKey;
 import java.security.PublicKey;
 

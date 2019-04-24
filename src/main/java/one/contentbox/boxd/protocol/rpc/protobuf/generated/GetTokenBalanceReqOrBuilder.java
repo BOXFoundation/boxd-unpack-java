@@ -10,7 +10,7 @@ public interface GetTokenBalanceReqOrBuilder extends
   /**
    * <code>repeated string addrs = 1;</code>
    */
-  java.util.List<java.lang.String>
+  java.util.List<String>
       getAddrsList();
   /**
    * <code>repeated string addrs = 1;</code>
@@ -19,7 +19,7 @@ public interface GetTokenBalanceReqOrBuilder extends
   /**
    * <code>repeated string addrs = 1;</code>
    */
-  java.lang.String getAddrs(int index);
+  String getAddrs(int index);
   /**
    * <code>repeated string addrs = 1;</code>
    */
@@ -29,7 +29,7 @@ public interface GetTokenBalanceReqOrBuilder extends
   /**
    * <code>string token_hash = 2;</code>
    */
-  java.lang.String getTokenHash();
+  String getTokenHash();
   /**
    * <code>string token_hash = 2;</code>
    */

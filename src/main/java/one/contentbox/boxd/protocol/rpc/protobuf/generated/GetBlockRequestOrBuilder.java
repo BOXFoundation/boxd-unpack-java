@@ -10,7 +10,7 @@ public interface GetBlockRequestOrBuilder extends
   /**
    * <code>string block_hash = 1;</code>
    */
-  java.lang.String getBlockHash();
+  String getBlockHash();
   /**
    * <code>string block_hash = 1;</code>
    */

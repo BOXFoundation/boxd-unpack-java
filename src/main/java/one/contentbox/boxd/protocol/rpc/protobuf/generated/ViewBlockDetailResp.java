@@ -19,7 +19,7 @@ public  final class ViewBlockDetailResp extends
     message_ = "";
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -50,7 +50,7 @@ public  final class ViewBlockDetailResp extends
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             message_ = s;
             break;
@@ -81,14 +81,14 @@ public  final class ViewBlockDetailResp extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return WebProto.internal_static_rpcpb_ViewBlockDetailResp_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ViewBlockDetailResp.class, ViewBlockDetailResp.Builder.class);
+            ViewBlockDetailResp.class, Builder.class);
   }
 
   public static final int CODE_FIELD_NUMBER = 1;
@@ -101,18 +101,18 @@ public  final class ViewBlockDetailResp extends
   }
 
   public static final int MESSAGE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object message_;
+  private volatile Object message_;
   /**
    * <code>string message = 2;</code>
    */
-  public java.lang.String getMessage() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getMessage() {
+    Object ref = message_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       message_ = s;
       return s;
     }
@@ -122,11 +122,11 @@ public  final class ViewBlockDetailResp extends
    */
   public com.google.protobuf.ByteString
       getMessageBytes() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
+    Object ref = message_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       message_ = b;
       return b;
     } else {
@@ -199,8 +199,8 @@ public  final class ViewBlockDetailResp extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -222,7 +222,7 @@ public  final class ViewBlockDetailResp extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -313,9 +313,9 @@ public  final class ViewBlockDetailResp extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -325,17 +325,17 @@ public  final class ViewBlockDetailResp extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.ViewBlockDetailResp)
-          ViewBlockDetailRespOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailRespOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return WebProto.internal_static_rpcpb_ViewBlockDetailResp_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ViewBlockDetailResp.class, ViewBlockDetailResp.Builder.class);
+              ViewBlockDetailResp.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp.newBuilder()
@@ -344,7 +344,7 @@ public  final class ViewBlockDetailResp extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -370,7 +370,7 @@ public  final class ViewBlockDetailResp extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
     }
 
     public ViewBlockDetailResp getDefaultInstanceForType() {
@@ -497,20 +497,20 @@ public  final class ViewBlockDetailResp extends
       return this;
     }
 
-    private java.lang.Object message_ = "";
+    private Object message_ = "";
     /**
      * <code>string message = 2;</code>
      */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getMessage() {
+      Object ref = message_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         message_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -518,11 +518,11 @@ public  final class ViewBlockDetailResp extends
      */
     public com.google.protobuf.ByteString
         getMessageBytes() {
-      java.lang.Object ref = message_;
+      Object ref = message_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         message_ = b;
         return b;
       } else {
@@ -533,7 +533,7 @@ public  final class ViewBlockDetailResp extends
      * <code>string message = 2;</code>
      */
     public Builder setMessage(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -568,7 +568,7 @@ public  final class ViewBlockDetailResp extends
 
     private BlockDetail detail_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            BlockDetail, BlockDetail.Builder, BlockDetailOrBuilder> detailBuilder_;
+        BlockDetail, BlockDetail.Builder, BlockDetailOrBuilder> detailBuilder_;
     /**
      * <code>.rpcpb.BlockDetail detail = 3;</code>
      */
@@ -670,11 +670,11 @@ public  final class ViewBlockDetailResp extends
      * <code>.rpcpb.BlockDetail detail = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            BlockDetail, BlockDetail.Builder, BlockDetailOrBuilder>
+        BlockDetail, BlockDetail.Builder, BlockDetailOrBuilder>
         getDetailFieldBuilder() {
       if (detailBuilder_ == null) {
         detailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                BlockDetail, BlockDetail.Builder, BlockDetailOrBuilder>(
+            BlockDetail, BlockDetail.Builder, BlockDetailOrBuilder>(
                 getDetail(),
                 getParentForChildren(),
                 isClean());
@@ -720,7 +720,7 @@ public  final class ViewBlockDetailResp extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<ViewBlockDetailResp> getParserForType() {
     return PARSER;
   }

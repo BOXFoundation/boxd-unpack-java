@@ -19,7 +19,7 @@ public  final class GetNetworkIDResponse extends
     literal_ = "";
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -50,7 +50,7 @@ public  final class GetNetworkIDResponse extends
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             literal_ = s;
             break;
@@ -71,11 +71,11 @@ public  final class GetNetworkIDResponse extends
     return ControlProto.internal_static_rpcpb_GetNetworkIDResponse_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return ControlProto.internal_static_rpcpb_GetNetworkIDResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GetNetworkIDResponse.class, GetNetworkIDResponse.Builder.class);
+            GetNetworkIDResponse.class, Builder.class);
   }
 
   public static final int ID_FIELD_NUMBER = 1;
@@ -88,18 +88,18 @@ public  final class GetNetworkIDResponse extends
   }
 
   public static final int LITERAL_FIELD_NUMBER = 2;
-  private volatile java.lang.Object literal_;
+  private volatile Object literal_;
   /**
    * <code>string literal = 2;</code>
    */
-  public java.lang.String getLiteral() {
-    java.lang.Object ref = literal_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getLiteral() {
+    Object ref = literal_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       literal_ = s;
       return s;
     }
@@ -109,11 +109,11 @@ public  final class GetNetworkIDResponse extends
    */
   public com.google.protobuf.ByteString
       getLiteralBytes() {
-    java.lang.Object ref = literal_;
-    if (ref instanceof java.lang.String) {
+    Object ref = literal_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       literal_ = b;
       return b;
     } else {
@@ -158,8 +158,8 @@ public  final class GetNetworkIDResponse extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -176,7 +176,7 @@ public  final class GetNetworkIDResponse extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -263,9 +263,9 @@ public  final class GetNetworkIDResponse extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -275,17 +275,17 @@ public  final class GetNetworkIDResponse extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetNetworkIDResponse)
-          GetNetworkIDResponseOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ControlProto.internal_static_rpcpb_GetNetworkIDResponse_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ControlProto.internal_static_rpcpb_GetNetworkIDResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetNetworkIDResponse.class, GetNetworkIDResponse.Builder.class);
+              GetNetworkIDResponse.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse.newBuilder()
@@ -294,7 +294,7 @@ public  final class GetNetworkIDResponse extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -433,20 +433,20 @@ public  final class GetNetworkIDResponse extends
       return this;
     }
 
-    private java.lang.Object literal_ = "";
+    private Object literal_ = "";
     /**
      * <code>string literal = 2;</code>
      */
-    public java.lang.String getLiteral() {
-      java.lang.Object ref = literal_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getLiteral() {
+      Object ref = literal_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         literal_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -454,11 +454,11 @@ public  final class GetNetworkIDResponse extends
      */
     public com.google.protobuf.ByteString
         getLiteralBytes() {
-      java.lang.Object ref = literal_;
+      Object ref = literal_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         literal_ = b;
         return b;
       } else {
@@ -469,7 +469,7 @@ public  final class GetNetworkIDResponse extends
      * <code>string literal = 2;</code>
      */
     public Builder setLiteral(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -539,7 +539,7 @@ public  final class GetNetworkIDResponse extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<GetNetworkIDResponse> getParserForType() {
     return PARSER;
   }

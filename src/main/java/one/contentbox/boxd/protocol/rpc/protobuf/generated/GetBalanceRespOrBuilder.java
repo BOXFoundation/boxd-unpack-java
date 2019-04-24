@@ -15,7 +15,7 @@ public interface GetBalanceRespOrBuilder extends
   /**
    * <code>string message = 2;</code>
    */
-  java.lang.String getMessage();
+  String getMessage();
   /**
    * <code>string message = 2;</code>
    */
@@ -25,7 +25,7 @@ public interface GetBalanceRespOrBuilder extends
   /**
    * <code>repeated uint64 balances = 3;</code>
    */
-  java.util.List<java.lang.Long> getBalancesList();
+  java.util.List<Long> getBalancesList();
   /**
    * <code>repeated uint64 balances = 3;</code>
    */

@@ -23,7 +23,7 @@ public  final class MakeTokenTransferTxReq extends
     fee_ = 0L;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -49,13 +49,13 @@ public  final class MakeTokenTransferTxReq extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             from_ = s;
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               to_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000002;
@@ -65,7 +65,7 @@ public  final class MakeTokenTransferTxReq extends
           }
           case 24: {
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-              amounts_ = new java.util.ArrayList<java.lang.Long>();
+              amounts_ = new java.util.ArrayList<Long>();
               mutable_bitField0_ |= 0x00000004;
             }
             amounts_.add(input.readUInt64());
@@ -75,7 +75,7 @@ public  final class MakeTokenTransferTxReq extends
             int length = input.readRawVarint32();
             int limit = input.pushLimit(length);
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
-              amounts_ = new java.util.ArrayList<java.lang.Long>();
+              amounts_ = new java.util.ArrayList<Long>();
               mutable_bitField0_ |= 0x00000004;
             }
             while (input.getBytesUntilLimit() > 0) {
@@ -85,7 +85,7 @@ public  final class MakeTokenTransferTxReq extends
             break;
           }
           case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             tokenHash_ = s;
             break;
@@ -119,30 +119,30 @@ public  final class MakeTokenTransferTxReq extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            MakeTokenTransferTxReq.class, MakeTokenTransferTxReq.Builder.class);
+            MakeTokenTransferTxReq.class, Builder.class);
   }
 
   private int bitField0_;
   public static final int FROM_FIELD_NUMBER = 1;
-  private volatile java.lang.Object from_;
+  private volatile Object from_;
   /**
    * <code>string from = 1;</code>
    */
-  public java.lang.String getFrom() {
-    java.lang.Object ref = from_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getFrom() {
+    Object ref = from_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       from_ = s;
       return s;
     }
@@ -152,11 +152,11 @@ public  final class MakeTokenTransferTxReq extends
    */
   public com.google.protobuf.ByteString
       getFromBytes() {
-    java.lang.Object ref = from_;
-    if (ref instanceof java.lang.String) {
+    Object ref = from_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       from_ = b;
       return b;
     } else {
@@ -182,7 +182,7 @@ public  final class MakeTokenTransferTxReq extends
   /**
    * <code>repeated string to = 2;</code>
    */
-  public java.lang.String getTo(int index) {
+  public String getTo(int index) {
     return to_.get(index);
   }
   /**
@@ -194,11 +194,11 @@ public  final class MakeTokenTransferTxReq extends
   }
 
   public static final int AMOUNTS_FIELD_NUMBER = 3;
-  private java.util.List<java.lang.Long> amounts_;
+  private java.util.List<Long> amounts_;
   /**
    * <code>repeated uint64 amounts = 3;</code>
    */
-  public java.util.List<java.lang.Long>
+  public java.util.List<Long>
       getAmountsList() {
     return amounts_;
   }
@@ -217,18 +217,18 @@ public  final class MakeTokenTransferTxReq extends
   private int amountsMemoizedSerializedSize = -1;
 
   public static final int TOKEN_HASH_FIELD_NUMBER = 4;
-  private volatile java.lang.Object tokenHash_;
+  private volatile Object tokenHash_;
   /**
    * <code>string token_hash = 4;</code>
    */
-  public java.lang.String getTokenHash() {
-    java.lang.Object ref = tokenHash_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getTokenHash() {
+    Object ref = tokenHash_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       tokenHash_ = s;
       return s;
     }
@@ -238,11 +238,11 @@ public  final class MakeTokenTransferTxReq extends
    */
   public com.google.protobuf.ByteString
       getTokenHashBytes() {
-    java.lang.Object ref = tokenHash_;
-    if (ref instanceof java.lang.String) {
+    Object ref = tokenHash_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       tokenHash_ = b;
       return b;
     } else {
@@ -351,8 +351,8 @@ public  final class MakeTokenTransferTxReq extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -377,7 +377,7 @@ public  final class MakeTokenTransferTxReq extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -477,9 +477,9 @@ public  final class MakeTokenTransferTxReq extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -489,17 +489,17 @@ public  final class MakeTokenTransferTxReq extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.MakeTokenTransferTxReq)
-          MakeTokenTransferTxReqOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MakeTokenTransferTxReq.class, MakeTokenTransferTxReq.Builder.class);
+              MakeTokenTransferTxReq.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq.newBuilder()
@@ -508,7 +508,7 @@ public  final class MakeTokenTransferTxReq extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -536,7 +536,7 @@ public  final class MakeTokenTransferTxReq extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenTransferTxReq_descriptor;
     }
 
     public MakeTokenTransferTxReq getDefaultInstanceForType() {
@@ -672,20 +672,20 @@ public  final class MakeTokenTransferTxReq extends
     }
     private int bitField0_;
 
-    private java.lang.Object from_ = "";
+    private Object from_ = "";
     /**
      * <code>string from = 1;</code>
      */
-    public java.lang.String getFrom() {
-      java.lang.Object ref = from_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getFrom() {
+      Object ref = from_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         from_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -693,11 +693,11 @@ public  final class MakeTokenTransferTxReq extends
      */
     public com.google.protobuf.ByteString
         getFromBytes() {
-      java.lang.Object ref = from_;
+      Object ref = from_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         from_ = b;
         return b;
       } else {
@@ -708,7 +708,7 @@ public  final class MakeTokenTransferTxReq extends
      * <code>string from = 1;</code>
      */
     public Builder setFrom(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -764,7 +764,7 @@ public  final class MakeTokenTransferTxReq extends
     /**
      * <code>repeated string to = 2;</code>
      */
-    public java.lang.String getTo(int index) {
+    public String getTo(int index) {
       return to_.get(index);
     }
     /**
@@ -778,7 +778,7 @@ public  final class MakeTokenTransferTxReq extends
      * <code>repeated string to = 2;</code>
      */
     public Builder setTo(
-        int index, java.lang.String value) {
+        int index, String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -791,7 +791,7 @@ public  final class MakeTokenTransferTxReq extends
      * <code>repeated string to = 2;</code>
      */
     public Builder addTo(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -804,7 +804,7 @@ public  final class MakeTokenTransferTxReq extends
      * <code>repeated string to = 2;</code>
      */
     public Builder addAllTo(
-        java.lang.Iterable<java.lang.String> values) {
+        Iterable<String> values) {
       ensureToIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, to_);
@@ -835,17 +835,17 @@ public  final class MakeTokenTransferTxReq extends
       return this;
     }
 
-    private java.util.List<java.lang.Long> amounts_ = java.util.Collections.emptyList();
+    private java.util.List<Long> amounts_ = java.util.Collections.emptyList();
     private void ensureAmountsIsMutable() {
       if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-        amounts_ = new java.util.ArrayList<java.lang.Long>(amounts_);
+        amounts_ = new java.util.ArrayList<Long>(amounts_);
         bitField0_ |= 0x00000004;
        }
     }
     /**
      * <code>repeated uint64 amounts = 3;</code>
      */
-    public java.util.List<java.lang.Long>
+    public java.util.List<Long>
         getAmountsList() {
       return java.util.Collections.unmodifiableList(amounts_);
     }
@@ -884,7 +884,7 @@ public  final class MakeTokenTransferTxReq extends
      * <code>repeated uint64 amounts = 3;</code>
      */
     public Builder addAllAmounts(
-        java.lang.Iterable<? extends java.lang.Long> values) {
+        Iterable<? extends Long> values) {
       ensureAmountsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, amounts_);
@@ -901,20 +901,20 @@ public  final class MakeTokenTransferTxReq extends
       return this;
     }
 
-    private java.lang.Object tokenHash_ = "";
+    private Object tokenHash_ = "";
     /**
      * <code>string token_hash = 4;</code>
      */
-    public java.lang.String getTokenHash() {
-      java.lang.Object ref = tokenHash_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getTokenHash() {
+      Object ref = tokenHash_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         tokenHash_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -922,11 +922,11 @@ public  final class MakeTokenTransferTxReq extends
      */
     public com.google.protobuf.ByteString
         getTokenHashBytes() {
-      java.lang.Object ref = tokenHash_;
+      Object ref = tokenHash_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         tokenHash_ = b;
         return b;
       } else {
@@ -937,7 +937,7 @@ public  final class MakeTokenTransferTxReq extends
      * <code>string token_hash = 4;</code>
      */
     public Builder setTokenHash(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -1059,7 +1059,7 @@ public  final class MakeTokenTransferTxReq extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<MakeTokenTransferTxReq> getParserForType() {
     return PARSER;
   }

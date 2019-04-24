@@ -21,7 +21,7 @@ public  final class TokenTag extends
     decimal_ = 0;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -47,13 +47,13 @@ public  final class TokenTag extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             name_ = s;
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             symbol_ = s;
             break;
@@ -81,29 +81,29 @@ public  final class TokenTag extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_TokenTag_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_TokenTag_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_TokenTag_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_TokenTag_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            TokenTag.class, TokenTag.Builder.class);
+            TokenTag.class, Builder.class);
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object name_;
+  private volatile Object name_;
   /**
    * <code>string name = 1;</code>
    */
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getName() {
+    Object ref = name_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       name_ = s;
       return s;
     }
@@ -113,11 +113,11 @@ public  final class TokenTag extends
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
+    Object ref = name_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       name_ = b;
       return b;
     } else {
@@ -126,18 +126,18 @@ public  final class TokenTag extends
   }
 
   public static final int SYMBOL_FIELD_NUMBER = 2;
-  private volatile java.lang.Object symbol_;
+  private volatile Object symbol_;
   /**
    * <code>string symbol = 2;</code>
    */
-  public java.lang.String getSymbol() {
-    java.lang.Object ref = symbol_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getSymbol() {
+    Object ref = symbol_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       symbol_ = s;
       return s;
     }
@@ -147,11 +147,11 @@ public  final class TokenTag extends
    */
   public com.google.protobuf.ByteString
       getSymbolBytes() {
-    java.lang.Object ref = symbol_;
-    if (ref instanceof java.lang.String) {
+    Object ref = symbol_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       symbol_ = b;
       return b;
     } else {
@@ -227,8 +227,8 @@ public  final class TokenTag extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -249,7 +249,7 @@ public  final class TokenTag extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -341,9 +341,9 @@ public  final class TokenTag extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -353,17 +353,17 @@ public  final class TokenTag extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.TokenTag)
-          TokenTagOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_TokenTag_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_TokenTag_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_TokenTag_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_TokenTag_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              TokenTag.class, TokenTag.Builder.class);
+              TokenTag.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.newBuilder()
@@ -372,7 +372,7 @@ public  final class TokenTag extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -396,7 +396,7 @@ public  final class TokenTag extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_TokenTag_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_TokenTag_descriptor;
     }
 
     public TokenTag getDefaultInstanceForType() {
@@ -498,20 +498,20 @@ public  final class TokenTag extends
       return this;
     }
 
-    private java.lang.Object name_ = "";
+    private Object name_ = "";
     /**
      * <code>string name = 1;</code>
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getName() {
+      Object ref = name_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         name_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -519,11 +519,11 @@ public  final class TokenTag extends
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
+      Object ref = name_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         name_ = b;
         return b;
       } else {
@@ -534,7 +534,7 @@ public  final class TokenTag extends
      * <code>string name = 1;</code>
      */
     public Builder setName(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -567,20 +567,20 @@ public  final class TokenTag extends
       return this;
     }
 
-    private java.lang.Object symbol_ = "";
+    private Object symbol_ = "";
     /**
      * <code>string symbol = 2;</code>
      */
-    public java.lang.String getSymbol() {
-      java.lang.Object ref = symbol_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getSymbol() {
+      Object ref = symbol_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         symbol_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -588,11 +588,11 @@ public  final class TokenTag extends
      */
     public com.google.protobuf.ByteString
         getSymbolBytes() {
-      java.lang.Object ref = symbol_;
+      Object ref = symbol_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         symbol_ = b;
         return b;
       } else {
@@ -603,7 +603,7 @@ public  final class TokenTag extends
      * <code>string symbol = 2;</code>
      */
     public Builder setSymbol(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -725,7 +725,7 @@ public  final class TokenTag extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<TokenTag> getParserForType() {
     return PARSER;
   }

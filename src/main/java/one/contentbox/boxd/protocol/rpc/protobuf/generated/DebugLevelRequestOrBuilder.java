@@ -10,7 +10,7 @@ public interface DebugLevelRequestOrBuilder extends
   /**
    * <code>string level = 1;</code>
    */
-  java.lang.String getLevel();
+  String getLevel();
   /**
    * <code>string level = 1;</code>
    */

@@ -82,7 +82,7 @@ public final class WebProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\tweb.proto\022\005rpcpb\032\021transaction.proto\"5\n" +
       "\017ViewTxDetailReq\022\014\n\004hash\030\001 \001(\t\022\024\n\014spread" +
       "_split\030\002 \001(\010\"\201\002\n\020ViewTxDetailResp\022\014\n\004cod" +
@@ -127,8 +127,8 @@ public final class WebProto {
       "pb.ViewBlockDetailReq\032\032.rpcpb.ViewBlockD" +
       "etailResp\022E\n\025ListenAndReadNewBlock\022\026.rpc" +
       "pb.ListenBlocksReq\032\022.rpcpb.BlockDetail0\001" +
-      "B\'\n\031one.contentbox.boxd.protoB\010WebProtoP" +
-      "\001b\006proto3"
+      "BA\n3one.contentbox.boxd.protocol.rpc.pro" +
+      "tobuf.generatedB\010WebProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -148,73 +148,73 @@ public final class WebProto {
     internal_static_rpcpb_ViewTxDetailReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_ViewTxDetailReq_descriptor,
-        new java.lang.String[] { "Hash", "SpreadSplit", });
+        new String[] { "Hash", "SpreadSplit", });
     internal_static_rpcpb_ViewTxDetailResp_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_rpcpb_ViewTxDetailResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_ViewTxDetailResp_descriptor,
-        new java.lang.String[] { "Code", "Message", "Version", "BlockTime", "BlockHeight", "Status", "Detail", });
+        new String[] { "Code", "Message", "Version", "BlockTime", "BlockHeight", "Status", "Detail", });
     internal_static_rpcpb_ViewBlockDetailReq_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_rpcpb_ViewBlockDetailReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_ViewBlockDetailReq_descriptor,
-        new java.lang.String[] { "Hash", });
+        new String[] { "Hash", });
     internal_static_rpcpb_ViewBlockDetailResp_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_rpcpb_ViewBlockDetailResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_ViewBlockDetailResp_descriptor,
-        new java.lang.String[] { "Code", "Message", "Detail", });
+        new String[] { "Code", "Message", "Detail", });
     internal_static_rpcpb_ListenBlocksReq_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_rpcpb_ListenBlocksReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_ListenBlocksReq_descriptor,
-        new java.lang.String[] { });
+        new String[] { });
     internal_static_rpcpb_TxDetail_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_rpcpb_TxDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_TxDetail_descriptor,
-        new java.lang.String[] { "Hash", "Vin", "Vout", });
+        new String[] { "Hash", "Vin", "Vout", });
     internal_static_rpcpb_TxInDetail_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_rpcpb_TxInDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_TxInDetail_descriptor,
-        new java.lang.String[] { "PrevOutDetail", "ScriptSig", "Sequence", "PrevOutPoint", });
+        new String[] { "PrevOutDetail", "ScriptSig", "Sequence", "PrevOutPoint", });
     internal_static_rpcpb_TxOutDetail_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_rpcpb_TxOutDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_TxOutDetail_descriptor,
-        new java.lang.String[] { "Addr", "Value", "ScriptPubKey", "ScriptDisasm", "Type", "TokenIssueInfo", "TokenTransferInfo", "SplitContractInfo", "Appendix", });
+        new String[] { "Addr", "Value", "ScriptPubKey", "ScriptDisasm", "Type", "TokenIssueInfo", "TokenTransferInfo", "SplitContractInfo", "Appendix", });
     internal_static_rpcpb_BlockDetail_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_rpcpb_BlockDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_BlockDetail_descriptor,
-        new java.lang.String[] { "Version", "Height", "TimeStamp", "Size", "Hash", "PrevBlockHash", "CoinBase", "Confirmed", "Signature", "Txs", });
+        new String[] { "Version", "Height", "TimeStamp", "Size", "Hash", "PrevBlockHash", "CoinBase", "Confirmed", "Signature", "Txs", });
     internal_static_rpcpb_TokenIssueInfo_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_rpcpb_TokenIssueInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_TokenIssueInfo_descriptor,
-        new java.lang.String[] { "TokenTag", });
+        new String[] { "TokenTag", });
     internal_static_rpcpb_SplitContractInfo_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_rpcpb_SplitContractInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_SplitContractInfo_descriptor,
-        new java.lang.String[] { "Addrs", "Weights", });
+        new String[] { "Addrs", "Weights", });
     internal_static_rpcpb_TokenTransferInfo_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_rpcpb_TokenTransferInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_TokenTransferInfo_descriptor,
-        new java.lang.String[] { "TokenId", });
+        new String[] { "TokenId", });
     TransactionProto.getDescriptor();
   }
 

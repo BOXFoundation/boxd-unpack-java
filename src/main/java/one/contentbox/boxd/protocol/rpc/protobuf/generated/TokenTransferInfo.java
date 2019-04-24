@@ -18,7 +18,7 @@ public  final class TokenTransferInfo extends
     tokenId_ = "";
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -44,7 +44,7 @@ public  final class TokenTransferInfo extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             tokenId_ = s;
             break;
@@ -62,29 +62,29 @@ public  final class TokenTransferInfo extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return WebProto.internal_static_rpcpb_TokenTransferInfo_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            TokenTransferInfo.class, TokenTransferInfo.Builder.class);
+            TokenTransferInfo.class, Builder.class);
   }
 
   public static final int TOKEN_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object tokenId_;
+  private volatile Object tokenId_;
   /**
    * <code>string token_id = 1;</code>
    */
-  public java.lang.String getTokenId() {
-    java.lang.Object ref = tokenId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getTokenId() {
+    Object ref = tokenId_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       tokenId_ = s;
       return s;
     }
@@ -94,11 +94,11 @@ public  final class TokenTransferInfo extends
    */
   public com.google.protobuf.ByteString
       getTokenIdBytes() {
-    java.lang.Object ref = tokenId_;
-    if (ref instanceof java.lang.String) {
+    Object ref = tokenId_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       tokenId_ = b;
       return b;
     } else {
@@ -136,8 +136,8 @@ public  final class TokenTransferInfo extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -152,7 +152,7 @@ public  final class TokenTransferInfo extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -237,9 +237,9 @@ public  final class TokenTransferInfo extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -249,17 +249,17 @@ public  final class TokenTransferInfo extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.TokenTransferInfo)
-          TokenTransferInfoOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTransferInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return WebProto.internal_static_rpcpb_TokenTransferInfo_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              TokenTransferInfo.class, TokenTransferInfo.Builder.class);
+              TokenTransferInfo.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTransferInfo.newBuilder()
@@ -268,7 +268,7 @@ public  final class TokenTransferInfo extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -286,7 +286,7 @@ public  final class TokenTransferInfo extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
     }
 
     public TokenTransferInfo getDefaultInstanceForType() {
@@ -375,20 +375,20 @@ public  final class TokenTransferInfo extends
       return this;
     }
 
-    private java.lang.Object tokenId_ = "";
+    private Object tokenId_ = "";
     /**
      * <code>string token_id = 1;</code>
      */
-    public java.lang.String getTokenId() {
-      java.lang.Object ref = tokenId_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getTokenId() {
+      Object ref = tokenId_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         tokenId_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -396,11 +396,11 @@ public  final class TokenTransferInfo extends
      */
     public com.google.protobuf.ByteString
         getTokenIdBytes() {
-      java.lang.Object ref = tokenId_;
+      Object ref = tokenId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         tokenId_ = b;
         return b;
       } else {
@@ -411,7 +411,7 @@ public  final class TokenTransferInfo extends
      * <code>string token_id = 1;</code>
      */
     public Builder setTokenId(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -481,7 +481,7 @@ public  final class TokenTransferInfo extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<TokenTransferInfo> getParserForType() {
     return PARSER;
   }

@@ -10,7 +10,7 @@ public interface TxOutDetailOrBuilder extends
   /**
    * <code>string addr = 1;</code>
    */
-  java.lang.String getAddr();
+  String getAddr();
   /**
    * <code>string addr = 1;</code>
    */
@@ -25,7 +25,7 @@ public interface TxOutDetailOrBuilder extends
   /**
    * <code>string script_pub_key = 3;</code>
    */
-  java.lang.String getScriptPubKey();
+  String getScriptPubKey();
   /**
    * <code>string script_pub_key = 3;</code>
    */
@@ -35,7 +35,7 @@ public interface TxOutDetailOrBuilder extends
   /**
    * <code>string script_disasm = 4;</code>
    */
-  java.lang.String getScriptDisasm();
+  String getScriptDisasm();
   /**
    * <code>string script_disasm = 4;</code>
    */

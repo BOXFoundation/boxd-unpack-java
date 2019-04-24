@@ -6,7 +6,7 @@ syntax = "proto3";
 
 package corepb;
 
-option java_package = "one.contentbox.boxd.proto";
+option java_package = "one.contentbox.boxd.protocol.rpc.protobuf.generated";
 option java_outer_classname ="BlockProto";
 option java_multiple_files = true;
 

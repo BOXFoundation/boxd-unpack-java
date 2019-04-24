@@ -27,7 +27,7 @@ public  final class BlockDetail extends
     txs_ = java.util.Collections.emptyList();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -73,19 +73,19 @@ public  final class BlockDetail extends
             break;
           }
           case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             hash_ = s;
             break;
           }
           case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             prevBlockHash_ = s;
             break;
           }
           case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             coinBase_ = s;
             break;
@@ -96,18 +96,18 @@ public  final class BlockDetail extends
             break;
           }
           case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             signature_ = s;
             break;
           }
           case 82: {
             if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
-              txs_ = new java.util.ArrayList<TxDetail>();
+              txs_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail>();
               mutable_bitField0_ |= 0x00000200;
             }
             txs_.add(
-                input.readMessage(TxDetail.parser(), extensionRegistry));
+                input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.parser(), extensionRegistry));
             break;
           }
         }
@@ -126,14 +126,14 @@ public  final class BlockDetail extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return WebProto.internal_static_rpcpb_BlockDetail_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return WebProto.internal_static_rpcpb_BlockDetail_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            BlockDetail.class, BlockDetail.Builder.class);
+            BlockDetail.class, Builder.class);
   }
 
   private int bitField0_;
@@ -174,18 +174,18 @@ public  final class BlockDetail extends
   }
 
   public static final int HASH_FIELD_NUMBER = 5;
-  private volatile java.lang.Object hash_;
+  private volatile Object hash_;
   /**
    * <code>string hash = 5;</code>
    */
-  public java.lang.String getHash() {
-    java.lang.Object ref = hash_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getHash() {
+    Object ref = hash_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       hash_ = s;
       return s;
     }
@@ -195,11 +195,11 @@ public  final class BlockDetail extends
    */
   public com.google.protobuf.ByteString
       getHashBytes() {
-    java.lang.Object ref = hash_;
-    if (ref instanceof java.lang.String) {
+    Object ref = hash_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       hash_ = b;
       return b;
     } else {
@@ -208,18 +208,18 @@ public  final class BlockDetail extends
   }
 
   public static final int PREV_BLOCK_HASH_FIELD_NUMBER = 6;
-  private volatile java.lang.Object prevBlockHash_;
+  private volatile Object prevBlockHash_;
   /**
    * <code>string prev_block_hash = 6;</code>
    */
-  public java.lang.String getPrevBlockHash() {
-    java.lang.Object ref = prevBlockHash_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getPrevBlockHash() {
+    Object ref = prevBlockHash_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       prevBlockHash_ = s;
       return s;
     }
@@ -229,11 +229,11 @@ public  final class BlockDetail extends
    */
   public com.google.protobuf.ByteString
       getPrevBlockHashBytes() {
-    java.lang.Object ref = prevBlockHash_;
-    if (ref instanceof java.lang.String) {
+    Object ref = prevBlockHash_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       prevBlockHash_ = b;
       return b;
     } else {
@@ -242,18 +242,18 @@ public  final class BlockDetail extends
   }
 
   public static final int COIN_BASE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object coinBase_;
+  private volatile Object coinBase_;
   /**
    * <code>string coin_base = 7;</code>
    */
-  public java.lang.String getCoinBase() {
-    java.lang.Object ref = coinBase_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getCoinBase() {
+    Object ref = coinBase_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       coinBase_ = s;
       return s;
     }
@@ -263,11 +263,11 @@ public  final class BlockDetail extends
    */
   public com.google.protobuf.ByteString
       getCoinBaseBytes() {
-    java.lang.Object ref = coinBase_;
-    if (ref instanceof java.lang.String) {
+    Object ref = coinBase_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       coinBase_ = b;
       return b;
     } else {
@@ -285,18 +285,18 @@ public  final class BlockDetail extends
   }
 
   public static final int SIGNATURE_FIELD_NUMBER = 9;
-  private volatile java.lang.Object signature_;
+  private volatile Object signature_;
   /**
    * <code>string signature = 9;</code>
    */
-  public java.lang.String getSignature() {
-    java.lang.Object ref = signature_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getSignature() {
+    Object ref = signature_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       signature_ = s;
       return s;
     }
@@ -306,11 +306,11 @@ public  final class BlockDetail extends
    */
   public com.google.protobuf.ByteString
       getSignatureBytes() {
-    java.lang.Object ref = signature_;
-    if (ref instanceof java.lang.String) {
+    Object ref = signature_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       signature_ = b;
       return b;
     } else {
@@ -319,17 +319,17 @@ public  final class BlockDetail extends
   }
 
   public static final int TXS_FIELD_NUMBER = 10;
-  private java.util.List<TxDetail> txs_;
+  private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> txs_;
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  public java.util.List<TxDetail> getTxsList() {
+  public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> getTxsList() {
     return txs_;
   }
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  public java.util.List<? extends TxDetailOrBuilder>
+  public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> 
       getTxsOrBuilderList() {
     return txs_;
   }
@@ -342,13 +342,13 @@ public  final class BlockDetail extends
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  public TxDetail getTxs(int index) {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail getTxs(int index) {
     return txs_.get(index);
   }
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  public TxDetailOrBuilder getTxsOrBuilder(
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder getTxsOrBuilder(
       int index) {
     return txs_.get(index);
   }
@@ -443,8 +443,8 @@ public  final class BlockDetail extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -477,7 +477,7 @@ public  final class BlockDetail extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -584,9 +584,9 @@ public  final class BlockDetail extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -596,17 +596,17 @@ public  final class BlockDetail extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.BlockDetail)
-          BlockDetailOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetailOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return WebProto.internal_static_rpcpb_BlockDetail_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return WebProto.internal_static_rpcpb_BlockDetail_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              BlockDetail.class, BlockDetail.Builder.class);
+              BlockDetail.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail.newBuilder()
@@ -615,7 +615,7 @@ public  final class BlockDetail extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -656,7 +656,7 @@ public  final class BlockDetail extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return WebProto.internal_static_rpcpb_BlockDetail_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_descriptor;
     }
 
     public BlockDetail getDefaultInstanceForType() {
@@ -923,20 +923,20 @@ public  final class BlockDetail extends
       return this;
     }
 
-    private java.lang.Object hash_ = "";
+    private Object hash_ = "";
     /**
      * <code>string hash = 5;</code>
      */
-    public java.lang.String getHash() {
-      java.lang.Object ref = hash_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getHash() {
+      Object ref = hash_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         hash_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -944,11 +944,11 @@ public  final class BlockDetail extends
      */
     public com.google.protobuf.ByteString
         getHashBytes() {
-      java.lang.Object ref = hash_;
+      Object ref = hash_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         hash_ = b;
         return b;
       } else {
@@ -959,7 +959,7 @@ public  final class BlockDetail extends
      * <code>string hash = 5;</code>
      */
     public Builder setHash(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -992,20 +992,20 @@ public  final class BlockDetail extends
       return this;
     }
 
-    private java.lang.Object prevBlockHash_ = "";
+    private Object prevBlockHash_ = "";
     /**
      * <code>string prev_block_hash = 6;</code>
      */
-    public java.lang.String getPrevBlockHash() {
-      java.lang.Object ref = prevBlockHash_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getPrevBlockHash() {
+      Object ref = prevBlockHash_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         prevBlockHash_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -1013,11 +1013,11 @@ public  final class BlockDetail extends
      */
     public com.google.protobuf.ByteString
         getPrevBlockHashBytes() {
-      java.lang.Object ref = prevBlockHash_;
+      Object ref = prevBlockHash_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         prevBlockHash_ = b;
         return b;
       } else {
@@ -1028,7 +1028,7 @@ public  final class BlockDetail extends
      * <code>string prev_block_hash = 6;</code>
      */
     public Builder setPrevBlockHash(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -1061,20 +1061,20 @@ public  final class BlockDetail extends
       return this;
     }
 
-    private java.lang.Object coinBase_ = "";
+    private Object coinBase_ = "";
     /**
      * <code>string coin_base = 7;</code>
      */
-    public java.lang.String getCoinBase() {
-      java.lang.Object ref = coinBase_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getCoinBase() {
+      Object ref = coinBase_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         coinBase_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -1082,11 +1082,11 @@ public  final class BlockDetail extends
      */
     public com.google.protobuf.ByteString
         getCoinBaseBytes() {
-      java.lang.Object ref = coinBase_;
+      Object ref = coinBase_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         coinBase_ = b;
         return b;
       } else {
@@ -1097,7 +1097,7 @@ public  final class BlockDetail extends
      * <code>string coin_base = 7;</code>
      */
     public Builder setCoinBase(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -1156,20 +1156,20 @@ public  final class BlockDetail extends
       return this;
     }
 
-    private java.lang.Object signature_ = "";
+    private Object signature_ = "";
     /**
      * <code>string signature = 9;</code>
      */
-    public java.lang.String getSignature() {
-      java.lang.Object ref = signature_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getSignature() {
+      Object ref = signature_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         signature_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -1177,11 +1177,11 @@ public  final class BlockDetail extends
      */
     public com.google.protobuf.ByteString
         getSignatureBytes() {
-      java.lang.Object ref = signature_;
+      Object ref = signature_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         signature_ = b;
         return b;
       } else {
@@ -1192,7 +1192,7 @@ public  final class BlockDetail extends
      * <code>string signature = 9;</code>
      */
     public Builder setSignature(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -1225,22 +1225,22 @@ public  final class BlockDetail extends
       return this;
     }
 
-    private java.util.List<TxDetail> txs_ =
+    private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> txs_ =
       java.util.Collections.emptyList();
     private void ensureTxsIsMutable() {
       if (!((bitField0_ & 0x00000200) == 0x00000200)) {
-        txs_ = new java.util.ArrayList<TxDetail>(txs_);
+        txs_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail>(txs_);
         bitField0_ |= 0x00000200;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            TxDetail, TxDetail.Builder, TxDetailOrBuilder> txsBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> txsBuilder_;
 
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public java.util.List<TxDetail> getTxsList() {
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> getTxsList() {
       if (txsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(txs_);
       } else {
@@ -1260,7 +1260,7 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public TxDetail getTxs(int index) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail getTxs(int index) {
       if (txsBuilder_ == null) {
         return txs_.get(index);
       } else {
@@ -1271,7 +1271,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder setTxs(
-        int index, TxDetail value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail value) {
       if (txsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1288,7 +1288,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder setTxs(
-        int index, TxDetail.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder builderForValue) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         txs_.set(index, builderForValue.build());
@@ -1301,7 +1301,7 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public Builder addTxs(TxDetail value) {
+    public Builder addTxs(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail value) {
       if (txsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1318,7 +1318,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder addTxs(
-        int index, TxDetail value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail value) {
       if (txsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1335,7 +1335,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder addTxs(
-        TxDetail.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder builderForValue) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         txs_.add(builderForValue.build());
@@ -1349,7 +1349,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder addTxs(
-        int index, TxDetail.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder builderForValue) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         txs_.add(index, builderForValue.build());
@@ -1363,7 +1363,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder addAllTxs(
-        java.lang.Iterable<? extends TxDetail> values) {
+        Iterable<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> values) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1403,14 +1403,14 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public TxDetail.Builder getTxsBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder getTxsBuilder(
         int index) {
       return getTxsFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public TxDetailOrBuilder getTxsOrBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder getTxsOrBuilder(
         int index) {
       if (txsBuilder_ == null) {
         return txs_.get(index);  } else {
@@ -1420,7 +1420,7 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public java.util.List<? extends TxDetailOrBuilder>
+    public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> 
          getTxsOrBuilderList() {
       if (txsBuilder_ != null) {
         return txsBuilder_.getMessageOrBuilderList();
@@ -1431,31 +1431,31 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public TxDetail.Builder addTxsBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder addTxsBuilder() {
       return getTxsFieldBuilder().addBuilder(
-          TxDetail.getDefaultInstance());
+          one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public TxDetail.Builder addTxsBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder addTxsBuilder(
         int index) {
       return getTxsFieldBuilder().addBuilder(
-          index, TxDetail.getDefaultInstance());
+          index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public java.util.List<TxDetail.Builder>
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder> 
          getTxsBuilderList() {
       return getTxsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            TxDetail, TxDetail.Builder, TxDetailOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> 
         getTxsFieldBuilder() {
       if (txsBuilder_ == null) {
         txsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                TxDetail, TxDetail.Builder, TxDetailOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder>(
                 txs_,
                 ((bitField0_ & 0x00000200) == 0x00000200),
                 getParentForChildren(),
@@ -1502,7 +1502,7 @@ public  final class BlockDetail extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<BlockDetail> getParserForType() {
     return PARSER;
   }

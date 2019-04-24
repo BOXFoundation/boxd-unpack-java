@@ -10,7 +10,7 @@ public interface TokenTransferInfoOrBuilder extends
   /**
    * <code>string token_id = 1;</code>
    */
-  java.lang.String getTokenId();
+  String getTokenId();
   /**
    * <code>string token_id = 1;</code>
    */

@@ -20,7 +20,7 @@ public  final class Utxo extends
     isSpent_ = false;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -102,11 +102,11 @@ public  final class Utxo extends
     return CommonProto.internal_static_rpcpb_Utxo_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return CommonProto.internal_static_rpcpb_Utxo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            Utxo.class, Utxo.Builder.class);
+            Utxo.class, Builder.class);
   }
 
   public static final int OUT_POINT_FIELD_NUMBER = 1;
@@ -237,8 +237,8 @@ public  final class Utxo extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -267,7 +267,7 @@ public  final class Utxo extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -366,9 +366,9 @@ public  final class Utxo extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -378,17 +378,17 @@ public  final class Utxo extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.Utxo)
-          UtxoOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return CommonProto.internal_static_rpcpb_Utxo_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return CommonProto.internal_static_rpcpb_Utxo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Utxo.class, Utxo.Builder.class);
+              Utxo.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.newBuilder()
@@ -397,7 +397,7 @@ public  final class Utxo extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -545,7 +545,7 @@ public  final class Utxo extends
 
     private OutPoint outPoint_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            OutPoint, OutPoint.Builder, OutPointOrBuilder> outPointBuilder_;
+        OutPoint, OutPoint.Builder, OutPointOrBuilder> outPointBuilder_;
     /**
      * <code>.corepb.OutPoint out_point = 1;</code>
      */
@@ -647,11 +647,11 @@ public  final class Utxo extends
      * <code>.corepb.OutPoint out_point = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            OutPoint, OutPoint.Builder, OutPointOrBuilder>
+        OutPoint, OutPoint.Builder, OutPointOrBuilder>
         getOutPointFieldBuilder() {
       if (outPointBuilder_ == null) {
         outPointBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                OutPoint, OutPoint.Builder, OutPointOrBuilder>(
+            OutPoint, OutPoint.Builder, OutPointOrBuilder>(
                 getOutPoint(),
                 getParentForChildren(),
                 isClean());
@@ -662,7 +662,7 @@ public  final class Utxo extends
 
     private TxOut txOut_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            TxOut, TxOut.Builder, TxOutOrBuilder> txOutBuilder_;
+        TxOut, TxOut.Builder, TxOutOrBuilder> txOutBuilder_;
     /**
      * <code>.corepb.TxOut tx_out = 2;</code>
      */
@@ -764,11 +764,11 @@ public  final class Utxo extends
      * <code>.corepb.TxOut tx_out = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            TxOut, TxOut.Builder, TxOutOrBuilder>
+        TxOut, TxOut.Builder, TxOutOrBuilder>
         getTxOutFieldBuilder() {
       if (txOutBuilder_ == null) {
         txOutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                TxOut, TxOut.Builder, TxOutOrBuilder>(
+            TxOut, TxOut.Builder, TxOutOrBuilder>(
                 getTxOut(),
                 getParentForChildren(),
                 isClean());
@@ -892,7 +892,7 @@ public  final class Utxo extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<Utxo> getParserForType() {
     return PARSER;
   }

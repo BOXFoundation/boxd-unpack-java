@@ -325,7 +325,7 @@ public class RpcBoxdClientImpl implements BoxdClient {
     public UnsignedTokenIssueTx makeUnsignedTokenIssueTx(TokenIssueTx tokenIssueTxReq) throws BoxdException {
         MakeTokenIssueTxReq.Builder builder = MakeTokenIssueTxReq.newBuilder();
         builder.setFee(tokenIssueTxReq.getFee());
-        builder.setIssuee(tokenIssueTxReq.getIssuee());
+        builder.setOwner(tokenIssueTxReq.getIssuee());
         builder.setIssuer(tokenIssueTxReq.getIssuer());
 
         one.contentbox.boxd.protocol.core.response.TokenTag token = tokenIssueTxReq.getToken();

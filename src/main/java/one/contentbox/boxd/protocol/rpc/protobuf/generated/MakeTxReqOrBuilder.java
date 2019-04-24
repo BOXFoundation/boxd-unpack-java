@@ -10,7 +10,7 @@ public interface MakeTxReqOrBuilder extends
   /**
    * <code>string from = 1;</code>
    */
-  java.lang.String getFrom();
+  String getFrom();
   /**
    * <code>string from = 1;</code>
    */
@@ -20,7 +20,7 @@ public interface MakeTxReqOrBuilder extends
   /**
    * <code>repeated string to = 2;</code>
    */
-  java.util.List<java.lang.String>
+  java.util.List<String>
       getToList();
   /**
    * <code>repeated string to = 2;</code>
@@ -29,7 +29,7 @@ public interface MakeTxReqOrBuilder extends
   /**
    * <code>repeated string to = 2;</code>
    */
-  java.lang.String getTo(int index);
+  String getTo(int index);
   /**
    * <code>repeated string to = 2;</code>
    */
@@ -39,7 +39,7 @@ public interface MakeTxReqOrBuilder extends
   /**
    * <code>repeated uint64 amounts = 3;</code>
    */
-  java.util.List<java.lang.Long> getAmountsList();
+  java.util.List<Long> getAmountsList();
   /**
    * <code>repeated uint64 amounts = 3;</code>
    */

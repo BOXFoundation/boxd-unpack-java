@@ -23,7 +23,7 @@ public  final class ViewTxDetailResp extends
     status_ = 0;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -54,7 +54,7 @@ public  final class ViewTxDetailResp extends
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             message_ = s;
             break;
@@ -106,14 +106,14 @@ public  final class ViewTxDetailResp extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return WebProto.internal_static_rpcpb_ViewTxDetailResp_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewTxDetailResp_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return WebProto.internal_static_rpcpb_ViewTxDetailResp_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewTxDetailResp_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ViewTxDetailResp.class, ViewTxDetailResp.Builder.class);
+            ViewTxDetailResp.class, Builder.class);
   }
 
   /**
@@ -160,7 +160,7 @@ public  final class ViewTxDetailResp extends
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
+        throw new IllegalArgumentException(
             "Can't get the number of an unknown enum value.");
       }
       return value;
@@ -169,7 +169,7 @@ public  final class ViewTxDetailResp extends
     /**
      * @deprecated Use {@link #forNumber(int)} instead.
      */
-    @java.lang.Deprecated
+    @Deprecated
     public static TxStatus valueOf(int value) {
       return forNumber(value);
     }
@@ -214,7 +214,7 @@ public  final class ViewTxDetailResp extends
     public static TxStatus valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
+        throw new IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
@@ -242,18 +242,18 @@ public  final class ViewTxDetailResp extends
   }
 
   public static final int MESSAGE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object message_;
+  private volatile Object message_;
   /**
    * <code>string message = 2;</code>
    */
-  public java.lang.String getMessage() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getMessage() {
+    Object ref = message_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       message_ = s;
       return s;
     }
@@ -263,11 +263,11 @@ public  final class ViewTxDetailResp extends
    */
   public com.google.protobuf.ByteString
       getMessageBytes() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
+    Object ref = message_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       message_ = b;
       return b;
     } else {
@@ -313,9 +313,9 @@ public  final class ViewTxDetailResp extends
   /**
    * <code>.rpcpb.ViewTxDetailResp.TxStatus status = 6;</code>
    */
-  public ViewTxDetailResp.TxStatus getStatus() {
-    ViewTxDetailResp.TxStatus result = ViewTxDetailResp.TxStatus.valueOf(status_);
-    return result == null ? ViewTxDetailResp.TxStatus.UNRECOGNIZED : result;
+  public TxStatus getStatus() {
+    TxStatus result = TxStatus.valueOf(status_);
+    return result == null ? TxStatus.UNRECOGNIZED : result;
   }
 
   public static final int DETAIL_FIELD_NUMBER = 7;
@@ -366,7 +366,7 @@ public  final class ViewTxDetailResp extends
     if (blockHeight_ != 0) {
       output.writeUInt32(5, blockHeight_);
     }
-    if (status_ != ViewTxDetailResp.TxStatus.unknown.getNumber()) {
+    if (status_ != TxStatus.unknown.getNumber()) {
       output.writeEnum(6, status_);
     }
     if (detail_ != null) {
@@ -398,7 +398,7 @@ public  final class ViewTxDetailResp extends
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(5, blockHeight_);
     }
-    if (status_ != ViewTxDetailResp.TxStatus.unknown.getNumber()) {
+    if (status_ != TxStatus.unknown.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, status_);
     }
@@ -411,8 +411,8 @@ public  final class ViewTxDetailResp extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -441,7 +441,7 @@ public  final class ViewTxDetailResp extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -541,9 +541,9 @@ public  final class ViewTxDetailResp extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -553,17 +553,17 @@ public  final class ViewTxDetailResp extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.ViewTxDetailResp)
-          ViewTxDetailRespOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailRespOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return WebProto.internal_static_rpcpb_ViewTxDetailResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewTxDetailResp_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return WebProto.internal_static_rpcpb_ViewTxDetailResp_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewTxDetailResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ViewTxDetailResp.class, ViewTxDetailResp.Builder.class);
+              ViewTxDetailResp.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp.newBuilder()
@@ -572,7 +572,7 @@ public  final class ViewTxDetailResp extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -606,7 +606,7 @@ public  final class ViewTxDetailResp extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return WebProto.internal_static_rpcpb_ViewTxDetailResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewTxDetailResp_descriptor;
     }
 
     public ViewTxDetailResp getDefaultInstanceForType() {
@@ -749,20 +749,20 @@ public  final class ViewTxDetailResp extends
       return this;
     }
 
-    private java.lang.Object message_ = "";
+    private Object message_ = "";
     /**
      * <code>string message = 2;</code>
      */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getMessage() {
+      Object ref = message_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         message_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -770,11 +770,11 @@ public  final class ViewTxDetailResp extends
      */
     public com.google.protobuf.ByteString
         getMessageBytes() {
-      java.lang.Object ref = message_;
+      Object ref = message_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         message_ = b;
         return b;
       } else {
@@ -785,7 +785,7 @@ public  final class ViewTxDetailResp extends
      * <code>string message = 2;</code>
      */
     public Builder setMessage(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -914,14 +914,14 @@ public  final class ViewTxDetailResp extends
     /**
      * <code>.rpcpb.ViewTxDetailResp.TxStatus status = 6;</code>
      */
-    public ViewTxDetailResp.TxStatus getStatus() {
-      ViewTxDetailResp.TxStatus result = ViewTxDetailResp.TxStatus.valueOf(status_);
-      return result == null ? ViewTxDetailResp.TxStatus.UNRECOGNIZED : result;
+    public TxStatus getStatus() {
+      TxStatus result = TxStatus.valueOf(status_);
+      return result == null ? TxStatus.UNRECOGNIZED : result;
     }
     /**
      * <code>.rpcpb.ViewTxDetailResp.TxStatus status = 6;</code>
      */
-    public Builder setStatus(ViewTxDetailResp.TxStatus value) {
+    public Builder setStatus(TxStatus value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -942,7 +942,7 @@ public  final class ViewTxDetailResp extends
 
     private TxDetail detail_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            TxDetail, TxDetail.Builder, TxDetailOrBuilder> detailBuilder_;
+        TxDetail, TxDetail.Builder, TxDetailOrBuilder> detailBuilder_;
     /**
      * <code>.rpcpb.TxDetail detail = 7;</code>
      */
@@ -1044,11 +1044,11 @@ public  final class ViewTxDetailResp extends
      * <code>.rpcpb.TxDetail detail = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            TxDetail, TxDetail.Builder, TxDetailOrBuilder>
+        TxDetail, TxDetail.Builder, TxDetailOrBuilder>
         getDetailFieldBuilder() {
       if (detailBuilder_ == null) {
         detailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                TxDetail, TxDetail.Builder, TxDetailOrBuilder>(
+            TxDetail, TxDetail.Builder, TxDetailOrBuilder>(
                 getDetail(),
                 getParentForChildren(),
                 isClean());
@@ -1094,7 +1094,7 @@ public  final class ViewTxDetailResp extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<ViewTxDetailResp> getParserForType() {
     return PARSER;
   }

@@ -22,7 +22,7 @@ public  final class TxOutDetail extends
     type_ = 0;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -48,7 +48,7 @@ public  final class TxOutDetail extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             addr_ = s;
             break;
@@ -59,13 +59,13 @@ public  final class TxOutDetail extends
             break;
           }
           case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             scriptPubKey_ = s;
             break;
           }
           case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             scriptDisasm_ = s;
             break;
@@ -131,14 +131,14 @@ public  final class TxOutDetail extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return WebProto.internal_static_rpcpb_TxOutDetail_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            TxOutDetail.class, TxOutDetail.Builder.class);
+            TxOutDetail.class, Builder.class);
   }
 
   /**
@@ -209,7 +209,7 @@ public  final class TxOutDetail extends
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
+        throw new IllegalArgumentException(
             "Can't get the number of an unknown enum value.");
       }
       return value;
@@ -218,7 +218,7 @@ public  final class TxOutDetail extends
     /**
      * @deprecated Use {@link #forNumber(int)} instead.
      */
-    @java.lang.Deprecated
+    @Deprecated
     public static TxOutType valueOf(int value) {
       return forNumber(value);
     }
@@ -266,7 +266,7 @@ public  final class TxOutDetail extends
     public static TxOutType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
+        throw new IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
@@ -285,7 +285,7 @@ public  final class TxOutDetail extends
   }
 
   private int appendixCase_ = 0;
-  private java.lang.Object appendix_;
+  private Object appendix_;
   public enum AppendixCase
       implements com.google.protobuf.Internal.EnumLite {
     TOKEN_ISSUE_INFO(6),
@@ -299,7 +299,7 @@ public  final class TxOutDetail extends
     /**
      * @deprecated Use {@link #forNumber(int)} instead.
      */
-    @java.lang.Deprecated
+    @Deprecated
     public static AppendixCase valueOf(int value) {
       return forNumber(value);
     }
@@ -325,18 +325,18 @@ public  final class TxOutDetail extends
   }
 
   public static final int ADDR_FIELD_NUMBER = 1;
-  private volatile java.lang.Object addr_;
+  private volatile Object addr_;
   /**
    * <code>string addr = 1;</code>
    */
-  public java.lang.String getAddr() {
-    java.lang.Object ref = addr_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getAddr() {
+    Object ref = addr_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       addr_ = s;
       return s;
     }
@@ -346,11 +346,11 @@ public  final class TxOutDetail extends
    */
   public com.google.protobuf.ByteString
       getAddrBytes() {
-    java.lang.Object ref = addr_;
-    if (ref instanceof java.lang.String) {
+    Object ref = addr_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       addr_ = b;
       return b;
     } else {
@@ -368,18 +368,18 @@ public  final class TxOutDetail extends
   }
 
   public static final int SCRIPT_PUB_KEY_FIELD_NUMBER = 3;
-  private volatile java.lang.Object scriptPubKey_;
+  private volatile Object scriptPubKey_;
   /**
    * <code>string script_pub_key = 3;</code>
    */
-  public java.lang.String getScriptPubKey() {
-    java.lang.Object ref = scriptPubKey_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getScriptPubKey() {
+    Object ref = scriptPubKey_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       scriptPubKey_ = s;
       return s;
     }
@@ -389,11 +389,11 @@ public  final class TxOutDetail extends
    */
   public com.google.protobuf.ByteString
       getScriptPubKeyBytes() {
-    java.lang.Object ref = scriptPubKey_;
-    if (ref instanceof java.lang.String) {
+    Object ref = scriptPubKey_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       scriptPubKey_ = b;
       return b;
     } else {
@@ -402,18 +402,18 @@ public  final class TxOutDetail extends
   }
 
   public static final int SCRIPT_DISASM_FIELD_NUMBER = 4;
-  private volatile java.lang.Object scriptDisasm_;
+  private volatile Object scriptDisasm_;
   /**
    * <code>string script_disasm = 4;</code>
    */
-  public java.lang.String getScriptDisasm() {
-    java.lang.Object ref = scriptDisasm_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getScriptDisasm() {
+    Object ref = scriptDisasm_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       scriptDisasm_ = s;
       return s;
     }
@@ -423,11 +423,11 @@ public  final class TxOutDetail extends
    */
   public com.google.protobuf.ByteString
       getScriptDisasmBytes() {
-    java.lang.Object ref = scriptDisasm_;
-    if (ref instanceof java.lang.String) {
+    Object ref = scriptDisasm_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       scriptDisasm_ = b;
       return b;
     } else {
@@ -446,9 +446,9 @@ public  final class TxOutDetail extends
   /**
    * <code>.rpcpb.TxOutDetail.TxOutType type = 5;</code>
    */
-  public TxOutDetail.TxOutType getType() {
-    TxOutDetail.TxOutType result = TxOutDetail.TxOutType.valueOf(type_);
-    return result == null ? TxOutDetail.TxOutType.UNRECOGNIZED : result;
+  public TxOutType getType() {
+    TxOutType result = TxOutType.valueOf(type_);
+    return result == null ? TxOutType.UNRECOGNIZED : result;
   }
 
   public static final int TOKEN_ISSUE_INFO_FIELD_NUMBER = 6;
@@ -535,7 +535,7 @@ public  final class TxOutDetail extends
     if (!getScriptDisasmBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, scriptDisasm_);
     }
-    if (type_ != TxOutDetail.TxOutType.unknown.getNumber()) {
+    if (type_ != TxOutType.unknown.getNumber()) {
       output.writeEnum(5, type_);
     }
     if (appendixCase_ == 6) {
@@ -567,7 +567,7 @@ public  final class TxOutDetail extends
     if (!getScriptDisasmBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, scriptDisasm_);
     }
-    if (type_ != TxOutDetail.TxOutType.unknown.getNumber()) {
+    if (type_ != TxOutType.unknown.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, type_);
     }
@@ -588,8 +588,8 @@ public  final class TxOutDetail extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -630,7 +630,7 @@ public  final class TxOutDetail extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -740,9 +740,9 @@ public  final class TxOutDetail extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -752,17 +752,17 @@ public  final class TxOutDetail extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.TxOutDetail)
-          TxOutDetailOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return WebProto.internal_static_rpcpb_TxOutDetail_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              TxOutDetail.class, TxOutDetail.Builder.class);
+              TxOutDetail.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.newBuilder()
@@ -771,7 +771,7 @@ public  final class TxOutDetail extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -799,7 +799,7 @@ public  final class TxOutDetail extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
     }
 
     public TxOutDetail getDefaultInstanceForType() {
@@ -945,7 +945,7 @@ public  final class TxOutDetail extends
       return this;
     }
     private int appendixCase_ = 0;
-    private java.lang.Object appendix_;
+    private Object appendix_;
     public AppendixCase
         getAppendixCase() {
       return AppendixCase.forNumber(
@@ -960,20 +960,20 @@ public  final class TxOutDetail extends
     }
 
 
-    private java.lang.Object addr_ = "";
+    private Object addr_ = "";
     /**
      * <code>string addr = 1;</code>
      */
-    public java.lang.String getAddr() {
-      java.lang.Object ref = addr_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getAddr() {
+      Object ref = addr_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         addr_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -981,11 +981,11 @@ public  final class TxOutDetail extends
      */
     public com.google.protobuf.ByteString
         getAddrBytes() {
-      java.lang.Object ref = addr_;
+      Object ref = addr_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         addr_ = b;
         return b;
       } else {
@@ -996,7 +996,7 @@ public  final class TxOutDetail extends
      * <code>string addr = 1;</code>
      */
     public Builder setAddr(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -1055,20 +1055,20 @@ public  final class TxOutDetail extends
       return this;
     }
 
-    private java.lang.Object scriptPubKey_ = "";
+    private Object scriptPubKey_ = "";
     /**
      * <code>string script_pub_key = 3;</code>
      */
-    public java.lang.String getScriptPubKey() {
-      java.lang.Object ref = scriptPubKey_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getScriptPubKey() {
+      Object ref = scriptPubKey_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         scriptPubKey_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -1076,11 +1076,11 @@ public  final class TxOutDetail extends
      */
     public com.google.protobuf.ByteString
         getScriptPubKeyBytes() {
-      java.lang.Object ref = scriptPubKey_;
+      Object ref = scriptPubKey_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         scriptPubKey_ = b;
         return b;
       } else {
@@ -1091,7 +1091,7 @@ public  final class TxOutDetail extends
      * <code>string script_pub_key = 3;</code>
      */
     public Builder setScriptPubKey(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -1124,20 +1124,20 @@ public  final class TxOutDetail extends
       return this;
     }
 
-    private java.lang.Object scriptDisasm_ = "";
+    private Object scriptDisasm_ = "";
     /**
      * <code>string script_disasm = 4;</code>
      */
-    public java.lang.String getScriptDisasm() {
-      java.lang.Object ref = scriptDisasm_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getScriptDisasm() {
+      Object ref = scriptDisasm_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         scriptDisasm_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -1145,11 +1145,11 @@ public  final class TxOutDetail extends
      */
     public com.google.protobuf.ByteString
         getScriptDisasmBytes() {
-      java.lang.Object ref = scriptDisasm_;
+      Object ref = scriptDisasm_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         scriptDisasm_ = b;
         return b;
       } else {
@@ -1160,7 +1160,7 @@ public  final class TxOutDetail extends
      * <code>string script_disasm = 4;</code>
      */
     public Builder setScriptDisasm(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -1211,14 +1211,14 @@ public  final class TxOutDetail extends
     /**
      * <code>.rpcpb.TxOutDetail.TxOutType type = 5;</code>
      */
-    public TxOutDetail.TxOutType getType() {
-      TxOutDetail.TxOutType result = TxOutDetail.TxOutType.valueOf(type_);
-      return result == null ? TxOutDetail.TxOutType.UNRECOGNIZED : result;
+    public TxOutType getType() {
+      TxOutType result = TxOutType.valueOf(type_);
+      return result == null ? TxOutType.UNRECOGNIZED : result;
     }
     /**
      * <code>.rpcpb.TxOutDetail.TxOutType type = 5;</code>
      */
-    public Builder setType(TxOutDetail.TxOutType value) {
+    public Builder setType(TxOutType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1238,7 +1238,7 @@ public  final class TxOutDetail extends
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-            TokenIssueInfo, TokenIssueInfo.Builder, TokenIssueInfoOrBuilder> tokenIssueInfoBuilder_;
+        TokenIssueInfo, TokenIssueInfo.Builder, TokenIssueInfoOrBuilder> tokenIssueInfoBuilder_;
     /**
      * <code>.rpcpb.TokenIssueInfo token_issue_info = 6;</code>
      */
@@ -1349,14 +1349,14 @@ public  final class TxOutDetail extends
      * <code>.rpcpb.TokenIssueInfo token_issue_info = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            TokenIssueInfo, TokenIssueInfo.Builder, TokenIssueInfoOrBuilder>
+        TokenIssueInfo, TokenIssueInfo.Builder, TokenIssueInfoOrBuilder>
         getTokenIssueInfoFieldBuilder() {
       if (tokenIssueInfoBuilder_ == null) {
         if (!(appendixCase_ == 6)) {
           appendix_ = TokenIssueInfo.getDefaultInstance();
         }
         tokenIssueInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                TokenIssueInfo, TokenIssueInfo.Builder, TokenIssueInfoOrBuilder>(
+            TokenIssueInfo, TokenIssueInfo.Builder, TokenIssueInfoOrBuilder>(
                 (TokenIssueInfo) appendix_,
                 getParentForChildren(),
                 isClean());
@@ -1368,7 +1368,7 @@ public  final class TxOutDetail extends
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-            TokenTransferInfo, TokenTransferInfo.Builder, TokenTransferInfoOrBuilder> tokenTransferInfoBuilder_;
+        TokenTransferInfo, TokenTransferInfo.Builder, TokenTransferInfoOrBuilder> tokenTransferInfoBuilder_;
     /**
      * <code>.rpcpb.TokenTransferInfo token_transfer_info = 7;</code>
      */
@@ -1479,14 +1479,14 @@ public  final class TxOutDetail extends
      * <code>.rpcpb.TokenTransferInfo token_transfer_info = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            TokenTransferInfo, TokenTransferInfo.Builder, TokenTransferInfoOrBuilder>
+        TokenTransferInfo, TokenTransferInfo.Builder, TokenTransferInfoOrBuilder>
         getTokenTransferInfoFieldBuilder() {
       if (tokenTransferInfoBuilder_ == null) {
         if (!(appendixCase_ == 7)) {
           appendix_ = TokenTransferInfo.getDefaultInstance();
         }
         tokenTransferInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                TokenTransferInfo, TokenTransferInfo.Builder, TokenTransferInfoOrBuilder>(
+            TokenTransferInfo, TokenTransferInfo.Builder, TokenTransferInfoOrBuilder>(
                 (TokenTransferInfo) appendix_,
                 getParentForChildren(),
                 isClean());
@@ -1498,7 +1498,7 @@ public  final class TxOutDetail extends
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-            SplitContractInfo, SplitContractInfo.Builder, SplitContractInfoOrBuilder> splitContractInfoBuilder_;
+        SplitContractInfo, SplitContractInfo.Builder, SplitContractInfoOrBuilder> splitContractInfoBuilder_;
     /**
      * <code>.rpcpb.SplitContractInfo split_contract_info = 8;</code>
      */
@@ -1609,14 +1609,14 @@ public  final class TxOutDetail extends
      * <code>.rpcpb.SplitContractInfo split_contract_info = 8;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            SplitContractInfo, SplitContractInfo.Builder, SplitContractInfoOrBuilder>
+        SplitContractInfo, SplitContractInfo.Builder, SplitContractInfoOrBuilder>
         getSplitContractInfoFieldBuilder() {
       if (splitContractInfoBuilder_ == null) {
         if (!(appendixCase_ == 8)) {
           appendix_ = SplitContractInfo.getDefaultInstance();
         }
         splitContractInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                SplitContractInfo, SplitContractInfo.Builder, SplitContractInfoOrBuilder>(
+            SplitContractInfo, SplitContractInfo.Builder, SplitContractInfoOrBuilder>(
                 (SplitContractInfo) appendix_,
                 getParentForChildren(),
                 isClean());
@@ -1664,7 +1664,7 @@ public  final class TxOutDetail extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<TxOutDetail> getParserForType() {
     return PARSER;
   }

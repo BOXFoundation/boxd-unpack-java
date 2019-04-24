@@ -18,7 +18,7 @@ public  final class GetBlockHashRequest extends
     height_ = 0;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -64,11 +64,11 @@ public  final class GetBlockHashRequest extends
     return ControlProto.internal_static_rpcpb_GetBlockHashRequest_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return ControlProto.internal_static_rpcpb_GetBlockHashRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GetBlockHashRequest.class, GetBlockHashRequest.Builder.class);
+            GetBlockHashRequest.class, Builder.class);
   }
 
   public static final int HEIGHT_FIELD_NUMBER = 1;
@@ -111,8 +111,8 @@ public  final class GetBlockHashRequest extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -127,7 +127,7 @@ public  final class GetBlockHashRequest extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -212,9 +212,9 @@ public  final class GetBlockHashRequest extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -224,17 +224,17 @@ public  final class GetBlockHashRequest extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetBlockHashRequest)
-          GetBlockHashRequestOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ControlProto.internal_static_rpcpb_GetBlockHashRequest_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ControlProto.internal_static_rpcpb_GetBlockHashRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetBlockHashRequest.class, GetBlockHashRequest.Builder.class);
+              GetBlockHashRequest.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest.newBuilder()
@@ -243,7 +243,7 @@ public  final class GetBlockHashRequest extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -412,7 +412,7 @@ public  final class GetBlockHashRequest extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<GetBlockHashRequest> getParserForType() {
     return PARSER;
   }

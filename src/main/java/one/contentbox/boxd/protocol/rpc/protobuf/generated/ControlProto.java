@@ -97,7 +97,7 @@ public final class ControlProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\rcontrol.proto\022\005rpcpb\032\013block.proto\032\014com" +
       "mon.proto\"\"\n\021DebugLevelRequest\022\r\n\005level\030" +
       "\001 \001(\t\"$\n\026UpdateNetworkIDRequest\022\n\n\002id\030\001 " +
@@ -117,24 +117,21 @@ public final class ControlProto {
       "orepb.Block\".\n\004Node\022\n\n\002id\030\001 \001(\t\022\r\n\005addrs" +
       "\030\002 \003(\t\022\013\n\003ttl\030\003 \001(\t\"\024\n\022GetNodeInfoReques" +
       "t\"1\n\023GetNodeInfoResponse\022\032\n\005nodes\030\001 \003(\0132" +
-      "\013.rpcpb.Node2\373\004\n\016ContorlCommand\022>\n\rSetDe",
-      "bugLevel\022\030.rpcpb.DebugLevelRequest\032\023.rpc" +
-      "pb.BaseResponse\022E\n\017UpdateNetworkID\022\035.rpc" +
-      "pb.UpdateNetworkIDRequest\032\023.rpcpb.BaseRe" +
-      "sponse\022G\n\014GetNetworkID\022\032.rpcpb.GetNetwor" +
-      "kIDRequest\032\033.rpcpb.GetNetworkIDResponse\022" +
-      "5\n\007AddNode\022\025.rpcpb.AddNodeRequest\032\023.rpcp" +
-      "b.BaseResponse\022M\n\016GetBlockHeight\022\034.rpcpb" +
-      ".GetBlockHeightRequest\032\035.rpcpb.GetBlockH" +
-      "eightResponse\022G\n\014GetBlockHash\022\032.rpcpb.Ge" +
-      "tBlockHashRequest\032\033.rpcpb.GetBlockHashRe",
-      "sponse\022G\n\016GetBlockHeader\022\026.rpcpb.GetBloc" +
-      "kRequest\032\035.rpcpb.GetBlockHeaderResponse\022" +
-      ";\n\010GetBlock\022\026.rpcpb.GetBlockRequest\032\027.rp" +
-      "cpb.GetBlockResponse\022D\n\013GetNodeInfo\022\031.rp" +
-      "cpb.GetNodeInfoRequest\032\032.rpcpb.GetNodeIn" +
-      "foResponseB+\n\031one.contentbox.boxd.protoB" +
-      "\014ControlProtoP\001b\006proto3"
+      "\013.rpcpb.Node2\364\003\n\016ContorlCommand\022G\n\014GetNe",
+      "tworkID\022\032.rpcpb.GetNetworkIDRequest\032\033.rp" +
+      "cpb.GetNetworkIDResponse\0225\n\007AddNode\022\025.rp" +
+      "cpb.AddNodeRequest\032\023.rpcpb.BaseResponse\022" +
+      "M\n\016GetBlockHeight\022\034.rpcpb.GetBlockHeight" +
+      "Request\032\035.rpcpb.GetBlockHeightResponse\022G" +
+      "\n\014GetBlockHash\022\032.rpcpb.GetBlockHashReque" +
+      "st\032\033.rpcpb.GetBlockHashResponse\022G\n\016GetBl" +
+      "ockHeader\022\026.rpcpb.GetBlockRequest\032\035.rpcp" +
+      "b.GetBlockHeaderResponse\022;\n\010GetBlock\022\026.r" +
+      "pcpb.GetBlockRequest\032\027.rpcpb.GetBlockRes",
+      "ponse\022D\n\013GetNodeInfo\022\031.rpcpb.GetNodeInfo" +
+      "Request\032\032.rpcpb.GetNodeInfoResponseBE\n3o" +
+      "ne.contentbox.boxd.protocol.rpc.protobuf" +
+      ".generatedB\014ControlProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -155,91 +152,91 @@ public final class ControlProto {
     internal_static_rpcpb_DebugLevelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_DebugLevelRequest_descriptor,
-        new java.lang.String[] { "Level", });
+        new String[] { "Level", });
     internal_static_rpcpb_UpdateNetworkIDRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_rpcpb_UpdateNetworkIDRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_UpdateNetworkIDRequest_descriptor,
-        new java.lang.String[] { "Id", });
+        new String[] { "Id", });
     internal_static_rpcpb_GetNetworkIDRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_rpcpb_GetNetworkIDRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetNetworkIDRequest_descriptor,
-        new java.lang.String[] { });
+        new String[] { });
     internal_static_rpcpb_GetNetworkIDResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_rpcpb_GetNetworkIDResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetNetworkIDResponse_descriptor,
-        new java.lang.String[] { "Id", "Literal", });
+        new String[] { "Id", "Literal", });
     internal_static_rpcpb_AddNodeRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_rpcpb_AddNodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_AddNodeRequest_descriptor,
-        new java.lang.String[] { "Node", });
+        new String[] { "Node", });
     internal_static_rpcpb_GetBlockHeightRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_rpcpb_GetBlockHeightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetBlockHeightRequest_descriptor,
-        new java.lang.String[] { });
+        new String[] { });
     internal_static_rpcpb_GetBlockHeightResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_rpcpb_GetBlockHeightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetBlockHeightResponse_descriptor,
-        new java.lang.String[] { "Code", "Message", "Height", });
+        new String[] { "Code", "Message", "Height", });
     internal_static_rpcpb_GetBlockHashRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_rpcpb_GetBlockHashRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetBlockHashRequest_descriptor,
-        new java.lang.String[] { "Height", });
+        new String[] { "Height", });
     internal_static_rpcpb_GetBlockHashResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_rpcpb_GetBlockHashResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetBlockHashResponse_descriptor,
-        new java.lang.String[] { "Code", "Message", "Hash", });
+        new String[] { "Code", "Message", "Hash", });
     internal_static_rpcpb_GetBlockRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_rpcpb_GetBlockRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetBlockRequest_descriptor,
-        new java.lang.String[] { "BlockHash", });
+        new String[] { "BlockHash", });
     internal_static_rpcpb_GetBlockHeaderResponse_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_rpcpb_GetBlockHeaderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetBlockHeaderResponse_descriptor,
-        new java.lang.String[] { "Code", "Message", "Header", });
+        new String[] { "Code", "Message", "Header", });
     internal_static_rpcpb_GetBlockResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_rpcpb_GetBlockResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetBlockResponse_descriptor,
-        new java.lang.String[] { "Code", "Message", "Block", });
+        new String[] { "Code", "Message", "Block", });
     internal_static_rpcpb_Node_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_rpcpb_Node_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_Node_descriptor,
-        new java.lang.String[] { "Id", "Addrs", "Ttl", });
+        new String[] { "Id", "Addrs", "Ttl", });
     internal_static_rpcpb_GetNodeInfoRequest_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_rpcpb_GetNodeInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetNodeInfoRequest_descriptor,
-        new java.lang.String[] { });
+        new String[] { });
     internal_static_rpcpb_GetNodeInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_rpcpb_GetNodeInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rpcpb_GetNodeInfoResponse_descriptor,
-        new java.lang.String[] { "Nodes", });
+        new String[] { "Nodes", });
     BlockProto.getDescriptor();
     CommonProto.getDescriptor();
   }

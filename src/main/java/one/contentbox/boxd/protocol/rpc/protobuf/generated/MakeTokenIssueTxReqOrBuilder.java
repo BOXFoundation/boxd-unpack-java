@@ -10,7 +10,7 @@ public interface MakeTokenIssueTxReqOrBuilder extends
   /**
    * <code>string issuer = 1;</code>
    */
-  java.lang.String getIssuer();
+  String getIssuer();
   /**
    * <code>string issuer = 1;</code>
    */
@@ -18,14 +18,14 @@ public interface MakeTokenIssueTxReqOrBuilder extends
       getIssuerBytes();
 
   /**
-   * <code>string issuee = 2;</code>
+   * <code>string owner = 2;</code>
    */
-  java.lang.String getIssuee();
+  String getOwner();
   /**
-   * <code>string issuee = 2;</code>
+   * <code>string owner = 2;</code>
    */
   com.google.protobuf.ByteString
-      getIssueeBytes();
+      getOwnerBytes();
 
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
@@ -34,11 +34,11 @@ public interface MakeTokenIssueTxReqOrBuilder extends
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
-  TokenTag getTag();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag getTag();
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
-  TokenTagOrBuilder getTagOrBuilder();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder getTagOrBuilder();
 
   /**
    * <code>uint64 fee = 4;</code>

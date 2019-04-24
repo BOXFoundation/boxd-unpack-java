@@ -20,7 +20,7 @@ public  final class Node extends
     ttl_ = "";
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -46,13 +46,13 @@ public  final class Node extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             id_ = s;
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               addrs_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000002;
@@ -61,7 +61,7 @@ public  final class Node extends
             break;
           }
           case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             ttl_ = s;
             break;
@@ -85,27 +85,27 @@ public  final class Node extends
     return ControlProto.internal_static_rpcpb_Node_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return ControlProto.internal_static_rpcpb_Node_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            Node.class, Node.Builder.class);
+            Node.class, Builder.class);
   }
 
   private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object id_;
+  private volatile Object id_;
   /**
    * <code>string id = 1;</code>
    */
-  public java.lang.String getId() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getId() {
+    Object ref = id_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       id_ = s;
       return s;
     }
@@ -115,11 +115,11 @@ public  final class Node extends
    */
   public com.google.protobuf.ByteString
       getIdBytes() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
+    Object ref = id_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       id_ = b;
       return b;
     } else {
@@ -145,7 +145,7 @@ public  final class Node extends
   /**
    * <code>repeated string addrs = 2;</code>
    */
-  public java.lang.String getAddrs(int index) {
+  public String getAddrs(int index) {
     return addrs_.get(index);
   }
   /**
@@ -157,18 +157,18 @@ public  final class Node extends
   }
 
   public static final int TTL_FIELD_NUMBER = 3;
-  private volatile java.lang.Object ttl_;
+  private volatile Object ttl_;
   /**
    * <code>string ttl = 3;</code>
    */
-  public java.lang.String getTtl() {
-    java.lang.Object ref = ttl_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getTtl() {
+    Object ref = ttl_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       ttl_ = s;
       return s;
     }
@@ -178,11 +178,11 @@ public  final class Node extends
    */
   public com.google.protobuf.ByteString
       getTtlBytes() {
-    java.lang.Object ref = ttl_;
-    if (ref instanceof java.lang.String) {
+    Object ref = ttl_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       ttl_ = b;
       return b;
     } else {
@@ -237,8 +237,8 @@ public  final class Node extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -257,7 +257,7 @@ public  final class Node extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -348,9 +348,9 @@ public  final class Node extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -360,17 +360,17 @@ public  final class Node extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.Node)
-          NodeOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ControlProto.internal_static_rpcpb_Node_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ControlProto.internal_static_rpcpb_Node_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Node.class, Node.Builder.class);
+              Node.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.Node.newBuilder()
@@ -379,7 +379,7 @@ public  final class Node extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -514,20 +514,20 @@ public  final class Node extends
     }
     private int bitField0_;
 
-    private java.lang.Object id_ = "";
+    private Object id_ = "";
     /**
      * <code>string id = 1;</code>
      */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getId() {
+      Object ref = id_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         id_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -535,11 +535,11 @@ public  final class Node extends
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
+      Object ref = id_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         id_ = b;
         return b;
       } else {
@@ -550,7 +550,7 @@ public  final class Node extends
      * <code>string id = 1;</code>
      */
     public Builder setId(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -606,7 +606,7 @@ public  final class Node extends
     /**
      * <code>repeated string addrs = 2;</code>
      */
-    public java.lang.String getAddrs(int index) {
+    public String getAddrs(int index) {
       return addrs_.get(index);
     }
     /**
@@ -620,7 +620,7 @@ public  final class Node extends
      * <code>repeated string addrs = 2;</code>
      */
     public Builder setAddrs(
-        int index, java.lang.String value) {
+        int index, String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -633,7 +633,7 @@ public  final class Node extends
      * <code>repeated string addrs = 2;</code>
      */
     public Builder addAddrs(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -646,7 +646,7 @@ public  final class Node extends
      * <code>repeated string addrs = 2;</code>
      */
     public Builder addAllAddrs(
-        java.lang.Iterable<java.lang.String> values) {
+        Iterable<String> values) {
       ensureAddrsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, addrs_);
@@ -677,20 +677,20 @@ public  final class Node extends
       return this;
     }
 
-    private java.lang.Object ttl_ = "";
+    private Object ttl_ = "";
     /**
      * <code>string ttl = 3;</code>
      */
-    public java.lang.String getTtl() {
-      java.lang.Object ref = ttl_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getTtl() {
+      Object ref = ttl_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         ttl_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -698,11 +698,11 @@ public  final class Node extends
      */
     public com.google.protobuf.ByteString
         getTtlBytes() {
-      java.lang.Object ref = ttl_;
+      Object ref = ttl_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         ttl_ = b;
         return b;
       } else {
@@ -713,7 +713,7 @@ public  final class Node extends
      * <code>string ttl = 3;</code>
      */
     public Builder setTtl(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -783,7 +783,7 @@ public  final class Node extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<Node> getParserForType() {
     return PARSER;
   }

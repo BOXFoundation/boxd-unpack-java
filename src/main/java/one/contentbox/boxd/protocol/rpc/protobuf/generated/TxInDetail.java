@@ -20,7 +20,7 @@ public  final class TxInDetail extends
     prevOutPoint_ = "";
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -46,11 +46,11 @@ public  final class TxInDetail extends
             break;
           }
           case 10: {
-            TxOutDetail.Builder subBuilder = null;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder subBuilder = null;
             if (prevOutDetail_ != null) {
               subBuilder = prevOutDetail_.toBuilder();
             }
-            prevOutDetail_ = input.readMessage(TxOutDetail.parser(), extensionRegistry);
+            prevOutDetail_ = input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(prevOutDetail_);
               prevOutDetail_ = subBuilder.buildPartial();
@@ -59,7 +59,7 @@ public  final class TxInDetail extends
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             scriptSig_ = s;
             break;
@@ -70,7 +70,7 @@ public  final class TxInDetail extends
             break;
           }
           case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             prevOutPoint_ = s;
             break;
@@ -88,18 +88,18 @@ public  final class TxInDetail extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return WebProto.internal_static_rpcpb_TxInDetail_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxInDetail_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return WebProto.internal_static_rpcpb_TxInDetail_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxInDetail_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            TxInDetail.class, TxInDetail.Builder.class);
+            TxInDetail.class, Builder.class);
   }
 
   public static final int PREV_OUT_DETAIL_FIELD_NUMBER = 1;
-  private TxOutDetail prevOutDetail_;
+  private one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail prevOutDetail_;
   /**
    * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
    */
@@ -109,29 +109,29 @@ public  final class TxInDetail extends
   /**
    * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
    */
-  public TxOutDetail getPrevOutDetail() {
-    return prevOutDetail_ == null ? TxOutDetail.getDefaultInstance() : prevOutDetail_;
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail getPrevOutDetail() {
+    return prevOutDetail_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.getDefaultInstance() : prevOutDetail_;
   }
   /**
    * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
    */
-  public TxOutDetailOrBuilder getPrevOutDetailOrBuilder() {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder getPrevOutDetailOrBuilder() {
     return getPrevOutDetail();
   }
 
   public static final int SCRIPT_SIG_FIELD_NUMBER = 2;
-  private volatile java.lang.Object scriptSig_;
+  private volatile Object scriptSig_;
   /**
    * <code>string script_sig = 2;</code>
    */
-  public java.lang.String getScriptSig() {
-    java.lang.Object ref = scriptSig_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getScriptSig() {
+    Object ref = scriptSig_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       scriptSig_ = s;
       return s;
     }
@@ -141,11 +141,11 @@ public  final class TxInDetail extends
    */
   public com.google.protobuf.ByteString
       getScriptSigBytes() {
-    java.lang.Object ref = scriptSig_;
-    if (ref instanceof java.lang.String) {
+    Object ref = scriptSig_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       scriptSig_ = b;
       return b;
     } else {
@@ -163,18 +163,18 @@ public  final class TxInDetail extends
   }
 
   public static final int PREV_OUT_POINT_FIELD_NUMBER = 4;
-  private volatile java.lang.Object prevOutPoint_;
+  private volatile Object prevOutPoint_;
   /**
    * <code>string prev_out_point = 4;</code>
    */
-  public java.lang.String getPrevOutPoint() {
-    java.lang.Object ref = prevOutPoint_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getPrevOutPoint() {
+    Object ref = prevOutPoint_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       prevOutPoint_ = s;
       return s;
     }
@@ -184,11 +184,11 @@ public  final class TxInDetail extends
    */
   public com.google.protobuf.ByteString
       getPrevOutPointBytes() {
-    java.lang.Object ref = prevOutPoint_;
-    if (ref instanceof java.lang.String) {
+    Object ref = prevOutPoint_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       prevOutPoint_ = b;
       return b;
     } else {
@@ -246,8 +246,8 @@ public  final class TxInDetail extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -271,7 +271,7 @@ public  final class TxInDetail extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -364,9 +364,9 @@ public  final class TxInDetail extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -376,17 +376,17 @@ public  final class TxInDetail extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.TxInDetail)
-          TxInDetailOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return WebProto.internal_static_rpcpb_TxInDetail_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxInDetail_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return WebProto.internal_static_rpcpb_TxInDetail_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxInDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              TxInDetail.class, TxInDetail.Builder.class);
+              TxInDetail.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.newBuilder()
@@ -395,7 +395,7 @@ public  final class TxInDetail extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -423,7 +423,7 @@ public  final class TxInDetail extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return WebProto.internal_static_rpcpb_TxInDetail_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxInDetail_descriptor;
     }
 
     public TxInDetail getDefaultInstanceForType() {
@@ -529,9 +529,9 @@ public  final class TxInDetail extends
       return this;
     }
 
-    private TxOutDetail prevOutDetail_ = null;
+    private one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail prevOutDetail_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            TxOutDetail, TxOutDetail.Builder, TxOutDetailOrBuilder> prevOutDetailBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder> prevOutDetailBuilder_;
     /**
      * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
      */
@@ -541,9 +541,9 @@ public  final class TxInDetail extends
     /**
      * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
      */
-    public TxOutDetail getPrevOutDetail() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail getPrevOutDetail() {
       if (prevOutDetailBuilder_ == null) {
-        return prevOutDetail_ == null ? TxOutDetail.getDefaultInstance() : prevOutDetail_;
+        return prevOutDetail_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.getDefaultInstance() : prevOutDetail_;
       } else {
         return prevOutDetailBuilder_.getMessage();
       }
@@ -551,7 +551,7 @@ public  final class TxInDetail extends
     /**
      * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
      */
-    public Builder setPrevOutDetail(TxOutDetail value) {
+    public Builder setPrevOutDetail(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail value) {
       if (prevOutDetailBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -568,7 +568,7 @@ public  final class TxInDetail extends
      * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
      */
     public Builder setPrevOutDetail(
-        TxOutDetail.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder builderForValue) {
       if (prevOutDetailBuilder_ == null) {
         prevOutDetail_ = builderForValue.build();
         onChanged();
@@ -581,11 +581,11 @@ public  final class TxInDetail extends
     /**
      * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
      */
-    public Builder mergePrevOutDetail(TxOutDetail value) {
+    public Builder mergePrevOutDetail(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail value) {
       if (prevOutDetailBuilder_ == null) {
         if (prevOutDetail_ != null) {
           prevOutDetail_ =
-            TxOutDetail.newBuilder(prevOutDetail_).mergeFrom(value).buildPartial();
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.newBuilder(prevOutDetail_).mergeFrom(value).buildPartial();
         } else {
           prevOutDetail_ = value;
         }
@@ -613,7 +613,7 @@ public  final class TxInDetail extends
     /**
      * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
      */
-    public TxOutDetail.Builder getPrevOutDetailBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder getPrevOutDetailBuilder() {
       
       onChanged();
       return getPrevOutDetailFieldBuilder().getBuilder();
@@ -621,23 +621,23 @@ public  final class TxInDetail extends
     /**
      * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
      */
-    public TxOutDetailOrBuilder getPrevOutDetailOrBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder getPrevOutDetailOrBuilder() {
       if (prevOutDetailBuilder_ != null) {
         return prevOutDetailBuilder_.getMessageOrBuilder();
       } else {
         return prevOutDetail_ == null ?
-            TxOutDetail.getDefaultInstance() : prevOutDetail_;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.getDefaultInstance() : prevOutDetail_;
       }
     }
     /**
      * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            TxOutDetail, TxOutDetail.Builder, TxOutDetailOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder> 
         getPrevOutDetailFieldBuilder() {
       if (prevOutDetailBuilder_ == null) {
         prevOutDetailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                TxOutDetail, TxOutDetail.Builder, TxOutDetailOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder>(
                 getPrevOutDetail(),
                 getParentForChildren(),
                 isClean());
@@ -646,20 +646,20 @@ public  final class TxInDetail extends
       return prevOutDetailBuilder_;
     }
 
-    private java.lang.Object scriptSig_ = "";
+    private Object scriptSig_ = "";
     /**
      * <code>string script_sig = 2;</code>
      */
-    public java.lang.String getScriptSig() {
-      java.lang.Object ref = scriptSig_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getScriptSig() {
+      Object ref = scriptSig_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         scriptSig_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -667,11 +667,11 @@ public  final class TxInDetail extends
      */
     public com.google.protobuf.ByteString
         getScriptSigBytes() {
-      java.lang.Object ref = scriptSig_;
+      Object ref = scriptSig_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         scriptSig_ = b;
         return b;
       } else {
@@ -682,7 +682,7 @@ public  final class TxInDetail extends
      * <code>string script_sig = 2;</code>
      */
     public Builder setScriptSig(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -741,20 +741,20 @@ public  final class TxInDetail extends
       return this;
     }
 
-    private java.lang.Object prevOutPoint_ = "";
+    private Object prevOutPoint_ = "";
     /**
      * <code>string prev_out_point = 4;</code>
      */
-    public java.lang.String getPrevOutPoint() {
-      java.lang.Object ref = prevOutPoint_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getPrevOutPoint() {
+      Object ref = prevOutPoint_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         prevOutPoint_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -762,11 +762,11 @@ public  final class TxInDetail extends
      */
     public com.google.protobuf.ByteString
         getPrevOutPointBytes() {
-      java.lang.Object ref = prevOutPoint_;
+      Object ref = prevOutPoint_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         prevOutPoint_ = b;
         return b;
       } else {
@@ -777,7 +777,7 @@ public  final class TxInDetail extends
      * <code>string prev_out_point = 4;</code>
      */
     public Builder setPrevOutPoint(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -847,7 +847,7 @@ public  final class TxInDetail extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<TxInDetail> getParserForType() {
     return PARSER;
   }

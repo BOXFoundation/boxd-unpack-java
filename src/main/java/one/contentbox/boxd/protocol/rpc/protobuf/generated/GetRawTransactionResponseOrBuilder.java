@@ -14,9 +14,9 @@ public interface GetRawTransactionResponseOrBuilder extends
   /**
    * <code>.corepb.Transaction tx = 1;</code>
    */
-  Transaction getTx();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTx();
   /**
    * <code>.corepb.Transaction tx = 1;</code>
    */
-  TransactionOrBuilder getTxOrBuilder();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxOrBuilder();
 }

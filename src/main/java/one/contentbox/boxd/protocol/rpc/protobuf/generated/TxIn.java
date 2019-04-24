@@ -19,7 +19,7 @@ public  final class TxIn extends
     sequence_ = 0;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -83,11 +83,11 @@ public  final class TxIn extends
     return BlockProto.internal_static_corepb_TxIn_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return BlockProto.internal_static_corepb_TxIn_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            TxIn.class, TxIn.Builder.class);
+            TxIn.class, Builder.class);
   }
 
   public static final int PREV_OUT_POINT_FIELD_NUMBER = 1;
@@ -174,8 +174,8 @@ public  final class TxIn extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -197,7 +197,7 @@ public  final class TxIn extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -288,9 +288,9 @@ public  final class TxIn extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -300,17 +300,17 @@ public  final class TxIn extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.TxIn)
-          TxInOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return BlockProto.internal_static_corepb_TxIn_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return BlockProto.internal_static_corepb_TxIn_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              TxIn.class, TxIn.Builder.class);
+              TxIn.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.newBuilder()
@@ -319,7 +319,7 @@ public  final class TxIn extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -447,7 +447,7 @@ public  final class TxIn extends
 
     private OutPoint prevOutPoint_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            OutPoint, OutPoint.Builder, OutPointOrBuilder> prevOutPointBuilder_;
+        OutPoint, OutPoint.Builder, OutPointOrBuilder> prevOutPointBuilder_;
     /**
      * <code>.corepb.OutPoint prev_out_point = 1;</code>
      */
@@ -549,11 +549,11 @@ public  final class TxIn extends
      * <code>.corepb.OutPoint prev_out_point = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            OutPoint, OutPoint.Builder, OutPointOrBuilder>
+        OutPoint, OutPoint.Builder, OutPointOrBuilder>
         getPrevOutPointFieldBuilder() {
       if (prevOutPointBuilder_ == null) {
         prevOutPointBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                OutPoint, OutPoint.Builder, OutPointOrBuilder>(
+            OutPoint, OutPoint.Builder, OutPointOrBuilder>(
                 getPrevOutPoint(),
                 getParentForChildren(),
                 isClean());
@@ -654,7 +654,7 @@ public  final class TxIn extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<TxIn> getParserForType() {
     return PARSER;
   }

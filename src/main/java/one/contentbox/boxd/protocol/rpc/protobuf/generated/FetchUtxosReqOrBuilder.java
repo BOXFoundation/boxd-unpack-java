@@ -10,7 +10,7 @@ public interface FetchUtxosReqOrBuilder extends
   /**
    * <code>string addr = 1;</code>
    */
-  java.lang.String getAddr();
+  String getAddr();
   /**
    * <code>string addr = 1;</code>
    */
@@ -25,7 +25,7 @@ public interface FetchUtxosReqOrBuilder extends
   /**
    * <code>string token_hash = 3;</code>
    */
-  java.lang.String getTokenHash();
+  String getTokenHash();
   /**
    * <code>string token_hash = 3;</code>
    */

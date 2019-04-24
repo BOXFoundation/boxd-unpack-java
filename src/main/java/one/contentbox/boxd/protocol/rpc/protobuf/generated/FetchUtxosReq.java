@@ -21,7 +21,7 @@ public  final class FetchUtxosReq extends
     tokenIndex_ = 0;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -47,7 +47,7 @@ public  final class FetchUtxosReq extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             addr_ = s;
             break;
@@ -58,7 +58,7 @@ public  final class FetchUtxosReq extends
             break;
           }
           case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             tokenHash_ = s;
             break;
@@ -81,29 +81,29 @@ public  final class FetchUtxosReq extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_FetchUtxosReq_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            FetchUtxosReq.class, FetchUtxosReq.Builder.class);
+            FetchUtxosReq.class, Builder.class);
   }
 
   public static final int ADDR_FIELD_NUMBER = 1;
-  private volatile java.lang.Object addr_;
+  private volatile Object addr_;
   /**
    * <code>string addr = 1;</code>
    */
-  public java.lang.String getAddr() {
-    java.lang.Object ref = addr_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getAddr() {
+    Object ref = addr_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       addr_ = s;
       return s;
     }
@@ -113,11 +113,11 @@ public  final class FetchUtxosReq extends
    */
   public com.google.protobuf.ByteString
       getAddrBytes() {
-    java.lang.Object ref = addr_;
-    if (ref instanceof java.lang.String) {
+    Object ref = addr_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       addr_ = b;
       return b;
     } else {
@@ -135,18 +135,18 @@ public  final class FetchUtxosReq extends
   }
 
   public static final int TOKEN_HASH_FIELD_NUMBER = 3;
-  private volatile java.lang.Object tokenHash_;
+  private volatile Object tokenHash_;
   /**
    * <code>string token_hash = 3;</code>
    */
-  public java.lang.String getTokenHash() {
-    java.lang.Object ref = tokenHash_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getTokenHash() {
+    Object ref = tokenHash_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       tokenHash_ = s;
       return s;
     }
@@ -156,11 +156,11 @@ public  final class FetchUtxosReq extends
    */
   public com.google.protobuf.ByteString
       getTokenHashBytes() {
-    java.lang.Object ref = tokenHash_;
-    if (ref instanceof java.lang.String) {
+    Object ref = tokenHash_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       tokenHash_ = b;
       return b;
     } else {
@@ -227,8 +227,8 @@ public  final class FetchUtxosReq extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -249,7 +249,7 @@ public  final class FetchUtxosReq extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -341,9 +341,9 @@ public  final class FetchUtxosReq extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -353,17 +353,17 @@ public  final class FetchUtxosReq extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.FetchUtxosReq)
-          FetchUtxosReqOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_FetchUtxosReq_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              FetchUtxosReq.class, FetchUtxosReq.Builder.class);
+              FetchUtxosReq.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq.newBuilder()
@@ -372,7 +372,7 @@ public  final class FetchUtxosReq extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -396,7 +396,7 @@ public  final class FetchUtxosReq extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
     }
 
     public FetchUtxosReq getDefaultInstanceForType() {
@@ -498,20 +498,20 @@ public  final class FetchUtxosReq extends
       return this;
     }
 
-    private java.lang.Object addr_ = "";
+    private Object addr_ = "";
     /**
      * <code>string addr = 1;</code>
      */
-    public java.lang.String getAddr() {
-      java.lang.Object ref = addr_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getAddr() {
+      Object ref = addr_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         addr_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -519,11 +519,11 @@ public  final class FetchUtxosReq extends
      */
     public com.google.protobuf.ByteString
         getAddrBytes() {
-      java.lang.Object ref = addr_;
+      Object ref = addr_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         addr_ = b;
         return b;
       } else {
@@ -534,7 +534,7 @@ public  final class FetchUtxosReq extends
      * <code>string addr = 1;</code>
      */
     public Builder setAddr(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -593,20 +593,20 @@ public  final class FetchUtxosReq extends
       return this;
     }
 
-    private java.lang.Object tokenHash_ = "";
+    private Object tokenHash_ = "";
     /**
      * <code>string token_hash = 3;</code>
      */
-    public java.lang.String getTokenHash() {
-      java.lang.Object ref = tokenHash_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getTokenHash() {
+      Object ref = tokenHash_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         tokenHash_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -614,11 +614,11 @@ public  final class FetchUtxosReq extends
      */
     public com.google.protobuf.ByteString
         getTokenHashBytes() {
-      java.lang.Object ref = tokenHash_;
+      Object ref = tokenHash_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         tokenHash_ = b;
         return b;
       } else {
@@ -629,7 +629,7 @@ public  final class FetchUtxosReq extends
      * <code>string token_hash = 3;</code>
      */
     public Builder setTokenHash(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -725,7 +725,7 @@ public  final class FetchUtxosReq extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<FetchUtxosReq> getParserForType() {
     return PARSER;
   }

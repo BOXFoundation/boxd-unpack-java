@@ -20,7 +20,7 @@ public  final class SendTransactionResp extends
     hash_ = "";
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -51,13 +51,13 @@ public  final class SendTransactionResp extends
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             message_ = s;
             break;
           }
           case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             hash_ = s;
             break;
@@ -75,14 +75,14 @@ public  final class SendTransactionResp extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_SendTransactionResp_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            SendTransactionResp.class, SendTransactionResp.Builder.class);
+            SendTransactionResp.class, Builder.class);
   }
 
   public static final int CODE_FIELD_NUMBER = 1;
@@ -95,18 +95,18 @@ public  final class SendTransactionResp extends
   }
 
   public static final int MESSAGE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object message_;
+  private volatile Object message_;
   /**
    * <code>string message = 2;</code>
    */
-  public java.lang.String getMessage() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getMessage() {
+    Object ref = message_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       message_ = s;
       return s;
     }
@@ -116,11 +116,11 @@ public  final class SendTransactionResp extends
    */
   public com.google.protobuf.ByteString
       getMessageBytes() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
+    Object ref = message_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       message_ = b;
       return b;
     } else {
@@ -129,18 +129,18 @@ public  final class SendTransactionResp extends
   }
 
   public static final int HASH_FIELD_NUMBER = 3;
-  private volatile java.lang.Object hash_;
+  private volatile Object hash_;
   /**
    * <code>string hash = 3;</code>
    */
-  public java.lang.String getHash() {
-    java.lang.Object ref = hash_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getHash() {
+    Object ref = hash_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       hash_ = s;
       return s;
     }
@@ -150,11 +150,11 @@ public  final class SendTransactionResp extends
    */
   public com.google.protobuf.ByteString
       getHashBytes() {
-    java.lang.Object ref = hash_;
-    if (ref instanceof java.lang.String) {
+    Object ref = hash_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       hash_ = b;
       return b;
     } else {
@@ -205,8 +205,8 @@ public  final class SendTransactionResp extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -225,7 +225,7 @@ public  final class SendTransactionResp extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -314,9 +314,9 @@ public  final class SendTransactionResp extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -326,17 +326,17 @@ public  final class SendTransactionResp extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.SendTransactionResp)
-          SendTransactionRespOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionRespOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_SendTransactionResp_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SendTransactionResp.class, SendTransactionResp.Builder.class);
+              SendTransactionResp.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp.newBuilder()
@@ -345,7 +345,7 @@ public  final class SendTransactionResp extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -367,7 +367,7 @@ public  final class SendTransactionResp extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
     }
 
     public SendTransactionResp getDefaultInstanceForType() {
@@ -491,20 +491,20 @@ public  final class SendTransactionResp extends
       return this;
     }
 
-    private java.lang.Object message_ = "";
+    private Object message_ = "";
     /**
      * <code>string message = 2;</code>
      */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getMessage() {
+      Object ref = message_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         message_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -512,11 +512,11 @@ public  final class SendTransactionResp extends
      */
     public com.google.protobuf.ByteString
         getMessageBytes() {
-      java.lang.Object ref = message_;
+      Object ref = message_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         message_ = b;
         return b;
       } else {
@@ -527,7 +527,7 @@ public  final class SendTransactionResp extends
      * <code>string message = 2;</code>
      */
     public Builder setMessage(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -560,20 +560,20 @@ public  final class SendTransactionResp extends
       return this;
     }
 
-    private java.lang.Object hash_ = "";
+    private Object hash_ = "";
     /**
      * <code>string hash = 3;</code>
      */
-    public java.lang.String getHash() {
-      java.lang.Object ref = hash_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getHash() {
+      Object ref = hash_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         hash_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -581,11 +581,11 @@ public  final class SendTransactionResp extends
      */
     public com.google.protobuf.ByteString
         getHashBytes() {
-      java.lang.Object ref = hash_;
+      Object ref = hash_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         hash_ = b;
         return b;
       } else {
@@ -596,7 +596,7 @@ public  final class SendTransactionResp extends
      * <code>string hash = 3;</code>
      */
     public Builder setHash(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -666,7 +666,7 @@ public  final class SendTransactionResp extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<SendTransactionResp> getParserForType() {
     return PARSER;
   }

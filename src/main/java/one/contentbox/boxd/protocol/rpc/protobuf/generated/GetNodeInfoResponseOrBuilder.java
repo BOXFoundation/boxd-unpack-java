@@ -10,12 +10,12 @@ public interface GetNodeInfoResponseOrBuilder extends
   /**
    * <code>repeated .rpcpb.Node nodes = 1;</code>
    */
-  java.util.List<Node>
+  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Node> 
       getNodesList();
   /**
    * <code>repeated .rpcpb.Node nodes = 1;</code>
    */
-  Node getNodes(int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.Node getNodes(int index);
   /**
    * <code>repeated .rpcpb.Node nodes = 1;</code>
    */
@@ -23,11 +23,11 @@ public interface GetNodeInfoResponseOrBuilder extends
   /**
    * <code>repeated .rpcpb.Node nodes = 1;</code>
    */
-  java.util.List<? extends NodeOrBuilder>
+  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder> 
       getNodesOrBuilderList();
   /**
    * <code>repeated .rpcpb.Node nodes = 1;</code>
    */
-  NodeOrBuilder getNodesOrBuilder(
-      int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.NodeOrBuilder getNodesOrBuilder(
+          int index);
 }

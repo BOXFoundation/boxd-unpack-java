@@ -18,7 +18,7 @@ public  final class GetBlockRequest extends
     blockHash_ = "";
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -44,7 +44,7 @@ public  final class GetBlockRequest extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             blockHash_ = s;
             break;
@@ -65,26 +65,26 @@ public  final class GetBlockRequest extends
     return ControlProto.internal_static_rpcpb_GetBlockRequest_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return ControlProto.internal_static_rpcpb_GetBlockRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GetBlockRequest.class, GetBlockRequest.Builder.class);
+            GetBlockRequest.class, Builder.class);
   }
 
   public static final int BLOCK_HASH_FIELD_NUMBER = 1;
-  private volatile java.lang.Object blockHash_;
+  private volatile Object blockHash_;
   /**
    * <code>string block_hash = 1;</code>
    */
-  public java.lang.String getBlockHash() {
-    java.lang.Object ref = blockHash_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getBlockHash() {
+    Object ref = blockHash_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       blockHash_ = s;
       return s;
     }
@@ -94,11 +94,11 @@ public  final class GetBlockRequest extends
    */
   public com.google.protobuf.ByteString
       getBlockHashBytes() {
-    java.lang.Object ref = blockHash_;
-    if (ref instanceof java.lang.String) {
+    Object ref = blockHash_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       blockHash_ = b;
       return b;
     } else {
@@ -136,8 +136,8 @@ public  final class GetBlockRequest extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -152,7 +152,7 @@ public  final class GetBlockRequest extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -237,9 +237,9 @@ public  final class GetBlockRequest extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -249,17 +249,17 @@ public  final class GetBlockRequest extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetBlockRequest)
-          GetBlockRequestOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ControlProto.internal_static_rpcpb_GetBlockRequest_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ControlProto.internal_static_rpcpb_GetBlockRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetBlockRequest.class, GetBlockRequest.Builder.class);
+              GetBlockRequest.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest.newBuilder()
@@ -268,7 +268,7 @@ public  final class GetBlockRequest extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -375,20 +375,20 @@ public  final class GetBlockRequest extends
       return this;
     }
 
-    private java.lang.Object blockHash_ = "";
+    private Object blockHash_ = "";
     /**
      * <code>string block_hash = 1;</code>
      */
-    public java.lang.String getBlockHash() {
-      java.lang.Object ref = blockHash_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getBlockHash() {
+      Object ref = blockHash_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         blockHash_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -396,11 +396,11 @@ public  final class GetBlockRequest extends
      */
     public com.google.protobuf.ByteString
         getBlockHashBytes() {
-      java.lang.Object ref = blockHash_;
+      Object ref = blockHash_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         blockHash_ = b;
         return b;
       } else {
@@ -411,7 +411,7 @@ public  final class GetBlockRequest extends
      * <code>string block_hash = 1;</code>
      */
     public Builder setBlockHash(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -481,7 +481,7 @@ public  final class GetBlockRequest extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<GetBlockRequest> getParserForType() {
     return PARSER;
   }

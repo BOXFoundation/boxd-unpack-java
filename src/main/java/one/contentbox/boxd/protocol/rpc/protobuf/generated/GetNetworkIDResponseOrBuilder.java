@@ -15,7 +15,7 @@ public interface GetNetworkIDResponseOrBuilder extends
   /**
    * <code>string literal = 2;</code>
    */
-  java.lang.String getLiteral();
+  String getLiteral();
   /**
    * <code>string literal = 2;</code>
    */

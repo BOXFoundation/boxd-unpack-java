@@ -19,7 +19,7 @@ public  final class IrreversibleInfo extends
     signatures_ = java.util.Collections.emptyList();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -76,11 +76,11 @@ public  final class IrreversibleInfo extends
     return BlockProto.internal_static_corepb_IrreversibleInfo_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return BlockProto.internal_static_corepb_IrreversibleInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            IrreversibleInfo.class, IrreversibleInfo.Builder.class);
+            IrreversibleInfo.class, Builder.class);
   }
 
   private int bitField0_;
@@ -158,8 +158,8 @@ public  final class IrreversibleInfo extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -176,7 +176,7 @@ public  final class IrreversibleInfo extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -265,9 +265,9 @@ public  final class IrreversibleInfo extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -277,17 +277,17 @@ public  final class IrreversibleInfo extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.IrreversibleInfo)
-          IrreversibleInfoOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return BlockProto.internal_static_corepb_IrreversibleInfo_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return BlockProto.internal_static_corepb_IrreversibleInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              IrreversibleInfo.class, IrreversibleInfo.Builder.class);
+              IrreversibleInfo.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo.newBuilder()
@@ -296,7 +296,7 @@ public  final class IrreversibleInfo extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -507,7 +507,7 @@ public  final class IrreversibleInfo extends
      * <code>repeated bytes signatures = 2;</code>
      */
     public Builder addAllSignatures(
-        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        Iterable<? extends com.google.protobuf.ByteString> values) {
       ensureSignaturesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, signatures_);
@@ -561,7 +561,7 @@ public  final class IrreversibleInfo extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<IrreversibleInfo> getParserForType() {
     return PARSER;
   }

@@ -10,7 +10,7 @@ public interface TokenTagOrBuilder extends
   /**
    * <code>string name = 1;</code>
    */
-  java.lang.String getName();
+  String getName();
   /**
    * <code>string name = 1;</code>
    */
@@ -20,7 +20,7 @@ public interface TokenTagOrBuilder extends
   /**
    * <code>string symbol = 2;</code>
    */
-  java.lang.String getSymbol();
+  String getSymbol();
   /**
    * <code>string symbol = 2;</code>
    */

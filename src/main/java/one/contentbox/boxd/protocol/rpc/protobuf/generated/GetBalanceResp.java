@@ -20,7 +20,7 @@ public  final class GetBalanceResp extends
     balances_ = java.util.Collections.emptyList();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -51,14 +51,14 @@ public  final class GetBalanceResp extends
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             message_ = s;
             break;
           }
           case 24: {
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-              balances_ = new java.util.ArrayList<java.lang.Long>();
+              balances_ = new java.util.ArrayList<Long>();
               mutable_bitField0_ |= 0x00000004;
             }
             balances_.add(input.readUInt64());
@@ -68,7 +68,7 @@ public  final class GetBalanceResp extends
             int length = input.readRawVarint32();
             int limit = input.pushLimit(length);
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
-              balances_ = new java.util.ArrayList<java.lang.Long>();
+              balances_ = new java.util.ArrayList<Long>();
               mutable_bitField0_ |= 0x00000004;
             }
             while (input.getBytesUntilLimit() > 0) {
@@ -93,14 +93,14 @@ public  final class GetBalanceResp extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_GetBalanceResp_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceResp_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_GetBalanceResp_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceResp_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GetBalanceResp.class, GetBalanceResp.Builder.class);
+            GetBalanceResp.class, Builder.class);
   }
 
   private int bitField0_;
@@ -114,18 +114,18 @@ public  final class GetBalanceResp extends
   }
 
   public static final int MESSAGE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object message_;
+  private volatile Object message_;
   /**
    * <code>string message = 2;</code>
    */
-  public java.lang.String getMessage() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getMessage() {
+    Object ref = message_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       message_ = s;
       return s;
     }
@@ -135,11 +135,11 @@ public  final class GetBalanceResp extends
    */
   public com.google.protobuf.ByteString
       getMessageBytes() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
+    Object ref = message_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       message_ = b;
       return b;
     } else {
@@ -148,11 +148,11 @@ public  final class GetBalanceResp extends
   }
 
   public static final int BALANCES_FIELD_NUMBER = 3;
-  private java.util.List<java.lang.Long> balances_;
+  private java.util.List<Long> balances_;
   /**
    * <code>repeated uint64 balances = 3;</code>
    */
-  public java.util.List<java.lang.Long>
+  public java.util.List<Long>
       getBalancesList() {
     return balances_;
   }
@@ -229,8 +229,8 @@ public  final class GetBalanceResp extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -249,7 +249,7 @@ public  final class GetBalanceResp extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -340,9 +340,9 @@ public  final class GetBalanceResp extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -352,17 +352,17 @@ public  final class GetBalanceResp extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetBalanceResp)
-          GetBalanceRespOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceRespOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_GetBalanceResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceResp_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_GetBalanceResp_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetBalanceResp.class, GetBalanceResp.Builder.class);
+              GetBalanceResp.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp.newBuilder()
@@ -371,7 +371,7 @@ public  final class GetBalanceResp extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -393,7 +393,7 @@ public  final class GetBalanceResp extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_GetBalanceResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetBalanceResp_descriptor;
     }
 
     public GetBalanceResp getDefaultInstanceForType() {
@@ -531,20 +531,20 @@ public  final class GetBalanceResp extends
       return this;
     }
 
-    private java.lang.Object message_ = "";
+    private Object message_ = "";
     /**
      * <code>string message = 2;</code>
      */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getMessage() {
+      Object ref = message_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         message_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -552,11 +552,11 @@ public  final class GetBalanceResp extends
      */
     public com.google.protobuf.ByteString
         getMessageBytes() {
-      java.lang.Object ref = message_;
+      Object ref = message_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         message_ = b;
         return b;
       } else {
@@ -567,7 +567,7 @@ public  final class GetBalanceResp extends
      * <code>string message = 2;</code>
      */
     public Builder setMessage(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -600,17 +600,17 @@ public  final class GetBalanceResp extends
       return this;
     }
 
-    private java.util.List<java.lang.Long> balances_ = java.util.Collections.emptyList();
+    private java.util.List<Long> balances_ = java.util.Collections.emptyList();
     private void ensureBalancesIsMutable() {
       if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-        balances_ = new java.util.ArrayList<java.lang.Long>(balances_);
+        balances_ = new java.util.ArrayList<Long>(balances_);
         bitField0_ |= 0x00000004;
        }
     }
     /**
      * <code>repeated uint64 balances = 3;</code>
      */
-    public java.util.List<java.lang.Long>
+    public java.util.List<Long>
         getBalancesList() {
       return java.util.Collections.unmodifiableList(balances_);
     }
@@ -649,7 +649,7 @@ public  final class GetBalanceResp extends
      * <code>repeated uint64 balances = 3;</code>
      */
     public Builder addAllBalances(
-        java.lang.Iterable<? extends java.lang.Long> values) {
+        Iterable<? extends Long> values) {
       ensureBalancesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, balances_);
@@ -703,7 +703,7 @@ public  final class GetBalanceResp extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<GetBalanceResp> getParserForType() {
     return PARSER;
   }

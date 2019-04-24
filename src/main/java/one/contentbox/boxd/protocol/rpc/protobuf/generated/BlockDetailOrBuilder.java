@@ -30,7 +30,7 @@ public interface BlockDetailOrBuilder extends
   /**
    * <code>string hash = 5;</code>
    */
-  java.lang.String getHash();
+  String getHash();
   /**
    * <code>string hash = 5;</code>
    */
@@ -40,7 +40,7 @@ public interface BlockDetailOrBuilder extends
   /**
    * <code>string prev_block_hash = 6;</code>
    */
-  java.lang.String getPrevBlockHash();
+  String getPrevBlockHash();
   /**
    * <code>string prev_block_hash = 6;</code>
    */
@@ -50,7 +50,7 @@ public interface BlockDetailOrBuilder extends
   /**
    * <code>string coin_base = 7;</code>
    */
-  java.lang.String getCoinBase();
+  String getCoinBase();
   /**
    * <code>string coin_base = 7;</code>
    */
@@ -65,7 +65,7 @@ public interface BlockDetailOrBuilder extends
   /**
    * <code>string signature = 9;</code>
    */
-  java.lang.String getSignature();
+  String getSignature();
   /**
    * <code>string signature = 9;</code>
    */
@@ -75,12 +75,12 @@ public interface BlockDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  java.util.List<TxDetail>
+  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> 
       getTxsList();
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  TxDetail getTxs(int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail getTxs(int index);
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
@@ -88,11 +88,11 @@ public interface BlockDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  java.util.List<? extends TxDetailOrBuilder>
+  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> 
       getTxsOrBuilderList();
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  TxDetailOrBuilder getTxsOrBuilder(
-      int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder getTxsOrBuilder(
+          int index);
 }

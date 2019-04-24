@@ -15,7 +15,7 @@ public interface FetchUtxosRespOrBuilder extends
   /**
    * <code>string message = 2;</code>
    */
-  java.lang.String getMessage();
+  String getMessage();
   /**
    * <code>string message = 2;</code>
    */
@@ -25,12 +25,12 @@ public interface FetchUtxosRespOrBuilder extends
   /**
    * <code>repeated .rpcpb.Utxo utxos = 3;</code>
    */
-  java.util.List<Utxo>
+  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo> 
       getUtxosList();
   /**
    * <code>repeated .rpcpb.Utxo utxos = 3;</code>
    */
-  Utxo getUtxos(int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo getUtxos(int index);
   /**
    * <code>repeated .rpcpb.Utxo utxos = 3;</code>
    */
@@ -38,11 +38,11 @@ public interface FetchUtxosRespOrBuilder extends
   /**
    * <code>repeated .rpcpb.Utxo utxos = 3;</code>
    */
-  java.util.List<? extends UtxoOrBuilder>
+  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder> 
       getUtxosOrBuilderList();
   /**
    * <code>repeated .rpcpb.Utxo utxos = 3;</code>
    */
-  UtxoOrBuilder getUtxosOrBuilder(
-      int index);
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder getUtxosOrBuilder(
+          int index);
 }

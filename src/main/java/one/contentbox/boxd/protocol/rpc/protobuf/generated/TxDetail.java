@@ -20,7 +20,7 @@ public  final class TxDetail extends
     vout_ = java.util.Collections.emptyList();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -46,27 +46,27 @@ public  final class TxDetail extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             hash_ = s;
             break;
           }
           case 18: {
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-              vin_ = new java.util.ArrayList<TxInDetail>();
+              vin_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail>();
               mutable_bitField0_ |= 0x00000002;
             }
             vin_.add(
-                input.readMessage(TxInDetail.parser(), extensionRegistry));
+                input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.parser(), extensionRegistry));
             break;
           }
           case 26: {
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-              vout_ = new java.util.ArrayList<TxOutDetail>();
+              vout_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail>();
               mutable_bitField0_ |= 0x00000004;
             }
             vout_.add(
-                input.readMessage(TxOutDetail.parser(), extensionRegistry));
+                input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.parser(), extensionRegistry));
             break;
           }
         }
@@ -88,30 +88,30 @@ public  final class TxDetail extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return WebProto.internal_static_rpcpb_TxDetail_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxDetail_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return WebProto.internal_static_rpcpb_TxDetail_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxDetail_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            TxDetail.class, TxDetail.Builder.class);
+            TxDetail.class, Builder.class);
   }
 
   private int bitField0_;
   public static final int HASH_FIELD_NUMBER = 1;
-  private volatile java.lang.Object hash_;
+  private volatile Object hash_;
   /**
    * <code>string hash = 1;</code>
    */
-  public java.lang.String getHash() {
-    java.lang.Object ref = hash_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getHash() {
+    Object ref = hash_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       hash_ = s;
       return s;
     }
@@ -121,11 +121,11 @@ public  final class TxDetail extends
    */
   public com.google.protobuf.ByteString
       getHashBytes() {
-    java.lang.Object ref = hash_;
-    if (ref instanceof java.lang.String) {
+    Object ref = hash_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       hash_ = b;
       return b;
     } else {
@@ -134,17 +134,17 @@ public  final class TxDetail extends
   }
 
   public static final int VIN_FIELD_NUMBER = 2;
-  private java.util.List<TxInDetail> vin_;
+  private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail> vin_;
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  public java.util.List<TxInDetail> getVinList() {
+  public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail> getVinList() {
     return vin_;
   }
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  public java.util.List<? extends TxInDetailOrBuilder>
+  public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder> 
       getVinOrBuilderList() {
     return vin_;
   }
@@ -157,29 +157,29 @@ public  final class TxDetail extends
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  public TxInDetail getVin(int index) {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail getVin(int index) {
     return vin_.get(index);
   }
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  public TxInDetailOrBuilder getVinOrBuilder(
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder getVinOrBuilder(
       int index) {
     return vin_.get(index);
   }
 
   public static final int VOUT_FIELD_NUMBER = 3;
-  private java.util.List<TxOutDetail> vout_;
+  private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail> vout_;
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  public java.util.List<TxOutDetail> getVoutList() {
+  public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail> getVoutList() {
     return vout_;
   }
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  public java.util.List<? extends TxOutDetailOrBuilder>
+  public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder> 
       getVoutOrBuilderList() {
     return vout_;
   }
@@ -192,13 +192,13 @@ public  final class TxDetail extends
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  public TxOutDetail getVout(int index) {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail getVout(int index) {
     return vout_.get(index);
   }
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  public TxOutDetailOrBuilder getVoutOrBuilder(
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder getVoutOrBuilder(
       int index) {
     return vout_.get(index);
   }
@@ -247,8 +247,8 @@ public  final class TxDetail extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -267,7 +267,7 @@ public  final class TxDetail extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -360,9 +360,9 @@ public  final class TxDetail extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -372,17 +372,17 @@ public  final class TxDetail extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.TxDetail)
-          TxDetailOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return WebProto.internal_static_rpcpb_TxDetail_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxDetail_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return WebProto.internal_static_rpcpb_TxDetail_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              TxDetail.class, TxDetail.Builder.class);
+              TxDetail.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.newBuilder()
@@ -391,7 +391,7 @@ public  final class TxDetail extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -423,7 +423,7 @@ public  final class TxDetail extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return WebProto.internal_static_rpcpb_TxDetail_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxDetail_descriptor;
     }
 
     public TxDetail getDefaultInstanceForType() {
@@ -586,20 +586,20 @@ public  final class TxDetail extends
     }
     private int bitField0_;
 
-    private java.lang.Object hash_ = "";
+    private Object hash_ = "";
     /**
      * <code>string hash = 1;</code>
      */
-    public java.lang.String getHash() {
-      java.lang.Object ref = hash_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getHash() {
+      Object ref = hash_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         hash_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -607,11 +607,11 @@ public  final class TxDetail extends
      */
     public com.google.protobuf.ByteString
         getHashBytes() {
-      java.lang.Object ref = hash_;
+      Object ref = hash_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         hash_ = b;
         return b;
       } else {
@@ -622,7 +622,7 @@ public  final class TxDetail extends
      * <code>string hash = 1;</code>
      */
     public Builder setHash(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -655,22 +655,22 @@ public  final class TxDetail extends
       return this;
     }
 
-    private java.util.List<TxInDetail> vin_ =
+    private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail> vin_ =
       java.util.Collections.emptyList();
     private void ensureVinIsMutable() {
       if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-        vin_ = new java.util.ArrayList<TxInDetail>(vin_);
+        vin_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail>(vin_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            TxInDetail, TxInDetail.Builder, TxInDetailOrBuilder> vinBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder> vinBuilder_;
 
     /**
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
-    public java.util.List<TxInDetail> getVinList() {
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail> getVinList() {
       if (vinBuilder_ == null) {
         return java.util.Collections.unmodifiableList(vin_);
       } else {
@@ -690,7 +690,7 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
-    public TxInDetail getVin(int index) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail getVin(int index) {
       if (vinBuilder_ == null) {
         return vin_.get(index);
       } else {
@@ -701,7 +701,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
     public Builder setVin(
-        int index, TxInDetail value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail value) {
       if (vinBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -718,7 +718,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
     public Builder setVin(
-        int index, TxInDetail.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder builderForValue) {
       if (vinBuilder_ == null) {
         ensureVinIsMutable();
         vin_.set(index, builderForValue.build());
@@ -731,7 +731,7 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
-    public Builder addVin(TxInDetail value) {
+    public Builder addVin(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail value) {
       if (vinBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -748,7 +748,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
     public Builder addVin(
-        int index, TxInDetail value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail value) {
       if (vinBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -765,7 +765,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
     public Builder addVin(
-        TxInDetail.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder builderForValue) {
       if (vinBuilder_ == null) {
         ensureVinIsMutable();
         vin_.add(builderForValue.build());
@@ -779,7 +779,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
     public Builder addVin(
-        int index, TxInDetail.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder builderForValue) {
       if (vinBuilder_ == null) {
         ensureVinIsMutable();
         vin_.add(index, builderForValue.build());
@@ -793,7 +793,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
     public Builder addAllVin(
-        java.lang.Iterable<? extends TxInDetail> values) {
+        Iterable<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail> values) {
       if (vinBuilder_ == null) {
         ensureVinIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -833,14 +833,14 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
-    public TxInDetail.Builder getVinBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder getVinBuilder(
         int index) {
       return getVinFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
-    public TxInDetailOrBuilder getVinOrBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder getVinOrBuilder(
         int index) {
       if (vinBuilder_ == null) {
         return vin_.get(index);  } else {
@@ -850,7 +850,7 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
-    public java.util.List<? extends TxInDetailOrBuilder>
+    public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder> 
          getVinOrBuilderList() {
       if (vinBuilder_ != null) {
         return vinBuilder_.getMessageOrBuilderList();
@@ -861,31 +861,31 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
-    public TxInDetail.Builder addVinBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder addVinBuilder() {
       return getVinFieldBuilder().addBuilder(
-          TxInDetail.getDefaultInstance());
+          one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
-    public TxInDetail.Builder addVinBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder addVinBuilder(
         int index) {
       return getVinFieldBuilder().addBuilder(
-          index, TxInDetail.getDefaultInstance());
+          index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
      */
-    public java.util.List<TxInDetail.Builder>
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder> 
          getVinBuilderList() {
       return getVinFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            TxInDetail, TxInDetail.Builder, TxInDetailOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder> 
         getVinFieldBuilder() {
       if (vinBuilder_ == null) {
         vinBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                TxInDetail, TxInDetail.Builder, TxInDetailOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder>(
                 vin_,
                 ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
@@ -895,22 +895,22 @@ public  final class TxDetail extends
       return vinBuilder_;
     }
 
-    private java.util.List<TxOutDetail> vout_ =
+    private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail> vout_ =
       java.util.Collections.emptyList();
     private void ensureVoutIsMutable() {
       if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-        vout_ = new java.util.ArrayList<TxOutDetail>(vout_);
+        vout_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail>(vout_);
         bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            TxOutDetail, TxOutDetail.Builder, TxOutDetailOrBuilder> voutBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder> voutBuilder_;
 
     /**
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
-    public java.util.List<TxOutDetail> getVoutList() {
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail> getVoutList() {
       if (voutBuilder_ == null) {
         return java.util.Collections.unmodifiableList(vout_);
       } else {
@@ -930,7 +930,7 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
-    public TxOutDetail getVout(int index) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail getVout(int index) {
       if (voutBuilder_ == null) {
         return vout_.get(index);
       } else {
@@ -941,7 +941,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
     public Builder setVout(
-        int index, TxOutDetail value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail value) {
       if (voutBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -958,7 +958,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
     public Builder setVout(
-        int index, TxOutDetail.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder builderForValue) {
       if (voutBuilder_ == null) {
         ensureVoutIsMutable();
         vout_.set(index, builderForValue.build());
@@ -971,7 +971,7 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
-    public Builder addVout(TxOutDetail value) {
+    public Builder addVout(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail value) {
       if (voutBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -988,7 +988,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
     public Builder addVout(
-        int index, TxOutDetail value) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail value) {
       if (voutBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1005,7 +1005,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
     public Builder addVout(
-        TxOutDetail.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder builderForValue) {
       if (voutBuilder_ == null) {
         ensureVoutIsMutable();
         vout_.add(builderForValue.build());
@@ -1019,7 +1019,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
     public Builder addVout(
-        int index, TxOutDetail.Builder builderForValue) {
+        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder builderForValue) {
       if (voutBuilder_ == null) {
         ensureVoutIsMutable();
         vout_.add(index, builderForValue.build());
@@ -1033,7 +1033,7 @@ public  final class TxDetail extends
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
     public Builder addAllVout(
-        java.lang.Iterable<? extends TxOutDetail> values) {
+        Iterable<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail> values) {
       if (voutBuilder_ == null) {
         ensureVoutIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1073,14 +1073,14 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
-    public TxOutDetail.Builder getVoutBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder getVoutBuilder(
         int index) {
       return getVoutFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
-    public TxOutDetailOrBuilder getVoutOrBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder getVoutOrBuilder(
         int index) {
       if (voutBuilder_ == null) {
         return vout_.get(index);  } else {
@@ -1090,7 +1090,7 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
-    public java.util.List<? extends TxOutDetailOrBuilder>
+    public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder> 
          getVoutOrBuilderList() {
       if (voutBuilder_ != null) {
         return voutBuilder_.getMessageOrBuilderList();
@@ -1101,31 +1101,31 @@ public  final class TxDetail extends
     /**
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
-    public TxOutDetail.Builder addVoutBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder addVoutBuilder() {
       return getVoutFieldBuilder().addBuilder(
-          TxOutDetail.getDefaultInstance());
+          one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
-    public TxOutDetail.Builder addVoutBuilder(
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder addVoutBuilder(
         int index) {
       return getVoutFieldBuilder().addBuilder(
-          index, TxOutDetail.getDefaultInstance());
+          index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
      */
-    public java.util.List<TxOutDetail.Builder>
+    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder> 
          getVoutBuilderList() {
       return getVoutFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            TxOutDetail, TxOutDetail.Builder, TxOutDetailOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder> 
         getVoutFieldBuilder() {
       if (voutBuilder_ == null) {
         voutBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                TxOutDetail, TxOutDetail.Builder, TxOutDetailOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder>(
                 vout_,
                 ((bitField0_ & 0x00000004) == 0x00000004),
                 getParentForChildren(),
@@ -1172,7 +1172,7 @@ public  final class TxDetail extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<TxDetail> getParserForType() {
     return PARSER;
   }

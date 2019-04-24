@@ -21,7 +21,7 @@ public  final class MakeSplitAddrTxResp extends
     rawMsgs_ = java.util.Collections.emptyList();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -52,23 +52,23 @@ public  final class MakeSplitAddrTxResp extends
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             message_ = s;
             break;
           }
           case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             splitAddr_ = s;
             break;
           }
           case 34: {
-            Transaction.Builder subBuilder = null;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder subBuilder = null;
             if (tx_ != null) {
               subBuilder = tx_.toBuilder();
             }
-            tx_ = input.readMessage(Transaction.parser(), extensionRegistry);
+            tx_ = input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(tx_);
               tx_ = subBuilder.buildPartial();
@@ -100,14 +100,14 @@ public  final class MakeSplitAddrTxResp extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            MakeSplitAddrTxResp.class, MakeSplitAddrTxResp.Builder.class);
+            MakeSplitAddrTxResp.class, Builder.class);
   }
 
   private int bitField0_;
@@ -121,18 +121,18 @@ public  final class MakeSplitAddrTxResp extends
   }
 
   public static final int MESSAGE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object message_;
+  private volatile Object message_;
   /**
    * <code>string message = 2;</code>
    */
-  public java.lang.String getMessage() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getMessage() {
+    Object ref = message_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       message_ = s;
       return s;
     }
@@ -142,11 +142,11 @@ public  final class MakeSplitAddrTxResp extends
    */
   public com.google.protobuf.ByteString
       getMessageBytes() {
-    java.lang.Object ref = message_;
-    if (ref instanceof java.lang.String) {
+    Object ref = message_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       message_ = b;
       return b;
     } else {
@@ -155,18 +155,18 @@ public  final class MakeSplitAddrTxResp extends
   }
 
   public static final int SPLITADDR_FIELD_NUMBER = 3;
-  private volatile java.lang.Object splitAddr_;
+  private volatile Object splitAddr_;
   /**
    * <code>string splitAddr = 3;</code>
    */
-  public java.lang.String getSplitAddr() {
-    java.lang.Object ref = splitAddr_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getSplitAddr() {
+    Object ref = splitAddr_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       splitAddr_ = s;
       return s;
     }
@@ -176,11 +176,11 @@ public  final class MakeSplitAddrTxResp extends
    */
   public com.google.protobuf.ByteString
       getSplitAddrBytes() {
-    java.lang.Object ref = splitAddr_;
-    if (ref instanceof java.lang.String) {
+    Object ref = splitAddr_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       splitAddr_ = b;
       return b;
     } else {
@@ -189,7 +189,7 @@ public  final class MakeSplitAddrTxResp extends
   }
 
   public static final int TX_FIELD_NUMBER = 4;
-  private Transaction tx_;
+  private one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction tx_;
   /**
    * <code>.corepb.Transaction tx = 4;</code>
    */
@@ -199,13 +199,13 @@ public  final class MakeSplitAddrTxResp extends
   /**
    * <code>.corepb.Transaction tx = 4;</code>
    */
-  public Transaction getTx() {
-    return tx_ == null ? Transaction.getDefaultInstance() : tx_;
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTx() {
+    return tx_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.getDefaultInstance() : tx_;
   }
   /**
    * <code>.corepb.Transaction tx = 4;</code>
    */
-  public TransactionOrBuilder getTxOrBuilder() {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxOrBuilder() {
     return getTx();
   }
 
@@ -293,8 +293,8 @@ public  final class MakeSplitAddrTxResp extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -320,7 +320,7 @@ public  final class MakeSplitAddrTxResp extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -417,9 +417,9 @@ public  final class MakeSplitAddrTxResp extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -429,17 +429,17 @@ public  final class MakeSplitAddrTxResp extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.MakeSplitAddrTxResp)
-          MakeSplitAddrTxRespOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxRespOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MakeSplitAddrTxResp.class, MakeSplitAddrTxResp.Builder.class);
+              MakeSplitAddrTxResp.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp.newBuilder()
@@ -448,7 +448,7 @@ public  final class MakeSplitAddrTxResp extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -478,7 +478,7 @@ public  final class MakeSplitAddrTxResp extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeSplitAddrTxResp_descriptor;
     }
 
     public MakeSplitAddrTxResp getDefaultInstanceForType() {
@@ -629,20 +629,20 @@ public  final class MakeSplitAddrTxResp extends
       return this;
     }
 
-    private java.lang.Object message_ = "";
+    private Object message_ = "";
     /**
      * <code>string message = 2;</code>
      */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getMessage() {
+      Object ref = message_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         message_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -650,11 +650,11 @@ public  final class MakeSplitAddrTxResp extends
      */
     public com.google.protobuf.ByteString
         getMessageBytes() {
-      java.lang.Object ref = message_;
+      Object ref = message_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         message_ = b;
         return b;
       } else {
@@ -665,7 +665,7 @@ public  final class MakeSplitAddrTxResp extends
      * <code>string message = 2;</code>
      */
     public Builder setMessage(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -698,20 +698,20 @@ public  final class MakeSplitAddrTxResp extends
       return this;
     }
 
-    private java.lang.Object splitAddr_ = "";
+    private Object splitAddr_ = "";
     /**
      * <code>string splitAddr = 3;</code>
      */
-    public java.lang.String getSplitAddr() {
-      java.lang.Object ref = splitAddr_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getSplitAddr() {
+      Object ref = splitAddr_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         splitAddr_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -719,11 +719,11 @@ public  final class MakeSplitAddrTxResp extends
      */
     public com.google.protobuf.ByteString
         getSplitAddrBytes() {
-      java.lang.Object ref = splitAddr_;
+      Object ref = splitAddr_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         splitAddr_ = b;
         return b;
       } else {
@@ -734,7 +734,7 @@ public  final class MakeSplitAddrTxResp extends
      * <code>string splitAddr = 3;</code>
      */
     public Builder setSplitAddr(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -767,9 +767,9 @@ public  final class MakeSplitAddrTxResp extends
       return this;
     }
 
-    private Transaction tx_ = null;
+    private one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction tx_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            Transaction, Transaction.Builder, TransactionOrBuilder> txBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder> txBuilder_;
     /**
      * <code>.corepb.Transaction tx = 4;</code>
      */
@@ -779,9 +779,9 @@ public  final class MakeSplitAddrTxResp extends
     /**
      * <code>.corepb.Transaction tx = 4;</code>
      */
-    public Transaction getTx() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTx() {
       if (txBuilder_ == null) {
-        return tx_ == null ? Transaction.getDefaultInstance() : tx_;
+        return tx_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.getDefaultInstance() : tx_;
       } else {
         return txBuilder_.getMessage();
       }
@@ -789,7 +789,7 @@ public  final class MakeSplitAddrTxResp extends
     /**
      * <code>.corepb.Transaction tx = 4;</code>
      */
-    public Builder setTx(Transaction value) {
+    public Builder setTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction value) {
       if (txBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -806,7 +806,7 @@ public  final class MakeSplitAddrTxResp extends
      * <code>.corepb.Transaction tx = 4;</code>
      */
     public Builder setTx(
-        Transaction.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder builderForValue) {
       if (txBuilder_ == null) {
         tx_ = builderForValue.build();
         onChanged();
@@ -819,11 +819,11 @@ public  final class MakeSplitAddrTxResp extends
     /**
      * <code>.corepb.Transaction tx = 4;</code>
      */
-    public Builder mergeTx(Transaction value) {
+    public Builder mergeTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction value) {
       if (txBuilder_ == null) {
         if (tx_ != null) {
           tx_ =
-            Transaction.newBuilder(tx_).mergeFrom(value).buildPartial();
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.newBuilder(tx_).mergeFrom(value).buildPartial();
         } else {
           tx_ = value;
         }
@@ -851,7 +851,7 @@ public  final class MakeSplitAddrTxResp extends
     /**
      * <code>.corepb.Transaction tx = 4;</code>
      */
-    public Transaction.Builder getTxBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder getTxBuilder() {
       
       onChanged();
       return getTxFieldBuilder().getBuilder();
@@ -859,23 +859,23 @@ public  final class MakeSplitAddrTxResp extends
     /**
      * <code>.corepb.Transaction tx = 4;</code>
      */
-    public TransactionOrBuilder getTxOrBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxOrBuilder() {
       if (txBuilder_ != null) {
         return txBuilder_.getMessageOrBuilder();
       } else {
         return tx_ == null ?
-            Transaction.getDefaultInstance() : tx_;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.getDefaultInstance() : tx_;
       }
     }
     /**
      * <code>.corepb.Transaction tx = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            Transaction, Transaction.Builder, TransactionOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder> 
         getTxFieldBuilder() {
       if (txBuilder_ == null) {
         txBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                Transaction, Transaction.Builder, TransactionOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder>(
                 getTx(),
                 getParentForChildren(),
                 isClean());
@@ -939,7 +939,7 @@ public  final class MakeSplitAddrTxResp extends
      * <code>repeated bytes rawMsgs = 5;</code>
      */
     public Builder addAllRawMsgs(
-        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        Iterable<? extends com.google.protobuf.ByteString> values) {
       ensureRawMsgsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, rawMsgs_);
@@ -993,7 +993,7 @@ public  final class MakeSplitAddrTxResp extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<MakeSplitAddrTxResp> getParserForType() {
     return PARSER;
   }

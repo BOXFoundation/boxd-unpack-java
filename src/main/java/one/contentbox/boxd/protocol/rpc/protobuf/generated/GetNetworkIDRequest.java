@@ -17,7 +17,7 @@ public  final class GetNetworkIDRequest extends
   private GetNetworkIDRequest() {
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -57,11 +57,11 @@ public  final class GetNetworkIDRequest extends
     return ControlProto.internal_static_rpcpb_GetNetworkIDRequest_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
     return ControlProto.internal_static_rpcpb_GetNetworkIDRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GetNetworkIDRequest.class, GetNetworkIDRequest.Builder.class);
+            GetNetworkIDRequest.class, Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -88,8 +88,8 @@ public  final class GetNetworkIDRequest extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -102,7 +102,7 @@ public  final class GetNetworkIDRequest extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -185,9 +185,9 @@ public  final class GetNetworkIDRequest extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -197,17 +197,17 @@ public  final class GetNetworkIDRequest extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetNetworkIDRequest)
-          GetNetworkIDRequestOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ControlProto.internal_static_rpcpb_GetNetworkIDRequest_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ControlProto.internal_static_rpcpb_GetNetworkIDRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetNetworkIDRequest.class, GetNetworkIDRequest.Builder.class);
+              GetNetworkIDRequest.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest.newBuilder()
@@ -216,7 +216,7 @@ public  final class GetNetworkIDRequest extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -353,7 +353,7 @@ public  final class GetNetworkIDRequest extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<GetNetworkIDRequest> getParserForType() {
     return PARSER;
   }

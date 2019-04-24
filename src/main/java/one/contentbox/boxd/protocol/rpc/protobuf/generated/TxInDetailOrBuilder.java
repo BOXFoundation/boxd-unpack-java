@@ -14,16 +14,16 @@ public interface TxInDetailOrBuilder extends
   /**
    * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
    */
-  TxOutDetail getPrevOutDetail();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail getPrevOutDetail();
   /**
    * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
    */
-  TxOutDetailOrBuilder getPrevOutDetailOrBuilder();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder getPrevOutDetailOrBuilder();
 
   /**
    * <code>string script_sig = 2;</code>
    */
-  java.lang.String getScriptSig();
+  String getScriptSig();
   /**
    * <code>string script_sig = 2;</code>
    */
@@ -38,7 +38,7 @@ public interface TxInDetailOrBuilder extends
   /**
    * <code>string prev_out_point = 4;</code>
    */
-  java.lang.String getPrevOutPoint();
+  String getPrevOutPoint();
   /**
    * <code>string prev_out_point = 4;</code>
    */

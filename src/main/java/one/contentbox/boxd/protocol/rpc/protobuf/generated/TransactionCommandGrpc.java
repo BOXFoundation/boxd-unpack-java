@@ -1,12 +1,19 @@
 package one.contentbox.boxd.protocol.rpc.protobuf.generated;
 
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
  */
@@ -21,124 +28,124 @@ public final class TransactionCommandGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<GetBalanceReq,
-          GetBalanceResp> METHOD_GET_BALANCE =
-      io.grpc.MethodDescriptor.<GetBalanceReq, GetBalanceResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp> METHOD_GET_BALANCE =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "GetBalance"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              GetBalanceReq.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              GetBalanceResp.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<GetTokenBalanceReq,
-          GetBalanceResp> METHOD_GET_TOKEN_BALANCE =
-      io.grpc.MethodDescriptor.<GetTokenBalanceReq, GetBalanceResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp> METHOD_GET_TOKEN_BALANCE =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "GetTokenBalance"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              GetTokenBalanceReq.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              GetBalanceResp.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<FetchUtxosReq,
-          FetchUtxosResp> METHOD_FETCH_UTXOS =
-      io.grpc.MethodDescriptor.<FetchUtxosReq, FetchUtxosResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosResp> METHOD_FETCH_UTXOS =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "FetchUtxos"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              FetchUtxosReq.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              FetchUtxosResp.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosResp.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<SendTransactionReq,
-          SendTransactionResp> METHOD_SEND_TRANSACTION =
-      io.grpc.MethodDescriptor.<SendTransactionReq, SendTransactionResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReq,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp> METHOD_SEND_TRANSACTION =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "SendTransaction"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              SendTransactionReq.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              SendTransactionResp.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<GetRawTransactionRequest,
-          GetRawTransactionResponse> METHOD_GET_RAW_TRANSACTION =
-      io.grpc.MethodDescriptor.<GetRawTransactionRequest, GetRawTransactionResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequest,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionResponse> METHOD_GET_RAW_TRANSACTION =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequest, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "GetRawTransaction"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              GetRawTransactionRequest.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              GetRawTransactionResponse.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionResponse.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<GetFeePriceRequest,
-          GetFeePriceResponse> METHOD_GET_FEE_PRICE =
-      io.grpc.MethodDescriptor.<GetFeePriceRequest, GetFeePriceResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceResponse> METHOD_GET_FEE_PRICE =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "GetFeePrice"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              GetFeePriceRequest.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              GetFeePriceResponse.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceResponse.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<MakeTxReq,
-          MakeTxResp> METHOD_MAKE_UNSIGNED_TX =
-      io.grpc.MethodDescriptor.<MakeTxReq, MakeTxResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp> METHOD_MAKE_UNSIGNED_TX =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "MakeUnsignedTx"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              MakeTxReq.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              MakeTxResp.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<MakeSplitAddrTxReq,
-          MakeSplitAddrTxResp> METHOD_MAKE_UNSIGNED_SPLIT_ADDR_TX =
-      io.grpc.MethodDescriptor.<MakeSplitAddrTxReq, MakeSplitAddrTxResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxReq,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp> METHOD_MAKE_UNSIGNED_SPLIT_ADDR_TX =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "MakeUnsignedSplitAddrTx"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              MakeSplitAddrTxReq.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              MakeSplitAddrTxResp.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<MakeTokenIssueTxReq,
-          MakeTokenIssueTxResp> METHOD_MAKE_UNSIGNED_TOKEN_ISSUE_TX =
-      io.grpc.MethodDescriptor.<MakeTokenIssueTxReq, MakeTokenIssueTxResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxResp> METHOD_MAKE_UNSIGNED_TOKEN_ISSUE_TX =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "MakeUnsignedTokenIssueTx"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              MakeTokenIssueTxReq.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              MakeTokenIssueTxResp.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxResp.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<MakeTokenTransferTxReq,
-          MakeTxResp> METHOD_MAKE_UNSIGNED_TOKEN_TRANSFER_TX =
-      io.grpc.MethodDescriptor.<MakeTokenTransferTxReq, MakeTxResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq,
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp> METHOD_MAKE_UNSIGNED_TOKEN_TRANSFER_TX =
+      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.TransactionCommand", "MakeUnsignedTokenTransferTx"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              MakeTokenTransferTxReq.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              MakeTxResp.getDefaultInstance()))
+              one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp.getDefaultInstance()))
           .build();
 
   /**
@@ -178,8 +185,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBalance(GetBalanceReq request,
-                           io.grpc.stub.StreamObserver<GetBalanceResp> responseObserver) {
+    public void getBalance(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_BALANCE, responseObserver);
     }
 
@@ -193,8 +200,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void getTokenBalance(GetTokenBalanceReq request,
-                                io.grpc.stub.StreamObserver<GetBalanceResp> responseObserver) {
+    public void getTokenBalance(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_TOKEN_BALANCE, responseObserver);
     }
 
@@ -208,8 +215,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void fetchUtxos(FetchUtxosReq request,
-                           io.grpc.stub.StreamObserver<FetchUtxosResp> responseObserver) {
+    public void fetchUtxos(one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_FETCH_UTXOS, responseObserver);
     }
 
@@ -223,8 +230,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void sendTransaction(SendTransactionReq request,
-                                io.grpc.stub.StreamObserver<SendTransactionResp> responseObserver) {
+    public void sendTransaction(one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SEND_TRANSACTION, responseObserver);
     }
 
@@ -238,8 +245,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void getRawTransaction(GetRawTransactionRequest request,
-                                  io.grpc.stub.StreamObserver<GetRawTransactionResponse> responseObserver) {
+    public void getRawTransaction(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequest request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_RAW_TRANSACTION, responseObserver);
     }
 
@@ -253,8 +260,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void getFeePrice(GetFeePriceRequest request,
-                            io.grpc.stub.StreamObserver<GetFeePriceResponse> responseObserver) {
+    public void getFeePrice(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_FEE_PRICE, responseObserver);
     }
 
@@ -268,8 +275,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void makeUnsignedTx(MakeTxReq request,
-                               io.grpc.stub.StreamObserver<MakeTxResp> responseObserver) {
+    public void makeUnsignedTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_MAKE_UNSIGNED_TX, responseObserver);
     }
 
@@ -283,8 +290,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void makeUnsignedSplitAddrTx(MakeSplitAddrTxReq request,
-                                        io.grpc.stub.StreamObserver<MakeSplitAddrTxResp> responseObserver) {
+    public void makeUnsignedSplitAddrTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_MAKE_UNSIGNED_SPLIT_ADDR_TX, responseObserver);
     }
 
@@ -298,8 +305,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void makeUnsignedTokenIssueTx(MakeTokenIssueTxReq request,
-                                         io.grpc.stub.StreamObserver<MakeTokenIssueTxResp> responseObserver) {
+    public void makeUnsignedTokenIssueTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_MAKE_UNSIGNED_TOKEN_ISSUE_TX, responseObserver);
     }
 
@@ -313,82 +320,82 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void makeUnsignedTokenTransferTx(MakeTokenTransferTxReq request,
-                                            io.grpc.stub.StreamObserver<MakeTxResp> responseObserver) {
+    public void makeUnsignedTokenTransferTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_MAKE_UNSIGNED_TOKEN_TRANSFER_TX, responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+    @Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             METHOD_GET_BALANCE,
             asyncUnaryCall(
               new MethodHandlers<
-                      GetBalanceReq,
-                      GetBalanceResp>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp>(
                   this, METHODID_GET_BALANCE)))
           .addMethod(
             METHOD_GET_TOKEN_BALANCE,
             asyncUnaryCall(
               new MethodHandlers<
-                      GetTokenBalanceReq,
-                      GetBalanceResp>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp>(
                   this, METHODID_GET_TOKEN_BALANCE)))
           .addMethod(
             METHOD_FETCH_UTXOS,
             asyncUnaryCall(
               new MethodHandlers<
-                      FetchUtxosReq,
-                      FetchUtxosResp>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosResp>(
                   this, METHODID_FETCH_UTXOS)))
           .addMethod(
             METHOD_SEND_TRANSACTION,
             asyncUnaryCall(
               new MethodHandlers<
-                      SendTransactionReq,
-                      SendTransactionResp>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReq,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp>(
                   this, METHODID_SEND_TRANSACTION)))
           .addMethod(
             METHOD_GET_RAW_TRANSACTION,
             asyncUnaryCall(
               new MethodHandlers<
-                      GetRawTransactionRequest,
-                      GetRawTransactionResponse>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequest,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionResponse>(
                   this, METHODID_GET_RAW_TRANSACTION)))
           .addMethod(
             METHOD_GET_FEE_PRICE,
             asyncUnaryCall(
               new MethodHandlers<
-                      GetFeePriceRequest,
-                      GetFeePriceResponse>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceResponse>(
                   this, METHODID_GET_FEE_PRICE)))
           .addMethod(
             METHOD_MAKE_UNSIGNED_TX,
             asyncUnaryCall(
               new MethodHandlers<
-                      MakeTxReq,
-                      MakeTxResp>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp>(
                   this, METHODID_MAKE_UNSIGNED_TX)))
           .addMethod(
             METHOD_MAKE_UNSIGNED_SPLIT_ADDR_TX,
             asyncUnaryCall(
               new MethodHandlers<
-                      MakeSplitAddrTxReq,
-                      MakeSplitAddrTxResp>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxReq,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp>(
                   this, METHODID_MAKE_UNSIGNED_SPLIT_ADDR_TX)))
           .addMethod(
             METHOD_MAKE_UNSIGNED_TOKEN_ISSUE_TX,
             asyncUnaryCall(
               new MethodHandlers<
-                      MakeTokenIssueTxReq,
-                      MakeTokenIssueTxResp>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxResp>(
                   this, METHODID_MAKE_UNSIGNED_TOKEN_ISSUE_TX)))
           .addMethod(
             METHOD_MAKE_UNSIGNED_TOKEN_TRANSFER_TX,
             asyncUnaryCall(
               new MethodHandlers<
-                      MakeTokenTransferTxReq,
-                      MakeTxResp>(
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq,
+                one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp>(
                   this, METHODID_MAKE_UNSIGNED_TOKEN_TRANSFER_TX)))
           .build();
     }
@@ -406,7 +413,7 @@ public final class TransactionCommandGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected TransactionCommandStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new TransactionCommandStub(channel, callOptions);
@@ -422,8 +429,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBalance(GetBalanceReq request,
-                           io.grpc.stub.StreamObserver<GetBalanceResp> responseObserver) {
+    public void getBalance(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_BALANCE, getCallOptions()), request, responseObserver);
     }
@@ -438,8 +445,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void getTokenBalance(GetTokenBalanceReq request,
-                                io.grpc.stub.StreamObserver<GetBalanceResp> responseObserver) {
+    public void getTokenBalance(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_TOKEN_BALANCE, getCallOptions()), request, responseObserver);
     }
@@ -454,8 +461,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void fetchUtxos(FetchUtxosReq request,
-                           io.grpc.stub.StreamObserver<FetchUtxosResp> responseObserver) {
+    public void fetchUtxos(one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_FETCH_UTXOS, getCallOptions()), request, responseObserver);
     }
@@ -470,8 +477,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void sendTransaction(SendTransactionReq request,
-                                io.grpc.stub.StreamObserver<SendTransactionResp> responseObserver) {
+    public void sendTransaction(one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SEND_TRANSACTION, getCallOptions()), request, responseObserver);
     }
@@ -486,8 +493,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void getRawTransaction(GetRawTransactionRequest request,
-                                  io.grpc.stub.StreamObserver<GetRawTransactionResponse> responseObserver) {
+    public void getRawTransaction(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequest request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_RAW_TRANSACTION, getCallOptions()), request, responseObserver);
     }
@@ -502,8 +509,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void getFeePrice(GetFeePriceRequest request,
-                            io.grpc.stub.StreamObserver<GetFeePriceResponse> responseObserver) {
+    public void getFeePrice(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_FEE_PRICE, getCallOptions()), request, responseObserver);
     }
@@ -518,8 +525,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void makeUnsignedTx(MakeTxReq request,
-                               io.grpc.stub.StreamObserver<MakeTxResp> responseObserver) {
+    public void makeUnsignedTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_MAKE_UNSIGNED_TX, getCallOptions()), request, responseObserver);
     }
@@ -534,8 +541,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void makeUnsignedSplitAddrTx(MakeSplitAddrTxReq request,
-                                        io.grpc.stub.StreamObserver<MakeSplitAddrTxResp> responseObserver) {
+    public void makeUnsignedSplitAddrTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_MAKE_UNSIGNED_SPLIT_ADDR_TX, getCallOptions()), request, responseObserver);
     }
@@ -550,8 +557,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void makeUnsignedTokenIssueTx(MakeTokenIssueTxReq request,
-                                         io.grpc.stub.StreamObserver<MakeTokenIssueTxResp> responseObserver) {
+    public void makeUnsignedTokenIssueTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_MAKE_UNSIGNED_TOKEN_ISSUE_TX, getCallOptions()), request, responseObserver);
     }
@@ -566,8 +573,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public void makeUnsignedTokenTransferTx(MakeTokenTransferTxReq request,
-                                            io.grpc.stub.StreamObserver<MakeTxResp> responseObserver) {
+    public void makeUnsignedTokenTransferTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq request,
+        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_MAKE_UNSIGNED_TOKEN_TRANSFER_TX, getCallOptions()), request, responseObserver);
     }
@@ -585,7 +592,7 @@ public final class TransactionCommandGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected TransactionCommandBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new TransactionCommandBlockingStub(channel, callOptions);
@@ -601,7 +608,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public GetBalanceResp getBalance(GetBalanceReq request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp getBalance(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_BALANCE, getCallOptions(), request);
     }
@@ -616,7 +623,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public GetBalanceResp getTokenBalance(GetTokenBalanceReq request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp getTokenBalance(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_TOKEN_BALANCE, getCallOptions(), request);
     }
@@ -631,7 +638,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public FetchUtxosResp fetchUtxos(FetchUtxosReq request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosResp fetchUtxos(one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_FETCH_UTXOS, getCallOptions(), request);
     }
@@ -646,7 +653,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public SendTransactionResp sendTransaction(SendTransactionReq request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp sendTransaction(one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SEND_TRANSACTION, getCallOptions(), request);
     }
@@ -661,7 +668,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public GetRawTransactionResponse getRawTransaction(GetRawTransactionRequest request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionResponse getRawTransaction(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_RAW_TRANSACTION, getCallOptions(), request);
     }
@@ -676,7 +683,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public GetFeePriceResponse getFeePrice(GetFeePriceRequest request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceResponse getFeePrice(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_FEE_PRICE, getCallOptions(), request);
     }
@@ -691,7 +698,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public MakeTxResp makeUnsignedTx(MakeTxReq request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp makeUnsignedTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_MAKE_UNSIGNED_TX, getCallOptions(), request);
     }
@@ -706,7 +713,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public MakeSplitAddrTxResp makeUnsignedSplitAddrTx(MakeSplitAddrTxReq request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp makeUnsignedSplitAddrTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_MAKE_UNSIGNED_SPLIT_ADDR_TX, getCallOptions(), request);
     }
@@ -721,7 +728,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public MakeTokenIssueTxResp makeUnsignedTokenIssueTx(MakeTokenIssueTxReq request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxResp makeUnsignedTokenIssueTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_MAKE_UNSIGNED_TOKEN_ISSUE_TX, getCallOptions(), request);
     }
@@ -736,7 +743,7 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public MakeTxResp makeUnsignedTokenTransferTx(MakeTokenTransferTxReq request) {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp makeUnsignedTokenTransferTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_MAKE_UNSIGNED_TOKEN_TRANSFER_TX, getCallOptions(), request);
     }
@@ -754,7 +761,7 @@ public final class TransactionCommandGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected TransactionCommandFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new TransactionCommandFutureStub(channel, callOptions);
@@ -770,8 +777,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<GetBalanceResp> getBalance(
-        GetBalanceReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp> getBalance(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_BALANCE, getCallOptions()), request);
     }
@@ -786,8 +793,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<GetBalanceResp> getTokenBalance(
-        GetTokenBalanceReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp> getTokenBalance(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_TOKEN_BALANCE, getCallOptions()), request);
     }
@@ -802,8 +809,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<FetchUtxosResp> fetchUtxos(
-        FetchUtxosReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosResp> fetchUtxos(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_FETCH_UTXOS, getCallOptions()), request);
     }
@@ -818,8 +825,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<SendTransactionResp> sendTransaction(
-        SendTransactionReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp> sendTransaction(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SEND_TRANSACTION, getCallOptions()), request);
     }
@@ -834,8 +841,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<GetRawTransactionResponse> getRawTransaction(
-        GetRawTransactionRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionResponse> getRawTransaction(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_RAW_TRANSACTION, getCallOptions()), request);
     }
@@ -850,8 +857,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<GetFeePriceResponse> getFeePrice(
-        GetFeePriceRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceResponse> getFeePrice(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_FEE_PRICE, getCallOptions()), request);
     }
@@ -866,8 +873,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<MakeTxResp> makeUnsignedTx(
-        MakeTxReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp> makeUnsignedTx(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_MAKE_UNSIGNED_TX, getCallOptions()), request);
     }
@@ -882,8 +889,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<MakeSplitAddrTxResp> makeUnsignedSplitAddrTx(
-        MakeSplitAddrTxReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp> makeUnsignedSplitAddrTx(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_MAKE_UNSIGNED_SPLIT_ADDR_TX, getCallOptions()), request);
     }
@@ -898,8 +905,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<MakeTokenIssueTxResp> makeUnsignedTokenIssueTx(
-        MakeTokenIssueTxReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxResp> makeUnsignedTokenIssueTx(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_MAKE_UNSIGNED_TOKEN_ISSUE_TX, getCallOptions()), request);
     }
@@ -914,8 +921,8 @@ public final class TransactionCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<MakeTxResp> makeUnsignedTokenTransferTx(
-        MakeTokenTransferTxReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp> makeUnsignedTokenTransferTx(
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_MAKE_UNSIGNED_TOKEN_TRANSFER_TX, getCallOptions()), request);
     }
@@ -945,57 +952,57 @@ public final class TransactionCommandGrpc {
       this.methodId = methodId;
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_BALANCE:
-          serviceImpl.getBalance((GetBalanceReq) request,
-              (io.grpc.stub.StreamObserver<GetBalanceResp>) responseObserver);
+          serviceImpl.getBalance((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceReq) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp>) responseObserver);
           break;
         case METHODID_GET_TOKEN_BALANCE:
-          serviceImpl.getTokenBalance((GetTokenBalanceReq) request,
-              (io.grpc.stub.StreamObserver<GetBalanceResp>) responseObserver);
+          serviceImpl.getTokenBalance((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetTokenBalanceReq) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBalanceResp>) responseObserver);
           break;
         case METHODID_FETCH_UTXOS:
-          serviceImpl.fetchUtxos((FetchUtxosReq) request,
-              (io.grpc.stub.StreamObserver<FetchUtxosResp>) responseObserver);
+          serviceImpl.fetchUtxos((one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReq) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosResp>) responseObserver);
           break;
         case METHODID_SEND_TRANSACTION:
-          serviceImpl.sendTransaction((SendTransactionReq) request,
-              (io.grpc.stub.StreamObserver<SendTransactionResp>) responseObserver);
+          serviceImpl.sendTransaction((one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReq) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionResp>) responseObserver);
           break;
         case METHODID_GET_RAW_TRANSACTION:
-          serviceImpl.getRawTransaction((GetRawTransactionRequest) request,
-              (io.grpc.stub.StreamObserver<GetRawTransactionResponse>) responseObserver);
+          serviceImpl.getRawTransaction((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequest) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionResponse>) responseObserver);
           break;
         case METHODID_GET_FEE_PRICE:
-          serviceImpl.getFeePrice((GetFeePriceRequest) request,
-              (io.grpc.stub.StreamObserver<GetFeePriceResponse>) responseObserver);
+          serviceImpl.getFeePrice((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceResponse>) responseObserver);
           break;
         case METHODID_MAKE_UNSIGNED_TX:
-          serviceImpl.makeUnsignedTx((MakeTxReq) request,
-              (io.grpc.stub.StreamObserver<MakeTxResp>) responseObserver);
+          serviceImpl.makeUnsignedTx((one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxReq) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp>) responseObserver);
           break;
         case METHODID_MAKE_UNSIGNED_SPLIT_ADDR_TX:
-          serviceImpl.makeUnsignedSplitAddrTx((MakeSplitAddrTxReq) request,
-              (io.grpc.stub.StreamObserver<MakeSplitAddrTxResp>) responseObserver);
+          serviceImpl.makeUnsignedSplitAddrTx((one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxReq) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeSplitAddrTxResp>) responseObserver);
           break;
         case METHODID_MAKE_UNSIGNED_TOKEN_ISSUE_TX:
-          serviceImpl.makeUnsignedTokenIssueTx((MakeTokenIssueTxReq) request,
-              (io.grpc.stub.StreamObserver<MakeTokenIssueTxResp>) responseObserver);
+          serviceImpl.makeUnsignedTokenIssueTx((one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxResp>) responseObserver);
           break;
         case METHODID_MAKE_UNSIGNED_TOKEN_TRANSFER_TX:
-          serviceImpl.makeUnsignedTokenTransferTx((MakeTokenTransferTxReq) request,
-              (io.grpc.stub.StreamObserver<MakeTxResp>) responseObserver);
+          serviceImpl.makeUnsignedTokenTransferTx((one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenTransferTxReq) request,
+              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTxResp>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -1006,9 +1013,9 @@ public final class TransactionCommandGrpc {
   }
 
   private static final class TransactionCommandDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return TransactionProto.getDescriptor();
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.getDescriptor();
     }
   }
 

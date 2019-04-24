@@ -16,11 +16,11 @@ public  final class MakeTokenIssueTxReq extends
   }
   private MakeTokenIssueTxReq() {
     issuer_ = "";
-    issuee_ = "";
+    owner_ = "";
     fee_ = 0L;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -46,23 +46,23 @@ public  final class MakeTokenIssueTxReq extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             issuer_ = s;
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
-            issuee_ = s;
+            owner_ = s;
             break;
           }
           case 26: {
-            TokenTag.Builder subBuilder = null;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder subBuilder = null;
             if (tag_ != null) {
               subBuilder = tag_.toBuilder();
             }
-            tag_ = input.readMessage(TokenTag.parser(), extensionRegistry);
+            tag_ = input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(tag_);
               tag_ = subBuilder.buildPartial();
@@ -88,29 +88,29 @@ public  final class MakeTokenIssueTxReq extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            MakeTokenIssueTxReq.class, MakeTokenIssueTxReq.Builder.class);
+            MakeTokenIssueTxReq.class, Builder.class);
   }
 
   public static final int ISSUER_FIELD_NUMBER = 1;
-  private volatile java.lang.Object issuer_;
+  private volatile Object issuer_;
   /**
    * <code>string issuer = 1;</code>
    */
-  public java.lang.String getIssuer() {
-    java.lang.Object ref = issuer_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getIssuer() {
+    Object ref = issuer_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       issuer_ = s;
       return s;
     }
@@ -120,11 +120,11 @@ public  final class MakeTokenIssueTxReq extends
    */
   public com.google.protobuf.ByteString
       getIssuerBytes() {
-    java.lang.Object ref = issuer_;
-    if (ref instanceof java.lang.String) {
+    Object ref = issuer_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       issuer_ = b;
       return b;
     } else {
@@ -132,34 +132,34 @@ public  final class MakeTokenIssueTxReq extends
     }
   }
 
-  public static final int ISSUEE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object issuee_;
+  public static final int OWNER_FIELD_NUMBER = 2;
+  private volatile Object owner_;
   /**
-   * <code>string issuee = 2;</code>
+   * <code>string owner = 2;</code>
    */
-  public java.lang.String getIssuee() {
-    java.lang.Object ref = issuee_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getOwner() {
+    Object ref = owner_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      issuee_ = s;
+      String s = bs.toStringUtf8();
+      owner_ = s;
       return s;
     }
   }
   /**
-   * <code>string issuee = 2;</code>
+   * <code>string owner = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getIssueeBytes() {
-    java.lang.Object ref = issuee_;
-    if (ref instanceof java.lang.String) {
+      getOwnerBytes() {
+    Object ref = owner_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      issuee_ = b;
+              (String) ref);
+      owner_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -167,7 +167,7 @@ public  final class MakeTokenIssueTxReq extends
   }
 
   public static final int TAG_FIELD_NUMBER = 3;
-  private TokenTag tag_;
+  private one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag tag_;
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
@@ -177,13 +177,13 @@ public  final class MakeTokenIssueTxReq extends
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
-  public TokenTag getTag() {
-    return tag_ == null ? TokenTag.getDefaultInstance() : tag_;
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag getTag() {
+    return tag_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.getDefaultInstance() : tag_;
   }
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
-  public TokenTagOrBuilder getTagOrBuilder() {
+  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder getTagOrBuilder() {
     return getTag();
   }
 
@@ -211,8 +211,8 @@ public  final class MakeTokenIssueTxReq extends
     if (!getIssuerBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, issuer_);
     }
-    if (!getIssueeBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, issuee_);
+    if (!getOwnerBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
     }
     if (tag_ != null) {
       output.writeMessage(3, getTag());
@@ -230,8 +230,8 @@ public  final class MakeTokenIssueTxReq extends
     if (!getIssuerBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, issuer_);
     }
-    if (!getIssueeBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, issuee_);
+    if (!getOwnerBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
     }
     if (tag_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -246,8 +246,8 @@ public  final class MakeTokenIssueTxReq extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -259,8 +259,8 @@ public  final class MakeTokenIssueTxReq extends
     boolean result = true;
     result = result && getIssuer()
         .equals(other.getIssuer());
-    result = result && getIssuee()
-        .equals(other.getIssuee());
+    result = result && getOwner()
+        .equals(other.getOwner());
     result = result && (hasTag() == other.hasTag());
     if (hasTag()) {
       result = result && getTag()
@@ -271,7 +271,7 @@ public  final class MakeTokenIssueTxReq extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -280,8 +280,8 @@ public  final class MakeTokenIssueTxReq extends
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ISSUER_FIELD_NUMBER;
     hash = (53 * hash) + getIssuer().hashCode();
-    hash = (37 * hash) + ISSUEE_FIELD_NUMBER;
-    hash = (53 * hash) + getIssuee().hashCode();
+    hash = (37 * hash) + OWNER_FIELD_NUMBER;
+    hash = (53 * hash) + getOwner().hashCode();
     if (hasTag()) {
       hash = (37 * hash) + TAG_FIELD_NUMBER;
       hash = (53 * hash) + getTag().hashCode();
@@ -365,9 +365,9 @@ public  final class MakeTokenIssueTxReq extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -377,17 +377,17 @@ public  final class MakeTokenIssueTxReq extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.MakeTokenIssueTxReq)
-          MakeTokenIssueTxReqOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MakeTokenIssueTxReq.class, MakeTokenIssueTxReq.Builder.class);
+              MakeTokenIssueTxReq.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReq.newBuilder()
@@ -396,7 +396,7 @@ public  final class MakeTokenIssueTxReq extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -409,7 +409,7 @@ public  final class MakeTokenIssueTxReq extends
       super.clear();
       issuer_ = "";
 
-      issuee_ = "";
+      owner_ = "";
 
       if (tagBuilder_ == null) {
         tag_ = null;
@@ -424,7 +424,7 @@ public  final class MakeTokenIssueTxReq extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
     }
 
     public MakeTokenIssueTxReq getDefaultInstanceForType() {
@@ -442,7 +442,7 @@ public  final class MakeTokenIssueTxReq extends
     public MakeTokenIssueTxReq buildPartial() {
       MakeTokenIssueTxReq result = new MakeTokenIssueTxReq(this);
       result.issuer_ = issuer_;
-      result.issuee_ = issuee_;
+      result.owner_ = owner_;
       if (tagBuilder_ == null) {
         result.tag_ = tag_;
       } else {
@@ -494,8 +494,8 @@ public  final class MakeTokenIssueTxReq extends
         issuer_ = other.issuer_;
         onChanged();
       }
-      if (!other.getIssuee().isEmpty()) {
-        issuee_ = other.issuee_;
+      if (!other.getOwner().isEmpty()) {
+        owner_ = other.owner_;
         onChanged();
       }
       if (other.hasTag()) {
@@ -530,20 +530,20 @@ public  final class MakeTokenIssueTxReq extends
       return this;
     }
 
-    private java.lang.Object issuer_ = "";
+    private Object issuer_ = "";
     /**
      * <code>string issuer = 1;</code>
      */
-    public java.lang.String getIssuer() {
-      java.lang.Object ref = issuer_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getIssuer() {
+      Object ref = issuer_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         issuer_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -551,11 +551,11 @@ public  final class MakeTokenIssueTxReq extends
      */
     public com.google.protobuf.ByteString
         getIssuerBytes() {
-      java.lang.Object ref = issuer_;
+      Object ref = issuer_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         issuer_ = b;
         return b;
       } else {
@@ -566,7 +566,7 @@ public  final class MakeTokenIssueTxReq extends
      * <code>string issuer = 1;</code>
      */
     public Builder setIssuer(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -599,78 +599,78 @@ public  final class MakeTokenIssueTxReq extends
       return this;
     }
 
-    private java.lang.Object issuee_ = "";
+    private Object owner_ = "";
     /**
-     * <code>string issuee = 2;</code>
+     * <code>string owner = 2;</code>
      */
-    public java.lang.String getIssuee() {
-      java.lang.Object ref = issuee_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getOwner() {
+      Object ref = owner_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        issuee_ = s;
+        String s = bs.toStringUtf8();
+        owner_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
-     * <code>string issuee = 2;</code>
+     * <code>string owner = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getIssueeBytes() {
-      java.lang.Object ref = issuee_;
+        getOwnerBytes() {
+      Object ref = owner_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        issuee_ = b;
+                (String) ref);
+        owner_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string issuee = 2;</code>
+     * <code>string owner = 2;</code>
      */
-    public Builder setIssuee(
-        java.lang.String value) {
+    public Builder setOwner(
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      issuee_ = value;
+      owner_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string issuee = 2;</code>
+     * <code>string owner = 2;</code>
      */
-    public Builder clearIssuee() {
+    public Builder clearOwner() {
       
-      issuee_ = getDefaultInstance().getIssuee();
+      owner_ = getDefaultInstance().getOwner();
       onChanged();
       return this;
     }
     /**
-     * <code>string issuee = 2;</code>
+     * <code>string owner = 2;</code>
      */
-    public Builder setIssueeBytes(
+    public Builder setOwnerBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      issuee_ = value;
+      owner_ = value;
       onChanged();
       return this;
     }
 
-    private TokenTag tag_ = null;
+    private one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag tag_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-            TokenTag, TokenTag.Builder, TokenTagOrBuilder> tagBuilder_;
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder> tagBuilder_;
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
@@ -680,9 +680,9 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public TokenTag getTag() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag getTag() {
       if (tagBuilder_ == null) {
-        return tag_ == null ? TokenTag.getDefaultInstance() : tag_;
+        return tag_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.getDefaultInstance() : tag_;
       } else {
         return tagBuilder_.getMessage();
       }
@@ -690,7 +690,7 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public Builder setTag(TokenTag value) {
+    public Builder setTag(one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag value) {
       if (tagBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -707,7 +707,7 @@ public  final class MakeTokenIssueTxReq extends
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
     public Builder setTag(
-        TokenTag.Builder builderForValue) {
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder builderForValue) {
       if (tagBuilder_ == null) {
         tag_ = builderForValue.build();
         onChanged();
@@ -720,11 +720,11 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public Builder mergeTag(TokenTag value) {
+    public Builder mergeTag(one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag value) {
       if (tagBuilder_ == null) {
         if (tag_ != null) {
           tag_ =
-            TokenTag.newBuilder(tag_).mergeFrom(value).buildPartial();
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.newBuilder(tag_).mergeFrom(value).buildPartial();
         } else {
           tag_ = value;
         }
@@ -752,7 +752,7 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public TokenTag.Builder getTagBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder getTagBuilder() {
       
       onChanged();
       return getTagFieldBuilder().getBuilder();
@@ -760,23 +760,23 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public TokenTagOrBuilder getTagOrBuilder() {
+    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder getTagOrBuilder() {
       if (tagBuilder_ != null) {
         return tagBuilder_.getMessageOrBuilder();
       } else {
         return tag_ == null ?
-            TokenTag.getDefaultInstance() : tag_;
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.getDefaultInstance() : tag_;
       }
     }
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            TokenTag, TokenTag.Builder, TokenTagOrBuilder>
+        one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder> 
         getTagFieldBuilder() {
       if (tagBuilder_ == null) {
         tagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                TokenTag, TokenTag.Builder, TokenTagOrBuilder>(
+            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder>(
                 getTag(),
                 getParentForChildren(),
                 isClean());
@@ -848,7 +848,7 @@ public  final class MakeTokenIssueTxReq extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<MakeTokenIssueTxReq> getParserForType() {
     return PARSER;
   }

@@ -10,7 +10,7 @@ public interface MakeSplitAddrTxReqOrBuilder extends
   /**
    * <code>string from = 1;</code>
    */
-  java.lang.String getFrom();
+  String getFrom();
   /**
    * <code>string from = 1;</code>
    */
@@ -20,7 +20,7 @@ public interface MakeSplitAddrTxReqOrBuilder extends
   /**
    * <code>repeated string addrs = 2;</code>
    */
-  java.util.List<java.lang.String>
+  java.util.List<String>
       getAddrsList();
   /**
    * <code>repeated string addrs = 2;</code>
@@ -29,7 +29,7 @@ public interface MakeSplitAddrTxReqOrBuilder extends
   /**
    * <code>repeated string addrs = 2;</code>
    */
-  java.lang.String getAddrs(int index);
+  String getAddrs(int index);
   /**
    * <code>repeated string addrs = 2;</code>
    */
@@ -39,7 +39,7 @@ public interface MakeSplitAddrTxReqOrBuilder extends
   /**
    * <code>repeated uint64 weights = 3;</code>
    */
-  java.util.List<java.lang.Long> getWeightsList();
+  java.util.List<Long> getWeightsList();
   /**
    * <code>repeated uint64 weights = 3;</code>
    */

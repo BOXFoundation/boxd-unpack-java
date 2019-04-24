@@ -5,7 +5,7 @@ import one.contentbox.boxd.crypto.secp256k1.Secp256k1;
 import java.math.BigInteger;
 
 /**
- * describe: ECDSASignature
+ * ECDSASignature
  *
  * @author wangjunbao2018@gmail.com
  * @date 2019/04/23

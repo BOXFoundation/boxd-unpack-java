@@ -17,7 +17,7 @@ public  final class GetFeePriceRequest extends
   private GetFeePriceRequest() {
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -54,14 +54,14 @@ public  final class GetFeePriceRequest extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return TransactionProto.internal_static_rpcpb_GetFeePriceRequest_descriptor;
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetFeePriceRequest_descriptor;
   }
 
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return TransactionProto.internal_static_rpcpb_GetFeePriceRequest_fieldAccessorTable
+    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetFeePriceRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GetFeePriceRequest.class, GetFeePriceRequest.Builder.class);
+            GetFeePriceRequest.class, Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -88,8 +88,8 @@ public  final class GetFeePriceRequest extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
@@ -102,7 +102,7 @@ public  final class GetFeePriceRequest extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -185,9 +185,9 @@ public  final class GetFeePriceRequest extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -197,17 +197,17 @@ public  final class GetFeePriceRequest extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetFeePriceRequest)
-          GetFeePriceRequestOrBuilder {
+      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TransactionProto.internal_static_rpcpb_GetFeePriceRequest_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetFeePriceRequest_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TransactionProto.internal_static_rpcpb_GetFeePriceRequest_fieldAccessorTable
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetFeePriceRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetFeePriceRequest.class, GetFeePriceRequest.Builder.class);
+              GetFeePriceRequest.class, Builder.class);
     }
 
     // Construct using one.contentbox.boxd.protocol.rpc.protobuf.generated.GetFeePriceRequest.newBuilder()
@@ -216,7 +216,7 @@ public  final class GetFeePriceRequest extends
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -232,7 +232,7 @@ public  final class GetFeePriceRequest extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return TransactionProto.internal_static_rpcpb_GetFeePriceRequest_descriptor;
+      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetFeePriceRequest_descriptor;
     }
 
     public GetFeePriceRequest getDefaultInstanceForType() {
@@ -353,7 +353,7 @@ public  final class GetFeePriceRequest extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<GetFeePriceRequest> getParserForType() {
     return PARSER;
   }

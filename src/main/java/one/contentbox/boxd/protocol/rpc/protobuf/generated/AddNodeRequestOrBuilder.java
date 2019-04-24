@@ -10,7 +10,7 @@ public interface AddNodeRequestOrBuilder extends
   /**
    * <code>string node = 1;</code>
    */
-  java.lang.String getNode();
+  String getNode();
   /**
    * <code>string node = 1;</code>
    */

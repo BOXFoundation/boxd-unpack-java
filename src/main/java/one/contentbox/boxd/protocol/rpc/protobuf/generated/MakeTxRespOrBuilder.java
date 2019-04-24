@@ -15,7 +15,7 @@ public interface MakeTxRespOrBuilder extends
   /**
    * <code>string message = 2;</code>
    */
-  java.lang.String getMessage();
+  String getMessage();
   /**
    * <code>string message = 2;</code>
    */
@@ -29,11 +29,11 @@ public interface MakeTxRespOrBuilder extends
   /**
    * <code>.corepb.Transaction tx = 3;</code>
    */
-  Transaction getTx();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTx();
   /**
    * <code>.corepb.Transaction tx = 3;</code>
    */
-  TransactionOrBuilder getTxOrBuilder();
+  one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxOrBuilder();
 
   /**
    * <code>repeated bytes rawMsgs = 4;</code>
