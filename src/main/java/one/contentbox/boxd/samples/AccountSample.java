@@ -20,8 +20,6 @@ public class AccountSample {
     static File f = new File("demo.keystore");
     static String path = "demo1.keystore";
 
-
-
     public String dumpAddrFromPrivateKey(String privKey) throws BoxdException{
         return manager.dumpAddrFromPrivKey(privKey);
     }
@@ -39,7 +37,6 @@ public class AccountSample {
     public String dumpPrivKeyFromKeyStore(String path, String password) throws BoxdException, FileNotFoundException{
         return manager.dumpPrivKeyFromKeyStore(path, password);
     }
-
 
     public boolean dumpKeyStoreFromPrivateKey(String privateKey, String path, String password)
             throws BoxdException, FileAlreadyExistsException{
@@ -73,7 +70,6 @@ public class AccountSample {
     public byte[] dumpPubKeyHashFromAddr (String addr) throws BoxdException{
         return manager.dumpPubKeyHashFromAddr(addr);
     }
-
 
     public static void main(String args[]) throws Exception{
         AccountSample sample = new AccountSample();

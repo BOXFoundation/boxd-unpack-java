@@ -34,5 +34,4 @@ public class BoxdDaemonSample {
 
         boxdDaemon.start();
     }
-
 }

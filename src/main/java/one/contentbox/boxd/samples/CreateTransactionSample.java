@@ -38,7 +38,6 @@ public class CreateTransactionSample {
         return unsignedTx;
     }
 
-
     public static void main(String args[])  throws Exception{
         CreateTransactionSample createTransactionSample = new CreateTransactionSample();
         UnsignedTx unsignedTx = createTransactionSample.createTx(address, to, fee);

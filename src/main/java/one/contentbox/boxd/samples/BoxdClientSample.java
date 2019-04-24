@@ -78,7 +78,6 @@ public class BoxdClientSample {
         return boxdClient.fetchTokenUtxos(addr, amount, tokenHash, tokenIndex);
     }
 
-
     public ExtendTxDetail viewTxDetail(String hash) throws BoxdException {
         return boxdClient.viewTxDetail(hash);
     }
@@ -146,14 +145,11 @@ public class BoxdClientSample {
 
         List<Utxo> tokenUtxos = sample.fetchUtxo(tokenTestAddr, 1000, tokenHash, tokenIndex);
 
-
         txHash = "8a77e8605a11b6dbc3a64bfdb1da7fcf54c0d851f891a6ca66d2f059bc1479de";
         ExtendTxDetail extendTxDetail = sample.viewTxDetail(txHash);
         System.out.println(SampleHelper.formatJavaObject(extendTxDetail));
 
         BlockDetail blockDetail = sample.viewBlockDetail(blockHash);
         System.out.println(SampleHelper.formatJavaObject(blockDetail));
-
-
     }
 }
