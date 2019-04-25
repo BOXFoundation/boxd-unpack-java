@@ -47,6 +47,19 @@ dependencies {
 
 4. Using raw github
 
+```
+repositories {
+    maven {
+        url 'https://raw.github.com/wangjunbao2018/maven-repo/master/0.0.1'
+    }
+}
+
+dependencies {
+    compile 'one.contentbox.boxd:boxd-client:0.0.1'
+}
+
+```
+
 
 
 ## Upload the jar to mvn repos
