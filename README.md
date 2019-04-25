@@ -1,6 +1,6 @@
 # boxd-unpack-java
 
-## 
+##  Add the dependency
 
 1.  Using jitpack
 
@@ -46,3 +46,22 @@ dependencies {
 ```
 
 4. Using raw github
+
+
+
+## Upload the jar to mvn repos
+
+1.  jcenter
+
+```
+gradlew clean build bintrayUpload -PdryRun=false
+
+```
+
+2. maven central
+
+```
+ gradle uploadArchives
+```
+
+
