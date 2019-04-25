@@ -66,13 +66,31 @@ dependencies {
 
 1.  jcenter
 
+- config
+```
+bintray.user=
+bintray.apikey=
+```
+
+- upload
+
 ```
 gradlew clean build bintrayUpload -PdryRun=false
-
 ```
 
 2. maven central
 
+- config
+```
+signing.keyId=
+signing.password=
+signing.secretKeyRingFile=
+
+NEXUS_USERNAME=
+NEXUS_PASSWORD=
+```
+
+- upload
 ```
  gradle uploadArchives
 ```
