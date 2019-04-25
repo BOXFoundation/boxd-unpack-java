@@ -96,3 +96,14 @@ NEXUS_PASSWORD=
 ```
 
 
+## Create keys
+
+```
+brew  install -v gpg
+gpg  --generate-key
+gpg -k
+gpg --export-secret-keys 067781F5FD36625E3F39DCE2104256C8753F5D10 > secret.gpg
+gpg --keyserver keyserver.ubuntu.com --send-keys 067781F5FD36625E3F39DCE2104256C8753F5D10
+gpg --keyserver keys.gnupg.net --send-keys 067781F5FD36625E3F39DCE2104256C8753F5D10
+gpg --keyserver pool.sks-keyservers.net --send-keys 067781F5FD36625E3F39DCE2104256C8753F5D10
+```
