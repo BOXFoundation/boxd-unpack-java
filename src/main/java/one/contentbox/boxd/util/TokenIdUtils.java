@@ -24,7 +24,10 @@ public class TokenIdUtils {
             String hexString = Hex.toHexString(bs);
             String hash = hexString.substring(0, hexString.length() - 10);
             int index = ByteBuffer.wrap(indexByte).getInt();
-            return new Outpoint(hash, index);
+            Outpoint outPoint = new Outpoint();
+            outPoint.setHash(hash);
+            outPoint.setIndex(index);
+            return outPoint;
         }catch (Exception e){
             throw new Exception("Input can't be decoded");
         }
