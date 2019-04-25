@@ -1,10 +1,35 @@
+ext {
+    // have to change
+    publishedGroupId = 'one.contentbox.boxd'
+    // `artifact` also use as and `bintray.pkg.name` for simplifying
+    artifact = 'boxd-client'
+    libraryVersion = '0.0.3'
+    // `libraryName` also uses as `bintray.pkg.libraryName` and `bintray.pkg.version.libraryName`
+    libraryName = 'Boxd Java SDK'
+
+    siteUrl = 'https://github.com/BOXFoundation/boxd-unpack-java'
+
+    // normally no need to change
+    repoName = 'maven'
+
+    gitUrl = "${siteUrl}.git"
+
+    developerId = 'JarvisWang'
+    developerName = 'JarvisWang'
+    developerEmail = 'wangjunbao2018@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 group = publishedGroupId
 version = libraryVersion
 
 install {
     repositories.mavenInstaller {
         pom.project {
-            packaging 'aar'
+            packaging 'jar'
             groupId publishedGroupId
             artifactId artifact
 
@@ -45,6 +70,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 }
 
 artifacts {
+    archives jar
     archives javadocJar
     archives sourcesJar
 }
