@@ -8,7 +8,7 @@
 - Boxd account related implementations
 - Signature related implementations
 
-# Getting started
+## Getting started
 
 The project is based on Java8. If your Java version is less than Java8, please upgrade your Java version first.  
 
