@@ -102,7 +102,7 @@ boxdDaemon.start();
 
 ## Snapshot Dependencies
 
-Snapshot versions of boxd-unpack-java follow the <major>.<minor>.<build>-SNAPSHOT convention.
+Snapshot versions of boxd-unpack-java follow the \<major\>.\<minor\>.\<build\>-SNAPSHOT convention.
   
 If you would like to use snapshots instead please add a new maven repository pointing to:
 
