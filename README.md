@@ -77,6 +77,29 @@ BoxdClient boxdClient = new RpcBoxdClientImpl(host, port);
 int height = boxdClient.getBlockHeight();
 ```
 
+To listen the block event:
+
+```
+String host = "39.97.169.1";
+int port = 19111;
+BoxdDaemon boxdDaemon = new BoxdDaemon(host, port);
+boxdDaemon.setBlockListener(new BlockListener() {
+  @Override
+  public void blockDetected(BlockDetail blockDetail) {
+    try {
+      one.contentbox.boxd.protocol.core.response.block.BlockDetail bd = ProtobufSerdeUtils
+                            .protobufToJavaBean(blockDetail,     one.contentbox.boxd.protocol.core.response.block.BlockDetail.class);
+
+      System.out.println(JSON.toJSONString(bd, true));
+    }catch (BoxdException e){
+      e.printStackTrace();
+    }
+  }
+});
+boxdDaemon.start();
+```
+
+
 ## Snapshot Dependencies
 
 Snapshot versions of boxd-unpack-java follow the <major>.<minor>.<build>-SNAPSHOT convention.
