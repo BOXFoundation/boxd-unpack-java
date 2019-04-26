@@ -134,4 +134,16 @@ Sample maven configuration:
 </repositories>
 ```
 
+## Build
 
+To build:
+
+```
+git clone https://github.com/BOXFoundation/boxd-unpack-java.git
+cd boxd-unpack-java/
+./gradlew build
+```
+
+## Bugs and Feedback
+
+For bugs, questions and discussions please use the Github Issues.
