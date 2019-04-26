@@ -1,109 +1,78 @@
-# boxd-unpack-java
+# boxd-unpack-java： Boxd Java SDK API
 
-##  Add the dependency
+  Boxd-unpack-java is a java library for working with integrating with clients(Boxd Rpc Node) on the Boxd network.
 
-1.  Using jitpack
+## Features
 
-```
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-  
-  dependencies {
-	        implementation 'com.github.wangjunbao2018:boxd-unpack-java:v0.0.1'
-	}
-```
+- Complete implementation of Boxd's RPC client API
+- Boxd account related implementations
+- Signature related implementations
 
-2. Using jcenter
+# Getting started
+
+The project is based on Java8. If your Java version is less than Java8, please upgrade your Java version first.  
+
+Add the relevant dependency to your project:
+
+### Maven
 
 ```
-buildscript {
-    repositories {
-        jcenter()
-    }
-}
-
-dependencies {
-	        implementation 'com.github.wangjunbao2018:boxd-unpack-java:v0.0.1'
-}
+<dependency>
+  <groupId>one.contentbox.boxd</groupId>
+  <artifactId>boxd-client</artifactId>
+  <version>0.0.1</version>
+</dependency>
 ```
 
-3. Using mavenCenter
+### Gradle
 
 ```
-buildscript {
-    repositories {
-        mavenLocal()
-    }
-}
-
-dependencies {
-	        implementation 'com.github.wangjunbao2018:boxd-unpack-java:v0.0.1'
-}
+implementation 'one.contentbox.boxd:boxd-client:0.0.1'
 ```
 
-4. Using raw github
+### SBT
 
 ```
-repositories {
-    maven {
-        url 'https://raw.github.com/wangjunbao2018/maven-repo/master/0.0.1'
-    }
-}
-
-dependencies {
-    compile 'one.contentbox.boxd:boxd-client:0.0.1'
-}
-
+libraryDependencies += "one.contentbox.boxd" % "boxd-client" % "0.0.1"
 ```
 
-
-
-## Upload the jar to mvn repos
-
-1.  jcenter
-
-- config
-```
-bintray.user=
-bintray.apikey=
-```
-
-- upload
+### Ivy
 
 ```
-gradlew clean build bintrayUpload -PdryRun=false
+<dependency org="one.contentbox.boxd" name="boxd-client" rev="0.0.1" />
 ```
 
-2. maven central
-
-- config
-```
-signing.keyId=
-signing.password=
-signing.secretKeyRingFile=
-
-NEXUS_USERNAME=
-NEXUS_PASSWORD=
-```
-
-- upload
-```
- gradle uploadArchives
-```
-
-
-## Create keys
+###  Grape
 
 ```
-brew  install -v gpg
-gpg  --generate-key
-gpg -k
-gpg --export-secret-keys 067781F5FD36625E3F39DCE2104256C8753F5D10 > secret.gpg
-gpg --keyserver keyserver.ubuntu.com --send-keys 067781F5FD36625E3F39DCE2104256C8753F5D10
-gpg --keyserver keys.gnupg.net --send-keys 067781F5FD36625E3F39DCE2104256C8753F5D10
-gpg --keyserver pool.sks-keyservers.net --send-keys 067781F5FD36625E3F39DCE2104256C8753F5D10
+@Grapes(
+  @Grab(group='one.contentbox.boxd', module='boxd-client', version='0.0.1')
+)
+```
+
+### Buildr
+
+```
+'one.contentbox.boxd:boxd-client:jar:0.0.1'
+```
+
+### Bazel
+
+```
+maven_jar(
+    name = "boxd-client",
+    artifact = "one.contentbox.boxd:boxd-client:0.0.1",
+    sha1 = "7980490ab9c8de4ddad79fa49302f60a82ade908",
+)
+```
+
+## Start sending requests
+
+To send requests:
+
+```
+String host = "39.97.169.1";
+int port = 19111;
+BoxdClient boxdClient = new RpcBoxdClientImpl(host, port);
+int height = boxdClient.getBlockHeight();
 ```
