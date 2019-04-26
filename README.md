@@ -76,3 +76,39 @@ int port = 19111;
 BoxdClient boxdClient = new RpcBoxdClientImpl(host, port);
 int height = boxdClient.getBlockHeight();
 ```
+
+## Snapshot Dependencies
+
+Snapshot versions of boxd-unpack-java follow the <major>.<minor>.<build>-SNAPSHOT convention.
+  
+If you would like to use snapshots instead please add a new maven repository pointing to:
+
+```
+https://oss.sonatype.org/content/repositories/snapshots
+```
+
+Please refer to the maven or gradle documentation for further detail.
+
+Sample gradle configuration:
+
+```
+repositories {
+   maven {
+      url "https://oss.sonatype.org/content/repositories/snapshots"
+   }
+}
+```
+
+Sample maven configuration:
+
+```
+<repositories>
+  <repository>
+    <id>sonatype-snasphots</id>
+    <name>Sonatype snapshots repo</name>
+    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+  </repository>
+</repositories>
+```
+
+
