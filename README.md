@@ -110,7 +110,7 @@ If you would like to use snapshots instead please add a new maven repository poi
 https://oss.sonatype.org/content/repositories/snapshots
 ```
 
-Please refer to the maven or gradle documentation for further detail.
+Please refer to the [maven](https://maven.apache.org/guides/mini/guide-multiple-repositories.html maven) or [gradle](https://maven.apache.org/guides/mini/guide-multiple-repositories.html gradle) documentation for further detail.
 
 Sample gradle configuration:
 
