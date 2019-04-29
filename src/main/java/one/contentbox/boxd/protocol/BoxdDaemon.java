@@ -30,7 +30,7 @@ public class BoxdDaemon extends  Thread{
     /**
      * Init boxdDaemon
      */
-    public BoxdDaemon(String host, int port) throws BoxdException {
+    public BoxdDaemon(String host, int port) {
         if (host != null && !"".equalsIgnoreCase(host)) {
             this.host = host;
         }
