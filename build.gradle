@@ -23,7 +23,7 @@ apply plugin: 'com.jfrog.bintray'
 
 
 group 'one.contentbox.boxd'
-version '0.0.1'
+version '1.0'
 sourceCompatibility = 1.8
 
 repositories {
@@ -40,7 +40,6 @@ repositories {
 dependencies {
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
     compileOnly 'org.projectlombok:lombok:1.16.2'
-    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.26'
     compile group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.61'
 
     compile('io.grpc:grpc-netty:1.18.0')
