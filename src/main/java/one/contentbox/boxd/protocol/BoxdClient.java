@@ -243,6 +243,13 @@ public interface BoxdClient {
      */
     String sendTransaction(Transaction transaction) throws BoxdException;
 
+    /**
+     * Send raw transaction to the chain, it will come into the memory pool
+     *
+     * @param rawTransaction
+     * @return
+     * @throws BoxdException
+     */
     String sendRawTransaction(String rawTransaction) throws BoxdException;
 
     /**
@@ -261,6 +268,6 @@ public interface BoxdClient {
      * @return
      * @throws BoxdException
      */
-    ExtendTxDetail viewTxDetail(String hash) throws BoxdException;
+    ExtendTxDetail viewTxDetail(String hash, boolean spreadSplit) throws BoxdException;
 
 }

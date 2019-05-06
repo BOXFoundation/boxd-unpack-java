@@ -39,7 +39,7 @@ public class TransferSample {
 
         Thread.sleep(2000);
 
-        ExtendTxDetail viewTxDetailResp = client.viewTxDetail(hash);
+        ExtendTxDetail viewTxDetailResp = client.viewTxDetail(hash, false);
         System.out.println(SampleHelper.formatJavaObject(viewTxDetailResp));
     }
 }

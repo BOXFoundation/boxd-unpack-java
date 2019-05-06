@@ -5,7 +5,6 @@ import one.contentbox.boxd.account.AccountManager;
 import one.contentbox.boxd.account.AccountManagerImpl;
 import one.contentbox.boxd.exception.BoxdException;
 import one.contentbox.boxd.util.AddressUtils;
-import org.bouncycastle.math.ec.FixedPointUtil;
 import org.bouncycastle.util.encoders.Hex;
 
 import java.io.File;
@@ -56,7 +55,7 @@ public class AccountSample {
     }
 
     public boolean isValidAddr(String addr) {
-        return AddressUtils.isVaildAddr(addr);
+        return AddressUtils.isValidAddr(addr);
     }
 
     public byte[]  dumpPubKeyHashFromPrivKey (String privKey) throws BoxdException{

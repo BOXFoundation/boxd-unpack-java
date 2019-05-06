@@ -50,7 +50,7 @@ public class TxOfflineSignSample {
         Thread.sleep(1000);
 
         // check transaction on chain
-        ExtendTxDetail extendTxDetail = client.viewTxDetail(hash);
+        ExtendTxDetail extendTxDetail = client.viewTxDetail(hash, false);
         System.out.println(SampleHelper.formatJavaObject(extendTxDetail));
     }
 

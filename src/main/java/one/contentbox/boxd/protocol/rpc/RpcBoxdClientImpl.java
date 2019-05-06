@@ -98,7 +98,7 @@ public class RpcBoxdClientImpl implements BoxdClient {
     @Override
     public String getBlockHash(int blockHeight) throws BoxdException {
         GetBlockHashResponse blockHashResponse = contorlCommandBlockingStub
-                .getBlockHash(GetBlockHashRequest.newBuilder().setHeight(0).build());
+                .getBlockHash(GetBlockHashRequest.newBuilder().setHeight(blockHeight).build());
         if (blockHashResponse.getCode() != 0) {
             throw new BoxdException(blockHashResponse.getCode(), blockHashResponse.getMessage());
         }
@@ -388,9 +388,9 @@ public class RpcBoxdClientImpl implements BoxdClient {
     }
 
     @Override
-    public ExtendTxDetail viewTxDetail(String hash) throws BoxdException {
+    public ExtendTxDetail viewTxDetail(String hash, boolean spreadSplit) throws BoxdException {
         ViewTxDetailResp viewTxDetailResp = webApiBlockingStub
-                .viewTxDetail(ViewTxDetailReq.newBuilder().setHash(hash).build());
+                .viewTxDetail(ViewTxDetailReq.newBuilder().setHash(hash).setSpreadSplit(spreadSplit).build());
         if (viewTxDetailResp.getCode() != 0) {
             throw new BoxdException(viewTxDetailResp.getCode(), viewTxDetailResp.getMessage());
         }

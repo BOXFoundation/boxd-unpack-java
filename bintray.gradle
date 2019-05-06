@@ -3,7 +3,7 @@ ext {
     publishedGroupId = 'one.contentbox.boxd'
     // `artifact` also use as and `bintray.pkg.name` for simplifying
     artifact = 'boxd-client'
-    libraryVersion = '0.0.3'
+    libraryVersion = '0.0.1'
     // `libraryName` also uses as `bintray.pkg.libraryName` and `bintray.pkg.version.libraryName`
     libraryName = 'Boxd Java SDK'
 

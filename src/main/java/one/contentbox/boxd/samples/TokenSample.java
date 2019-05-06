@@ -65,7 +65,7 @@ public class TokenSample {
 
         Thread.sleep(2000);
         // view tx
-        ExtendTxDetail viewTxDetailResp = client.viewTxDetail(hash2);
+        ExtendTxDetail viewTxDetailResp = client.viewTxDetail(hash2, true);
         System.out.println(SampleHelper.formatJavaObject(viewTxDetailResp));
 
     }

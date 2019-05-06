@@ -79,7 +79,7 @@ public class BoxdClientSample {
     }
 
     public ExtendTxDetail viewTxDetail(String hash) throws BoxdException {
-        return boxdClient.viewTxDetail(hash);
+        return boxdClient.viewTxDetail(hash, false);
     }
 
     public BlockDetail viewBlockDetail(String hash) throws BoxdException {

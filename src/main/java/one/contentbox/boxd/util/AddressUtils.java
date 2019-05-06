@@ -8,7 +8,7 @@ import one.contentbox.boxd.exception.BoxdException;
 public class AddressUtils {
 
 
-    public static boolean isVaildAddr(String addr) {
+    public static boolean isValidAddr(String addr) {
         // check len
         if(addr == null || "".equalsIgnoreCase(addr)
                 || addr.length() != 35){
@@ -33,7 +33,7 @@ public class AddressUtils {
     }
 
     public static  byte[] getPubKeyHashFromAddr(String addr) throws BoxdException {
-        if( !isVaildAddr(addr)){
+        if( !isValidAddr(addr)){
             throw new BoxdException(-1, "Addr format error");
         }
 

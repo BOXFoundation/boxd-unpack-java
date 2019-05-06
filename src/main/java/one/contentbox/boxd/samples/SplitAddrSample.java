@@ -46,7 +46,7 @@ public class SplitAddrSample {
 
         Thread.sleep(2000);
 
-        ExtendTxDetail extendTxDetail = client.viewTxDetail(hash2);
+        ExtendTxDetail extendTxDetail = client.viewTxDetail(hash2, true);
         System.out.println(SampleHelper.formatJavaObject(extendTxDetail));
     }
 }
