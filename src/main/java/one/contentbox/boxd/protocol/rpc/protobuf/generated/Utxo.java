@@ -378,7 +378,7 @@ public  final class Utxo extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.Utxo)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder {
+      UtxoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return CommonProto.internal_static_rpcpb_Utxo_descriptor;

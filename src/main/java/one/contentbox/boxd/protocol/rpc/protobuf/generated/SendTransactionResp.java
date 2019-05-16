@@ -75,12 +75,12 @@ public  final class SendTransactionResp extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
+    return TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_fieldAccessorTable
+    return TransactionProto.internal_static_rpcpb_SendTransactionResp_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             SendTransactionResp.class, Builder.class);
   }
@@ -326,15 +326,15 @@ public  final class SendTransactionResp extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.SendTransactionResp)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionRespOrBuilder {
+      SendTransactionRespOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
+      return TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_fieldAccessorTable
+      return TransactionProto.internal_static_rpcpb_SendTransactionResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               SendTransactionResp.class, Builder.class);
     }
@@ -367,7 +367,7 @@ public  final class SendTransactionResp extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
+      return TransactionProto.internal_static_rpcpb_SendTransactionResp_descriptor;
     }
 
     public SendTransactionResp getDefaultInstanceForType() {

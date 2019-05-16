@@ -75,12 +75,12 @@ public interface BlockDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> 
+  java.util.List<TxDetail>
       getTxsList();
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail getTxs(int index);
+  TxDetail getTxs(int index);
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
@@ -88,11 +88,11 @@ public interface BlockDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> 
+  java.util.List<? extends TxDetailOrBuilder>
       getTxsOrBuilderList();
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder getTxsOrBuilder(
+  TxDetailOrBuilder getTxsOrBuilder(
           int index);
 }

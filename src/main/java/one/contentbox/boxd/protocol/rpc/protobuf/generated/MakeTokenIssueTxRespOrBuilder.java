@@ -34,11 +34,11 @@ public interface MakeTokenIssueTxRespOrBuilder extends
   /**
    * <code>.corepb.Transaction tx = 4;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTx();
+  Transaction getTx();
   /**
    * <code>.corepb.Transaction tx = 4;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxOrBuilder();
+  TransactionOrBuilder getTxOrBuilder();
 
   /**
    * <code>repeated bytes rawMsgs = 5;</code>

@@ -300,7 +300,7 @@ public  final class TxIn extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.TxIn)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder {
+      TxInOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return BlockProto.internal_static_corepb_TxIn_descriptor;

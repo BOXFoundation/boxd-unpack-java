@@ -43,11 +43,11 @@ public  final class SendTransactionReq extends
             break;
           }
           case 10: {
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder subBuilder = null;
+            Transaction.Builder subBuilder = null;
             if (tx_ != null) {
               subBuilder = tx_.toBuilder();
             }
-            tx_ = input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.parser(), extensionRegistry);
+            tx_ = input.readMessage(Transaction.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(tx_);
               tx_ = subBuilder.buildPartial();
@@ -68,18 +68,18 @@ public  final class SendTransactionReq extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionReq_descriptor;
+    return TransactionProto.internal_static_rpcpb_SendTransactionReq_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionReq_fieldAccessorTable
+    return TransactionProto.internal_static_rpcpb_SendTransactionReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             SendTransactionReq.class, Builder.class);
   }
 
   public static final int TX_FIELD_NUMBER = 1;
-  private one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction tx_;
+  private Transaction tx_;
   /**
    * <code>.corepb.Transaction tx = 1;</code>
    */
@@ -89,13 +89,13 @@ public  final class SendTransactionReq extends
   /**
    * <code>.corepb.Transaction tx = 1;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTx() {
-    return tx_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.getDefaultInstance() : tx_;
+  public Transaction getTx() {
+    return tx_ == null ? Transaction.getDefaultInstance() : tx_;
   }
   /**
    * <code>.corepb.Transaction tx = 1;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxOrBuilder() {
+  public TransactionOrBuilder getTxOrBuilder() {
     return getTx();
   }
 
@@ -248,15 +248,15 @@ public  final class SendTransactionReq extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.SendTransactionReq)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.SendTransactionReqOrBuilder {
+      SendTransactionReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionReq_descriptor;
+      return TransactionProto.internal_static_rpcpb_SendTransactionReq_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionReq_fieldAccessorTable
+      return TransactionProto.internal_static_rpcpb_SendTransactionReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               SendTransactionReq.class, Builder.class);
     }
@@ -289,7 +289,7 @@ public  final class SendTransactionReq extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_SendTransactionReq_descriptor;
+      return TransactionProto.internal_static_rpcpb_SendTransactionReq_descriptor;
     }
 
     public SendTransactionReq getDefaultInstanceForType() {
@@ -381,9 +381,9 @@ public  final class SendTransactionReq extends
       return this;
     }
 
-    private one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction tx_ = null;
+    private Transaction tx_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder> txBuilder_;
+        Transaction, Transaction.Builder, TransactionOrBuilder> txBuilder_;
     /**
      * <code>.corepb.Transaction tx = 1;</code>
      */
@@ -393,9 +393,9 @@ public  final class SendTransactionReq extends
     /**
      * <code>.corepb.Transaction tx = 1;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTx() {
+    public Transaction getTx() {
       if (txBuilder_ == null) {
-        return tx_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.getDefaultInstance() : tx_;
+        return tx_ == null ? Transaction.getDefaultInstance() : tx_;
       } else {
         return txBuilder_.getMessage();
       }
@@ -403,7 +403,7 @@ public  final class SendTransactionReq extends
     /**
      * <code>.corepb.Transaction tx = 1;</code>
      */
-    public Builder setTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction value) {
+    public Builder setTx(Transaction value) {
       if (txBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -420,7 +420,7 @@ public  final class SendTransactionReq extends
      * <code>.corepb.Transaction tx = 1;</code>
      */
     public Builder setTx(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder builderForValue) {
+        Transaction.Builder builderForValue) {
       if (txBuilder_ == null) {
         tx_ = builderForValue.build();
         onChanged();
@@ -433,11 +433,11 @@ public  final class SendTransactionReq extends
     /**
      * <code>.corepb.Transaction tx = 1;</code>
      */
-    public Builder mergeTx(one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction value) {
+    public Builder mergeTx(Transaction value) {
       if (txBuilder_ == null) {
         if (tx_ != null) {
           tx_ =
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.newBuilder(tx_).mergeFrom(value).buildPartial();
+            Transaction.newBuilder(tx_).mergeFrom(value).buildPartial();
         } else {
           tx_ = value;
         }
@@ -465,7 +465,7 @@ public  final class SendTransactionReq extends
     /**
      * <code>.corepb.Transaction tx = 1;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder getTxBuilder() {
+    public Transaction.Builder getTxBuilder() {
       
       onChanged();
       return getTxFieldBuilder().getBuilder();
@@ -473,23 +473,23 @@ public  final class SendTransactionReq extends
     /**
      * <code>.corepb.Transaction tx = 1;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxOrBuilder() {
+    public TransactionOrBuilder getTxOrBuilder() {
       if (txBuilder_ != null) {
         return txBuilder_.getMessageOrBuilder();
       } else {
         return tx_ == null ?
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.getDefaultInstance() : tx_;
+            Transaction.getDefaultInstance() : tx_;
       }
     }
     /**
      * <code>.corepb.Transaction tx = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder> 
+        Transaction, Transaction.Builder, TransactionOrBuilder>
         getTxFieldBuilder() {
       if (txBuilder_ == null) {
         txBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction, one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder>(
+            Transaction, Transaction.Builder, TransactionOrBuilder>(
                 getTx(),
                 getParentForChildren(),
                 isClean());

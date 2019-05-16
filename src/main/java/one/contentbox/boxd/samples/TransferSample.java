@@ -5,6 +5,7 @@ import one.contentbox.boxd.protocol.core.response.UnsignedTx;
 import one.contentbox.boxd.protocol.core.response.tx.ExtendTxDetail;
 import one.contentbox.boxd.protocol.rpc.RpcBoxdClientImpl;
 import one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction;
+import org.bouncycastle.util.encoders.Hex;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,7 +35,10 @@ public class TransferSample {
         Transaction transaction = client.signTransaction(unsignedTx, privKey);
         System.out.println(transaction);
 
-        String hash  = client.sendTransaction(transaction);
+        String rawTx = Hex.toHexString(transaction.toByteArray());
+        String hash = client.sendRawTransaction(rawTx);
+
+//        String hash  = client.sendTransaction(transaction);
         System.out.println(hash);
 
         Thread.sleep(2000);

@@ -61,12 +61,12 @@ public  final class GetRawTransactionRequest extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_descriptor;
+    return TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_fieldAccessorTable
+    return TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             GetRawTransactionRequest.class, Builder.class);
   }
@@ -224,15 +224,15 @@ public  final class GetRawTransactionRequest extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetRawTransactionRequest)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetRawTransactionRequestOrBuilder {
+      GetRawTransactionRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_descriptor;
+      return TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_fieldAccessorTable
+      return TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               GetRawTransactionRequest.class, Builder.class);
     }
@@ -261,7 +261,7 @@ public  final class GetRawTransactionRequest extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_descriptor;
+      return TransactionProto.internal_static_rpcpb_GetRawTransactionRequest_descriptor;
     }
 
     public GetRawTransactionRequest getDefaultInstanceForType() {

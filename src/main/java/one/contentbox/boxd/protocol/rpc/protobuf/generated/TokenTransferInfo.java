@@ -62,12 +62,12 @@ public  final class TokenTransferInfo extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
+    return WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_fieldAccessorTable
+    return WebProto.internal_static_rpcpb_TokenTransferInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             TokenTransferInfo.class, Builder.class);
   }
@@ -249,15 +249,15 @@ public  final class TokenTransferInfo extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.TokenTransferInfo)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTransferInfoOrBuilder {
+      TokenTransferInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
+      return WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_fieldAccessorTable
+      return WebProto.internal_static_rpcpb_TokenTransferInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               TokenTransferInfo.class, Builder.class);
     }
@@ -286,7 +286,7 @@ public  final class TokenTransferInfo extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
+      return WebProto.internal_static_rpcpb_TokenTransferInfo_descriptor;
     }
 
     public TokenTransferInfo getDefaultInstanceForType() {

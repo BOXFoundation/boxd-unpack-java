@@ -81,12 +81,12 @@ public  final class FetchUtxosReq extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
+    return TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_fieldAccessorTable
+    return TransactionProto.internal_static_rpcpb_FetchUtxosReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             FetchUtxosReq.class, Builder.class);
   }
@@ -353,15 +353,15 @@ public  final class FetchUtxosReq extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.FetchUtxosReq)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosReqOrBuilder {
+      FetchUtxosReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
+      return TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_fieldAccessorTable
+      return TransactionProto.internal_static_rpcpb_FetchUtxosReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               FetchUtxosReq.class, Builder.class);
     }
@@ -396,7 +396,7 @@ public  final class FetchUtxosReq extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
+      return TransactionProto.internal_static_rpcpb_FetchUtxosReq_descriptor;
     }
 
     public FetchUtxosReq getDefaultInstanceForType() {

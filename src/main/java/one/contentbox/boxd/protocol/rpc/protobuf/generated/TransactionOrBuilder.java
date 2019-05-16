@@ -15,12 +15,12 @@ public interface TransactionOrBuilder extends
   /**
    * <code>repeated .corepb.TxIn vin = 2;</code>
    */
-  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn> 
+  java.util.List<TxIn>
       getVinList();
   /**
    * <code>repeated .corepb.TxIn vin = 2;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn getVin(int index);
+  TxIn getVin(int index);
   /**
    * <code>repeated .corepb.TxIn vin = 2;</code>
    */
@@ -28,23 +28,23 @@ public interface TransactionOrBuilder extends
   /**
    * <code>repeated .corepb.TxIn vin = 2;</code>
    */
-  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder> 
+  java.util.List<? extends TxInOrBuilder>
       getVinOrBuilderList();
   /**
    * <code>repeated .corepb.TxIn vin = 2;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder getVinOrBuilder(
+  TxInOrBuilder getVinOrBuilder(
           int index);
 
   /**
    * <code>repeated .corepb.TxOut vout = 3;</code>
    */
-  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut> 
+  java.util.List<TxOut>
       getVoutList();
   /**
    * <code>repeated .corepb.TxOut vout = 3;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut getVout(int index);
+  TxOut getVout(int index);
   /**
    * <code>repeated .corepb.TxOut vout = 3;</code>
    */
@@ -52,12 +52,12 @@ public interface TransactionOrBuilder extends
   /**
    * <code>repeated .corepb.TxOut vout = 3;</code>
    */
-  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder> 
+  java.util.List<? extends TxOutOrBuilder>
       getVoutOrBuilderList();
   /**
    * <code>repeated .corepb.TxOut vout = 3;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder getVoutOrBuilder(
+  TxOutOrBuilder getVoutOrBuilder(
           int index);
 
   /**

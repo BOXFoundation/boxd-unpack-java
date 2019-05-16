@@ -14,9 +14,9 @@ public interface TokenIssueInfoOrBuilder extends
   /**
    * <code>.rpcpb.TokenTag token_tag = 1;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag getTokenTag();
+  TokenTag getTokenTag();
   /**
    * <code>.rpcpb.TokenTag token_tag = 1;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder getTokenTagOrBuilder();
+  TokenTagOrBuilder getTokenTagOrBuilder();
 }

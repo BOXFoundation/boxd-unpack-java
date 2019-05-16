@@ -58,11 +58,11 @@ public  final class FetchUtxosResp extends
           }
           case 26: {
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-              utxos_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo>();
+              utxos_ = new java.util.ArrayList<Utxo>();
               mutable_bitField0_ |= 0x00000004;
             }
             utxos_.add(
-                input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.parser(), extensionRegistry));
+                input.readMessage(Utxo.parser(), extensionRegistry));
             break;
           }
         }
@@ -81,12 +81,12 @@ public  final class FetchUtxosResp extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosResp_descriptor;
+    return TransactionProto.internal_static_rpcpb_FetchUtxosResp_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosResp_fieldAccessorTable
+    return TransactionProto.internal_static_rpcpb_FetchUtxosResp_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             FetchUtxosResp.class, Builder.class);
   }
@@ -136,17 +136,17 @@ public  final class FetchUtxosResp extends
   }
 
   public static final int UTXOS_FIELD_NUMBER = 3;
-  private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo> utxos_;
+  private java.util.List<Utxo> utxos_;
   /**
    * <code>repeated .rpcpb.Utxo utxos = 3;</code>
    */
-  public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo> getUtxosList() {
+  public java.util.List<Utxo> getUtxosList() {
     return utxos_;
   }
   /**
    * <code>repeated .rpcpb.Utxo utxos = 3;</code>
    */
-  public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder> 
+  public java.util.List<? extends UtxoOrBuilder>
       getUtxosOrBuilderList() {
     return utxos_;
   }
@@ -159,13 +159,13 @@ public  final class FetchUtxosResp extends
   /**
    * <code>repeated .rpcpb.Utxo utxos = 3;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo getUtxos(int index) {
+  public Utxo getUtxos(int index) {
     return utxos_.get(index);
   }
   /**
    * <code>repeated .rpcpb.Utxo utxos = 3;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder getUtxosOrBuilder(
+  public UtxoOrBuilder getUtxosOrBuilder(
       int index) {
     return utxos_.get(index);
   }
@@ -337,15 +337,15 @@ public  final class FetchUtxosResp extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.FetchUtxosResp)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.FetchUtxosRespOrBuilder {
+      FetchUtxosRespOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosResp_descriptor;
+      return TransactionProto.internal_static_rpcpb_FetchUtxosResp_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosResp_fieldAccessorTable
+      return TransactionProto.internal_static_rpcpb_FetchUtxosResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               FetchUtxosResp.class, Builder.class);
     }
@@ -383,7 +383,7 @@ public  final class FetchUtxosResp extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_FetchUtxosResp_descriptor;
+      return TransactionProto.internal_static_rpcpb_FetchUtxosResp_descriptor;
     }
 
     public FetchUtxosResp getDefaultInstanceForType() {
@@ -610,22 +610,22 @@ public  final class FetchUtxosResp extends
       return this;
     }
 
-    private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo> utxos_ =
+    private java.util.List<Utxo> utxos_ =
       java.util.Collections.emptyList();
     private void ensureUtxosIsMutable() {
       if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-        utxos_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo>(utxos_);
+        utxos_ = new java.util.ArrayList<Utxo>(utxos_);
         bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo, one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder> utxosBuilder_;
+        Utxo, Utxo.Builder, UtxoOrBuilder> utxosBuilder_;
 
     /**
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
-    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo> getUtxosList() {
+    public java.util.List<Utxo> getUtxosList() {
       if (utxosBuilder_ == null) {
         return java.util.Collections.unmodifiableList(utxos_);
       } else {
@@ -645,7 +645,7 @@ public  final class FetchUtxosResp extends
     /**
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo getUtxos(int index) {
+    public Utxo getUtxos(int index) {
       if (utxosBuilder_ == null) {
         return utxos_.get(index);
       } else {
@@ -656,7 +656,7 @@ public  final class FetchUtxosResp extends
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
     public Builder setUtxos(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo value) {
+        int index, Utxo value) {
       if (utxosBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -673,7 +673,7 @@ public  final class FetchUtxosResp extends
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
     public Builder setUtxos(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder builderForValue) {
+        int index, Utxo.Builder builderForValue) {
       if (utxosBuilder_ == null) {
         ensureUtxosIsMutable();
         utxos_.set(index, builderForValue.build());
@@ -686,7 +686,7 @@ public  final class FetchUtxosResp extends
     /**
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
-    public Builder addUtxos(one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo value) {
+    public Builder addUtxos(Utxo value) {
       if (utxosBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -703,7 +703,7 @@ public  final class FetchUtxosResp extends
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
     public Builder addUtxos(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo value) {
+        int index, Utxo value) {
       if (utxosBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -720,7 +720,7 @@ public  final class FetchUtxosResp extends
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
     public Builder addUtxos(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder builderForValue) {
+        Utxo.Builder builderForValue) {
       if (utxosBuilder_ == null) {
         ensureUtxosIsMutable();
         utxos_.add(builderForValue.build());
@@ -734,7 +734,7 @@ public  final class FetchUtxosResp extends
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
     public Builder addUtxos(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder builderForValue) {
+        int index, Utxo.Builder builderForValue) {
       if (utxosBuilder_ == null) {
         ensureUtxosIsMutable();
         utxos_.add(index, builderForValue.build());
@@ -748,7 +748,7 @@ public  final class FetchUtxosResp extends
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
     public Builder addAllUtxos(
-        Iterable<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo> values) {
+        Iterable<? extends Utxo> values) {
       if (utxosBuilder_ == null) {
         ensureUtxosIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -788,14 +788,14 @@ public  final class FetchUtxosResp extends
     /**
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder getUtxosBuilder(
+    public Utxo.Builder getUtxosBuilder(
         int index) {
       return getUtxosFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder getUtxosOrBuilder(
+    public UtxoOrBuilder getUtxosOrBuilder(
         int index) {
       if (utxosBuilder_ == null) {
         return utxos_.get(index);  } else {
@@ -805,7 +805,7 @@ public  final class FetchUtxosResp extends
     /**
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
-    public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder> 
+    public java.util.List<? extends UtxoOrBuilder>
          getUtxosOrBuilderList() {
       if (utxosBuilder_ != null) {
         return utxosBuilder_.getMessageOrBuilderList();
@@ -816,31 +816,31 @@ public  final class FetchUtxosResp extends
     /**
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder addUtxosBuilder() {
+    public Utxo.Builder addUtxosBuilder() {
       return getUtxosFieldBuilder().addBuilder(
-          one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.getDefaultInstance());
+          Utxo.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder addUtxosBuilder(
+    public Utxo.Builder addUtxosBuilder(
         int index) {
       return getUtxosFieldBuilder().addBuilder(
-          index, one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.getDefaultInstance());
+          index, Utxo.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.Utxo utxos = 3;</code>
      */
-    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder> 
+    public java.util.List<Utxo.Builder>
          getUtxosBuilderList() {
       return getUtxosFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo, one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder> 
+        Utxo, Utxo.Builder, UtxoOrBuilder>
         getUtxosFieldBuilder() {
       if (utxosBuilder_ == null) {
         utxosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo, one.contentbox.boxd.protocol.rpc.protobuf.generated.Utxo.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.UtxoOrBuilder>(
+            Utxo, Utxo.Builder, UtxoOrBuilder>(
                 utxos_,
                 ((bitField0_ & 0x00000004) == 0x00000004),
                 getParentForChildren(),

@@ -54,20 +54,20 @@ public  final class Transaction extends
           }
           case 18: {
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-              vin_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn>();
+              vin_ = new java.util.ArrayList<TxIn>();
               mutable_bitField0_ |= 0x00000002;
             }
             vin_.add(
-                input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.parser(), extensionRegistry));
+                input.readMessage(TxIn.parser(), extensionRegistry));
             break;
           }
           case 26: {
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-              vout_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut>();
+              vout_ = new java.util.ArrayList<TxOut>();
               mutable_bitField0_ |= 0x00000004;
             }
             vout_.add(
-                input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.parser(), extensionRegistry));
+                input.readMessage(TxOut.parser(), extensionRegistry));
             break;
           }
           case 34: {
@@ -133,17 +133,17 @@ public  final class Transaction extends
   }
 
   public static final int VIN_FIELD_NUMBER = 2;
-  private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn> vin_;
+  private java.util.List<TxIn> vin_;
   /**
    * <code>repeated .corepb.TxIn vin = 2;</code>
    */
-  public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn> getVinList() {
+  public java.util.List<TxIn> getVinList() {
     return vin_;
   }
   /**
    * <code>repeated .corepb.TxIn vin = 2;</code>
    */
-  public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder> 
+  public java.util.List<? extends TxInOrBuilder>
       getVinOrBuilderList() {
     return vin_;
   }
@@ -156,29 +156,29 @@ public  final class Transaction extends
   /**
    * <code>repeated .corepb.TxIn vin = 2;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn getVin(int index) {
+  public TxIn getVin(int index) {
     return vin_.get(index);
   }
   /**
    * <code>repeated .corepb.TxIn vin = 2;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder getVinOrBuilder(
+  public TxInOrBuilder getVinOrBuilder(
       int index) {
     return vin_.get(index);
   }
 
   public static final int VOUT_FIELD_NUMBER = 3;
-  private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut> vout_;
+  private java.util.List<TxOut> vout_;
   /**
    * <code>repeated .corepb.TxOut vout = 3;</code>
    */
-  public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut> getVoutList() {
+  public java.util.List<TxOut> getVoutList() {
     return vout_;
   }
   /**
    * <code>repeated .corepb.TxOut vout = 3;</code>
    */
-  public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder> 
+  public java.util.List<? extends TxOutOrBuilder>
       getVoutOrBuilderList() {
     return vout_;
   }
@@ -191,13 +191,13 @@ public  final class Transaction extends
   /**
    * <code>repeated .corepb.TxOut vout = 3;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut getVout(int index) {
+  public TxOut getVout(int index) {
     return vout_.get(index);
   }
   /**
    * <code>repeated .corepb.TxOut vout = 3;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder getVoutOrBuilder(
+  public TxOutOrBuilder getVoutOrBuilder(
       int index) {
     return vout_.get(index);
   }
@@ -450,7 +450,7 @@ public  final class Transaction extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.Transaction)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder {
+      TransactionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return BlockProto.internal_static_corepb_Transaction_descriptor;
@@ -715,22 +715,22 @@ public  final class Transaction extends
       return this;
     }
 
-    private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn> vin_ =
+    private java.util.List<TxIn> vin_ =
       java.util.Collections.emptyList();
     private void ensureVinIsMutable() {
       if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-        vin_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn>(vin_);
+        vin_ = new java.util.ArrayList<TxIn>(vin_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder> vinBuilder_;
+        TxIn, TxIn.Builder, TxInOrBuilder> vinBuilder_;
 
     /**
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
-    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn> getVinList() {
+    public java.util.List<TxIn> getVinList() {
       if (vinBuilder_ == null) {
         return java.util.Collections.unmodifiableList(vin_);
       } else {
@@ -750,7 +750,7 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn getVin(int index) {
+    public TxIn getVin(int index) {
       if (vinBuilder_ == null) {
         return vin_.get(index);
       } else {
@@ -761,7 +761,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
     public Builder setVin(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn value) {
+        int index, TxIn value) {
       if (vinBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -778,7 +778,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
     public Builder setVin(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder builderForValue) {
+        int index, TxIn.Builder builderForValue) {
       if (vinBuilder_ == null) {
         ensureVinIsMutable();
         vin_.set(index, builderForValue.build());
@@ -791,7 +791,7 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
-    public Builder addVin(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn value) {
+    public Builder addVin(TxIn value) {
       if (vinBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -808,7 +808,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
     public Builder addVin(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn value) {
+        int index, TxIn value) {
       if (vinBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -825,7 +825,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
     public Builder addVin(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder builderForValue) {
+        TxIn.Builder builderForValue) {
       if (vinBuilder_ == null) {
         ensureVinIsMutable();
         vin_.add(builderForValue.build());
@@ -839,7 +839,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
     public Builder addVin(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder builderForValue) {
+        int index, TxIn.Builder builderForValue) {
       if (vinBuilder_ == null) {
         ensureVinIsMutable();
         vin_.add(index, builderForValue.build());
@@ -853,7 +853,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
     public Builder addAllVin(
-        Iterable<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn> values) {
+        Iterable<? extends TxIn> values) {
       if (vinBuilder_ == null) {
         ensureVinIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -893,14 +893,14 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder getVinBuilder(
+    public TxIn.Builder getVinBuilder(
         int index) {
       return getVinFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder getVinOrBuilder(
+    public TxInOrBuilder getVinOrBuilder(
         int index) {
       if (vinBuilder_ == null) {
         return vin_.get(index);  } else {
@@ -910,7 +910,7 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
-    public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder> 
+    public java.util.List<? extends TxInOrBuilder>
          getVinOrBuilderList() {
       if (vinBuilder_ != null) {
         return vinBuilder_.getMessageOrBuilderList();
@@ -921,31 +921,31 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder addVinBuilder() {
+    public TxIn.Builder addVinBuilder() {
       return getVinFieldBuilder().addBuilder(
-          one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.getDefaultInstance());
+          TxIn.getDefaultInstance());
     }
     /**
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder addVinBuilder(
+    public TxIn.Builder addVinBuilder(
         int index) {
       return getVinFieldBuilder().addBuilder(
-          index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.getDefaultInstance());
+          index, TxIn.getDefaultInstance());
     }
     /**
      * <code>repeated .corepb.TxIn vin = 2;</code>
      */
-    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder> 
+    public java.util.List<TxIn.Builder>
          getVinBuilderList() {
       return getVinFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder> 
+        TxIn, TxIn.Builder, TxInOrBuilder>
         getVinFieldBuilder() {
       if (vinBuilder_ == null) {
         vinBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxIn.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInOrBuilder>(
+            TxIn, TxIn.Builder, TxInOrBuilder>(
                 vin_,
                 ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
@@ -955,22 +955,22 @@ public  final class Transaction extends
       return vinBuilder_;
     }
 
-    private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut> vout_ =
+    private java.util.List<TxOut> vout_ =
       java.util.Collections.emptyList();
     private void ensureVoutIsMutable() {
       if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-        vout_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut>(vout_);
+        vout_ = new java.util.ArrayList<TxOut>(vout_);
         bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder> voutBuilder_;
+        TxOut, TxOut.Builder, TxOutOrBuilder> voutBuilder_;
 
     /**
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
-    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut> getVoutList() {
+    public java.util.List<TxOut> getVoutList() {
       if (voutBuilder_ == null) {
         return java.util.Collections.unmodifiableList(vout_);
       } else {
@@ -990,7 +990,7 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut getVout(int index) {
+    public TxOut getVout(int index) {
       if (voutBuilder_ == null) {
         return vout_.get(index);
       } else {
@@ -1001,7 +1001,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
     public Builder setVout(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut value) {
+        int index, TxOut value) {
       if (voutBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1018,7 +1018,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
     public Builder setVout(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder builderForValue) {
+        int index, TxOut.Builder builderForValue) {
       if (voutBuilder_ == null) {
         ensureVoutIsMutable();
         vout_.set(index, builderForValue.build());
@@ -1031,7 +1031,7 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
-    public Builder addVout(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut value) {
+    public Builder addVout(TxOut value) {
       if (voutBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1048,7 +1048,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
     public Builder addVout(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut value) {
+        int index, TxOut value) {
       if (voutBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1065,7 +1065,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
     public Builder addVout(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder builderForValue) {
+        TxOut.Builder builderForValue) {
       if (voutBuilder_ == null) {
         ensureVoutIsMutable();
         vout_.add(builderForValue.build());
@@ -1079,7 +1079,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
     public Builder addVout(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder builderForValue) {
+        int index, TxOut.Builder builderForValue) {
       if (voutBuilder_ == null) {
         ensureVoutIsMutable();
         vout_.add(index, builderForValue.build());
@@ -1093,7 +1093,7 @@ public  final class Transaction extends
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
     public Builder addAllVout(
-        Iterable<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut> values) {
+        Iterable<? extends TxOut> values) {
       if (voutBuilder_ == null) {
         ensureVoutIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1133,14 +1133,14 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder getVoutBuilder(
+    public TxOut.Builder getVoutBuilder(
         int index) {
       return getVoutFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder getVoutOrBuilder(
+    public TxOutOrBuilder getVoutOrBuilder(
         int index) {
       if (voutBuilder_ == null) {
         return vout_.get(index);  } else {
@@ -1150,7 +1150,7 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
-    public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder> 
+    public java.util.List<? extends TxOutOrBuilder>
          getVoutOrBuilderList() {
       if (voutBuilder_ != null) {
         return voutBuilder_.getMessageOrBuilderList();
@@ -1161,31 +1161,31 @@ public  final class Transaction extends
     /**
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder addVoutBuilder() {
+    public TxOut.Builder addVoutBuilder() {
       return getVoutFieldBuilder().addBuilder(
-          one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.getDefaultInstance());
+          TxOut.getDefaultInstance());
     }
     /**
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder addVoutBuilder(
+    public TxOut.Builder addVoutBuilder(
         int index) {
       return getVoutFieldBuilder().addBuilder(
-          index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.getDefaultInstance());
+          index, TxOut.getDefaultInstance());
     }
     /**
      * <code>repeated .corepb.TxOut vout = 3;</code>
      */
-    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder> 
+    public java.util.List<TxOut.Builder>
          getVoutBuilderList() {
       return getVoutFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder> 
+        TxOut, TxOut.Builder, TxOutOrBuilder>
         getVoutFieldBuilder() {
       if (voutBuilder_ == null) {
         voutBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOut.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder>(
+            TxOut, TxOut.Builder, TxOutOrBuilder>(
                 vout_,
                 ((bitField0_ & 0x00000004) == 0x00000004),
                 getParentForChildren(),

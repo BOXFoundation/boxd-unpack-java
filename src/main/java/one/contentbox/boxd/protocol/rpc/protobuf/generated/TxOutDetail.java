@@ -131,12 +131,12 @@ public  final class TxOutDetail extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
+    return WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_fieldAccessorTable
+    return WebProto.internal_static_rpcpb_TxOutDetail_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             TxOutDetail.class, Builder.class);
   }
@@ -752,15 +752,15 @@ public  final class TxOutDetail extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.TxOutDetail)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder {
+      TxOutDetailOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
+      return WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_fieldAccessorTable
+      return WebProto.internal_static_rpcpb_TxOutDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               TxOutDetail.class, Builder.class);
     }
@@ -799,7 +799,7 @@ public  final class TxOutDetail extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
+      return WebProto.internal_static_rpcpb_TxOutDetail_descriptor;
     }
 
     public TxOutDetail getDefaultInstanceForType() {

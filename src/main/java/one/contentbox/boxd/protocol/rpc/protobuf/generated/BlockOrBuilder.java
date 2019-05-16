@@ -23,12 +23,12 @@ public interface BlockOrBuilder extends
   /**
    * <code>repeated .corepb.Transaction txs = 2;</code>
    */
-  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction> 
+  java.util.List<Transaction>
       getTxsList();
   /**
    * <code>repeated .corepb.Transaction txs = 2;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.Transaction getTxs(int index);
+  Transaction getTxs(int index);
   /**
    * <code>repeated .corepb.Transaction txs = 2;</code>
    */
@@ -36,12 +36,12 @@ public interface BlockOrBuilder extends
   /**
    * <code>repeated .corepb.Transaction txs = 2;</code>
    */
-  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder> 
+  java.util.List<? extends TransactionOrBuilder>
       getTxsOrBuilderList();
   /**
    * <code>repeated .corepb.Transaction txs = 2;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionOrBuilder getTxsOrBuilder(
+  TransactionOrBuilder getTxsOrBuilder(
           int index);
 
   /**
@@ -61,9 +61,9 @@ public interface BlockOrBuilder extends
   /**
    * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfo getIrreversibleInfo();
+  IrreversibleInfo getIrreversibleInfo();
   /**
    * <code>.corepb.IrreversibleInfo irreversible_info = 5;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.IrreversibleInfoOrBuilder getIrreversibleInfoOrBuilder();
+  IrreversibleInfoOrBuilder getIrreversibleInfoOrBuilder();
 }

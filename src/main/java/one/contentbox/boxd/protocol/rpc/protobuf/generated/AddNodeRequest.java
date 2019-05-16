@@ -62,12 +62,12 @@ public  final class AddNodeRequest extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.ControlProto.internal_static_rpcpb_AddNodeRequest_descriptor;
+    return ControlProto.internal_static_rpcpb_AddNodeRequest_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.ControlProto.internal_static_rpcpb_AddNodeRequest_fieldAccessorTable
+    return ControlProto.internal_static_rpcpb_AddNodeRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             AddNodeRequest.class, Builder.class);
   }
@@ -249,15 +249,15 @@ public  final class AddNodeRequest extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.AddNodeRequest)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.AddNodeRequestOrBuilder {
+      AddNodeRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.ControlProto.internal_static_rpcpb_AddNodeRequest_descriptor;
+      return ControlProto.internal_static_rpcpb_AddNodeRequest_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.ControlProto.internal_static_rpcpb_AddNodeRequest_fieldAccessorTable
+      return ControlProto.internal_static_rpcpb_AddNodeRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               AddNodeRequest.class, Builder.class);
     }
@@ -286,7 +286,7 @@ public  final class AddNodeRequest extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.ControlProto.internal_static_rpcpb_AddNodeRequest_descriptor;
+      return ControlProto.internal_static_rpcpb_AddNodeRequest_descriptor;
     }
 
     public AddNodeRequest getDefaultInstanceForType() {

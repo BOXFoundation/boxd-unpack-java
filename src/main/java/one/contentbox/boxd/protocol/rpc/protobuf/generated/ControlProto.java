@@ -117,21 +117,25 @@ public final class ControlProto {
       "orepb.Block\".\n\004Node\022\n\n\002id\030\001 \001(\t\022\r\n\005addrs" +
       "\030\002 \003(\t\022\013\n\003ttl\030\003 \001(\t\"\024\n\022GetNodeInfoReques" +
       "t\"1\n\023GetNodeInfoResponse\022\032\n\005nodes\030\001 \003(\0132" +
-      "\013.rpcpb.Node2\364\003\n\016ContorlCommand\022G\n\014GetNe",
-      "tworkID\022\032.rpcpb.GetNetworkIDRequest\032\033.rp" +
-      "cpb.GetNetworkIDResponse\0225\n\007AddNode\022\025.rp" +
-      "cpb.AddNodeRequest\032\023.rpcpb.BaseResponse\022" +
-      "M\n\016GetBlockHeight\022\034.rpcpb.GetBlockHeight" +
-      "Request\032\035.rpcpb.GetBlockHeightResponse\022G" +
-      "\n\014GetBlockHash\022\032.rpcpb.GetBlockHashReque" +
-      "st\032\033.rpcpb.GetBlockHashResponse\022G\n\016GetBl" +
-      "ockHeader\022\026.rpcpb.GetBlockRequest\032\035.rpcp" +
-      "b.GetBlockHeaderResponse\022;\n\010GetBlock\022\026.r" +
-      "pcpb.GetBlockRequest\032\027.rpcpb.GetBlockRes",
-      "ponse\022D\n\013GetNodeInfo\022\031.rpcpb.GetNodeInfo" +
-      "Request\032\032.rpcpb.GetNodeInfoResponseBE\n3o" +
-      "ne.contentbox.boxd.protocol.rpc.protobuf" +
-      ".generatedB\014ControlProtoP\001b\006proto3"
+      "\013.rpcpb.Node2\373\004\n\016ContorlCommand\022>\n\rSetDe",
+      "bugLevel\022\030.rpcpb.DebugLevelRequest\032\023.rpc" +
+      "pb.BaseResponse\022E\n\017UpdateNetworkID\022\035.rpc" +
+      "pb.UpdateNetworkIDRequest\032\023.rpcpb.BaseRe" +
+      "sponse\022G\n\014GetNetworkID\022\032.rpcpb.GetNetwor" +
+      "kIDRequest\032\033.rpcpb.GetNetworkIDResponse\022" +
+      "5\n\007AddNode\022\025.rpcpb.AddNodeRequest\032\023.rpcp" +
+      "b.BaseResponse\022M\n\016GetBlockHeight\022\034.rpcpb" +
+      ".GetBlockHeightRequest\032\035.rpcpb.GetBlockH" +
+      "eightResponse\022G\n\014GetBlockHash\022\032.rpcpb.Ge" +
+      "tBlockHashRequest\032\033.rpcpb.GetBlockHashRe",
+      "sponse\022G\n\016GetBlockHeader\022\026.rpcpb.GetBloc" +
+      "kRequest\032\035.rpcpb.GetBlockHeaderResponse\022" +
+      ";\n\010GetBlock\022\026.rpcpb.GetBlockRequest\032\027.rp" +
+      "cpb.GetBlockResponse\022D\n\013GetNodeInfo\022\031.rp" +
+      "cpb.GetNodeInfoRequest\032\032.rpcpb.GetNodeIn" +
+      "foResponseBE\n3one.contentbox.boxd.protoc" +
+      "ol.rpc.protobuf.generatedB\014ControlProtoP" +
+      "\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

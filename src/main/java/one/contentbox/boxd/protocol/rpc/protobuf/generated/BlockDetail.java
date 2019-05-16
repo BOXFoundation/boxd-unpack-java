@@ -103,11 +103,11 @@ public  final class BlockDetail extends
           }
           case 82: {
             if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
-              txs_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail>();
+              txs_ = new java.util.ArrayList<TxDetail>();
               mutable_bitField0_ |= 0x00000200;
             }
             txs_.add(
-                input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.parser(), extensionRegistry));
+                input.readMessage(TxDetail.parser(), extensionRegistry));
             break;
           }
         }
@@ -126,12 +126,12 @@ public  final class BlockDetail extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_descriptor;
+    return WebProto.internal_static_rpcpb_BlockDetail_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_fieldAccessorTable
+    return WebProto.internal_static_rpcpb_BlockDetail_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             BlockDetail.class, Builder.class);
   }
@@ -319,17 +319,17 @@ public  final class BlockDetail extends
   }
 
   public static final int TXS_FIELD_NUMBER = 10;
-  private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> txs_;
+  private java.util.List<TxDetail> txs_;
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> getTxsList() {
+  public java.util.List<TxDetail> getTxsList() {
     return txs_;
   }
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> 
+  public java.util.List<? extends TxDetailOrBuilder>
       getTxsOrBuilderList() {
     return txs_;
   }
@@ -342,13 +342,13 @@ public  final class BlockDetail extends
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail getTxs(int index) {
+  public TxDetail getTxs(int index) {
     return txs_.get(index);
   }
   /**
    * <code>repeated .rpcpb.TxDetail txs = 10;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder getTxsOrBuilder(
+  public TxDetailOrBuilder getTxsOrBuilder(
       int index) {
     return txs_.get(index);
   }
@@ -596,15 +596,15 @@ public  final class BlockDetail extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.BlockDetail)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetailOrBuilder {
+      BlockDetailOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_descriptor;
+      return WebProto.internal_static_rpcpb_BlockDetail_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_fieldAccessorTable
+      return WebProto.internal_static_rpcpb_BlockDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               BlockDetail.class, Builder.class);
     }
@@ -656,7 +656,7 @@ public  final class BlockDetail extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_BlockDetail_descriptor;
+      return WebProto.internal_static_rpcpb_BlockDetail_descriptor;
     }
 
     public BlockDetail getDefaultInstanceForType() {
@@ -1225,22 +1225,22 @@ public  final class BlockDetail extends
       return this;
     }
 
-    private java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> txs_ =
+    private java.util.List<TxDetail> txs_ =
       java.util.Collections.emptyList();
     private void ensureTxsIsMutable() {
       if (!((bitField0_ & 0x00000200) == 0x00000200)) {
-        txs_ = new java.util.ArrayList<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail>(txs_);
+        txs_ = new java.util.ArrayList<TxDetail>(txs_);
         bitField0_ |= 0x00000200;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> txsBuilder_;
+        TxDetail, TxDetail.Builder, TxDetailOrBuilder> txsBuilder_;
 
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> getTxsList() {
+    public java.util.List<TxDetail> getTxsList() {
       if (txsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(txs_);
       } else {
@@ -1260,7 +1260,7 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail getTxs(int index) {
+    public TxDetail getTxs(int index) {
       if (txsBuilder_ == null) {
         return txs_.get(index);
       } else {
@@ -1271,7 +1271,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder setTxs(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail value) {
+        int index, TxDetail value) {
       if (txsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1288,7 +1288,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder setTxs(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder builderForValue) {
+        int index, TxDetail.Builder builderForValue) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         txs_.set(index, builderForValue.build());
@@ -1301,7 +1301,7 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public Builder addTxs(one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail value) {
+    public Builder addTxs(TxDetail value) {
       if (txsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1318,7 +1318,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder addTxs(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail value) {
+        int index, TxDetail value) {
       if (txsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1335,7 +1335,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder addTxs(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder builderForValue) {
+        TxDetail.Builder builderForValue) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         txs_.add(builderForValue.build());
@@ -1349,7 +1349,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder addTxs(
-        int index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder builderForValue) {
+        int index, TxDetail.Builder builderForValue) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         txs_.add(index, builderForValue.build());
@@ -1363,7 +1363,7 @@ public  final class BlockDetail extends
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
     public Builder addAllTxs(
-        Iterable<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail> values) {
+        Iterable<? extends TxDetail> values) {
       if (txsBuilder_ == null) {
         ensureTxsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1403,14 +1403,14 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder getTxsBuilder(
+    public TxDetail.Builder getTxsBuilder(
         int index) {
       return getTxsFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder getTxsOrBuilder(
+    public TxDetailOrBuilder getTxsOrBuilder(
         int index) {
       if (txsBuilder_ == null) {
         return txs_.get(index);  } else {
@@ -1420,7 +1420,7 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> 
+    public java.util.List<? extends TxDetailOrBuilder>
          getTxsOrBuilderList() {
       if (txsBuilder_ != null) {
         return txsBuilder_.getMessageOrBuilderList();
@@ -1431,31 +1431,31 @@ public  final class BlockDetail extends
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder addTxsBuilder() {
+    public TxDetail.Builder addTxsBuilder() {
       return getTxsFieldBuilder().addBuilder(
-          one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.getDefaultInstance());
+          TxDetail.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder addTxsBuilder(
+    public TxDetail.Builder addTxsBuilder(
         int index) {
       return getTxsFieldBuilder().addBuilder(
-          index, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.getDefaultInstance());
+          index, TxDetail.getDefaultInstance());
     }
     /**
      * <code>repeated .rpcpb.TxDetail txs = 10;</code>
      */
-    public java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder> 
+    public java.util.List<TxDetail.Builder>
          getTxsBuilderList() {
       return getTxsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder> 
+        TxDetail, TxDetail.Builder, TxDetailOrBuilder>
         getTxsFieldBuilder() {
       if (txsBuilder_ == null) {
         txsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetail.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TxDetailOrBuilder>(
+            TxDetail, TxDetail.Builder, TxDetailOrBuilder>(
                 txs_,
                 ((bitField0_ & 0x00000200) == 0x00000200),
                 getParentForChildren(),

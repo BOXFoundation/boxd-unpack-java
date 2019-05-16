@@ -362,8 +362,13 @@ public class RpcBoxdClientImpl implements BoxdClient {
     }
 
     @Override
-    public String sendRawTransaction(String rawTransaction) throws BoxdException {
-        return null;
+    public String sendRawTransaction(String transaction) throws BoxdException {
+        SendTransactionResp sendTransactionResp =transactionCommandBlockingStub
+                .sendRawTransaction(SendRawTransactionReq.newBuilder().setTx(transaction).build());
+        if (sendTransactionResp.getCode() != 0) {
+            throw new BoxdException(sendTransactionResp.getCode(), sendTransactionResp.getMessage());
+        }
+        return sendTransactionResp.getHash();
     }
 
     @Override

@@ -28,40 +28,40 @@ public final class WebApiGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailReq,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp> METHOD_VIEW_TX_DETAIL =
-      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<ViewTxDetailReq,
+      ViewTxDetailResp> METHOD_VIEW_TX_DETAIL =
+      io.grpc.MethodDescriptor.<ViewTxDetailReq, ViewTxDetailResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.WebApi", "ViewTxDetail"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailReq.getDefaultInstance()))
+              ViewTxDetailReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp.getDefaultInstance()))
+              ViewTxDetailResp.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailReq,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp> METHOD_VIEW_BLOCK_DETAIL =
-      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp>newBuilder()
+  public static final io.grpc.MethodDescriptor<ViewBlockDetailReq,
+      ViewBlockDetailResp> METHOD_VIEW_BLOCK_DETAIL =
+      io.grpc.MethodDescriptor.<ViewBlockDetailReq, ViewBlockDetailResp>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.WebApi", "ViewBlockDetail"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailReq.getDefaultInstance()))
+              ViewBlockDetailReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp.getDefaultInstance()))
+              ViewBlockDetailResp.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail> METHOD_LISTEN_AND_READ_NEW_BLOCK =
-      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq, one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail>newBuilder()
+  public static final io.grpc.MethodDescriptor<ListenBlocksReq,
+      BlockDetail> METHOD_LISTEN_AND_READ_NEW_BLOCK =
+      io.grpc.MethodDescriptor.<ListenBlocksReq, BlockDetail>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.WebApi", "ListenAndReadNewBlock"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq.getDefaultInstance()))
+              ListenBlocksReq.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail.getDefaultInstance()))
+              BlockDetail.getDefaultInstance()))
           .build();
 
   /**
@@ -101,8 +101,8 @@ public final class WebApiGrpc {
      *    }
      * </pre>
      */
-    public void viewTxDetail(one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailReq request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp> responseObserver) {
+    public void viewTxDetail(ViewTxDetailReq request,
+                             io.grpc.stub.StreamObserver<ViewTxDetailResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_VIEW_TX_DETAIL, responseObserver);
     }
 
@@ -116,15 +116,15 @@ public final class WebApiGrpc {
      *    }
      * </pre>
      */
-    public void viewBlockDetail(one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailReq request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp> responseObserver) {
+    public void viewBlockDetail(ViewBlockDetailReq request,
+                                io.grpc.stub.StreamObserver<ViewBlockDetailResp> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_VIEW_BLOCK_DETAIL, responseObserver);
     }
 
     /**
      */
-    public void listenAndReadNewBlock(one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail> responseObserver) {
+    public void listenAndReadNewBlock(ListenBlocksReq request,
+                                      io.grpc.stub.StreamObserver<BlockDetail> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_LISTEN_AND_READ_NEW_BLOCK, responseObserver);
     }
 
@@ -134,22 +134,22 @@ public final class WebApiGrpc {
             METHOD_VIEW_TX_DETAIL,
             asyncUnaryCall(
               new MethodHandlers<
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailReq,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp>(
+                ViewTxDetailReq,
+                ViewTxDetailResp>(
                   this, METHODID_VIEW_TX_DETAIL)))
           .addMethod(
             METHOD_VIEW_BLOCK_DETAIL,
             asyncUnaryCall(
               new MethodHandlers<
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailReq,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp>(
+                ViewBlockDetailReq,
+                ViewBlockDetailResp>(
                   this, METHODID_VIEW_BLOCK_DETAIL)))
           .addMethod(
             METHOD_LISTEN_AND_READ_NEW_BLOCK,
             asyncServerStreamingCall(
               new MethodHandlers<
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail>(
+                ListenBlocksReq,
+                BlockDetail>(
                   this, METHODID_LISTEN_AND_READ_NEW_BLOCK)))
           .build();
     }
@@ -183,8 +183,8 @@ public final class WebApiGrpc {
      *    }
      * </pre>
      */
-    public void viewTxDetail(one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailReq request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp> responseObserver) {
+    public void viewTxDetail(ViewTxDetailReq request,
+                             io.grpc.stub.StreamObserver<ViewTxDetailResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_VIEW_TX_DETAIL, getCallOptions()), request, responseObserver);
     }
@@ -199,16 +199,16 @@ public final class WebApiGrpc {
      *    }
      * </pre>
      */
-    public void viewBlockDetail(one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailReq request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp> responseObserver) {
+    public void viewBlockDetail(ViewBlockDetailReq request,
+                                io.grpc.stub.StreamObserver<ViewBlockDetailResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_VIEW_BLOCK_DETAIL, getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void listenAndReadNewBlock(one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail> responseObserver) {
+    public void listenAndReadNewBlock(ListenBlocksReq request,
+                                      io.grpc.stub.StreamObserver<BlockDetail> responseObserver) {
       asyncServerStreamingCall(
           getChannel().newCall(METHOD_LISTEN_AND_READ_NEW_BLOCK, getCallOptions()), request, responseObserver);
     }
@@ -242,7 +242,7 @@ public final class WebApiGrpc {
      *    }
      * </pre>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp viewTxDetail(one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailReq request) {
+    public ViewTxDetailResp viewTxDetail(ViewTxDetailReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_VIEW_TX_DETAIL, getCallOptions(), request);
     }
@@ -257,15 +257,15 @@ public final class WebApiGrpc {
      *    }
      * </pre>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp viewBlockDetail(one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailReq request) {
+    public ViewBlockDetailResp viewBlockDetail(ViewBlockDetailReq request) {
       return blockingUnaryCall(
           getChannel(), METHOD_VIEW_BLOCK_DETAIL, getCallOptions(), request);
     }
 
     /**
      */
-    public java.util.Iterator<one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail> listenAndReadNewBlock(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq request) {
+    public java.util.Iterator<BlockDetail> listenAndReadNewBlock(
+        ListenBlocksReq request) {
       return blockingServerStreamingCall(
           getChannel(), METHOD_LISTEN_AND_READ_NEW_BLOCK, getCallOptions(), request);
     }
@@ -299,8 +299,8 @@ public final class WebApiGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp> viewTxDetail(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<ViewTxDetailResp> viewTxDetail(
+        ViewTxDetailReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_VIEW_TX_DETAIL, getCallOptions()), request);
     }
@@ -315,8 +315,8 @@ public final class WebApiGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp> viewBlockDetail(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<ViewBlockDetailResp> viewBlockDetail(
+        ViewBlockDetailReq request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_VIEW_BLOCK_DETAIL, getCallOptions()), request);
     }
@@ -344,16 +344,16 @@ public final class WebApiGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_VIEW_TX_DETAIL:
-          serviceImpl.viewTxDetail((one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailReq) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewTxDetailResp>) responseObserver);
+          serviceImpl.viewTxDetail((ViewTxDetailReq) request,
+              (io.grpc.stub.StreamObserver<ViewTxDetailResp>) responseObserver);
           break;
         case METHODID_VIEW_BLOCK_DETAIL:
-          serviceImpl.viewBlockDetail((one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailReq) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailResp>) responseObserver);
+          serviceImpl.viewBlockDetail((ViewBlockDetailReq) request,
+              (io.grpc.stub.StreamObserver<ViewBlockDetailResp>) responseObserver);
           break;
         case METHODID_LISTEN_AND_READ_NEW_BLOCK:
-          serviceImpl.listenAndReadNewBlock((one.contentbox.boxd.protocol.rpc.protobuf.generated.ListenBlocksReq) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockDetail>) responseObserver);
+          serviceImpl.listenAndReadNewBlock((ListenBlocksReq) request,
+              (io.grpc.stub.StreamObserver<BlockDetail>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -374,7 +374,7 @@ public final class WebApiGrpc {
   private static final class WebApiDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
     @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.getDescriptor();
+      return WebProto.getDescriptor();
     }
   }
 

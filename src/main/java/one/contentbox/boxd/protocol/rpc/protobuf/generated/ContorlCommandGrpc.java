@@ -31,88 +31,112 @@ public final class ContorlCommandGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse> METHOD_GET_NETWORK_ID =
-      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<DebugLevelRequest,
+      BaseResponse> METHOD_SET_DEBUG_LEVEL =
+      io.grpc.MethodDescriptor.<DebugLevelRequest, BaseResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "rpcpb.ContorlCommand", "SetDebugLevel"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              DebugLevelRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              BaseResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<UpdateNetworkIDRequest,
+      BaseResponse> METHOD_UPDATE_NETWORK_ID =
+      io.grpc.MethodDescriptor.<UpdateNetworkIDRequest, BaseResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "rpcpb.ContorlCommand", "UpdateNetworkID"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              UpdateNetworkIDRequest.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              BaseResponse.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<GetNetworkIDRequest,
+      GetNetworkIDResponse> METHOD_GET_NETWORK_ID =
+      io.grpc.MethodDescriptor.<GetNetworkIDRequest, GetNetworkIDResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.ContorlCommand", "GetNetworkID"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest.getDefaultInstance()))
+              GetNetworkIDRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse.getDefaultInstance()))
+              GetNetworkIDResponse.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<AddNodeRequest,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponse> METHOD_ADD_NODE =
-      io.grpc.MethodDescriptor.<AddNodeRequest, one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponse>newBuilder()
+      BaseResponse> METHOD_ADD_NODE =
+      io.grpc.MethodDescriptor.<AddNodeRequest, BaseResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.ContorlCommand", "AddNode"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               AddNodeRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponse.getDefaultInstance()))
+              BaseResponse.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightRequest,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightResponse> METHOD_GET_BLOCK_HEIGHT =
-      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightRequest, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<GetBlockHeightRequest,
+      GetBlockHeightResponse> METHOD_GET_BLOCK_HEIGHT =
+      io.grpc.MethodDescriptor.<GetBlockHeightRequest, GetBlockHeightResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.ContorlCommand", "GetBlockHeight"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightRequest.getDefaultInstance()))
+              GetBlockHeightRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightResponse.getDefaultInstance()))
+              GetBlockHeightResponse.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashResponse> METHOD_GET_BLOCK_HASH =
-      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<GetBlockHashRequest,
+      GetBlockHashResponse> METHOD_GET_BLOCK_HASH =
+      io.grpc.MethodDescriptor.<GetBlockHashRequest, GetBlockHashResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.ContorlCommand", "GetBlockHash"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest.getDefaultInstance()))
+              GetBlockHashRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashResponse.getDefaultInstance()))
+              GetBlockHashResponse.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponse> METHOD_GET_BLOCK_HEADER =
-      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<GetBlockRequest,
+      GetBlockHeaderResponse> METHOD_GET_BLOCK_HEADER =
+      io.grpc.MethodDescriptor.<GetBlockRequest, GetBlockHeaderResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.ContorlCommand", "GetBlockHeader"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest.getDefaultInstance()))
+              GetBlockRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponse.getDefaultInstance()))
+              GetBlockHeaderResponse.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockResponse> METHOD_GET_BLOCK =
-      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<GetBlockRequest,
+      GetBlockResponse> METHOD_GET_BLOCK =
+      io.grpc.MethodDescriptor.<GetBlockRequest, GetBlockResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.ContorlCommand", "GetBlock"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest.getDefaultInstance()))
+              GetBlockRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockResponse.getDefaultInstance()))
+              GetBlockResponse.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoRequest,
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse> METHOD_GET_NODE_INFO =
-      io.grpc.MethodDescriptor.<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoRequest, one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<GetNodeInfoRequest,
+      GetNodeInfoResponse> METHOD_GET_NODE_INFO =
+      io.grpc.MethodDescriptor.<GetNodeInfoRequest, GetNodeInfoResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "rpcpb.ContorlCommand", "GetNodeInfo"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoRequest.getDefaultInstance()))
+              GetNodeInfoRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse.getDefaultInstance()))
+              GetNodeInfoResponse.getDefaultInstance()))
           .build();
 
   /**
@@ -147,6 +171,36 @@ public final class ContorlCommandGrpc {
 
     /**
      * <pre>
+     *    rpc SetDebugLevel (DebugLevelRequest) returns (BaseResponse) {
+     *        option (google.api.http) = {
+     *            post: "/v1/ctl/debuglevel"
+     *            body: "*"
+     *      };
+     *    }
+     * </pre>
+     */
+    public void setDebugLevel(DebugLevelRequest request,
+                              io.grpc.stub.StreamObserver<BaseResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SET_DEBUG_LEVEL, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *    rpc UpdateNetworkID (UpdateNetworkIDRequest) returns (BaseResponse) {
+     *        option (google.api.http) = {
+     *            post: "/v1/ctl/networkid"
+     *            body: "*"
+     *      };
+     *    }
+     * </pre>
+     */
+    public void updateNetworkID(UpdateNetworkIDRequest request,
+                                io.grpc.stub.StreamObserver<BaseResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_UPDATE_NETWORK_ID, responseObserver);
+    }
+
+    /**
+     * <pre>
      *    rpc GetNetworkID (GetNetworkIDRequest) returns (GetNetworkIDResponse) {
      *        option (google.api.http) = {
      *            post: "/v1/ctl/getnetwork"
@@ -155,8 +209,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getNetworkID(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse> responseObserver) {
+    public void getNetworkID(GetNetworkIDRequest request,
+                             io.grpc.stub.StreamObserver<GetNetworkIDResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_NETWORK_ID, responseObserver);
     }
 
@@ -171,7 +225,7 @@ public final class ContorlCommandGrpc {
      * </pre>
      */
     public void addNode(AddNodeRequest request,
-                        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponse> responseObserver) {
+                        io.grpc.stub.StreamObserver<BaseResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_ADD_NODE, responseObserver);
     }
 
@@ -185,8 +239,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBlockHeight(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightResponse> responseObserver) {
+    public void getBlockHeight(GetBlockHeightRequest request,
+                               io.grpc.stub.StreamObserver<GetBlockHeightResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_BLOCK_HEIGHT, responseObserver);
     }
 
@@ -200,8 +254,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBlockHash(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashResponse> responseObserver) {
+    public void getBlockHash(GetBlockHashRequest request,
+                             io.grpc.stub.StreamObserver<GetBlockHashResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_BLOCK_HASH, responseObserver);
     }
 
@@ -215,8 +269,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBlockHeader(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponse> responseObserver) {
+    public void getBlockHeader(GetBlockRequest request,
+                               io.grpc.stub.StreamObserver<GetBlockHeaderResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_BLOCK_HEADER, responseObserver);
     }
 
@@ -230,8 +284,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBlock(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockResponse> responseObserver) {
+    public void getBlock(GetBlockRequest request,
+                         io.grpc.stub.StreamObserver<GetBlockResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_BLOCK, responseObserver);
     }
 
@@ -245,61 +299,75 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getNodeInfo(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse> responseObserver) {
+    public void getNodeInfo(GetNodeInfoRequest request,
+                            io.grpc.stub.StreamObserver<GetNodeInfoResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_NODE_INFO, responseObserver);
     }
 
     @Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
+            METHOD_SET_DEBUG_LEVEL,
+            asyncUnaryCall(
+              new MethodHandlers<
+                DebugLevelRequest,
+                BaseResponse>(
+                  this, METHODID_SET_DEBUG_LEVEL)))
+          .addMethod(
+            METHOD_UPDATE_NETWORK_ID,
+            asyncUnaryCall(
+              new MethodHandlers<
+                UpdateNetworkIDRequest,
+                BaseResponse>(
+                  this, METHODID_UPDATE_NETWORK_ID)))
+          .addMethod(
             METHOD_GET_NETWORK_ID,
             asyncUnaryCall(
               new MethodHandlers<
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse>(
+                GetNetworkIDRequest,
+                GetNetworkIDResponse>(
                   this, METHODID_GET_NETWORK_ID)))
           .addMethod(
             METHOD_ADD_NODE,
             asyncUnaryCall(
               new MethodHandlers<
                 AddNodeRequest,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponse>(
+                BaseResponse>(
                   this, METHODID_ADD_NODE)))
           .addMethod(
             METHOD_GET_BLOCK_HEIGHT,
             asyncUnaryCall(
               new MethodHandlers<
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightRequest,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightResponse>(
+                GetBlockHeightRequest,
+                GetBlockHeightResponse>(
                   this, METHODID_GET_BLOCK_HEIGHT)))
           .addMethod(
             METHOD_GET_BLOCK_HASH,
             asyncUnaryCall(
               new MethodHandlers<
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashResponse>(
+                GetBlockHashRequest,
+                GetBlockHashResponse>(
                   this, METHODID_GET_BLOCK_HASH)))
           .addMethod(
             METHOD_GET_BLOCK_HEADER,
             asyncUnaryCall(
               new MethodHandlers<
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponse>(
+                GetBlockRequest,
+                GetBlockHeaderResponse>(
                   this, METHODID_GET_BLOCK_HEADER)))
           .addMethod(
             METHOD_GET_BLOCK,
             asyncUnaryCall(
               new MethodHandlers<
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockResponse>(
+                GetBlockRequest,
+                GetBlockResponse>(
                   this, METHODID_GET_BLOCK)))
           .addMethod(
             METHOD_GET_NODE_INFO,
             asyncUnaryCall(
               new MethodHandlers<
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoRequest,
-                one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse>(
+                GetNodeInfoRequest,
+                GetNodeInfoResponse>(
                   this, METHODID_GET_NODE_INFO)))
           .build();
     }
@@ -328,6 +396,38 @@ public final class ContorlCommandGrpc {
 
     /**
      * <pre>
+     *    rpc SetDebugLevel (DebugLevelRequest) returns (BaseResponse) {
+     *        option (google.api.http) = {
+     *            post: "/v1/ctl/debuglevel"
+     *            body: "*"
+     *      };
+     *    }
+     * </pre>
+     */
+    public void setDebugLevel(DebugLevelRequest request,
+                              io.grpc.stub.StreamObserver<BaseResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_SET_DEBUG_LEVEL, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *    rpc UpdateNetworkID (UpdateNetworkIDRequest) returns (BaseResponse) {
+     *        option (google.api.http) = {
+     *            post: "/v1/ctl/networkid"
+     *            body: "*"
+     *      };
+     *    }
+     * </pre>
+     */
+    public void updateNetworkID(UpdateNetworkIDRequest request,
+                                io.grpc.stub.StreamObserver<BaseResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_UPDATE_NETWORK_ID, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      *    rpc GetNetworkID (GetNetworkIDRequest) returns (GetNetworkIDResponse) {
      *        option (google.api.http) = {
      *            post: "/v1/ctl/getnetwork"
@@ -336,8 +436,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getNetworkID(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse> responseObserver) {
+    public void getNetworkID(GetNetworkIDRequest request,
+                             io.grpc.stub.StreamObserver<GetNetworkIDResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_NETWORK_ID, getCallOptions()), request, responseObserver);
     }
@@ -353,7 +453,7 @@ public final class ContorlCommandGrpc {
      * </pre>
      */
     public void addNode(AddNodeRequest request,
-                        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponse> responseObserver) {
+                        io.grpc.stub.StreamObserver<BaseResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_ADD_NODE, getCallOptions()), request, responseObserver);
     }
@@ -368,8 +468,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBlockHeight(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightResponse> responseObserver) {
+    public void getBlockHeight(GetBlockHeightRequest request,
+                               io.grpc.stub.StreamObserver<GetBlockHeightResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_BLOCK_HEIGHT, getCallOptions()), request, responseObserver);
     }
@@ -384,8 +484,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBlockHash(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashResponse> responseObserver) {
+    public void getBlockHash(GetBlockHashRequest request,
+                             io.grpc.stub.StreamObserver<GetBlockHashResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_BLOCK_HASH, getCallOptions()), request, responseObserver);
     }
@@ -400,8 +500,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBlockHeader(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponse> responseObserver) {
+    public void getBlockHeader(GetBlockRequest request,
+                               io.grpc.stub.StreamObserver<GetBlockHeaderResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_BLOCK_HEADER, getCallOptions()), request, responseObserver);
     }
@@ -416,8 +516,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getBlock(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockResponse> responseObserver) {
+    public void getBlock(GetBlockRequest request,
+                         io.grpc.stub.StreamObserver<GetBlockResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_BLOCK, getCallOptions()), request, responseObserver);
     }
@@ -432,8 +532,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public void getNodeInfo(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoRequest request,
-        io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse> responseObserver) {
+    public void getNodeInfo(GetNodeInfoRequest request,
+                            io.grpc.stub.StreamObserver<GetNodeInfoResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_NODE_INFO, getCallOptions()), request, responseObserver);
     }
@@ -462,6 +562,36 @@ public final class ContorlCommandGrpc {
 
     /**
      * <pre>
+     *    rpc SetDebugLevel (DebugLevelRequest) returns (BaseResponse) {
+     *        option (google.api.http) = {
+     *            post: "/v1/ctl/debuglevel"
+     *            body: "*"
+     *      };
+     *    }
+     * </pre>
+     */
+    public BaseResponse setDebugLevel(DebugLevelRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_SET_DEBUG_LEVEL, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *    rpc UpdateNetworkID (UpdateNetworkIDRequest) returns (BaseResponse) {
+     *        option (google.api.http) = {
+     *            post: "/v1/ctl/networkid"
+     *            body: "*"
+     *      };
+     *    }
+     * </pre>
+     */
+    public BaseResponse updateNetworkID(UpdateNetworkIDRequest request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_UPDATE_NETWORK_ID, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      *    rpc GetNetworkID (GetNetworkIDRequest) returns (GetNetworkIDResponse) {
      *        option (google.api.http) = {
      *            post: "/v1/ctl/getnetwork"
@@ -470,7 +600,7 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse getNetworkID(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest request) {
+    public GetNetworkIDResponse getNetworkID(GetNetworkIDRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_NETWORK_ID, getCallOptions(), request);
     }
@@ -485,7 +615,7 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponse addNode(AddNodeRequest request) {
+    public BaseResponse addNode(AddNodeRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_ADD_NODE, getCallOptions(), request);
     }
@@ -500,7 +630,7 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightResponse getBlockHeight(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightRequest request) {
+    public GetBlockHeightResponse getBlockHeight(GetBlockHeightRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_BLOCK_HEIGHT, getCallOptions(), request);
     }
@@ -515,7 +645,7 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashResponse getBlockHash(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest request) {
+    public GetBlockHashResponse getBlockHash(GetBlockHashRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_BLOCK_HASH, getCallOptions(), request);
     }
@@ -530,7 +660,7 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponse getBlockHeader(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest request) {
+    public GetBlockHeaderResponse getBlockHeader(GetBlockRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_BLOCK_HEADER, getCallOptions(), request);
     }
@@ -545,7 +675,7 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockResponse getBlock(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest request) {
+    public GetBlockResponse getBlock(GetBlockRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_BLOCK, getCallOptions(), request);
     }
@@ -560,7 +690,7 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse getNodeInfo(one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoRequest request) {
+    public GetNodeInfoResponse getNodeInfo(GetNodeInfoRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_NODE_INFO, getCallOptions(), request);
     }
@@ -589,6 +719,38 @@ public final class ContorlCommandGrpc {
 
     /**
      * <pre>
+     *    rpc SetDebugLevel (DebugLevelRequest) returns (BaseResponse) {
+     *        option (google.api.http) = {
+     *            post: "/v1/ctl/debuglevel"
+     *            body: "*"
+     *      };
+     *    }
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<BaseResponse> setDebugLevel(
+        DebugLevelRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_SET_DEBUG_LEVEL, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *    rpc UpdateNetworkID (UpdateNetworkIDRequest) returns (BaseResponse) {
+     *        option (google.api.http) = {
+     *            post: "/v1/ctl/networkid"
+     *            body: "*"
+     *      };
+     *    }
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<BaseResponse> updateNetworkID(
+        UpdateNetworkIDRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_UPDATE_NETWORK_ID, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      *    rpc GetNetworkID (GetNetworkIDRequest) returns (GetNetworkIDResponse) {
      *        option (google.api.http) = {
      *            post: "/v1/ctl/getnetwork"
@@ -597,8 +759,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse> getNetworkID(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<GetNetworkIDResponse> getNetworkID(
+        GetNetworkIDRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_NETWORK_ID, getCallOptions()), request);
     }
@@ -613,7 +775,7 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponse> addNode(
+    public com.google.common.util.concurrent.ListenableFuture<BaseResponse> addNode(
         AddNodeRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_ADD_NODE, getCallOptions()), request);
@@ -629,8 +791,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightResponse> getBlockHeight(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<GetBlockHeightResponse> getBlockHeight(
+        GetBlockHeightRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_BLOCK_HEIGHT, getCallOptions()), request);
     }
@@ -645,8 +807,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashResponse> getBlockHash(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<GetBlockHashResponse> getBlockHash(
+        GetBlockHashRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_BLOCK_HASH, getCallOptions()), request);
     }
@@ -661,8 +823,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponse> getBlockHeader(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<GetBlockHeaderResponse> getBlockHeader(
+        GetBlockRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_BLOCK_HEADER, getCallOptions()), request);
     }
@@ -677,8 +839,8 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockResponse> getBlock(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<GetBlockResponse> getBlock(
+        GetBlockRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_BLOCK, getCallOptions()), request);
     }
@@ -693,20 +855,22 @@ public final class ContorlCommandGrpc {
      *    }
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse> getNodeInfo(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<GetNodeInfoResponse> getNodeInfo(
+        GetNodeInfoRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_NODE_INFO, getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_GET_NETWORK_ID = 0;
-  private static final int METHODID_ADD_NODE = 1;
-  private static final int METHODID_GET_BLOCK_HEIGHT = 2;
-  private static final int METHODID_GET_BLOCK_HASH = 3;
-  private static final int METHODID_GET_BLOCK_HEADER = 4;
-  private static final int METHODID_GET_BLOCK = 5;
-  private static final int METHODID_GET_NODE_INFO = 6;
+  private static final int METHODID_SET_DEBUG_LEVEL = 0;
+  private static final int METHODID_UPDATE_NETWORK_ID = 1;
+  private static final int METHODID_GET_NETWORK_ID = 2;
+  private static final int METHODID_ADD_NODE = 3;
+  private static final int METHODID_GET_BLOCK_HEIGHT = 4;
+  private static final int METHODID_GET_BLOCK_HASH = 5;
+  private static final int METHODID_GET_BLOCK_HEADER = 6;
+  private static final int METHODID_GET_BLOCK = 7;
+  private static final int METHODID_GET_NODE_INFO = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -725,33 +889,41 @@ public final class ContorlCommandGrpc {
     @SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_SET_DEBUG_LEVEL:
+          serviceImpl.setDebugLevel((DebugLevelRequest) request,
+              (io.grpc.stub.StreamObserver<BaseResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_NETWORK_ID:
+          serviceImpl.updateNetworkID((UpdateNetworkIDRequest) request,
+              (io.grpc.stub.StreamObserver<BaseResponse>) responseObserver);
+          break;
         case METHODID_GET_NETWORK_ID:
-          serviceImpl.getNetworkID((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDRequest) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNetworkIDResponse>) responseObserver);
+          serviceImpl.getNetworkID((GetNetworkIDRequest) request,
+              (io.grpc.stub.StreamObserver<GetNetworkIDResponse>) responseObserver);
           break;
         case METHODID_ADD_NODE:
           serviceImpl.addNode((AddNodeRequest) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<BaseResponse>) responseObserver);
           break;
         case METHODID_GET_BLOCK_HEIGHT:
-          serviceImpl.getBlockHeight((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightRequest) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeightResponse>) responseObserver);
+          serviceImpl.getBlockHeight((GetBlockHeightRequest) request,
+              (io.grpc.stub.StreamObserver<GetBlockHeightResponse>) responseObserver);
           break;
         case METHODID_GET_BLOCK_HASH:
-          serviceImpl.getBlockHash((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashRequest) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHashResponse>) responseObserver);
+          serviceImpl.getBlockHash((GetBlockHashRequest) request,
+              (io.grpc.stub.StreamObserver<GetBlockHashResponse>) responseObserver);
           break;
         case METHODID_GET_BLOCK_HEADER:
-          serviceImpl.getBlockHeader((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponse>) responseObserver);
+          serviceImpl.getBlockHeader((GetBlockRequest) request,
+              (io.grpc.stub.StreamObserver<GetBlockHeaderResponse>) responseObserver);
           break;
         case METHODID_GET_BLOCK:
-          serviceImpl.getBlock((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockRequest) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockResponse>) responseObserver);
+          serviceImpl.getBlock((GetBlockRequest) request,
+              (io.grpc.stub.StreamObserver<GetBlockResponse>) responseObserver);
           break;
         case METHODID_GET_NODE_INFO:
-          serviceImpl.getNodeInfo((one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoRequest) request,
-              (io.grpc.stub.StreamObserver<one.contentbox.boxd.protocol.rpc.protobuf.generated.GetNodeInfoResponse>) responseObserver);
+          serviceImpl.getNodeInfo((GetNodeInfoRequest) request,
+              (io.grpc.stub.StreamObserver<GetNodeInfoResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -772,7 +944,7 @@ public final class ContorlCommandGrpc {
   private static final class ContorlCommandDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
     @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.ControlProto.getDescriptor();
+      return ControlProto.getDescriptor();
     }
   }
 
@@ -786,6 +958,8 @@ public final class ContorlCommandGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ContorlCommandDescriptorSupplier())
+              .addMethod(METHOD_SET_DEBUG_LEVEL)
+              .addMethod(METHOD_UPDATE_NETWORK_ID)
               .addMethod(METHOD_GET_NETWORK_ID)
               .addMethod(METHOD_ADD_NODE)
               .addMethod(METHOD_GET_BLOCK_HEIGHT)

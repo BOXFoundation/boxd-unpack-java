@@ -81,12 +81,12 @@ public  final class ViewBlockDetailResp extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
+    return WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_fieldAccessorTable
+    return WebProto.internal_static_rpcpb_ViewBlockDetailResp_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             ViewBlockDetailResp.class, Builder.class);
   }
@@ -325,15 +325,15 @@ public  final class ViewBlockDetailResp extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.ViewBlockDetailResp)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.ViewBlockDetailRespOrBuilder {
+      ViewBlockDetailRespOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
+      return WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_fieldAccessorTable
+      return WebProto.internal_static_rpcpb_ViewBlockDetailResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               ViewBlockDetailResp.class, Builder.class);
     }
@@ -370,7 +370,7 @@ public  final class ViewBlockDetailResp extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
+      return WebProto.internal_static_rpcpb_ViewBlockDetailResp_descriptor;
     }
 
     public ViewBlockDetailResp getDefaultInstanceForType() {

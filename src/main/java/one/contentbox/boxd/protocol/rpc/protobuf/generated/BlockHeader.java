@@ -97,12 +97,12 @@ public  final class BlockHeader extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_descriptor;
+    return BlockProto.internal_static_corepb_BlockHeader_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_fieldAccessorTable
+    return BlockProto.internal_static_corepb_BlockHeader_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             BlockHeader.class, Builder.class);
   }
@@ -381,15 +381,15 @@ public  final class BlockHeader extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.BlockHeader)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockHeaderOrBuilder {
+      BlockHeaderOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_descriptor;
+      return BlockProto.internal_static_corepb_BlockHeader_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_fieldAccessorTable
+      return BlockProto.internal_static_corepb_BlockHeader_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               BlockHeader.class, Builder.class);
     }
@@ -430,7 +430,7 @@ public  final class BlockHeader extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.BlockProto.internal_static_corepb_BlockHeader_descriptor;
+      return BlockProto.internal_static_corepb_BlockHeader_descriptor;
     }
 
     public BlockHeader getDefaultInstanceForType() {

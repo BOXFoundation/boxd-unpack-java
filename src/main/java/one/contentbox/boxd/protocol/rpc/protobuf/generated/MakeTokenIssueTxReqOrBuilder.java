@@ -34,11 +34,11 @@ public interface MakeTokenIssueTxReqOrBuilder extends
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag getTag();
+  TokenTag getTag();
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder getTagOrBuilder();
+  TokenTagOrBuilder getTagOrBuilder();
 
   /**
    * <code>uint64 fee = 4;</code>

@@ -20,12 +20,12 @@ public interface TxDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail> 
+  java.util.List<TxInDetail>
       getVinList();
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetail getVin(int index);
+  TxInDetail getVin(int index);
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
@@ -33,23 +33,23 @@ public interface TxDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder> 
+  java.util.List<? extends TxInDetailOrBuilder>
       getVinOrBuilderList();
   /**
    * <code>repeated .rpcpb.TxInDetail vin = 2;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxInDetailOrBuilder getVinOrBuilder(
+  TxInDetailOrBuilder getVinOrBuilder(
           int index);
 
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  java.util.List<one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail> 
+  java.util.List<TxOutDetail>
       getVoutList();
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail getVout(int index);
+  TxOutDetail getVout(int index);
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
@@ -57,11 +57,11 @@ public interface TxDetailOrBuilder extends
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  java.util.List<? extends one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder> 
+  java.util.List<? extends TxOutDetailOrBuilder>
       getVoutOrBuilderList();
   /**
    * <code>repeated .rpcpb.TxOutDetail vout = 3;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder getVoutOrBuilder(
+  TxOutDetailOrBuilder getVoutOrBuilder(
           int index);
 }

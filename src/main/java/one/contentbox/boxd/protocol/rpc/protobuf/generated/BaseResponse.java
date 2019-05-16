@@ -68,12 +68,12 @@ public  final class BaseResponse extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.CommonProto.internal_static_rpcpb_BaseResponse_descriptor;
+    return CommonProto.internal_static_rpcpb_BaseResponse_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.CommonProto.internal_static_rpcpb_BaseResponse_fieldAccessorTable
+    return CommonProto.internal_static_rpcpb_BaseResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             BaseResponse.class, Builder.class);
   }
@@ -275,15 +275,15 @@ public  final class BaseResponse extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.BaseResponse)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.BaseResponseOrBuilder {
+      BaseResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.CommonProto.internal_static_rpcpb_BaseResponse_descriptor;
+      return CommonProto.internal_static_rpcpb_BaseResponse_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.CommonProto.internal_static_rpcpb_BaseResponse_fieldAccessorTable
+      return CommonProto.internal_static_rpcpb_BaseResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               BaseResponse.class, Builder.class);
     }
@@ -314,7 +314,7 @@ public  final class BaseResponse extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.CommonProto.internal_static_rpcpb_BaseResponse_descriptor;
+      return CommonProto.internal_static_rpcpb_BaseResponse_descriptor;
     }
 
     public BaseResponse getDefaultInstanceForType() {

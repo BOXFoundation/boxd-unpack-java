@@ -250,7 +250,7 @@ public  final class OutPoint extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.OutPoint)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.OutPointOrBuilder {
+      OutPointOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return BlockProto.internal_static_corepb_OutPoint_descriptor;

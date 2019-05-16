@@ -58,11 +58,11 @@ public  final class MakeTokenIssueTxReq extends
             break;
           }
           case 26: {
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder subBuilder = null;
+            TokenTag.Builder subBuilder = null;
             if (tag_ != null) {
               subBuilder = tag_.toBuilder();
             }
-            tag_ = input.readMessage(one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.parser(), extensionRegistry);
+            tag_ = input.readMessage(TokenTag.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(tag_);
               tag_ = subBuilder.buildPartial();
@@ -88,12 +88,12 @@ public  final class MakeTokenIssueTxReq extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
+    return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
   }
 
   protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_fieldAccessorTable
+    return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             MakeTokenIssueTxReq.class, Builder.class);
   }
@@ -167,7 +167,7 @@ public  final class MakeTokenIssueTxReq extends
   }
 
   public static final int TAG_FIELD_NUMBER = 3;
-  private one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag tag_;
+  private TokenTag tag_;
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
@@ -177,13 +177,13 @@ public  final class MakeTokenIssueTxReq extends
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag getTag() {
-    return tag_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.getDefaultInstance() : tag_;
+  public TokenTag getTag() {
+    return tag_ == null ? TokenTag.getDefaultInstance() : tag_;
   }
   /**
    * <code>.rpcpb.TokenTag tag = 3;</code>
    */
-  public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder getTagOrBuilder() {
+  public TokenTagOrBuilder getTagOrBuilder() {
     return getTag();
   }
 
@@ -377,15 +377,15 @@ public  final class MakeTokenIssueTxReq extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.MakeTokenIssueTxReq)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.MakeTokenIssueTxReqOrBuilder {
+      MakeTokenIssueTxReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
+      return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
     }
 
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_fieldAccessorTable
+      return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               MakeTokenIssueTxReq.class, Builder.class);
     }
@@ -424,7 +424,7 @@ public  final class MakeTokenIssueTxReq extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return one.contentbox.boxd.protocol.rpc.protobuf.generated.TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
+      return TransactionProto.internal_static_rpcpb_MakeTokenIssueTxReq_descriptor;
     }
 
     public MakeTokenIssueTxReq getDefaultInstanceForType() {
@@ -668,9 +668,9 @@ public  final class MakeTokenIssueTxReq extends
       return this;
     }
 
-    private one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag tag_ = null;
+    private TokenTag tag_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder> tagBuilder_;
+        TokenTag, TokenTag.Builder, TokenTagOrBuilder> tagBuilder_;
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
@@ -680,9 +680,9 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag getTag() {
+    public TokenTag getTag() {
       if (tagBuilder_ == null) {
-        return tag_ == null ? one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.getDefaultInstance() : tag_;
+        return tag_ == null ? TokenTag.getDefaultInstance() : tag_;
       } else {
         return tagBuilder_.getMessage();
       }
@@ -690,7 +690,7 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public Builder setTag(one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag value) {
+    public Builder setTag(TokenTag value) {
       if (tagBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -707,7 +707,7 @@ public  final class MakeTokenIssueTxReq extends
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
     public Builder setTag(
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder builderForValue) {
+        TokenTag.Builder builderForValue) {
       if (tagBuilder_ == null) {
         tag_ = builderForValue.build();
         onChanged();
@@ -720,11 +720,11 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public Builder mergeTag(one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag value) {
+    public Builder mergeTag(TokenTag value) {
       if (tagBuilder_ == null) {
         if (tag_ != null) {
           tag_ =
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.newBuilder(tag_).mergeFrom(value).buildPartial();
+            TokenTag.newBuilder(tag_).mergeFrom(value).buildPartial();
         } else {
           tag_ = value;
         }
@@ -752,7 +752,7 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder getTagBuilder() {
+    public TokenTag.Builder getTagBuilder() {
       
       onChanged();
       return getTagFieldBuilder().getBuilder();
@@ -760,23 +760,23 @@ public  final class MakeTokenIssueTxReq extends
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
-    public one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder getTagOrBuilder() {
+    public TokenTagOrBuilder getTagOrBuilder() {
       if (tagBuilder_ != null) {
         return tagBuilder_.getMessageOrBuilder();
       } else {
         return tag_ == null ?
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.getDefaultInstance() : tag_;
+            TokenTag.getDefaultInstance() : tag_;
       }
     }
     /**
      * <code>.rpcpb.TokenTag tag = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder> 
+        TokenTag, TokenTag.Builder, TokenTagOrBuilder>
         getTagFieldBuilder() {
       if (tagBuilder_ == null) {
         tagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTag.Builder, one.contentbox.boxd.protocol.rpc.protobuf.generated.TokenTagOrBuilder>(
+            TokenTag, TokenTag.Builder, TokenTagOrBuilder>(
                 getTag(),
                 getParentForChildren(),
                 isClean());

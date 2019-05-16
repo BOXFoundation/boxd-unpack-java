@@ -14,11 +14,11 @@ public interface TxInDetailOrBuilder extends
   /**
    * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetail getPrevOutDetail();
+  TxOutDetail getPrevOutDetail();
   /**
    * <code>.rpcpb.TxOutDetail prev_out_detail = 1;</code>
    */
-  one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutDetailOrBuilder getPrevOutDetailOrBuilder();
+  TxOutDetailOrBuilder getPrevOutDetailOrBuilder();
 
   /**
    * <code>string script_sig = 2;</code>

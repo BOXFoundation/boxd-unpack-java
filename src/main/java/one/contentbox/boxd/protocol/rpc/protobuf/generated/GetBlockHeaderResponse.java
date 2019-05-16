@@ -325,7 +325,7 @@ public  final class GetBlockHeaderResponse extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:rpcpb.GetBlockHeaderResponse)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.GetBlockHeaderResponseOrBuilder {
+      GetBlockHeaderResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ControlProto.internal_static_rpcpb_GetBlockHeaderResponse_descriptor;

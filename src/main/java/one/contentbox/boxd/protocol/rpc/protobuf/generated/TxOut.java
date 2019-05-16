@@ -251,7 +251,7 @@ public  final class TxOut extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:corepb.TxOut)
-      one.contentbox.boxd.protocol.rpc.protobuf.generated.TxOutOrBuilder {
+      TxOutOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return BlockProto.internal_static_corepb_TxOut_descriptor;
