@@ -5,9 +5,6 @@
 syntax = "proto3";
 package rpcpb;
 
-option java_package = "one.contentbox.boxd.protocol.rpc.protobuf.generated";
-option java_outer_classname ="ControlProto";
-option java_multiple_files = true;
 
 import "block.proto";
 import "common.proto";
@@ -17,7 +14,7 @@ import "common.proto";
 service ContorlCommand {
     // set boxd debug level
 
-//    rpc SetDebugLevel (DebugLevelRequest) returns (BaseResponse) ;
+    rpc SetDebugLevel (DebugLevelRequest) returns (BaseResponse) ;
 //    rpc SetDebugLevel (DebugLevelRequest) returns (BaseResponse) {
 //        option (google.api.http) = {
 //            post: "/v1/ctl/debuglevel"
@@ -26,7 +23,7 @@ service ContorlCommand {
 //    }
 
 
-//    rpc UpdateNetworkID (UpdateNetworkIDRequest) returns (BaseResponse) ;
+    rpc UpdateNetworkID (UpdateNetworkIDRequest) returns (BaseResponse) ;
 //    rpc UpdateNetworkID (UpdateNetworkIDRequest) returns (BaseResponse) {
 //        option (google.api.http) = {
 //            post: "/v1/ctl/networkid"

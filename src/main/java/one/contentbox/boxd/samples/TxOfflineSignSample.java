@@ -24,7 +24,7 @@ public class TxOfflineSignSample {
         to.put("b1Tvej4G8Lma86pgYpWqv4fUFJcEyDdeGst", 100L);
         to.put("b1USvtdkLrXXtzTfz8R5tpicJYobDbwuqeT", 200L);
         to.put("b1dSx5FTXEpzB7hWZAydY5N4A5PtFJb57V1", 300L);
-        to.put("b1Vc6vBWzjSp71c3c49hx3pENPL1TwU1Exy", 600L);
+        to.put("b1Vc6vBWzjSp71c3c49hx3pENPL1TwU1Exy", 400L);
         long fee = 100;
         long amount = to.values().stream().mapToLong(Long::longValue).sum();
 
