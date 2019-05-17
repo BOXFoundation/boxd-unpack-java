@@ -246,11 +246,11 @@ public interface BoxdClient {
     /**
      * Send raw transaction to the chain, it will come into the memory pool
      *
-     * @param rawTransaction
+     * @param transaction
      * @return
      * @throws BoxdException
      */
-    String sendRawTransaction(String rawTransaction) throws BoxdException;
+    String sendRawTransaction(String transaction) throws BoxdException;
 
     /**
      * Get block info by the given block hash
