@@ -6,6 +6,7 @@ import com.google.protobuf.MessageOrBuilder;
 import com.google.protobuf.util.JsonFormat;
 import one.contentbox.boxd.exception.BoxdException;
 import one.contentbox.boxd.protocol.BoxdClient;
+import one.contentbox.boxd.protocol.core.response.tx.ExtendTxDetail;
 import one.contentbox.boxd.protocol.rpc.RpcBoxdClientImpl;
 
 
@@ -34,6 +35,12 @@ public class SampleHelper {
         }catch (InvalidProtocolBufferException e){
             throw new BoxdException(-1, e.getMessage());
         }
+    }
+
+    public static void viewTx(String hash, BoxdClient client) throws Exception {
+        Thread.sleep(1000);
+        ExtendTxDetail txDetail = client.viewTxDetail(hash, false);
+        System.out.println(txDetail);
     }
 
 }
